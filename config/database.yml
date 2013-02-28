@@ -1,0 +1,7 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: highlander_development
+  pool: 5
+  username: highlander
+  password:
