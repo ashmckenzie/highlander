@@ -1,10 +1,15 @@
 Highlander::Application.routes.draw do
 
-  get "users/index"
-
   namespace :api do
     resources :events, only: [ :create ]
   end
+
+  namespace :admin do
+  end
+
+  resources :users, only: [ :index, :show ]
+
+  root to: 'welcome#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

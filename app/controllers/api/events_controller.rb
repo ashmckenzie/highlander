@@ -1,8 +1,7 @@
 class Api::EventsController < ApiController
 
   def create
-
-    # User.where(email: params['email']).events << Event.create()
+    current_user.events << Event.create(user: current_user, metric: Metric.where(name: params['metric']).first)
 
     respond_to do |format|
       format.html

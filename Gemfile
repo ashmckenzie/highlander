@@ -26,9 +26,13 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.0.1'
 
 gem 'cancan'
+gem 'rails-observers'
 
 group :development, :test do
+  gem 'thin'
+  gem 'pry'
   gem 'rspec-rails'
+  gem 'awesome_print'
 end
 
 # To use ActiveModel has_secure_password
