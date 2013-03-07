@@ -1,7 +1,7 @@
 module AchievementCalculator
-  class GitHubCommit < AchievementCalculator::Base
+  class MingPongVictory < AchievementCalculator::Base
 
-    CONCERNED_WITH = 'github_commit'
+    CONCERNED_WITH = 'ming_pong_victory'
 
     def calculate!
       if metric.name == CONCERNED_WITH && name = badges[total_event_count]
@@ -15,11 +15,8 @@ module AchievementCalculator
 
     def badges
       {
-        1     => '1_github_commit',
-        100   => '100_github_commits',
-        250   => '250_github_commits',
-        500   => '500_github_commits',
-        1000  => '1000_github_commits'
+        1  => '1_ming_pong_victory',
+        10 => '10_ming_pong_victories'
       }
     end
   end
