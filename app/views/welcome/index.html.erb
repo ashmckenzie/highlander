@@ -1,7 +1,5 @@
-<ul>
+<table>
   <%- @users.each do |user| -%>
-    <li>
-      <%= render partial: 'shared/user', locals: { user: user } %>
-    </li>
+    <%= render partial: 'shared/user', locals: { user: user } %>
   <%- end -%>
-</ul>
+</table>

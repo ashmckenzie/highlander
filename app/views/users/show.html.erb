@@ -1,9 +1,9 @@
-<%= render partial: 'shared/user', locals: { user: @user } %>
+<table>
+  <%= render partial: 'shared/user', locals: { user: @user } %>
+</table>
 
-<ul>
+<table>
   <%- @user.achievements.each do |achievement| %>
-    <li>
-      <%= render partial: 'shared/badge', locals: { badge: achievement.badge } %>
-    </li>
+    <%= render partial: 'shared/badge', locals: { badge: achievement.badge } %>
   <%- end %>
-</ul>
+</table>
