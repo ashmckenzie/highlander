@@ -48,6 +48,7 @@ ActiveRecord::Schema.define(version: 20130228032505) do
 
   create_table "users", force: true do |t|
     t.string   "email"
+    t.integer  "total_score", default: 0
     t.datetime "created_at"
     t.datetime "updated_at"
   end
