@@ -14,7 +14,7 @@ class EventObserver < ActiveRecord::Observer
   def achievement_calculators
     [
       AchievementCalculator::FirstTime,
-      AchievementCalculator::GitHubCommit,
+      AchievementCalculator::GitHubPush,
       AchievementCalculator::JenkinsGreenJob,
       AchievementCalculator::MingPongVictory,
       AchievementCalculator::MingPongLoss
