@@ -19,4 +19,9 @@ class User < ActiveRecord::Base
     gravatar_id = Digest::MD5::hexdigest(email).downcase
     "http://gravatar.com/avatar/#{gravatar_id}.png"
   end
+
+  def metrics_with_values
+    Metric.select('metrics.id, metrics.description, coalesce(sum(events.value), 0) as event_total').joins('left join events on events.metric_id = metrics.id').where('events.user_id = ? or events.user_id is null', id).group('metrics.id, metrics.description')
+    # select metrics.description, coalesce(sum(events.value), 0) from metrics left join events on events.metric_id = metrics.id where (events.user_id = 2 or events.user_id is null) group by metrics.description order by metrics.description;
+  end
 end

@@ -3,6 +3,15 @@
 </table>
 
 <table>
+  <tr>
+    <%- @user.metrics_with_values.each do |metric| %>
+      <td><%= metric.description %></td>
+      <td><%= metric.event_total %></td>
+    <%- end %>
+  </tr>
+</table>
+
+<table>
   <%- @user.achievements.each do |achievement| %>
     <%= render partial: 'shared/badge', locals: { badge: achievement.badge } %>
   <%- end %>
