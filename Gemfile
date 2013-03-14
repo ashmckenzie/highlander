@@ -10,7 +10,8 @@ gem 'pg'
 # Gems used only for assets and not required
 # in production environments by default.
 gem 'sass-rails',   '~> 4.0.0.beta1'
-group :assets do
+
+group :heroku, :assets do
   gem 'coffee-rails', '~> 4.0.0.beta1'
   gem 'bourbon'
   gem 'neat'
@@ -36,10 +37,6 @@ group :development, :test do
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'api_taster'
-end
-
-group :heroku, :assets do
-  gem 'bourbon'
 end
 
 group :heroku do
