@@ -1,8 +1,8 @@
 class EventObserver < ActiveRecord::Observer
+
   def after_create event
     update_total_score_for! event
     calculate_achievements_for! event
-
   end
 
   private
@@ -14,7 +14,7 @@ class EventObserver < ActiveRecord::Observer
   def achievement_calculators
     [
       AchievementCalculator::FirstTime,
-      AchievementCalculator::GitHubPush,
+      AchievementCalculator::GithubPush,
       AchievementCalculator::JenkinsGreenJob,
       AchievementCalculator::MingPongVictory,
       AchievementCalculator::MingPongLoss

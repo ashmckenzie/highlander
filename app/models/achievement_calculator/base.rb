@@ -1,12 +1,16 @@
 module AchievementCalculator
   class Base
 
+    CONCERNED_WITH = ''
+
     def initialize event
       @event = event
     end
 
     def calculate!
-      raise NotImplementedError
+      if metric.name == CONCERNED_WITH && name = badges[total_event_count]
+        add_achievement_for_badge badge_for(name)
+      end
     end
 
     private
