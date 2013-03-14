@@ -1,12 +1,12 @@
 class User < ActiveRecord::Base
 
-  has_many :events, order: 'events.created_at DESC'
-  has_many :metrics, through: :events, order: 'events.created_at DESC'
+  has_many :events, -> { order 'events.created_at DESC' }
+  has_many :metrics, -> { order 'events.created_at DESC' }, through: :events
 
-  has_many :achievements, order: 'achievements.created_at DESC'
-  has_many :badges, through: :achievements, order: 'achievements.created_at DESC'
+  has_many :achievements, -> { order 'achievements.created_at DESC' }
+  has_many :badges, -> { order 'achievements.created_at DESC' }, through: :achievements
 
-  scope :by_total_score, -> { order('total_score DESC, name ASC') }
+  scope :by_total_score, -> { order 'total_score DESC, name ASC' }
 
   def self.with_email email
     where('? = ANY (emails)', email).first
