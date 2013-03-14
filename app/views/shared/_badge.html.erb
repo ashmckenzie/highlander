@@ -2,5 +2,5 @@
 <div>
   <h3 class="badge-name"><%= badge.description %></h3>
   <p class="badge-description"><%= badge.tag %></p>
-  <p class="badge-date"><%= badge.created_at %></p>
+  <p class="badge-date"><%= time_ago_in_words(badge.created_at).capitalize %> ago</p>
 </div>
