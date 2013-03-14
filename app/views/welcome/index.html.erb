@@ -1,5 +1,3 @@
-<table>
-  <%- @users.each do |user| -%>
-    <%= render partial: 'shared/user', locals: { user: user } %>
-  <%- end -%>
+<table class="ranking">
+    <%= render partial: 'shared/user', locals: { users: @users } %>
 </table>
