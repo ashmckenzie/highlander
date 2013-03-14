@@ -33,6 +33,9 @@ GEM
       erubis (>= 2.6.6)
     binding_of_caller (0.7.1)
       debug_inspector (>= 0.0.1)
+    bourbon (3.1.1)
+      sass (>= 3.2.0)
+      thor
     builder (3.1.4)
     cancan (1.6.9)
     coderay (1.0.9)
@@ -66,6 +69,9 @@ GEM
     mime-types (1.21)
     minitest (4.6.2)
     multi_json (1.6.1)
+    neat (1.2.0)
+      bourbon (>= 2.1)
+      sass (>= 3.2)
     pg (0.14.1)
     polyglot (0.3.3)
     pry (0.9.12)
@@ -146,10 +152,12 @@ DEPENDENCIES
   awesome_print
   better_errors
   binding_of_caller
+  bourbon
   cancan
   coffee-rails (~> 4.0.0.beta1)
   jbuilder (~> 1.0.1)
   jquery-rails
+  neat
   pg
   pry
   rails (= 4.0.0.beta1)
