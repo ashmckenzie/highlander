@@ -4,12 +4,12 @@
 
 <table>
   <tr>
-    <%- @user.metrics_with_values.each do |metric| %>
+    <%- @user.metric_totals.each do |metric| %>
       <td><%= metric.description %></td>
     <%- end %>
   </tr>
   <tr>
-    <%- @user.metrics_with_values.each do |metric| %>
+    <%- @user.metric_totals.each do |metric| %>
       <td><%= metric.event_total %></td>
     <%- end %>
   </tr>
