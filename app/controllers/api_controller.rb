@@ -13,7 +13,7 @@ class ApiController < ApplicationController
 
   def current_user
     begin
-      @current_user ||= User.where("'params[:email]' = ANY (emails)").first
+      @current_user ||= User.where("'#{params[:email]}' = ANY (emails)").first
     rescue
       raise InvalidUserToken
     end

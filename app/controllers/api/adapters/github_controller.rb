@@ -24,7 +24,7 @@ class Api::Adapters::GithubController < Api::AdapterController
   end
 
   def current_user
-    @current_user ||= User.where("'params[:email]' = ANY (emails)").first
+    @current_user ||= User.where("'#{params[:email]}' = ANY (emails)").first
   rescue
     raise InvalidUserToken
   end
