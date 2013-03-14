@@ -2,6 +2,7 @@ Metric.create(name: 'github_push', description: 'GitHub push')
 Metric.create(name: 'jenkins_green_job', description: 'Jenkins green job')
 Metric.create(name: 'ming_pong_loss', description: 'Ming Pong loss')
 Metric.create(name: 'ming_pong_victory', default_unit: 2, description: 'Ming Pong victory')
+Metric.create(name: 'gift', description: 'A gift - good or bad!')
 
 Badge.create(name: 'first_time', tag: 'Experience the quickening', description: 'First timer')
 
@@ -19,6 +20,8 @@ Badge.create(name: '1000_jenkins_green_jobs', tag: 'Green gobline GOD', descript
 
 Badge.create(name: '1_ming_pong_victory', tag: 'One small step forward', description: 'First Ming Pong victory')
 Badge.create(name: '1_ming_pong_loss', tag: "Well that's to be expected", description: 'First Ming Pong loss')
+Badge.create(name: '10_ming_pong_victories', tag: 'Paddle master', description: '10 Ming Pong victories')
+
 Badge.create(name: '10_ming_pong_victories', tag: 'Paddle master', description: '10 Ming Pong victories')
 
 User.create(email: 'ash@greenworm.com.au', name: 'Ash McKenzie')
