@@ -1,8 +1,6 @@
 module AchievementCalculator
   class JenkinsGreenJob < AchievementCalculator::Base
 
-    CONCERNED_WITH = 'jenkins_green_job'
-
     private
 
     def badges

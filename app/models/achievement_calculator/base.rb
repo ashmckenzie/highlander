@@ -1,14 +1,12 @@
 module AchievementCalculator
   class Base
 
-    CONCERNED_WITH = ''
-
     def initialize event
       @event = event
     end
 
     def calculate!
-      if metric.name == CONCERNED_WITH && name = badges[total_event_count]
+      if metric.name == concerned_with && name = badges[total_event_count]
         add_achievement_for_badge badge_for(name)
       end
     end
@@ -16,6 +14,10 @@ module AchievementCalculator
     private
 
     attr_reader :event
+
+    def concerned_with
+      self.class.to_s.demodulize.underscore
+    end
 
     def badges
       raise NotImplementedError

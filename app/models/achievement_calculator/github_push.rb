@@ -1,8 +1,6 @@
 module AchievementCalculator
   class GithubPush < AchievementCalculator::Base
 
-    CONCERNED_WITH = 'github_push'
-
     private
 
     def badges

@@ -1,8 +1,6 @@
 module AchievementCalculator
   class MingPongLoss < AchievementCalculator::Base
 
-    CONCERNED_WITH = 'ming_pong_loss'
-
     private
 
     def badges
