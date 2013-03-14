@@ -1,11 +1,15 @@
-h1,h2,h3,h4,h5,h6
+h1, h2, h3, h4, h5, h6
   font-family: "Signika Negative", Helvetica, Arial, sans-serif
   font-weight: 600
 
 a
+  color: $primary-dark
   text-decoration: none
+  &:hover
+    color: darken($primary-dark, 10%)
 
 #main-header
   a
     color: #fff
+  nav a
     font-size: .9rem

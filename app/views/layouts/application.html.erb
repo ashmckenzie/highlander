@@ -19,7 +19,7 @@
   <body>
 
     <header id="main-header">
-        <h1>Highlander</h1>
+        <h1><%= link_to "Highlander", root_path %></h1>
 
         <nav>
           <ul>
@@ -29,17 +29,17 @@
         </nav>
     </header>
 
+    <%= yield :pre_main %>
 
     <div id="container">
-
       <div class="main-column">
 
-        <h1>There can be only one</h1>
         <%= yield %>
 
       </div>
-
     </div>
+
+    <%= yield :post_main %>
 
   </body>
 </html>
