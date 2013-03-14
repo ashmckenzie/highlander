@@ -1,29 +1,28 @@
-<div class="user">
-  <h2>Bio</h2>
-  <div class="avatar">
-    <%= image_tag @user.avatar_url %>
+<section class="user-details">
+
+  <p class="avatar"><%= image_tag @user.avatar_url 150 %></p>
+
+  <div class="info-block">
+
+  <h2><%= link_to @user.name, @user %></h2>
+  <p class="bio">Bio goes here. Excuse me! Mark it zero. Next frame. People forget that the brain is the biggest erogenous zone. Are you employed, Mr. Lebowski?</p>
+
+  <ul class="stats">
+    <li class="total-score"><span><%= @user.total_score %></span> Total Score</li>
+    <li class="total-score"><span><%= @user.achievements.count %></span> Badges</li>
+  </ul>
+
   </div>
-  <div class="name-email">
-    <p class="name"><%= link_to @user.name, @user %></p>
-    <p class="email"><%= link_to @user.email, @user %></p>
-  </div>
-</div>
+
+</section>
 
 <div class="score">
   <h2>Score</h2>
 
-  <table>
     <%- @user.metric_totals.each do |metric| %>
-      <tr>
-        <th><%= metric.description %></th>
-        <td><%= metric.event_total %></td>
-      </tr>
+    <li class="<%= metric.description %>"><span><%= metric.event_total %></span> <%= metric.description %></li>
     <%- end %>
-    <tr class="total">
-      <th>Total</th>
-      <td><%= @user.total_score %></td>
-    </tr>
-  </table>
+
 </div>
 
 <div class="achievements">
