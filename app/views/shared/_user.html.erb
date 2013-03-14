@@ -1,12 +1,3 @@
-<tr>
-  <th>Avatar</th>
-  <th>Name</th>
-  <th>Email</th>
-  <th>Score</th>
-  <th>Badges</th>
-</tr>
-
-<%- users.each do |user| -%>
 <tr class="user">
   <td class="avatar"><%= image_tag user.avatar_url %></td>
   <td class="name"><%= user.name %></td>
@@ -14,4 +5,3 @@
   <td class="total-score"><%= user.total_score %></td>
   <td class="total-badges"><%= user.total_badges %></td>
 </div>
-<%- end -%>
