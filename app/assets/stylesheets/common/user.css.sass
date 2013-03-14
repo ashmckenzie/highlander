@@ -1,27 +1,21 @@
-.user
+.user-details
 
-  float: left
-
-  .avatar, .name-email
+  .avatar
+    +span-columns(2 of 6)
     float: left
+    margin: 0
+    img
+      border-radius: 5px
+      display: block
 
-.score
+  .info-block
+    +span-columns(4 of 6)
+    min-height: 150px
 
-  float: right
+    h2
+      margin: 0
 
-  th
-    text-align: left
-
-  th, td
-    padding: 6px
-
-.achievements
-
-  clear: both
-
-.avatar
-  width: 100px
-
-  img
-    border-radius: 100%
-    display: block
+    .bio
+      color: desaturate(lighten($primary-dark, 10%), 1%)
+      font-size: .9rem
+      font-style: italic

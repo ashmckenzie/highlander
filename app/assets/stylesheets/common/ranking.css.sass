@@ -1,6 +1,10 @@
 .ranking
   width: 100%
 
+  th
+    &:nth-child(-n+2)
+      visibility: hidden
+
   tr
     &:nth-child(2n)
       background: $primary-ultra-light
@@ -12,6 +16,12 @@
 
   td
     padding: .5em
+
+
+  tbody
+    tr:first-child
+      background: lighten($secondary-light, 20%)
+      border-bottom: 20px solid #fff
 
   .total-score, .total-badges
     text-align: center
