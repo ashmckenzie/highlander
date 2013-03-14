@@ -1,8 +1,12 @@
+Metric.destroy_all
+
 Metric.create(name: 'github_push', description: 'GitHub push')
 Metric.create(name: 'jenkins_green_job', description: 'Jenkins green job')
 Metric.create(name: 'ming_pong_loss', description: 'Ming Pong loss')
 Metric.create(name: 'ming_pong_victory', default_unit: 2, description: 'Ming Pong victory')
 Metric.create(name: 'gift', description: 'A gift - good or bad!')
+
+Badge.destroy_all
 
 Badge.create(name: 'first_time', tag: 'Experience the quickening', description: 'First timer')
 
@@ -22,20 +26,22 @@ Badge.create(name: '1_ming_pong_victory', tag: 'One small step forward', descrip
 Badge.create(name: '1_ming_pong_loss', tag: "Well that's to be expected", description: 'First Ming Pong loss')
 Badge.create(name: '10_ming_pong_victories', tag: 'Paddle master', description: '10 Ming Pong victories')
 
-User.create(emails: ['ash@greenworm.com.au'], name: 'Ash McKenzie')
-User.create(emails: ['locusdelicti@gmail.com'], name: 'Dan Bradford')
-User.create(emails: ['stuart.liston@gmail.com'], name: 'Stu Liston')
+User.destroy_all
+
+User.create(emails: ['ash@greenworm.com.au'], name: 'Ash McKenzie', bio: 'Software engineer, Boxer owner and craft beer & gaming connoisseur')
+User.create(emails: ['locusdelicti@gmail.com'], name: 'Dan Bradford', bio: "PhD Candidate and researcher, Developer and FLOSS enthusiast with a dull sense of humour. You've been warned.")
+User.create(emails: ['stuart.liston@gmail.com'], name: 'Stu Liston', bio: 'Scotsman in Melbourne. Husband, Pug Owner & Rubyist.')
 User.create(emails: ['andrei@hooroo.com'], name: 'Andrei Miulescu')
-User.create(emails: ['ashley@hooroo.com'], name: 'Ashley Cambrell')
+User.create(emails: ['ashley@hooroo.com'], name: 'Ashley Cambrell', bio: 'Software dev. Web, Java, ROR')
 User.create(emails: ['chris@hooroo.com'], name:  'Chris Rode')
-User.create(emails: ['gabe@hooroo.com'], name: 'Gabriel Rotbart')
-User.create(emails: ['james@hooroo.com'], name:  'James Martelletti')
+User.create(emails: ['gabe@hooroo.com'], name: 'Gabriel Rotbart', bio: 'Sharpening the saw daily')
+User.create(emails: ['james@hooroo.com'], name:  'James Martelletti', bio: 'Part-time chainsaw enthusiast')
 User.create(emails: ['jamesd@hooroo.com'], name: 'James Dunwoody')
 User.create(emails: ['kunal@hooroo.com'], name:  'Kunal Parikh')
-User.create(emails: ['michael@hooroo.com'], name:  'Michael Krzanich')
-User.create(emails: ['mike@hooroo.com'], name: 'Mike Bain')
-User.create(emails: ['mikem@hooroo.com'], name:  'Mike Mortimer')
+User.create(emails: ['michael@hooroo.com'], name:  'Michael Krzanich', bio: "Hiya, I'm a UX guy based in beautiful Melbourne Australia.")
+User.create(emails: ['mike@hooroo.com'], name: 'Mike Bain', bio: 'Alpha Tester')
+User.create(emails: ['mikem@hooroo.com'], name:  'Mike Mortimer', bio: 'Product Manager @Hooroo making Australian travel awesome')
 User.create(emails: ['peter@hooroo.com'], name:  'Peter Moran')
-User.create(emails: ['phil@hooroo.com'], name: 'Phil Metcalfe')
+User.create(emails: ['phil@hooroo.com'], name: 'Phil Metcalfe', bio: 'Technology & digital product enthusiast. Product Manager at http://hooroo.com . Still searching for the perfect t-shirt...')
 User.create(emails: ['sarah@hooroo.com'], name:  'Sarah Blayden')
-User.create(emails: ['tim@hooroo.com'], name: 'Timothy Dang')
+User.create(emails: ['tim@hooroo.com'], name: 'Timothy Dang', bio: "the beautiful web' aficionado. UX designer, front-end developer & Javascript ninja in training")

@@ -5,7 +5,7 @@
   <div class="info-block">
 
   <h2><%= link_to @user.name, @user %></h2>
-  <p class="bio">Excuse me! Mark it zero. Next frame. People forget that the brain is the biggest erogenous zone. Are you employed, Mr. Lebowski?</p>
+  <p class="bio"><%= @user.bio %></p>
 
   <ul class="stats">
     <li class="total-score"><span><%= @user.total_score %></span> Total Score</li>
