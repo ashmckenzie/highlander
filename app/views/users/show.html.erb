@@ -5,11 +5,11 @@
   <div class="info-block">
 
   <h2><%= link_to @user.name, @user %></h2>
-  <p class="bio">Bio goes here. Excuse me! Mark it zero. Next frame. People forget that the brain is the biggest erogenous zone. Are you employed, Mr. Lebowski?</p>
+  <p class="bio">Excuse me! Mark it zero. Next frame. People forget that the brain is the biggest erogenous zone. Are you employed, Mr. Lebowski?</p>
 
   <ul class="stats">
     <li class="total-score"><span><%= @user.total_score %></span> Total Score</li>
-    <li class="total-score"><span><%= @user.achievements.count %></span> Badges</li>
+    <li class="total-badges"><span><%= @user.achievements.count %></span> Badges</li>
   </ul>
 
   </div>
