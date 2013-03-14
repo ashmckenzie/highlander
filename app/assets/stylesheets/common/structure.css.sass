@@ -1,2 +1,55 @@
 body
-  background: hotpink
+  background: $primary-ultra-light
+  color: darken($primary-dark, 10%)
+
+.hero
+  background: #fff
+  clear: both
+  height: 115px
+  margin-bottom: 30px
+  padding-top: 40px
+  text-align: center
+  h2
+    margin: 0
+    font-size: 2rem
+    font-weight: 300
+    line-height: 1em
+
+#main-header
+  background: $primary-dark
+  color: #fff
+  height: 50px
+
+  h1
+    +shift(1)
+    +span-columns(4)
+    line-height: 50px
+    float: left
+    font-size: 1.7rem
+    margin-bottom: 0
+    margin-top: 0
+
+  nav
+    +shift(3)
+    +span-columns(3)
+    float: left
+    margin-top: 0
+
+  ul
+    list-style: none
+    overflow: auto
+    padding: 0
+
+  li
+    float: left
+    width: 30%
+
+#container
+  +outer-container
+
+  .main-column
+    +box-shadow(0 0 15px 0px rgba($primary-dark, .5))
+    +shift(2)
+    +span-columns(8)
+    background: #fff
+    padding: 1em

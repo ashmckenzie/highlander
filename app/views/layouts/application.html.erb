@@ -3,11 +3,12 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Highlander</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
+    <meta name="google" value="notranslate">
+    <title>Highlander</title>
 
-
+    <link href='http://fonts.googleapis.com/css?family=Signika+Negative:300,400,600' rel='stylesheet' type='text/css'>
     <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
     <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
     <%= csrf_meta_tags %>
@@ -17,19 +18,28 @@
 
   <body>
 
-    <div class="container">
+    <header id="main-header">
+        <h1><%= link_to "Highlander", root_path %></h1>
 
+        <nav>
+          <ul>
+            <li><a href="">Rankings</a></li>
+            <li><a href="">Users</a></li>
+          </ul>
+        </nav>
+    </header>
+
+    <%= yield :pre_main %>
+
+    <div id="container">
       <div class="main-column">
 
-        <h1>There can be only one</h1>
+        <%= yield %>
 
       </div>
-
     </div>
 
-
-
-    <%= yield %>
+    <%= yield :post_main %>
 
   </body>
 </html>
