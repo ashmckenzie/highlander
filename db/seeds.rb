@@ -21,5 +21,6 @@ Badge.create(name: '1_ming_pong_victory', tag: 'One small step forward', descrip
 Badge.create(name: '1_ming_pong_loss', tag: "Well that's to be expected", description: 'First Ming Pong loss')
 Badge.create(name: '10_ming_pong_victories', tag: 'Paddle master', description: '10 Ming Pong victories')
 
-User.create(email: 'ash@greenworm.com.au')
-User.create(email: 'locusdelicti@gmail.com')
+User.create(name: 'Ash McKenzie', email: 'ash@greenworm.com.au')
+User.create(name: 'Dan Bradford', email: 'locusdelicti@gmail.com')
+User.create(name: 'Stu Liston', email: 'stuart.liston@gmail.com')
