@@ -72,6 +72,7 @@ GEM
     neat (1.2.0)
       bourbon (>= 2.1)
       sass (>= 3.2)
+    normalize-rails (2.0.1)
     pg (0.14.1)
     polyglot (0.3.3)
     pry (0.9.12)
@@ -158,6 +159,7 @@ DEPENDENCIES
   jbuilder (~> 1.0.1)
   jquery-rails
   neat
+  normalize-rails
   pg
   pry
   rails (= 4.0.0.beta1)
