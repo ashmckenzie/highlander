@@ -1,7 +1,13 @@
 development:
   adapter: postgresql
-  encoding: unicode
+  encoding: utf8
   database: highlander_development
   pool: 5
-  username: highlander
-  password:
+  host: localhost
+
+test:
+  adapter: postgresql
+  encoding: utf8
+  database: highlander_test
+  pool: 5
+  host: localhost
