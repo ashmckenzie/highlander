@@ -4,7 +4,7 @@ ruby "2.0.0"
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0.beta1'
-
+gem 'thin'
 gem 'pg'
 
 # Gems used only for assets and not required
@@ -34,7 +34,6 @@ gem 'cancan'
 gem 'rails-observers'
 
 group :development, :test do
-  gem 'thin'
   gem 'pry'
   gem 'rspec-rails'
   gem 'awesome_print'
