@@ -8,7 +8,7 @@ class User < ActiveRecord::Base
   scope :by_total_score, -> { order('total_score DESC, name ASC') }
 
   def email
-    emails.first
+    emails.first || ''
   end
 
   def email=(email)
