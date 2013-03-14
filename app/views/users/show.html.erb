@@ -1,3 +1,7 @@
+<%- provide :head do -%>
+   <%= stylesheet_link_tag :user -%>
+<%- end -%>
+
 <section class="user-details">
 
   <p class="avatar"><%= image_tag @user.avatar_url 150 %></p>
@@ -5,7 +9,7 @@
   <div class="info-block">
 
   <h2><%= link_to @user.name, @user %></h2>
-  <p class="bio"><%= @user.bio %></p>
+  <p class="bio"><%= @user.bio || "#{@user.name} hasn't added a bio yet." %></p>
 
   <ul class="stats">
     <li class="total-score"><span><%= @user.total_score %></span> Total Score</li>
