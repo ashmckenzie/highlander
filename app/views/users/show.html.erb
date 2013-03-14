@@ -16,23 +16,27 @@
 
 </section>
 
-<div class="score">
-  <h2>Score</h2>
+
+<section class="badges">
+
+  <h2>Badges</h2>
+
+  <ul>
+    <%- @user.achievements.each do |achievement| %>
+      <li><%= render partial: 'shared/badge', locals: { badge: achievement.badge } %></li>
+    <%- end %>
+  </ul>
+
+
+</section>
+
+<section class="summary">
+  <h2>Summary</h2>
 
     <%- @user.metric_totals.each do |metric| %>
     <li class="<%= metric.description %>"><span><%= metric.event_total %></span> <%= metric.description %></li>
     <%- end %>
 
-</div>
+</section>
 
-<div class="achievements">
 
-  <h2>Achievments</h2>
-
-  <table>
-    <%- @user.achievements.each do |achievement| %>
-      <%= render partial: 'shared/badge', locals: { badge: achievement.badge } %>
-    <%- end %>
-  </table>
-
-</div>

@@ -1,8 +1,6 @@
-<tr class="badge">
-  <td class="image"><%= image_tag badge_image_url(badge) %></td>
-  <td class="description">
-    <p><%= badge.description %></p>
-    <p><%= badge.tag %></p>
-    <p><%= badge.created_at %></p>
-  </td>
-</tr>
+<%= image_tag badge_image_url(badge) %>
+<div>
+  <p><%= badge.description %></p>
+  <p><%= badge.tag %></p>
+  <p><%= badge.created_at %></p>
+</div>

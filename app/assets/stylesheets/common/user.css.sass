@@ -1,4 +1,9 @@
+h2
+  margin: 0
+
 .user-details
+  +hl-clearfix
+  margin-bottom: 30px
 
   .avatar
     +span-columns(2 of 6)
@@ -8,36 +13,67 @@
       border-radius: 5px
       display: block
 
-  .info-block
-    +span-columns(4 of 6)
-    min-height: 150px
+.info-block
+  +span-columns(4 of 6)
+  min-height: 150px
 
-    h2
-      margin: 0
+  .bio
+    color: desaturate(lighten($primary-dark, 10%), 1%)
+    font-size: .9rem
+    font-style: italic
 
-    .bio
-      color: desaturate(lighten($primary-dark, 10%), 1%)
-      font-size: .9rem
-      font-style: italic
+  .stats
+    background: #f7f7f7
+    color: #aaa
+    border-radius: 3px
+    font-size: .6rem
+    list-style: none
+    padding: 1em
+    overflow: auto
 
-    .stats
-      background: #f7f7f7
-      color: #aaa
-      border-radius: 3px
-      font-size: .6rem
-      list-style: none
-      padding: 1em
-      overflow: auto
+    li
+      +span-columns(2 of 4)
+      border-right: 1px solid #ddd
+      text-transform: uppercase
+      &:last-child
+        border: none
 
-      li
-        +span-columns(2 of 4)
-        border-right: 1px solid #ccc
-        text-transform: uppercase
-        &:last-child
-          border: none
+    span
+      color: $primary-dark
+      display: block
+      font-size: 1.6rem
+      font-weight: bold
 
-      span
-        color: $primary-dark
-        display: block
-        font-size: 1.6rem
-        font-weight: bold
+
+.badges
+  +span-columns(4 of 6)
+
+  ul
+    list-style: none
+    padding: 0
+    position: relative
+
+  li
+    +span-columns(1 of 4)
+    +omega(4n)
+    margin-bottom: 1em
+
+    img
+      display: block
+      margin: 0 auto
+      max-width: 85px
+
+    div
+      background: gold
+      display: none
+      left: 0
+      position: absolute
+      top: 0
+      width: 100%
+
+    &:hover div
+      display: block
+
+
+.summary
+  +span-columns(2 of 6)
