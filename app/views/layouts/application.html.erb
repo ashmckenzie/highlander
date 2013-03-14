@@ -21,6 +21,7 @@
   <body>
 
     <header id="main-header" class="top-header">
+      <div class="container">
         <h1><%= link_to "Highlander", root_path %></h1>
 
         <nav>
@@ -29,11 +30,12 @@
             <li><a href="">Users</a></li>
           </ul>
         </nav>
+      </div>
     </header>
 
     <%= yield :pre_main %>
 
-    <div id="container">
+    <div id="main-container" class="container">
       <div class="main-column">
 
         <%= yield %>
