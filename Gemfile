@@ -9,8 +9,8 @@ gem 'pg'
 
 # Gems used only for assets and not required
 # in production environments by default.
+gem 'sass-rails',   '~> 4.0.0.beta1'
 group :assets do
-  gem 'sass-rails',   '~> 4.0.0.beta1'
   gem 'coffee-rails', '~> 4.0.0.beta1'
   gem 'bourbon'
   gem 'neat'
