@@ -54,14 +54,15 @@ h2
   ul
     list-style: none
     padding: 0
-    position: relative
 
   li
     +span-columns(1 of 4)
     +omega(4n)
     margin-bottom: 1em
+    position: relative
 
     img
+      cursor: pointer
       display: block
       margin: 0 auto
       max-width: 80px
@@ -72,11 +73,13 @@ h2
       height: 50px
       left: 0
       position: absolute
-      top: 0
-      width: 100%
+      top: -80px
+      left: -100px
+      width: 200px
 
     &:hover div
       display: block
+      z-index: 99
 
 
 .summary
