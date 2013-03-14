@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+
   has_many :events, order: 'events.created_at DESC'
   has_many :metrics, through: :events, order: 'events.created_at DESC'
 
@@ -6,6 +7,10 @@ class User < ActiveRecord::Base
   has_many :badges, through: :achievements, order: 'achievements.created_at DESC'
 
   scope :by_total_score, -> { order('total_score DESC, name ASC') }
+
+  def self.with_email email
+    where('? = ANY (emails)', email).first
+  end
 
   def email
     emails.first || ''

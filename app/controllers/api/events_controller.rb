@@ -1,8 +1,7 @@
 class Api::EventsController < ApiController
 
   def create
-    if metric = Metric.where(name: params['metric']).first
-      current_user.events << Event.create(user: current_user, metric: metric)
+    if new_event_for_user(metric)
       code = :ok
     else
       code = :not_found
@@ -11,5 +10,11 @@ class Api::EventsController < ApiController
     respond_to do |format|
       format.json { head code }
     end
+  end
+
+  private
+
+  def metric
+    Metric.where(name: params['metric']).first
   end
 end
