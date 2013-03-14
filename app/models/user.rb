@@ -7,6 +7,14 @@ class User < ActiveRecord::Base
 
   scope :by_total_score, -> { order('total_score DESC, name ASC') }
 
+  def email
+    emails.first
+  end
+
+  def email=(email)
+    emails << email unless emails.include? email
+  end
+
   def total_badges
     achievements.count
   end
@@ -23,4 +31,5 @@ class User < ActiveRecord::Base
   def metric_totals
     QueryObjects::MetricTotals.new(user: self)
   end
+
 end
