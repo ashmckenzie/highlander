@@ -68,16 +68,26 @@ h2
       max-width: 80px
 
     div
-      background: gold
+      +box-shadow(0 0 15px 1px rgba($primary-dark, .5))
+      background: $primary-dark
+      border-radius: 3px
+      color: #fff
       display: none
-      height: 50px
+      height: 90px
       left: 0
       position: absolute
-      top: -80px
-      left: -100px
-      width: 200px
+      padding: .5em 1em
+      top: -100px
+      left: -5.5em
+      width: 16em
 
-    &:hover div
+    h3
+      margin: 0
+    p
+      font-size: .9rem
+      margin: 0 0 .5em
+
+    &:hover div, &:first-child div
       display: block
       z-index: 99
 
