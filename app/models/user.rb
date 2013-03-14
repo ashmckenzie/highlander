@@ -21,6 +21,6 @@ class User < ActiveRecord::Base
   end
 
   def metric_totals
-    @metric_totals ||= QueryObjects::MetricTotals.new(Metric, self).select
+    QueryObjects::MetricTotals.new(Metric, self)
   end
 end

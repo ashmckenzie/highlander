@@ -13,7 +13,7 @@
   <h2>Score</h2>
 
   <table>
-    <%- @user.metrics_with_values.each do |metric| %>
+    <%- @user.metric_totals.each do |metric| %>
       <tr>
         <th><%= metric.description %></th>
         <td><%= metric.event_total %></td>
