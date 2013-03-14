@@ -12,11 +12,11 @@ class Api::Adapters::GithubController < Api::AdapterController
   private
 
   def payload
-    params[:payload]
+    JSON.parse(params[:payload])
   end
 
   def email_address
-    payload[:commits].first[:author][:email]
+    payload['commits'].first['author']['email']
   end
 
   def metric
