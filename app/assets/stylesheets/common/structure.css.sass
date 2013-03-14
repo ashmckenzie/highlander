@@ -1,19 +1,41 @@
 body
-  background: #eef6f7
+  background: $primary-ultra-light
+  color: darken($primary-dark, 10%)
 
 #main-header
-  background: #076b7f
+  background: $primary-dark
   color: #fff
   height: 50px
 
   h1
-    margin: 0
+    +shift(1)
+    +span-columns(4)
+    line-height: 50px
+    float: left
+    font-size: 1.7rem
+    margin-top: 0
 
+  nav
+    +shift(3)
+    +span-columns(3)
+    float: left
+    margin-top: 0
+
+  ul
+    list-style: none
+    overflow: auto
+    padding: 0
+
+  li
+    float: left
+    width: 30%
 
 #container
   +outer-container
 
   .main-column
+    +box-shadow(0 0 15px 0px rgba($primary-dark, .5))
     +shift(2)
     +span-columns(8)
-    background: red
+    background: #fff
+    padding: 1em
