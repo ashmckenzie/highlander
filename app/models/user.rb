@@ -20,8 +20,7 @@ class User < ActiveRecord::Base
     "http://gravatar.com/avatar/#{gravatar_id}.png?s=#{size}"
   end
 
-  def metrics_with_values
-    Metric.select('metrics.id, metrics.description, coalesce(sum(events.value), 0) as event_total').joins('left join events on events.metric_id = metrics.id').where('events.user_id = ? or events.user_id is null', id).group('metrics.id, metrics.description')
-    # select metrics.description, coalesce(sum(events.value), 0) from metrics left join events on events.metric_id = metrics.id where (events.user_id = 2 or events.user_id is null) group by metrics.description order by metrics.description;
+  def metric_totals
+    QueryObjects::MetricTotals.new(user: self)
   end
 end

@@ -1,22 +1,40 @@
-<table>
-  <%= render partial: 'shared/user', locals: { user: @user } %>
-</table>
+<div class="user">
+  <h2>Bio</h2>
+  <div class="avatar">
+    <%= image_tag @user.avatar_url %>
+  </div>
+  <div class="name-email">
+    <p class="name"><%= link_to @user.name, @user %></p>
+    <p class="email"><%= link_to @user.email, @user %></p>
+  </div>
+</div>
 
-<table>
-  <tr>
-    <%- @user.metrics_with_values.each do |metric| %>
-      <td><%= metric.description %></td>
-    <%- end %>
-  </tr>
-  <tr>
-    <%- @user.metrics_with_values.each do |metric| %>
-      <td><%= metric.event_total %></td>
-    <%- end %>
-  </tr>
-</table>
+<div class="score">
+  <h2>Score</h2>
 
-<table>
-  <%- @user.achievements.each do |achievement| %>
-    <%= render partial: 'shared/badge', locals: { badge: achievement.badge } %>
-  <%- end %>
-</table>
+  <table>
+    <%- @user.metric_totals.each do |metric| %>
+      <tr>
+        <th><%= metric.description %></th>
+        <td><%= metric.event_total %></td>
+      </tr>
+    <%- end %>
+    <tr class="total">
+      <th>Total</th>
+      <td><%= @user.total_score %></td>
+    </tr>
+  </table>
+</div>
+
+<div class="achievements">
+
+  <h2>Achievments</h2>
+
+  <table>
+    <%- @user.achievements.each do |achievement| %>
+      <%= render partial: 'shared/badge', locals: { badge: achievement.badge } %>
+    <%- end %>
+  </table>
+
+</div>
+

@@ -1,19 +1,23 @@
 <%- provide :pre_main do -%>
 <div class="hero">
-  <h2><em>Highlander</em> is Hooroo's office game. Earn badges and climb to the top of the rankings</h2>
+  <h2><em>Highlander</em> - Be awesome at your job, earn badges and become the leader</h2>
 </div>
 <%- end -%>
 
 <table class="ranking">
   <tr>
-    <th>Avatar</th>
-    <th>Name</th>
-    <th>Email</th>
+    <th></th>
+    <th></th>
     <th>Score</th>
     <th>Badges</th>
   </tr>
 
   <%- @users.each do |user| -%>
-    <%= render partial: 'shared/user', locals: { user: user } %>
+    <tr>
+      <td class="avatar"><%= image_tag user.avatar_url %></td>
+      <td class="name"><%= link_to user.name, user %></td>
+      <td class="total-score"><%= user.total_score %></td>
+      <td class="total-badges"><%= user.total_badges %></td>
+    </tr>
   <%- end -%>
 </table>
