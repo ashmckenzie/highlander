@@ -5,7 +5,7 @@ class User < ActiveRecord::Base
   has_many :achievements, order: 'achievements.created_at DESC'
   has_many :badges, through: :achievements, order: 'achievements.created_at DESC'
 
-  scope :by_total_score, -> { order('total_score DESC') }
+  scope :by_total_score, -> { order('total_score DESC, name ASC') }
 
   def total_badges
     achievements.count
