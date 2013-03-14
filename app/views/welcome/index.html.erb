@@ -5,13 +5,16 @@
 <%- end -%>
 
 <table class="ranking">
-  <tr>
-    <th></th>
-    <th></th>
-    <th>Score</th>
-    <th>Badges</th>
-  </tr>
+  <thead>
+    <tr>
+      <th scope="col">Avatar</th>
+      <th scope="col">Name</th>
+      <th scope="col">Total Score</th>
+      <th scope="col">Badges</th>
+    </tr>
+  </thead>
 
+  <tbody>
   <%- @users.each do |user| -%>
     <tr>
       <td class="avatar"><%= image_tag user.avatar_url %></td>
@@ -20,4 +23,5 @@
       <td class="total-badges"><%= user.total_badges %></td>
     </tr>
   <%- end -%>
+  </tbody>
 </table>
