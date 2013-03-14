@@ -2,19 +2,6 @@ body
   background: $primary-ultra-light
   color: darken($primary-dark, 10%)
 
-.hero
-  background: #fff
-  clear: both
-  height: 115px
-  margin-bottom: 30px
-  padding-top: 40px
-  text-align: center
-  h2
-    margin: 0
-    font-size: 2rem
-    font-weight: 300
-    line-height: 1em
-
 #main-header
   background: $primary-dark
   color: #fff
@@ -44,11 +31,24 @@ body
     float: left
     width: 30%
 
+.hero
+  background: #fff
+  clear: both
+  height: 115px
+  padding-top: 40px
+  text-align: center
+  h2
+    margin: 0
+    font-size: 2rem
+    font-weight: 300
+    line-height: 1em
+
 #container
   +outer-container
+  margin-top: 30px
 
   .main-column
-    +box-shadow(0 0 15px 0px rgba($primary-dark, .5))
+    +box-shadow(0 0 15px 0px rgba($primary-dark, .2))
     +shift(2)
     +span-columns(8)
     background: #fff
