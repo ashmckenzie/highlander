@@ -60,4 +60,5 @@ class Api::Adapters::GithubController < Api::AdapterController
   def metric
     Metric.where(name: metric_name).first
   end
+
 end
