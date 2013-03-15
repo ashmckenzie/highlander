@@ -38,6 +38,7 @@ class Api::Adapters::GithubController < Api::AdapterController
       50.57.231.61/32
       204.232.175.64/27
       192.30.252.0/22
+      127.0.0.1/32
 
     }.map do |ip|
      IPAddr.new(ip).to_range

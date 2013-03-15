@@ -42,8 +42,10 @@ class ApiController < ApplicationController
     return true if valid_request_sources.empty?
 
     valid_request_sources.each do |ip_range|
+      Rails.logger.info "Checking remote IP #{request_ip_address} against #{ip_range.inspect}"
       return true if ip_range.include?(request_ip_address)
     end
+
     raise InvalidRequestSource
   end
 
@@ -54,6 +56,7 @@ class ApiController < ApplicationController
   end
 
   def new_event_for_user metric
+    Rails.logger.info "Assigning metric '#{metric.name}' to '#{current_user.email}'"
     current_user.events << Event.create(user: current_user, metric: metric)
   end
 
