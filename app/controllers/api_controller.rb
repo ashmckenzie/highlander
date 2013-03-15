@@ -5,7 +5,7 @@ class ApiController < ApplicationController
   respond_to :json
 
   rescue_from InvalidUserToken do
-    render :text => "Could not authenticate user", :status => :unauthorized
+    render :text => "User is not authorised", :status => :unauthorized
   end
 
   before_filter :set_default_format, :set_current_user
@@ -18,11 +18,8 @@ class ApiController < ApplicationController
   protected
 
   def set_current_user
-    begin
-      @current_user ||= User.enabled.with_email(params[:email])
-    rescue
-      raise InvalidUserToken
-    end
+    @current_user ||= User.point_earner.with_email(params[:email])
+    raise InvalidUserToken if @current_user.nil?
   end
 
   private

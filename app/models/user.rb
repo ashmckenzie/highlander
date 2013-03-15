@@ -8,6 +8,9 @@ class User < ActiveRecord::Base
 
   scope :by_total_score, -> { order 'total_score DESC, name ASC' }
   scope :enabled, -> { where(enabled: true) }
+  scope :point_earner, -> { where(earns_points: true) }
+
+  default_scope -> { where(enabled: true) }
 
   def self.with_email email
     where('? = ANY (emails)', email).first
@@ -36,6 +39,22 @@ class User < ActiveRecord::Base
 
   def metric_totals
     QueryObjects::MetricTotals.new(user: self)
+  end
+
+  def enable!
+    update(enabled: true)
+  end
+
+  def disable!
+    update(enabled: false)
+  end
+
+  def can_earn_points!
+    update(earns_points: true)
+  end
+
+  def can_not_earn_points!
+    update(earns_points: false)
   end
 
 end
