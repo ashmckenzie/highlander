@@ -61,7 +61,7 @@ class ApiController < ApplicationController
   end
 
   def request_ip_address
-    IPAddr.new(env['REMOTE_ADDR'])
+    IPAddr.new(env['HTTP_X_REAL_IP'] || env['REMOTE_ADDR'])
   end
 
   def valid_request_sources
