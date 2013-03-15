@@ -19,7 +19,7 @@ class ApiController < ApplicationController
 
   def set_current_user
     begin
-      @current_user ||= User.with_email(params[:email])
+      @current_user ||= User.enabled.with_email(params[:email])
     rescue
       raise InvalidUserToken
     end
