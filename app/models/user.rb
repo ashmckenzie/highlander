@@ -13,7 +13,7 @@ class User < ActiveRecord::Base
   end
 
   def email
-    preferred_email
+    preferred_email || ''
   end
 
   def email=(email)
