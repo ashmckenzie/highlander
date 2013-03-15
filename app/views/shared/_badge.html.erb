@@ -1,6 +1,7 @@
-<%= image_tag badge_image_url(badge) %>
+<%= image_tag badge_image_url(achievement.badge) %>
+
 <div>
-  <h3 class="badge-name"><%= badge.description %></h3>
-  <p class="badge-description"><%= badge.tag %></p>
-  <p class="badge-date"><%= time_ago_in_words(badge.created_at).capitalize %> ago</p>
+  <h3 class="badge-name"><%= achievement.badge.description %></h3>
+  <p class="badge-description"><%= achievement.badge.tag %></p>
+  <p class="badge-date"><%= time_ago_in_words(achievement.created_at).capitalize %> ago</p>
 </div>

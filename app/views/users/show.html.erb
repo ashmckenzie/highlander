@@ -27,7 +27,7 @@
 
   <ul>
     <%- @user.achievements.each do |achievement| %>
-      <li><%= render partial: 'shared/badge', locals: { badge: achievement.badge } %></li>
+      <li><%= render partial: 'shared/badge', locals: { achievement: achievement } %></li>
     <%- end %>
   </ul>
 
