@@ -1,6 +1,8 @@
 class ApiController < ApplicationController
 
   class InvalidUserToken < RuntimeError ; end
+  class InvalidMetric < RuntimeError ; end
+  class InvalidRequestSource < RuntimeError ; end
 
   respond_to :json
 
@@ -8,7 +10,16 @@ class ApiController < ApplicationController
     render :text => "User is not authorised", :status => :unauthorized
   end
 
-  before_filter :set_default_format, :set_current_user
+  rescue_from InvalidMetric do
+    render :text => "Metric is invalid", :status => :error
+  end
+
+  rescue_from InvalidRequestSource do
+    render :text => "You are not authorised", :status => :error
+  end
+
+  before_filter :set_default_format, :set_current_user, :validate_metric
+
   skip_before_filter :verify_authenticity_token
 
   def current_user
@@ -22,6 +33,20 @@ class ApiController < ApplicationController
     raise InvalidUserToken if @current_user.nil?
   end
 
+  def validate_metric
+    raise InvalidMetric unless valid_metrics.include?(metric_name)
+    true
+  end
+
+  def validate_request_source
+    return true if valid_request_sources.empty?
+
+    valid_request_sources.each do |ip_range|
+      return true if ip_range.include?(request_ip_address)
+    end
+    raise InvalidRequestSource
+  end
+
   private
 
   def set_default_format
@@ -30,5 +55,21 @@ class ApiController < ApplicationController
 
   def new_event_for_user metric
     current_user.events << Event.create(user: current_user, metric: metric)
+  end
+
+  def request_ip_address
+    IPAddr.new(env['REMOTE_ADDR'])
+  end
+
+  def valid_request_sources
+    []
+  end
+
+  def valid_metrics
+    raise NotImplementedError
+  end
+
+  def metric_name
+    raise NotImplementedError
   end
 end
