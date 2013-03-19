@@ -7,15 +7,15 @@ class ApiController < ApplicationController
   respond_to :json
 
   rescue_from InvalidUserToken do
-    render :text => "User is not authorised", :status => :unauthorized
+    render text: "User is not authorised", status: :unauthorized
   end
 
   rescue_from InvalidMetric do
-    render :text => "Metric is invalid", :status => :error
+    render text: "Metric is invalid", status: :error
   end
 
   rescue_from InvalidRequestSource do
-    render :text => "You are not authorised", :status => :error
+    render text: "You are not authorised", status: :error
   end
 
   before_filter :set_default_format, :set_current_user, :validate_metric
