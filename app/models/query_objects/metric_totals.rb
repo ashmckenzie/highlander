@@ -2,7 +2,7 @@ module QueryObjects
 
   class MetricTotals
 
-    def initialize (relation: Metric.scoped, user: user)
+    def initialize(relation: Metric.scoped, user: user)
       @relation = relation
       @user     = user
     end
