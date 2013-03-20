@@ -10,27 +10,13 @@ gem 'pg'
 # Gems used only for assets and not required
 # in production environments by default.
 gem 'sass-rails',   '~> 4.0.0.beta1'
-
-group :heroku, :assets do
-  gem 'coffee-rails', '~> 4.0.0.beta1'
-  gem 'bourbon'
-  gem 'neat'
-  gem 'uglifier', '>= 1.0.3'
-end
-
 gem 'normalize-rails'
 gem 'jquery-rails'
-
-# # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
-# gem 'turbolinks'
-
-# Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.0.1'
-
 gem 'cancan'
 gem 'rails-observers'
-
 gem 'thor'
+gem 'twitter'
 
 group :development, :test do
   gem 'pry'
@@ -39,6 +25,13 @@ group :development, :test do
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'api_taster'
+end
+
+group :heroku, :assets do
+  gem 'coffee-rails', '~> 4.0.0.beta1'
+  gem 'bourbon'
+  gem 'neat'
+  gem 'uglifier', '>= 1.0.3'
 end
 
 group :heroku do
