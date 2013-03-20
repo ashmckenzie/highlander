@@ -191,4 +191,5 @@ DEPENDENCIES
   rspec-rails
   sass-rails (~> 4.0.0.beta1)
   thin
+  thor
   uglifier (>= 1.0.3)

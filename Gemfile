@@ -30,6 +30,8 @@ gem 'jbuilder', '~> 1.0.1'
 gem 'cancan'
 gem 'rails-observers'
 
+gem 'thor'
+
 group :development, :test do
   gem 'pry'
   gem 'rspec-rails'
