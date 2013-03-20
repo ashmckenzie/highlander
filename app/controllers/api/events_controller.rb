@@ -1,6 +1,8 @@
 class Api::EventsController < ApiController
 
   def create
+    binding.pry
+
     if new_event_for_user(metric)
       code = :ok
     else

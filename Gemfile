@@ -14,6 +14,7 @@ gem 'cancan'
 gem 'rails-observers'
 gem 'thor'
 gem 'twitter'
+gem 'typhoeus'
 
 group :development, :test do
   gem 'pry'

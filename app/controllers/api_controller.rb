@@ -29,7 +29,7 @@ class ApiController < ApplicationController
   protected
 
   def set_current_user
-    @current_user ||= User.point_earner.with_email(params[:email])
+    @current_user ||= User.point_earner.with_email(params[:email]) || User.point_earner.find_by_twitter_username(params[:twitter_username])
     raise InvalidUserToken if @current_user.nil?
   end
 
