@@ -32,7 +32,7 @@ User.destroy_all
 User.create(emails: ['ash@hooroo.com', 'ash@greenworm.com.au'], name: 'Ash McKenzie', bio: 'Software engineer, Boxer owner and craft beer & gaming connoisseur')
 User.create(emails: ['daniel@hooroo.com', 'locusdelicti@gmail.com'], name: 'Dan Bradford', bio: "PhD Candidate and researcher, Developer and FLOSS enthusiast with a dull sense of humour. You've been warned.")
 User.create(emails: ['stuart@hooroo.com', 'stuart.liston@gmail.com'], name: 'Stu Liston', bio: 'Scotsman in Melbourne. Husband, Pug Owner & Rubyist.')
-User.create(emails: ['andrei@hooroo.com'], name: 'Andrei Miulescu')
+User.create(emails: ['andrei@hooroo.com', 'lusu777@gmail.com'], name: 'Andrei Miulescu')
 User.create(emails: ['ashley@hooroo.com'], name: 'Ashley Cambrell', bio: 'Software dev. Web, Java, ROR')
 User.create(emails: ['chris@hooroo.com'], name:  'Chris Rode')
 User.create(emails: ['gabe@hooroo.com', 'gabe@rotbart.net', 'rotbart@gmail.com'], name: 'Gabriel Rotbart', bio: 'Sharpening the saw daily')
