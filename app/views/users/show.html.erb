@@ -40,7 +40,7 @@
     <%- @user.metric_totals.each do |metric| %>
       <li class="<%= metric.description %>">
          <span class="value"><strong><%= metric.event_total %></strong></span>
-         <span class="description"><%= metric.description.titleize %></span>
+         <span class="description"><%= metric.description.titleize.pluralize(metric.event_total) %></span>
       </li>
     <%- end %>
   </ul>
