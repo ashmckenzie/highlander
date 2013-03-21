@@ -40,6 +40,7 @@ module AchievementCalculator
     end
 
     def add_achievement_for_badge badge
+      Rails.logger.info "Adding '#{badge.name}' badge to '#{user.email}'"
       user.achievements << Achievement.create(badge: badge)
     end
   end
