@@ -4,10 +4,10 @@ require 'pry'
 require 'net/http'
 
 Twitter.configure do |config|
-  config.consumer_key = '880G7hBnwBBF11lFxMV3Q'
-  config.consumer_secret = 'aJzve69D6tToEeVadOUCgAbCxnET9DHaOUt0ZPwH2hg'
-  config.oauth_token = '66106097-9ICLkzdFqHBcFsW3bOGnfKtiKWPvSgb9WcEElUFHa'
-  config.oauth_token_secret = '2LWooYZ9Mrb3UoclySShppaPUlsbYBpsgG7NzsLhRRI'
+  config.consumer_key = 'tftvBCthb2Dzx6ccIAYkg'
+  config.consumer_secret = '2JI0mCn7hxJhmExU4jPBFox5wcfcPBQ059P6mAKkhg'
+  config.oauth_token = '15657534-DAClAfBX6VWiosAY4QDUCqP1DY9HFbo0d5HIZzyEr'
+  config.oauth_token_secret = 'Apj4Y7iEEqQJRxKWAOkuWSeoJAJSIz8P0YpS2Ys'
 end
 
 class TwitterIntegration < Thor
@@ -26,13 +26,13 @@ class TwitterIntegration < Thor
       }.to_json
     end
 
-    host = '0.0.0.0'
-    port = 3000
+    host = 'http://leaderboard.hooroo.com'
+    port = 80
     endpoint = '/api/events.json'
     metric = 'twitter_mention'
 
     tweets.each do |payload|
-      req = Net::HTTP::Post.new(endpoint, initheader = {'Content-Type' =>'application/json'})
+      req = Net::HTTP::Post.new(endpoint, initheader = { 'Content-Type' =>'application/json' })
       req.body = payload
       Net::HTTP.new(host, port).start { |http| http.request(req) }
     end
