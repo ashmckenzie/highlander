@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130320112916) do
+ActiveRecord::Schema.define(version: 20130228032505) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -49,15 +49,16 @@ ActiveRecord::Schema.define(version: 20130320112916) do
 
   create_table "users", force: true do |t|
     t.string   "name"
+    t.string   "email"
     t.integer  "total_score",                  default: 0
-    t.datetime "created_at"
-    t.datetime "updated_at"
     t.string   "emails",                       default: [],   array: true
     t.string   "bio",              limit: 128
     t.string   "preferred_email"
     t.boolean  "enabled",                      default: true
     t.boolean  "earns_points",                 default: true
     t.string   "twitter_username"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
 end

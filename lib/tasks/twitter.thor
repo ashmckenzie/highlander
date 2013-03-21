@@ -20,15 +20,20 @@ class TwitterIntegration < Thor
       {
         tweet_id: status.id,
         text: status.text,
-        twitter_username: status.user.screen_name,
+        twitter_username: 'stuliston',#status.user.screen_name,
         followers_count: status.user.followers_count,
         metric: 'twitter_mention'
       }.to_json
     end
 
-    host = 'http://leaderboard.hooroo.com'
-    port = 80
-    endpoint = '/api/events.json'
+    #host = 'http://leaderboard.hooroo.com'
+    #port = 80
+    #endpoint = '/api/adapters/twitter.json'
+    #metric = 'twitter_mention'
+
+    host = '0.0.0.0'
+    port = 3000
+    endpoint = '/api/adapters/twitter.json'
     metric = 'twitter_mention'
 
     tweets.each do |payload|
