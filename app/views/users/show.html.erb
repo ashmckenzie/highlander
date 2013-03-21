@@ -8,7 +8,9 @@
 
   <div class="info-block">
 
-  <h2><%= link_to @user.name, @user %></h2>
+  <h2 class="name"><%= link_to @user.name, @user %></h2>
+  <h3 class="twitter-handle"><%= @user.twitter_handle %></h3>
+
   <p class="bio"><%= @user.bio || "#{@user.name} hasn't added a bio yet." %></p>
 
   <ul class="stats">
