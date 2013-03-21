@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130321093650) do
+ActiveRecord::Schema.define(version: 20130321100800) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -40,6 +40,8 @@ ActiveRecord::Schema.define(version: 20130321093650) do
     t.datetime "updated_at"
     t.hstore   "data"
   end
+
+  add_index "events", ["data"], name: "events_gin_data"
 
   create_table "metrics", force: true do |t|
     t.string   "name"
