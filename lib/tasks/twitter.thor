@@ -1,6 +1,4 @@
 require 'twitter'
-require 'awesome_print'
-require 'pry'
 require 'net/http'
 
 Twitter.configure do |config|
