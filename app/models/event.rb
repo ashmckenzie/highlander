@@ -16,10 +16,12 @@ class Event < ActiveRecord::Base
       where("data ? :key", :key => key)
     end
 
+    def with_value(value)
+      where("data ? :value", :value => value.to_s)
+    end
+
     def with_key_and_value(key, value)
-      # http://schneems.com/post/19298469372/you-got-nosql-in-my-postgres-using-hstore-in-rails
-      # WTF
-      where("data @> (:key => :value)", :key => key, :value => value)
+      with_key(value).with_value(value)
     end
 
   end
