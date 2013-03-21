@@ -27,7 +27,7 @@ class TwitterIntegration < Thor
     end
 
     host = 'http://leaderboard.hooroo.com'
-    port = 80
+    port = ENV['PORT']
     endpoint = '/api/adapters/twitter.json'
     metric = 'twitter_mention'
 
