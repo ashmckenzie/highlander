@@ -19,7 +19,7 @@ class Api::EventsController < ApiController
   end
 
   def interested_in_metrics
-    Metric.all.map(&:name)
+    Metric::NAMES
   end
 
   def not_interested_in_metrics

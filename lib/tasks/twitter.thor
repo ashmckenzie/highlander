@@ -26,15 +26,15 @@ class TwitterIntegration < Thor
       }.to_json
     end
 
-    #host = 'http://leaderboard.hooroo.com'
-    #port = 80
-    #endpoint = '/api/adapters/twitter.json'
-    #metric = 'twitter_mention'
-
-    host = '0.0.0.0'
-    port = 3000
+    host = 'http://leaderboard.hooroo.com'
+    port = 80
     endpoint = '/api/adapters/twitter.json'
     metric = 'twitter_mention'
+
+    #host = '0.0.0.0'
+    #port = 3000
+    #endpoint = '/api/adapters/twitter.json'
+    #metric = 'twitter_mention'
 
     tweets.each do |payload|
       req = Net::HTTP::Post.new(endpoint, initheader = { 'Content-Type' =>'application/json' })

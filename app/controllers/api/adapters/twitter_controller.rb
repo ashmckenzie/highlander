@@ -1,7 +1,7 @@
 class Api::Adapters::TwitterController < Api::AdapterController
 
   def create
-    if current_tweet_already_persisted? || new_event_for_user(metric)
+    if current_tweet_already_persisted? || new_event_for_user(metric, data: current_tweet)
       code = :ok
     else
       code = :not_found
@@ -23,7 +23,7 @@ class Api::Adapters::TwitterController < Api::AdapterController
   private
 
   def current_tweet
-    @current_tweet ||= params['twitter']
+    @current_tweet ||= params['twitter'].with_indifferent_access
   end
 
   def current_tweet_already_persisted?

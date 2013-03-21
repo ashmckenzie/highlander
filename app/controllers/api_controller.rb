@@ -59,8 +59,8 @@ class ApiController < ApplicationController
     request.format = 'json'
   end
 
-  def new_event_for_user metric
-    current_user.events << Event.create(user: current_user, metric: metric)
+  def new_event_for_user(metric, data: nil)
+    current_user.events << Event.create(user: current_user, metric: metric, data: data)
   end
 
   def request_ip_address

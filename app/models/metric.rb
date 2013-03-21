@@ -4,7 +4,7 @@ class Metric < ActiveRecord::Base
 
   validate :default_unit, numericality: true
 
-  TYPES = %w{
+  NAMES = %w{
     github_push
     jenkins_green_job
     ming_pong_loss
