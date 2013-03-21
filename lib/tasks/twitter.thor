@@ -24,8 +24,8 @@ class TwitterIntegration < Thor
       }.to_json
     end
 
-    host = 'http://thequickening.herokuapp.com'
-    port = ENV['port']
+    host = 'leaderboard.hooroo.com'
+    port = 80
     endpoint = '/api/adapters/twitter.json'
     metric = 'twitter_mention'
 
