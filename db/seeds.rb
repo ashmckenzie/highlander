@@ -45,5 +45,5 @@ User.create(emails: ['mike@hooroo.com', 'mike@thealphatester.com'], name: 'Mike 
 User.create(emails: ['mikem@hooroo.com', 'me@mikemortimer.com'], name: 'Mike Mortimer', bio: 'Product Manager @Hooroo making Australian travel awesome')
 User.create(emails: ['peter@hooroo.com', 'peterlmoran@gmail.com'], name: 'Peter Moran')
 User.create(emails: ['phil@hooroo.com', 'metcalfe.phil@gmail.com'], name: 'Phil Metcalfe', bio: 'Technology & digital product enthusiast. Product Manager at http://hooroo.com . Still searching for the perfect t-shirt...')
-User.create(emails: ['sarah@hooroo.com'], name: 'Sarah Blayden')
+User.create(emails: ['sarah@hooroo.com', 'sarahblayden@gmail.com'], name: 'Sarah Blayden')
 User.create(emails: ['tim@hooroo.com', 'dangertimo@gmail.com'], name: 'Timothy Dang', bio: "the beautiful web' aficionado. UX designer, front-end developer & Javascript ninja in training")

@@ -20,10 +20,6 @@ class User < ActiveRecord::Base
     preferred_email || ''
   end
 
-  def email=(email)
-    emails << email unless emails.include? email
-  end
-
   def total_badges
     achievements.count
   end
