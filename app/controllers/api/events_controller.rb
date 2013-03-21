@@ -23,7 +23,7 @@ class Api::EventsController < ApiController
   end
 
   def not_interested_in_metrics
-    %w{ github_push }
+    %w{ github_push twitter_mention }
   end
 
   def metric_name
