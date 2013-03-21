@@ -16,11 +16,11 @@ gem 'thor'
 gem 'twitter'
 gem 'typhoeus'#, git: "https://github.com/typhoeus/typhoeus.git", branch: "master"
 gem 'draper'
+gem 'awesome_print'
 
 group :development, :test do
   gem 'pry'
   gem 'rspec-rails'
-  gem 'awesome_print'
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'api_taster'
