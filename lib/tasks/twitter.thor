@@ -20,7 +20,7 @@ class TwitterIntegration < Thor
       {
         tweet_id: status.id,
         text: status.text,
-        twitter_username: 'stuliston',#status.user.screen_name,
+        twitter_username: status.user.screen_name,
         followers_count: status.user.followers_count,
         metric: 'twitter_mention'
       }.to_json
