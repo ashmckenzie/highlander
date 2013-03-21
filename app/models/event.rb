@@ -21,7 +21,7 @@ class Event < ActiveRecord::Base
     end
 
     def with_key_and_value(key, value)
-      with_key(value).with_value(value)
+      with_key(key).with_value(value)
     end
 
   end
