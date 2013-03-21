@@ -1,39 +1,77 @@
 .ranking
+  list-style: none
+  padding: 0
   width: 100%
+
+  .rankee
+    border-bottom: 1px solid $grey-light
+    height: 100px
+    overflow: hidden
+    padding: .5em 0 0
+    position: relative
+
+    &:nth-child(2n+1)
+      background: $primary-ultra-light
+
+    &:hover
+      background: $secondary-ultra-light
+
+    &:nth-child(2), &:first-child
+      border-top: 1px solid $grey-light
+
+    &:first-child
+      margin-bottom: 20px
+
+
+  p
+    margin: 0
+
+  .avatar
+    +span-columns(1 of 5)
 
   img
     border-radius: 100%
     display: block
+    margin: 0 auto
 
-  th
-    &:nth-child(-n+2)
-      visibility: hidden
+  .details
+    +span-columns(3 of 5)
 
-  tr
-    &:nth-child(2n)
-      background: $primary-ultra-light
-    &:hover
-      background: $secondary-ultra-light
+    .name
+      +vag
+      font-size: 1.3rem
+      margin-top: .5em
 
-  th
-    height: 40px
-
-  td
-    padding: .5em
+    .bio
+      color: #aaa
+      font-size: .8rem
 
 
-  tbody
-    tr:first-child
-      background: lighten($secondary-light, 20%)
-      border-bottom: 20px solid #fff
-
+  // This needs to be improved
   .total-score, .total-badges
+    background: #69BF13
+    border-radius: 3px
+    color: #fff
+    font-size: .9em
+    font-weight: bold
+    height: 30px
+    line-height: 30px
+    margin-top: -25px
+    padding: 0 .5em
+    position: absolute
+    right: 20px
     text-align: center
+    top: 50%
+    width: 40px
+
+  .total-badges
+    right: 80px
 
   .last-updated
-    span
-      font-weight: bold
-    color: #aaa
-    font-size: 0.8em
-    position: relative
-    top: -10px
+    bottom: 5px
+    color: $primary-dark
+    font-size: .7rem
+    height: 25px
+    line-height: 25px
+    position: absolute
+    right: 20px

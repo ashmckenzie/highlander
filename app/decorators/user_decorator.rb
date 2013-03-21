@@ -11,9 +11,9 @@ class UserDecorator < Draper::Decorator
 
   def last_event_created_at
     if source.events.first
-      source.events.first.created_at.strftime("%d/%m/%Y %I:%M:%S %p")
+      source.events.first.created_at.strftime("%d/%m/%y %k:%M")
     else
-      'N/A'
+      ''
     end
   end
 end

@@ -4,27 +4,26 @@
 </div>
 <%- end -%>
 
-<table class="ranking">
-  <thead>
-    <tr>
-      <th scope="col">Avatar</th>
-      <th scope="col">Name</th>
-      <th scope="col">Total Score</th>
-      <th scope="col">Badges</th>
-    </tr>
-  </thead>
+<ul class="ranking">
 
-  <tbody>
   <%- @users.each do |user| -%>
-    <tr>
-      <td class="avatar"><%= image_tag user.avatar_url %></td>
-      <td class="name">
-        <p><%= link_to user.name, user %></p>
-        <p class="last-updated"><span>Updated:</span> <%= user.last_event_created_at %></p>
-      </td>
-      <td class="total-score"><%= user.total_score %></td>
-      <td class="total-badges"><%= user.total_badges %></td>
-    </tr>
+    <li class="rankee">
+
+      <p class="avatar"><%= image_tag user.avatar_url %></p>
+
+      <div class="details">
+        <p class="name"><%= link_to user.name, user %></p>
+        <p class="bio"><%= user.bio %></p>
+      </div>
+
+      <ul class="scores">
+        <li class="total-score"><%= user.total_score %></li>
+        <li class="total-badges"><%= user.total_badges %></li>
+      </ul>
+
+      <p class="last-updated"><%= user.last_event_created_at %></p>
+
+    </li>
   <%- end -%>
-  </tbody>
-</table>
+
+</ul>
