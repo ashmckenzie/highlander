@@ -4,4 +4,14 @@ class Metric < ActiveRecord::Base
 
   validate :default_unit, numericality: true
 
+  TYPES = %w{
+    github_push
+    jenkins_green_job
+    ming_pong_loss
+    ming_pong_victory
+    gift
+    express_yaself
+    twitter_mention
+  }
+
 end

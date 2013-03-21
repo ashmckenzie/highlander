@@ -5,8 +5,7 @@ class Event < ActiveRecord::Base
 
   validate :value, numericality: true
 
-  # Event.twitter_mentions etc
-  Metric.all.collect(&:name).each do |metric|
+  Metric::TYPES.each do |metric|
     scope metric.pluralize.to_sym, -> { joins(:metric).where("metrics.name = '#{metric}'") }
   end
 
