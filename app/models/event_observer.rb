@@ -17,7 +17,8 @@ class EventObserver < ActiveRecord::Observer
       AchievementCalculator::GithubPush,
       AchievementCalculator::JenkinsGreenJob,
       AchievementCalculator::MingPongVictory,
-      AchievementCalculator::MingPongLoss
+      AchievementCalculator::MingPongLoss,
+      AchievementCalculator::TwitterMention
     ]
   end
 
