@@ -27,7 +27,7 @@ class Api::Adapters::TwitterController < Api::AdapterController
   end
 
   def current_tweet_already_persisted?
-    Event.twitter_mentions.with_key_and_value('tweet_id', current_tweet['tweet_id'])
+    Event.twitter_mentions.with_key_and_value('tweet_id', current_tweet['tweet_id']).present?
   end
 
   def valid_metrics
