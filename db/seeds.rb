@@ -6,7 +6,7 @@ Metric.create(name: 'ming_pong_loss', description: 'Ming Pong loss')
 Metric.create(name: 'ming_pong_victory', default_unit: 2, description: 'Ming Pong victory')
 Metric.create(name: 'gift', description: 'A gift - good or bad!')
 Metric.create(name: 'express_yaself', description: 'Expressed Yaself!')
-Metric.create(name: 'twitter_mention', description: 'Twitter mention')
+Metric.create(name: 'twitter_mention', description: 'Twitter mention', default_unit: 10)
 
 Badge.destroy_all
 

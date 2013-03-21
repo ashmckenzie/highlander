@@ -45,6 +45,10 @@ class User < ActiveRecord::Base
     update(enabled: false)
   end
 
+  def recalculate_total_score!
+    update!(total_score: events.sum(:value))
+  end
+
   def can_earn_points!
     update(earns_points: true)
   end

@@ -39,10 +39,14 @@
   <h2>Summary</h2>
 
   <ul>
-    <%- @user.metric_totals.each do |metric| %>
-      <li class="<%= metric.description %>">
-         <span class="value"><strong><%= metric.event_total %></strong></span>
-         <span class="description"><%= metric.description.titleize.pluralize(metric.event_total) %></span>
+    <%- @user.metric_totals.each do |metric_total| %>
+      <li class="<%= metric_total.description %>">
+        <%
+          # TODO: We can provide point line items too using metric_total.event_total_value
+          # e.g. 20 points for 2 twitter mentions
+        %>
+         <span class="value"><strong><%= metric_total.event_total_count %></strong></span>
+         <span class="description"><%= metric_total.description.titleize.pluralize(metric_total.event_total_count) %></span>
       </li>
     <%- end %>
   </ul>

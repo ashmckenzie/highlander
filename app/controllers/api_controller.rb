@@ -60,7 +60,7 @@ class ApiController < ApplicationController
   end
 
   def new_event_for_user(metric, data: nil)
-    current_user.events << Event.create(user: current_user, metric: metric, data: data)
+    current_user.events << Event.create(user: current_user, metric: metric, value: metric.default_unit, data: data)
   end
 
   def request_ip_address

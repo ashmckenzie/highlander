@@ -2,7 +2,7 @@ module Queries
 
   class MetricTotals
 
-    def initialize(relation: Metric.scoped, user: user)
+    def initialize(relation: Metric.all, user: user)
       @relation = relation
       @user     = user
     end
@@ -17,8 +17,8 @@ module Queries
 
     def query
       relation
-        .select('metrics.id, metrics.description, coalesce(sum(events.value), 0) as event_total')
-        .joins('left join events on events.metric_id = metrics.id')
+        .select('metrics.id, metrics.description, sum(1) as event_total_count, coalesce(sum(events.value), 0) as event_total_value')
+        .joins('left outer join events on events.metric_id = metrics.id')
         .where('events.user_id = ?', user.id)
         .group('metrics.id, metrics.description')
     end

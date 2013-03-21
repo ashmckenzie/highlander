@@ -13,7 +13,7 @@ class EventObserver < ActiveRecord::Observer
   end
 
   def update_total_score_for! event
-    event.user.update(total_score: event.user.events.sum(:value))
+    event.user.recalculate_total_score!
   end
 
   def achievement_calculators
