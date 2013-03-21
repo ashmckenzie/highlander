@@ -18,7 +18,10 @@
   <%- @users.each do |user| -%>
     <tr>
       <td class="avatar"><%= image_tag user.avatar_url %></td>
-      <td class="name"><%= link_to user.name, user %></td>
+      <td class="name">
+        <p><%= link_to user.name, user %></p>
+        <p class="last-updated"><span>Updated:</span> <%= user.last_event_created_at %></p>
+      </td>
       <td class="total-score"><%= user.total_score %></td>
       <td class="total-badges"><%= user.total_badges %></td>
     </tr>
