@@ -28,6 +28,10 @@ Badge.create(name: '1_ming_pong_victory', tag: 'One small step forward', descrip
 Badge.create(name: '1_ming_pong_loss', tag: "Well that's to be expected", description: 'First Ming Pong loss')
 Badge.create(name: '10_ming_pong_victories', tag: 'Paddle master', description: '10 Ming Pong victories')
 
+Badge.create(name: '1_twitter_mention', tag: 'Fly fly little birdie!', description: 'First Hooroo Twitter mention')
+Badge.create(name: '25_twitter_mentions', tag: 'In a flutter', description: 'First Hooroo Twitter mention')
+Badge.create(name: '50_twitter_mentions', tag: 'Swoop in for the kill', description: 'First Hooroo Twitter mention')
+
 User.destroy_all
 
 User.create(emails: ['ash@hooroo.com', 'ash@greenworm.com.au'], name: 'Ash McKenzie', bio: 'Software engineer, Boxer owner and craft beer & gaming connoisseur')
