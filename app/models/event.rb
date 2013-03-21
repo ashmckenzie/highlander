@@ -17,7 +17,7 @@ class Event < ActiveRecord::Base
 
   def inspect
     self.reload
-    "Event(user: #{user.name}, metric: #{metric.name})"
+    "Event(user: #{user.try(:name)}, metric: #{metric.try(:name)})"
   end
 
 end
