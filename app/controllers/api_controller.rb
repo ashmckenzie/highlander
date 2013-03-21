@@ -60,7 +60,6 @@ class ApiController < ApplicationController
   end
 
   def new_event_for_user metric
-    Rails.logger.info "Assigning metric '#{metric.name}' to '#{current_user.email}'"
     current_user.events << Event.create(user: current_user, metric: metric)
   end
 

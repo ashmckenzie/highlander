@@ -34,7 +34,7 @@ class User < ActiveRecord::Base
   end
 
   def metric_totals
-    QueryObjects::MetricTotals.new(user: self)
+    Queries::MetricTotals.new(user: self)
   end
 
   def enable!
