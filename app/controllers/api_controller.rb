@@ -45,10 +45,10 @@ class ApiController < ApplicationController
       if ip_range.include?(request_ip_address)
         Rails.logger.info "MATCH on remote IP #{request_ip_address} against #{ip_range.inspect}"
         return true
-      else
-        Rails.logger.info "NO match on remote IP #{request_ip_address} against #{ip_range.inspect}"
       end
     end
+
+    Rails.logger.info "NO match on remote IP #{request_ip_address}"
 
     raise InvalidRequestSource
   end
