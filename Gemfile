@@ -14,7 +14,7 @@ gem 'cancan'
 gem 'rails-observers'
 gem 'thor'
 gem 'twitter'
-gem 'typhoeus'
+gem 'typhoeus', git: "https://github.com/typhoeus/typhoeus.git", branch: "master"
 gem 'draper'
 
 group :development, :test do

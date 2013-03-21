@@ -18,6 +18,9 @@ module Highlander
     config.time_zone = 'Melbourne'
     config.active_record.observers = :event_observer
 
+    #fonts path
+    config.assets.paths << "#{Rails.root}/app/assets/fonts"
+
     #sass, beeeatch
     config.sass.preferred_syntax = :sass
   end
