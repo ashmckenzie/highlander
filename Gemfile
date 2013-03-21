@@ -15,6 +15,7 @@ gem 'rails-observers'
 gem 'thor'
 gem 'twitter'
 gem 'typhoeus'
+gem 'draper'
 
 group :development, :test do
   gem 'pry'
