@@ -1,19 +1,27 @@
 require 'twitter'
 require 'net/http'
-
-Twitter.configure do |config|
-  config.consumer_key = 'tftvBCthb2Dzx6ccIAYkg'
-  config.consumer_secret = '2JI0mCn7hxJhmExU4jPBFox5wcfcPBQ059P6mAKkhg'
-  config.oauth_token = '15657534-DAClAfBX6VWiosAY4QDUCqP1DY9HFbo0d5HIZzyEr'
-  config.oauth_token_secret = 'Apj4Y7iEEqQJRxKWAOkuWSeoJAJSIz8P0YpS2Ys'
-end
+require File.expand_path('../../../config/initializers/twitter', __FILE__)
 
 class TwitterIntegration < Thor
 
   desc 'scan_for_mentions', 'scans twitter for mentions of Hooroo'
   def scan_for_mentions
 
-    tweets = twitter_client.mentions_timeline.collect do |status|
+    tweets.each do |payload|
+      req = Net::HTTP::Post.new(config.endpoint, initheader = { 'Content-Type' =>'application/json' })
+      req.body = payload
+      Net::HTTP.new(config.host, config.port).start { |http| http.request(req) }
+    end
+  end
+
+  private
+
+  def config
+    TwitterConfig
+  end
+
+  def tweets
+    twitter_client.mentions_timeline.collect do |status|
       {
         tweet_id: status.id,
         text: status.text,
@@ -22,27 +30,11 @@ class TwitterIntegration < Thor
         metric: 'twitter_mention'
       }.to_json
     end
-
-    host = 'leaderboard.hooroo.com'
-    port = 80
-    endpoint = '/api/adapters/twitter.json'
-    metric = 'twitter_mention'
-
-    # TODO: Perhaps we need a twitter.yml config that has development / production keys ?
-    #
-    # host = '0.0.0.0'
-    # port = 3000
-    # endpoint = '/api/adapters/twitter.json'
-    # metric = 'twitter_mention'
-
-    tweets.each do |payload|
-      req = Net::HTTP::Post.new(endpoint, initheader = { 'Content-Type' =>'application/json' })
-      req.body = payload
-      Net::HTTP.new(host, port).start { |http| http.request(req) }
-    end
   end
 
-  private
+  def metric
+    'twitter_mention'
+  end
 
   def twitter_client
     @twitter_client ||= begin

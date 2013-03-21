@@ -1,0 +1,17 @@
+---
+default: &default
+  endpoint: /api/adapters/twitter.json
+  consumer_key: tftvBCthb2Dzx6ccIAYkg
+  consumer_secret: 2JI0mCn7hxJhmExU4jPBFox5wcfcPBQ059P6mAKkhg
+  oauth_token: 15657534-DAClAfBX6VWiosAY4QDUCqP1DY9HFbo0d5HIZzyEr
+  oauth_token_secret: Apj4Y7iEEqQJRxKWAOkuWSeoJAJSIz8P0YpS2Ys
+
+development:
+  <<: *default
+  host: localhost
+  port: 3000
+
+production:
+  <<: *default
+  host: leaderboard.hooroo.com
+  port: 80
