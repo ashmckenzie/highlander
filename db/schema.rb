@@ -11,10 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130228032505) do
+ActiveRecord::Schema.define(version: 20130321093650) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+  enable_extension "hstore"
 
   create_table "achievements", force: true do |t|
     t.integer  "user_id"
@@ -37,6 +38,7 @@ ActiveRecord::Schema.define(version: 20130228032505) do
     t.integer  "value",      default: 1
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.hstore   "data"
   end
 
   create_table "metrics", force: true do |t|
