@@ -1,0 +1,19 @@
+.flash
+  background: red
+  font-size: .8rem
+  height: 50px
+  padding: 15px 0 0 0
+  width: 100%
+
+  &.warning
+    background: $flash-warning
+    color: $flash-warning-text
+  &.success
+  &.error
+
+  > div
+    +outer-container
+
+  p
+    line-height: .7em
+    margin: 0 0 .5em
