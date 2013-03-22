@@ -1,8 +1,5 @@
 class User < ActiveRecord::Base
 
-  # extend FriendlyId
-  # friendly_id :name, use: :slugged
-
   has_many :events, -> { order 'events.created_at DESC' }
   has_many :metrics, -> { order 'events.created_at DESC' }, through: :events
 
@@ -14,6 +11,9 @@ class User < ActiveRecord::Base
   scope :point_earner, -> { where(earns_points: true) }
 
   default_scope -> { where(enabled: true) }
+
+  # extend FriendlyId
+  # friendly_id :name, use: :slugged
 
   def self.with_email email
     where('? = ANY (emails)', email).first
