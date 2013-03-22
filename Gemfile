@@ -18,6 +18,7 @@ gem 'typhoeus'#, git: "https://github.com/typhoeus/typhoeus.git", branch: "maste
 gem 'draper'
 gem 'awesome_print'
 gem 'hashie'
+gem 'friendly_id', github: 'norman/friendly_id', branch: 'rails4'
 
 group :development, :test do
   gem 'pry'
