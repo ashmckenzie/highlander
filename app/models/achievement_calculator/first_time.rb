@@ -2,7 +2,7 @@ module AchievementCalculator
   class FirstTime < AchievementCalculator::Base
 
     def calculate!
-      if name = badges[total_score]
+      if name = badges[total_events]
         add_achievement_for_badge badge_for(name)
       end
     end
@@ -13,8 +13,8 @@ module AchievementCalculator
       { 1 => 'first_time' }
     end
 
-    def total_score
-      user.total_score
+    def total_events
+      user.events.count
     end
   end
 end
