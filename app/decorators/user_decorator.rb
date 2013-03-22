@@ -9,6 +9,10 @@ class UserDecorator < Draper::Decorator
     end
   end
 
+  def id_or_slug
+    source.slug.present? ? source.slug : source.id
+  end
+
   def last_event_created_at
     if source.events.first
       source.events.first.created_at.strftime("%d/%m/%y %k:%M")

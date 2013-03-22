@@ -12,7 +12,7 @@
       <p class="avatar"><%= image_tag user.avatar_url %></p>
 
       <div class="details">
-        <p class="name"><%= link_to user.name, user %></p>
+        <p class="name"><%= link_to user.name, user_path(user.id_or_slug) %></p>
         <p class="bio"><%= user.bio %></p>
       </div>
 

@@ -15,6 +15,36 @@ class User < ActiveRecord::Base
   # extend FriendlyId
   # friendly_id :name, use: :slugged
 
+  class << self
+    alias_method :original_find, :find
+  end
+
+  module QueryMethods
+    module ClassMethods
+
+      def with_id_or_slug lookup
+        if lookup.match(/^\d+$/)
+          query = "#{table_name}.id = ?"
+        else
+          query = "#{table_name}.slug = ?"
+        end
+        where(query, lookup).first
+      end
+    end
+
+    def self.included(base)
+      base.extend ClassMethods
+      base.class_eval do
+        class << self
+          alias_method :original_find, :find
+          alias_method :find, :with_id_or_slug
+        end
+      end
+    end
+  end
+
+  include QueryMethods
+
   def self.with_email email
     where('? = ANY (emails)', email).first
   end
