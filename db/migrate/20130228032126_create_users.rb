@@ -26,7 +26,7 @@ class CreateUsers < ActiveRecord::Migration
     User.create(emails: ['michael@hooroo.com'], name: 'Michael Krzanich', bio: "Hiya, I'm a UX guy based in beautiful Melbourne Australia.")
     User.create(emails: ['mike@hooroo.com', 'mike@thealphatester.com'], name: 'Mike Bain', bio: 'Alpha Tester')
     User.create(emails: ['me@mikemortimer.com', 'mikem@hooroo.com'], name: 'Mike Mortimer', bio: 'Product Manager @Hooroo making Australian travel awesome')
-    User.create(emails: ['peter@hooroo.com', 'peterlmoran@gmail.com'], name: 'Peter Moran')
+    User.create(emails: ['peter@hooroo.com', 'peterlmoran@gmail.com', 'workingpeter@gmail.com'], name: 'Peter Moran')
     User.create(emails: ['phil@hooroo.com', 'metcalfe.phil@gmail.com'], name: 'Phil Metcalfe', bio: 'Technology & digital product enthusiast. Product Manager at http://hooroo.com . Still searching for the perfect t-shirt...')
     User.create(emails: ['sarah@hooroo.com', 'sarahblayden@gmail.com'], name: 'Sarah Blayden')
     User.create(emails: ['tim@hooroo.com', 'dangertimo@gmail.com'], name: 'Timothy Dang', bio: "the beautiful web' aficionado. UX designer, front-end developer & Javascript ninja in training")
