@@ -15,7 +15,7 @@ Highlander::Application.routes.draw do
   get   '/signout' => 'sessions#destroy', as: :signout
   post  '/auth/google_apps/callback' => 'sessions#create'
 
-  resources :users, only: [ :index, :show, :edit ]
+  resources :users
 
   root to: 'welcome#index'
 

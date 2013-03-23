@@ -8,6 +8,10 @@
 
   <div class="info-block">
 
+  <% if can? :edit, @user %>
+    <%= link_to 'edit', edit_user_path(current_user) %></li>
+  <% end %>
+
   <h2 class="name"><%= link_to @user.name, @user %></h2>
   <h3 class="twitter-handle"><%= @user.twitter_handle %></h3>
 

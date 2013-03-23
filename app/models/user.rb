@@ -12,8 +12,7 @@ class User < ActiveRecord::Base
 
   default_scope -> { where(enabled: true) }
 
-  # extend FriendlyId
-  # friendly_id :name, use: :slugged
+  after_save :update_slug
 
   class << self
     alias_method :original_find, :find
@@ -44,6 +43,10 @@ class User < ActiveRecord::Base
   end
 
   include QueryMethods
+
+  def to_param
+    slug
+  end
 
   def self.with_email email
     where('? = ANY (emails)', email).first
@@ -88,6 +91,10 @@ class User < ActiveRecord::Base
 
   def can_not_earn_points!
     update(earns_points: false)
+  end
+
+  def update_slug
+    update(slug: name.parameterize) unless slug == name.parameterize
   end
 
 end

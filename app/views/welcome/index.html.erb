@@ -1,7 +1,7 @@
 <%- provide :pre_main do -%>
-<div class="hero">
-  <h2>Be awesome at what you do, earn badges and become the leader!</h2>
-</div>
+  <div class="hero">
+    <h2>Be awesome at what you do, earn badges and become the leader!</h2>
+  </div>
 <%- end -%>
 
 <ul class="ranking">
@@ -12,7 +12,7 @@
       <p class="avatar"><%= image_tag user.avatar_url %></p>
 
       <div class="details">
-        <p class="name"><%= link_to user.name, user_path(user.id_or_slug) %></p>
+        <p class="name"><%= link_to user.name, user_path(user) %></p>
         <p class="bio"><%= user.bio %></p>
       </div>
 

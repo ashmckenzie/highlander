@@ -1,0 +1,20 @@
+<%- provide :head do -%>
+   <%= stylesheet_link_tag :user -%>
+<%- end -%>
+
+<p class="avatar"><%= image_tag @user.avatar_url 150 %></p>
+
+<%= form_for @user, :url => { :action => "update" } do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <%= f.label :preferred_email %>
+  <%= f.text_field :preferred_email %>
+
+  <%= f.label :twitter_username %>
+  <%= f.text_field :twitter_username %>
+
+  <%= f.submit "Save" %>
+  <%= link_to 'cancel', user_path(@user) %>
+
+<% end %>
