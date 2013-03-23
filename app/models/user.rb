@@ -23,7 +23,7 @@ class User < ActiveRecord::Base
     module ClassMethods
 
       def with_id_or_slug lookup
-        if lookup.match(/^\d+$/)
+        if lookup.to_s.match(/^\d+$/)
           query = "#{table_name}.id = ?"
         else
           query = "#{table_name}.slug = ?"

@@ -25,8 +25,13 @@
 
         <nav>
           <ul>
-            <li><a href="">Rankings</a></li>
-            <li><a href="">Users</a></li>
+            <% if signed_in? %>
+              <li><%= current_user.name %></li>
+              <li><%= current_user.name %></li>
+              <li><%= link_to 'Sign out', signout_path %></li>
+            <% else %>
+              <li><a href="/auth/google_apps">Sign in</a></li>
+            <% end %>
           </ul>
         </nav>
       </div>

@@ -12,7 +12,10 @@ Highlander::Application.routes.draw do
   namespace :admin do
   end
 
-  resources :users, only: [ :index, :show ]
+  get   '/signout' => 'sessions#destroy', as: :signout
+  post  '/auth/google_apps/callback' => 'sessions#create'
+
+  resources :users, only: [ :index, :show, :edit ]
 
   root to: 'welcome#index'
 

@@ -19,6 +19,7 @@ gem 'draper'
 gem 'awesome_print'
 gem 'hashie'
 gem 'friendly_id', github: 'norman/friendly_id', branch: 'rails4'
+gem 'omniauth-google-apps'
 
 group :development, :test do
   gem 'pry'
