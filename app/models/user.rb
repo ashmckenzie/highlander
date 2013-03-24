@@ -1,18 +1,15 @@
 class User < ActiveRecord::Base
 
-  has_many :events, -> { order 'events.created_at DESC' }
-  has_many :metrics, -> { order 'events.created_at DESC' }, through: :events
-
+  has_many :events,       -> { order 'events.created_at DESC' }
+  has_many :metrics,      -> { order 'events.created_at DESC' }, through: :events
   has_many :achievements, -> { order 'achievements.created_at DESC' }
-  has_many :badges, -> { order 'achievements.created_at DESC' }, through: :achievements
-
-  scope :by_total_score, -> { order 'total_score DESC, name ASC' }
-  scope :enabled, -> { where(enabled: true) }
-  scope :point_earner, -> { where(earns_points: true) }
+  has_many :badges,       -> { order 'achievements.created_at DESC' }, through: :achievements
 
   default_scope -> { where(enabled: true) }
 
-  after_save :update_slug
+  scope :by_total_score,  -> { order 'total_score DESC, name ASC' }
+  scope :enabled,         -> { where(enabled: true) }
+  scope :point_earner,    -> { where(earns_points: true) }
 
   class << self
     alias_method :original_find, :find
@@ -91,10 +88,6 @@ class User < ActiveRecord::Base
 
   def can_not_earn_points!
     update(earns_points: false)
-  end
-
-  def update_slug
-    update(slug: name.parameterize) unless slug == name.parameterize
   end
 
 end
