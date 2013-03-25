@@ -1,15 +1,18 @@
-// Colours
+// Main palette
 
-$primary-dark:           #076b7f
-$primary-light:          #44cabe
-$primary-ultra-light:    #eef6f7
+$colours: #ECD078 #D95B43 #C02942 #542437 #53777A
 
-$secondary-light:        #fcee55
-$secondary-ultra-light:  lighten($secondary-light, 30%)
+// Sheeat! This function could be so much smarter if sass was a bit more powerful
+@function palette($colour-number: 3, $operation: normal, $amount: 0)
+  $colour: nth($colours, $colour-number)
 
-$grey-light:             #eaeaea
+  @if $operation == lighten
+    $colour: lighten( $colour, $amount )
 
-$tertiary:               #eef6f7
+  @return $colour
+
+
+// Flashes
 
 $flash-warning:          #fcf8e3
 $flash-warning-text:     darken($flash-warning, 63%)

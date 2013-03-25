@@ -1,9 +1,11 @@
 .flash
   background: red
-  font-size: .8rem
-  height: 55px
+  height: 45px
   padding: 15px 0 0 0
   width: 100%
+
+  &.topmost
+    border-bottom: 1px solid
 
   &.warning
     background: $flash-warning
@@ -15,5 +17,6 @@
     +outer-container
 
   p
-    line-height: .7em
+    font-size: .8rem
+    line-height: 1em
     margin: 0 0 .5em

@@ -33,6 +33,12 @@
 
   <body>
 
+    <div class="flash warning topmost">
+      <div>
+        <p>Attention shoppers! <strong>Highlander</strong> is still in experimental stage. Don't worry if you notice fluctuations in your total score. We're still determining how many points each activity deserves.</p>
+      </div>
+    </div>
+
     <header id="main-header" class="top-header">
       <div class="container">
         <h1><%= link_to "Highlander", root_path %></h1>
@@ -53,13 +59,6 @@
     </header>
 
     <%= yield :pre_main %>
-
-    <div class="flash warning">
-      <div>
-        <p>Attention shoppers! <strong>Highlander</strong> is still in experimental stage.</p>
-        <p>Don't worry if you notice fluctuations in your total score. We're still determining how many points each activity deserves.</p>
-      </div>
-    </div>
 
     <div id="main-container" class="container">
       <div class="main-column">

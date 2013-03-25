@@ -1,17 +1,19 @@
 body
-  background: $primary-ultra-light
-  color: darken($primary-dark, 10%)
+  background: palette(1, lighten, 25)
+  color: darken(hotpink, 10%)
 
 #main-header
-  background: $primary-dark
-  color: #fff
-  height: 50px
+  background: palette(1, lighten, 25)
+  height: 80px
+
+  a
+    color: palette(2)
 
   h1
     +span-columns(4)
-    line-height: 50px
+    line-height: 80px
     float: left
-    font-size: 1.7rem
+    font-size: 2.2rem
     margin-bottom: 0
     margin-top: 0
 
@@ -31,15 +33,17 @@ body
     width: 30%
 
 .hero
-  background: #fff
+  background: palette(2)
+  color: palette(1, lighten, 25)
   clear: both
-  height: 115px
+  height: 300px
   padding-top: 40px
   text-align: center
+  text-shadow: 0 1px 0 palette(3)
 
   h2
     +vag(thin)
-    font-size: 2rem
+    font-size: 2.4rem
     line-height: 1em
     margin: 0
 
@@ -51,8 +55,6 @@ body
   margin-top: 30px
 
   .main-column
-    +box-shadow(0 0 15px 0px rgba($primary-dark, .2))
-    +shift(2)
-    +span-columns(8)
+    +box-shadow(0 0 15px 0px rgba(hotpink, .2))
     background: #fff
     padding: 1em
