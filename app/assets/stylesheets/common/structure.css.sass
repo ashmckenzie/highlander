@@ -1,6 +1,6 @@
 body
   background: palette(1, lighten, 25)
-  color: palette(4)
+  color: palette(3)
 
 #main-header
   background: palette(1, lighten, 25)
@@ -17,6 +17,7 @@ body
     margin-bottom: 0
     margin-top: 0
     position: relative
+    z-index: 99
 
     a
       +hide-text
@@ -24,7 +25,7 @@ body
       display: block
       height: 137px
       position: absolute
-      top: -25px
+      top: -40px
       width: 181px
 
 
@@ -40,23 +41,23 @@ body
     padding: 0
 
   li
-    +span-columns(2 of 7)
+    +span-columns(2 of 12)
     height: 35px
     line-height: 35px
     float: left
 
     &.username
-      +span-columns(3 of 7)
+      +span-columns(8 of 12)
       color: palette(6)
       font-size: .9em
       text-align: right
 
     &.sign-in
-      +shift(5)
+      +shift(10)
 
     a
       +hl-button
-      font-size: .9em
+      font-size: .8em
 
 .hero
   background: palette(2, $texture: true)
@@ -77,10 +78,19 @@ body
   +outer-container
 
 #main-container
+  +box-shadow(0 0 15px 0px rgba(palette(4), .3))
+  background: palette(1, lighten, 100)
+  // margin-top: 5px
   margin-bottom: 30px
-  margin-top: 30px
+  position: relative
+  z-index: 0
 
-  .main-column
-    +box-shadow(0 0 15px 0px rgba(palette(4), .3))
-    background: #fff
-    padding: 1em
+.main-column
+  +span-columns(8)
+
+.sidebar
+  +span-columns(4)
+  border-left: 1px solid palette(5, lighten, 45)
+  position: absolute
+  right: 0
+  height: 100%

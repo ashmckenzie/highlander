@@ -2,43 +2,42 @@
    <%= stylesheet_link_tag :user -%>
 <%- end -%>
 
-<section class="user-details">
+<div class="user-details main-column">
 
-  <p class="avatar"><%= image_tag @user.avatar_url 150 %></p>
+  <section class="info-block">
 
-  <div class="info-block">
+    <p class="avatar"><%= image_tag @user.avatar_url 150 %></p>
 
-  <% if can? :edit, @user %>
-    <%= link_to 'edit', edit_user_path(current_user) %></li>
-  <% end %>
+    <h2 class="name">
+      <%= link_to @user.name, @user %>
+      <% if can? :edit, @user %><sup>(<%= link_to 'edit', edit_user_path(current_user) %>)</sup><% end %>
+    </h2>
+    <h3 class="twitter-handle"><%= @user.twitter_handle %></h3>
 
-  <h2 class="name"><%= link_to @user.name, @user %></h2>
-  <h3 class="twitter-handle"><%= @user.twitter_handle %></h3>
+    <p class="bio"><%= @user.bio %></p>
 
-  <p class="bio"><%= @user.bio %></p>
+  </section>
+
+  <section class="badges">
+
+    <h2>Badges</h2>
+
+    <ul>
+      <%- @user.achievements.each do |achievement| %>
+        <li><%= render partial: 'shared/badge', locals: { achievement: achievement } %></li>
+      <%- end %>
+    </ul>
+
+  </section>
+
+</div>
+
+<section class="summary sidebar">
 
   <ul class="stats">
     <li class="total-score"><span><%= @user.total_score %></span> Total Score</li>
     <li class="total-badges"><span><%= @user.achievements.count %></span> Badges</li>
   </ul>
-
-  </div>
-
-</section>
-
-<section class="badges">
-
-  <h2>Badges</h2>
-
-  <ul>
-    <%- @user.achievements.each do |achievement| %>
-      <li><%= render partial: 'shared/badge', locals: { achievement: achievement } %></li>
-    <%- end %>
-  </ul>
-
-</section>
-
-<section class="summary">
 
   <h2>Summary</h2>
 
