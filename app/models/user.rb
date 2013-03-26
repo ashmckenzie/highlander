@@ -61,11 +61,6 @@ class User < ActiveRecord::Base
     events.joins(:metric).where("metrics.name = ?", metric.name)
   end
 
-  def avatar_url size=80
-    gravatar_id = Digest::MD5::hexdigest(email).downcase
-    "http://gravatar.com/avatar/#{gravatar_id}.png?s=#{size}"
-  end
-
   def metric_totals
     Queries::MetricTotals.new(user: self)
   end
