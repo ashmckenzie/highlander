@@ -1,6 +1,6 @@
-require "spec_helper"
+require 'spec_helper'
 
-feature "Twitter Mentions" do
+feature 'Twitter Mentions' do
 
   background do
     @first_time_badge     = FactoryGirl.create(:first_time)
@@ -26,13 +26,13 @@ feature "Twitter Mentions" do
     }
   end
 
-  scenario "User twets mentioning @Hooroo" do
+  scenario 'User twets mentioning @Hooroo' do
 
     visit user_path(user)
     page.should have_content @first_time_badge.description
     page.should have_content @one_twitter_mention.description
 
     page.should have_content "#{twitter_mention_metric.default_unit} Total Score"
-    page.should have_content "2 Badges"
+    page.should have_content '2 Badges'
   end
 end
