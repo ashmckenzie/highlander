@@ -44,13 +44,6 @@ GEM
       multi_json (~> 1.3)
       thread_safe (~> 0.1)
       tzinfo (~> 0.3.33)
-    api_taster (0.6.0)
-      bootstrap-sass (~> 2.1)
-      jquery-rails
-      rails (>= 3.1.0)
-      redcarpet
-      remotipart (~> 1.0)
-      sass-rails
     arel (4.0.0.beta1)
     atomic (1.0.1)
     awesome_print (1.1.0)
@@ -59,13 +52,20 @@ GEM
       erubis (>= 2.6.6)
     binding_of_caller (0.7.1)
       debug_inspector (>= 0.0.1)
-    bootstrap-sass (2.3.0.1)
-      sass (~> 3.2)
     bourbon (3.1.1)
       sass (>= 3.2.0)
       thor
     builder (3.1.4)
     cancan (1.6.9)
+    capybara (2.0.2)
+      mime-types (>= 1.16)
+      nokogiri (>= 1.3.3)
+      rack (>= 1.0.0)
+      rack-test (>= 0.5.4)
+      selenium-webdriver (~> 2.0)
+      xpath (~> 1.0.0)
+    childprocess (0.3.9)
+      ffi (~> 1.0, >= 1.0.11)
     coderay (1.0.9)
     coffee-rails (4.0.0.beta1)
       coffee-script (>= 2.2.0)
@@ -85,8 +85,14 @@ GEM
     eventmachine (1.0.1)
     execjs (1.4.0)
       multi_json (~> 1.0)
+    factory_girl (4.2.0)
+      activesupport (>= 3.0.0)
+    factory_girl_rails (4.2.1)
+      factory_girl (~> 4.2.0)
+      railties (>= 3.0.0)
     faraday (0.8.6)
       multipart-post (~> 1.1)
+    ffi (1.5.0)
     hashie (1.2.0)
     hike (1.2.1)
     i18n (0.6.4)
@@ -108,6 +114,7 @@ GEM
     neat (1.2.0)
       bourbon (>= 2.1)
       sass (>= 3.2)
+    nokogiri (1.5.9)
     normalize-rails (2.0.1)
     omniauth (1.1.3)
       hashie (~> 1.2)
@@ -150,8 +157,6 @@ GEM
     rake (10.0.3)
     rdoc (3.12.2)
       json (~> 1.4)
-    redcarpet (2.2.2)
-    remotipart (1.0.5)
     request_store (1.0.5)
     rspec-core (2.13.0)
     rspec-expectations (2.13.0)
@@ -167,12 +172,18 @@ GEM
     ruby-openid (2.2.3)
     ruby-openid-apps-discovery (1.2.0)
       ruby-openid (>= 2.1.7)
+    rubyzip (0.9.9)
     sass (3.2.6)
     sass-rails (4.0.0.beta1)
       railties (>= 4.0.0.beta, < 5.0)
       sass (>= 3.1.10)
       sprockets-rails (~> 2.0.0.rc0)
       tilt (~> 1.3)
+    selenium-webdriver (2.31.0)
+      childprocess (>= 0.2.5)
+      multi_json (~> 1.0)
+      rubyzip
+      websocket (~> 1.0.4)
     simple_oauth (0.2.0)
     slop (3.4.3)
     sprockets (2.9.0)
@@ -205,19 +216,23 @@ GEM
     uglifier (1.3.0)
       execjs (>= 0.3.0)
       multi_json (~> 1.0, >= 1.0.2)
+    websocket (1.0.7)
+    xpath (1.0.0)
+      nokogiri (~> 1.3)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
-  api_taster
   awesome_print
   better_errors
   binding_of_caller
   bourbon
   cancan
+  capybara
   coffee-rails (~> 4.0.0.beta1)
   draper
+  factory_girl_rails
   friendly_id!
   hashie
   jbuilder (~> 1.0.1)

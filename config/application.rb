@@ -16,12 +16,16 @@ end
 module Highlander
   class Application < Rails::Application
     config.time_zone = 'Melbourne'
-    config.active_record.observers = :event_observer
+    config.active_record.observers = [ :event_observer, :user_observer ]
 
     #fonts path
     config.assets.paths << "#{Rails.root}/app/assets/fonts"
 
     #sass, beeeatch
     config.sass.preferred_syntax = :sass
+
+    config.generators do |g|
+      g.fixture_replacement :factory_girl
+    end
   end
 end

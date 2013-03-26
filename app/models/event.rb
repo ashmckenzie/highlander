@@ -15,8 +15,4 @@ class Event < ActiveRecord::Base
     end
   end
 
-  def inspect
-    "Event(user: #{user.name}, metric: #{metric.name})"
-  end
-
 end

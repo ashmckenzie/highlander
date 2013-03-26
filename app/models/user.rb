@@ -5,11 +5,15 @@ class User < ActiveRecord::Base
   has_many :achievements, -> { order 'achievements.created_at DESC' }
   has_many :badges,       -> { order 'achievements.created_at DESC' }, through: :achievements
 
-  default_scope -> { where(enabled: true) }
+  default_scope -> { enabled }
 
   scope :by_total_score,  -> { order 'total_score DESC, name ASC' }
   scope :enabled,         -> { where(enabled: true) }
   scope :point_earner,    -> { where(earns_points: true) }
+
+  validates :name, presence: true
+  validates :preferred_email,  uniqueness: true, presence: true
+  validates :twitter_username, uniqueness: true
 
   class << self
     alias_method :original_find, :find
@@ -46,7 +50,7 @@ class User < ActiveRecord::Base
   end
 
   def self.with_email email
-    where('? = ANY (emails)', email).first
+    where("'#{email}' = ANY (emails) OR preferred_email = '#{email}'").first
   end
 
   def email

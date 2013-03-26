@@ -26,12 +26,8 @@ class Api::Adapters::GithubController < Api::AdapterController
 
   protected
 
-  def set_current_user
-    begin
-      @current_user ||= User.with_email(email)
-    rescue
-      raise InvalidUserToken
-    end
+  def current_user
+    @current_user ||= User.with_email(email)
   end
 
   private

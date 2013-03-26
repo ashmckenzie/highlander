@@ -23,10 +23,8 @@ class Api::Adapters::TwitterController < Api::AdapterController
 
   protected
 
-  def set_current_user
+  def current_user
     @current_user ||= User.point_earner.find_by_twitter_username!(current_tweet[:twitter_username])
-  rescue
-    raise InvalidUserToken
   end
 
   private

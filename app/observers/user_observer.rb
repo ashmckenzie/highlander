@@ -7,7 +7,7 @@ class UserObserver < ActiveRecord::Observer
   private
 
   def update_slug(user)
-    user.update(slug: user.name.parameterize) unless slug == name.parameterize
+    user.update(slug: user.name.parameterize) unless user.slug == user.name.parameterize
   end
 
 end
