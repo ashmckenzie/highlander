@@ -4,13 +4,10 @@ feature "Twitter Mentions" do
 
   background do
 
-    @first_time_badge = Badge.create(name: 'first_time', tag: 'Experience the quickening', description: 'First timer')
-    @twitter_badge    = Badge.create(name: '1_twitter_mention', tag: 'Fly fly little birdie!', description: 'First Hooroo Twitter mention')
+    @first_time_badge     = FactoryGirl.create(:first_time)
+    @one_twitter_mention  = FactoryGirl.create(:one_twitter_mention)
 
-    c = Api::Adapters::TwitterController.new
-    c.params = valid_params
-    c.stub(:respond_to)
-    c.create
+    page.driver.post api_adapters_twitter_index_path, valid_params
   end
 
   given(:valid_params) do
@@ -33,6 +30,6 @@ feature "Twitter Mentions" do
   scenario "User twets mentioning @Hooroo" do
     visit user_path(user)
     page.should have_content @first_time_badge.description
-    page.should have_content @twitter_badge.description
+    page.should have_content @one_twitter_mention.description
   end
 end
