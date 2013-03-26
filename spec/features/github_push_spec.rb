@@ -4,13 +4,10 @@ feature "First Github push" do
 
   background do
 
-    @first_time_badge   = Badge.create(name: 'first_time', tag: 'Experience the quickening', description: 'First timer')
-    @github_push_badge  = Badge.create(name: '1_github_push', tag: 'Octocat is pleased with you', description: 'First GitHub push')
+    @first_time_badge       = FactoryGirl.create(:first_time)
+    @one_github_push_badge  = FactoryGirl.create(:one_github_push)
 
-    c = Api::Adapters::GithubController.new
-    c.params = valid_params
-    c.stub(:respond_to)
-    c.create
+    page.driver.post api_adapters_github_index_path, valid_params
   end
 
   given(:valid_params) do
@@ -27,6 +24,6 @@ feature "First Github push" do
   scenario "User is given the First Github push and First Timer badges" do
     visit user_path(user)
     page.should have_content @first_time_badge.description
-    page.should have_content @github_push_badge.description
+    page.should have_content @one_github_push_badge.description
   end
 end

@@ -14,5 +14,11 @@ FactoryGirl.define do
       description   'First Hooroo Twitter mention'
     end
 
+    factory :one_github_push do
+      name          '1_github_push'
+      tag           'Octocat is pleased with you'
+      description   'First GitHub push'
+    end
+
   end
 end
