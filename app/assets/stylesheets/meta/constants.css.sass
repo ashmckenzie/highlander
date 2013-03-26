@@ -1,6 +1,7 @@
 // Main palette
 
-$colours: #ECD078 #D95B43 #C02942 #542437 #257A69
+$colours: #ECD078 #D95B43 #C02942 #542437 #56AB2C
+// #257A69 #69bf13
 
 // Sheeat! This function could be so much smarter if sass was a bit more powerful
 @function palette($colour-number: 3, $operation: normal, $amount: 0)
@@ -15,6 +16,5 @@ $colours: #ECD078 #D95B43 #C02942 #542437 #257A69
 
 
 // Flashes
-
-$flash-warning:          #fcf8e3
-$flash-warning-text:     darken($flash-warning, 63%)
+$flash-warning:          palette(1, lighten, 15)
+$flash-warning-text:     palette(1, darken, 28)

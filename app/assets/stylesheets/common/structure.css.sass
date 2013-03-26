@@ -5,7 +5,6 @@ body
 #main-header
   background: palette(1, lighten, 25)
   height: 80px
-  overflow: hidden
 
   a
     color: palette(2)
@@ -17,11 +16,21 @@ body
     font-size: 2.2rem
     margin-bottom: 0
     margin-top: 0
+    position: relative
+
+    a
+      +hide-text
+      background: image-url("logo.png") top left no-repeat
+      display: block
+      height: 137px
+      position: absolute
+      top: -25px
+      width: 181px
+
 
   nav
     +shift(1)
     +span-columns(7)
-    float: left
     margin-top: 0
 
   ul
@@ -33,14 +42,21 @@ body
   li
     +span-columns(2 of 7)
     height: 35px
+    line-height: 35px
     float: left
 
     &.username
       +span-columns(3 of 7)
+      color: palette(5, darken, 10)
+      font-size: .9em
+      text-align: right
+
+    &.sign-in
+      +shift(5)
+
     a
       +hl-button
       font-size: .9em
-      line-height: 35px
 
 
 .hero
@@ -50,11 +66,11 @@ body
   height: 300px
   padding-top: 40px
   text-align: center
-  text-shadow: 0 1px 0 palette(3)
+  text-shadow: 0 2px 0 palette(3, darken, 10)
 
   h2
     +nice-font
-    font-size: 2.4rem
+    font-size: 2.5rem
     line-height: 1em
     margin: 0
 

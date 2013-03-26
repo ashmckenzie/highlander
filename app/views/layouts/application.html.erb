@@ -22,22 +22,22 @@
 
     <div class="flash warning topmost">
       <div>
-        <p>Attention shoppers! <strong>Highlander</strong> is still in experimental stage. Don't worry if you notice fluctuations in your total score. We're still determining how many points each activity deserves.</p>
+        <p>Attention shoppers! <strong>Highlander</strong> is still experimental. Your total score may fluctuate as we determine how many points each activity deserves.</p>
       </div>
     </div>
 
     <header id="main-header" class="top-header">
       <div class="container">
-        <h1><%= link_to "Highlander", root_path %></h1>
+        <h1><%= link_to "Highlander", root_path %>&nbsp;</h1>
 
         <nav>
           <ul>
             <% if signed_in? %>
-              <li class="username"><%= current_user.name %></li>
+              <li class="username">Hello there, <strong><%= current_user.name %></strong>!</li>
               <li><%= link_to 'My Account', user_path(current_user) %></li>
               <li><%= link_to 'Sign out', signout_path %></li>
             <% else %>
-              <li><a href="/auth/google_apps">Sign in</a></li>
+              <li class="sign-in"><a href="/auth/google_apps">Sign in</a></li>
             <% end %>
           </ul>
         </nav>
