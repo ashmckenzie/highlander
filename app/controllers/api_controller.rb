@@ -50,7 +50,6 @@ class ApiController < ApplicationController
   private
 
   def validate_current_user!
-    binding.pry
     raise InvalidUserToken if current_user.nil?
   end
 
