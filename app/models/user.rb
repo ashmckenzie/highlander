@@ -12,7 +12,7 @@ class User < ActiveRecord::Base
   scope :point_earner,    -> { where(earns_points: true) }
 
   validates :name, presence: true
-  validates :preferred_email,  uniqueness: true, presence: true
+  validates :hooroo_email,  uniqueness: true, presence: true
   validates :twitter_username, uniqueness: true
 
   class << self
@@ -50,11 +50,11 @@ class User < ActiveRecord::Base
   end
 
   def self.with_email email
-    where("'#{email}' = ANY (emails) OR preferred_email = '#{email}'").first
+    where("'#{email}' = ANY (emails) OR hooroo_email = '#{email}'").first
   end
 
   def email
-    preferred_email || ''
+    hooroo_email || ''
   end
 
   def total_badges

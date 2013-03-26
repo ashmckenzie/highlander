@@ -2,7 +2,7 @@ FactoryGirl.define do
 
   factory :user do
     name            'Bob Smith'
-    preferred_email 'bob@hooroo.com'
+    hooroo_email 'bob@hooroo.com'
     earns_points    true
 
     trait :tweeter do
