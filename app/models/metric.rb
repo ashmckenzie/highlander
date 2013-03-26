@@ -1,6 +1,7 @@
 class Metric < ActiveRecord::Base
 
-  has_one :event
+  has_many :events
+  has_many :users, through: :events
 
   validate :default_unit, numericality: true
 
