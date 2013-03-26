@@ -4,47 +4,57 @@
   width: 100%
 
   .rankee
-    border-bottom: 1px solid palette(5, lighten, 25)
-    height: 100px
+    border-bottom: 1px solid palette(5, lighten, 40)
     overflow: hidden
-    padding: .5em 0 0
+    padding: .75em 0
     position: relative
 
     &:nth-child(2n+1)
-      background: palette(5, lighten, 53)
-
-    &:hover
-      background: palette(5, lighten, 45)
-
-    &:nth-child(2), &:first-child
-      border-top: 1px solid palette(5, lighten, 25)
+      background: palette(5, lighten, 55)
 
     &:first-child
-      margin-bottom: 20px
+      border-top: 1px solid palette(5, lighten, 40)
+
+    &:first-child
+      .rank
+        +nice-font(black)
+        color: palette(3)
+        font-size: 6rem
 
 
   p
     margin: 0
 
+  .rank
+    +span-columns(1 of 8)
+    +nice-font(bold)
+    +omega
+    color: palette(3, lighten, 5)
+    font-size: 2.5rem
+    line-height: 100px
+    text-align: center
+    text-shadow: 0 2px 0 palette(4)
+
   .avatar
-    +span-columns(1 of 5)
+    float: left
+    margin-right: 20px
 
   img
-    border-radius: 100%
+    border-radius: $radius
     display: block
-    margin: 0 auto
 
   .details
-    +span-columns(3 of 5)
+    +span-columns(4 of 8)
 
     .name
-      +nice-font
+      +nice-font(bold)
       font-size: 1.3rem
       margin-top: .5em
 
     .bio
-      color: #aaa
+      color: desaturate(palette(4, lighten, 20), 100)
       font-size: .8rem
+      margin-top: .5em
 
   .scores
     list-style: none

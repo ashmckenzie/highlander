@@ -12,23 +12,24 @@
 
 <ul class="ranking">
 
-  <%- @users.each do |user| -%>
+  <%- @users.each_with_index do |user, i| -%>
     <li class="rankee">
+      <%= link_to user_path(user) do %>
+        <p class="rank"><%= (i + 1) %></p>
 
-      <p class="avatar"><%= image_tag user.avatar_url %></p>
+        <div class="details">
+          <p class="avatar"><%= image_tag user.avatar_url 100 %></p>
+          <p class="name"><%= user.name %></p>
+          <p class="bio"><%= user.bio %></p>
+        </div>
 
-      <div class="details">
-        <p class="name"><%= link_to user.name, user_path(user) %></p>
-        <p class="bio"><%= user.bio %></p>
-      </div>
+        <ul class="scores">
+          <li class="total-score"><%= user.total_score %></li>
+          <li class="total-badges"><%= user.total_badges %></li>
+        </ul>
 
-      <ul class="scores">
-        <li class="total-score"><%= user.total_score %></li>
-        <li class="total-badges"><%= user.total_badges %></li>
-      </ul>
-
-      <p class="last-updated"><%= user.last_event_created_at %></p>
-
+        <p class="last-updated"><%= user.last_event_created_at %></p>
+      <%- end -%>
     </li>
   <%- end -%>
 

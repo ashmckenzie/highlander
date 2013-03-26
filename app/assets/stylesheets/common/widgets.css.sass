@@ -1,12 +1,15 @@
 // Mixins
 @mixin hl-button
+  +transition(opacity, .4s)
   background: palette(5)
   color: palette(1, lighten, 50)
-  border-radius: 3px
+  border-radius: $radius
   display: block
   height: 100%
   text-align: center
   text-shadow: 0 2px 0 palette(5, darken, 10)
+  &:hover
+    background: palette(5, lighten, 15)
 
 // Classes
 .button
