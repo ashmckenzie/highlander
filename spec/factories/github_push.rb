@@ -1,6 +1,6 @@
 class GithubPush
 
-  def payload
+  def payload(email)
     <<-JSON
     {
        "after":"1481a2de7b2a7d02428ad93446ab166be7793fbb",
@@ -11,12 +11,12 @@ class GithubPush
 
              ],
              "author":{
-                "email":"lolwut@noway.biz",
+                "email":"#{email}",
                 "name":"Garen Torikian",
                 "username":"octokitty"
              },
              "committer":{
-                "email":"lolwut@noway.biz",
+                "email":"#{email}",
                 "name":"Garen Torikian",
                 "username":"octokitty"
              },
@@ -37,12 +37,12 @@ class GithubPush
 
              ],
              "author":{
-                "email":"lolwut@noway.biz",
+                "email":"#{email}",
                 "name":"Garen Torikian",
                 "username":"octokitty"
              },
              "committer":{
-                "email":"lolwut@noway.biz",
+                "email":"#{email}",
                 "name":"Garen Torikian",
                 "username":"octokitty"
              },
@@ -63,12 +63,12 @@ class GithubPush
                 "words/madame-bovary.txt"
              ],
              "author":{
-                "email":"lolwut@noway.biz",
+                "email":"#{email}",
                 "name":"Garen Torikian",
                 "username":"octokitty"
              },
              "committer":{
-                "email":"lolwut@noway.biz",
+                "email":"#{email}",
                 "name":"Garen Torikian",
                 "username":"octokitty"
              },
@@ -94,12 +94,12 @@ class GithubPush
              "words/madame-bovary.txt"
           ],
           "author":{
-             "email":"lolwut@noway.biz",
+             "email":"#{email}",
              "name":"Garen Torikian",
              "username":"octokitty"
           },
           "committer":{
-             "email":"lolwut@noway.biz",
+             "email":"#{email}",
              "name":"Garen Torikian",
              "username":"octokitty"
           },
@@ -134,7 +134,7 @@ class GithubPush
           "name":"testing",
           "open_issues":2,
           "owner":{
-             "email":"lolwut@noway.biz",
+             "email":"#{email}",
              "name":"octokitty"
           },
           "private":false,

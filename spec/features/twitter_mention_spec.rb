@@ -1,17 +1,16 @@
-require "spec_helper"
+require 'spec_helper'
 
-feature "Twitter Mentions" do
+feature 'Twitter Mentions' do
 
   background do
+    @first_time_badge     = FactoryGirl.create(:first_time)
+    @one_twitter_mention  = FactoryGirl.create(:one_twitter_mention)
 
-    @first_time_badge = Badge.create(name: 'first_time', tag: 'Experience the quickening', description: 'First timer')
-    @twitter_badge    = Badge.create(name: '1_twitter_mention', tag: 'Fly fly little birdie!', description: 'First Hooroo Twitter mention')
-
-    c = Api::Adapters::TwitterController.new
-    c.params = valid_params
-    c.stub(:respond_to)
-    c.create
+    page.driver.post '/api/adapters/twitter.json', valid_params
   end
+
+  given(:user)                    { FactoryGirl.create(:twitter_user) }
+  given(:twitter_mention_metric)  { FactoryGirl.create(:twitter_mention) }
 
   given(:valid_params) do
     {
@@ -27,12 +26,13 @@ feature "Twitter Mentions" do
     }
   end
 
-  given(:user)                    { FactoryGirl.create(:twitter_user) }
-  given(:twitter_mention_metric)  { FactoryGirl.create(:twitter_mention) }
+  scenario 'User twets mentioning @Hooroo' do
 
-  scenario "User twets mentioning @Hooroo" do
     visit user_path(user)
     page.should have_content @first_time_badge.description
-    page.should have_content @twitter_badge.description
+    page.should have_content @one_twitter_mention.description
+
+    page.should have_content "#{twitter_mention_metric.default_unit} Total Score"
+    page.should have_content '2 Badges'
   end
 end

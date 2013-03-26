@@ -15,7 +15,7 @@
   <h2 class="name"><%= link_to @user.name, @user %></h2>
   <h3 class="twitter-handle"><%= @user.twitter_handle %></h3>
 
-  <p class="bio"><%= @user.bio || "#{@user.name} hasn't added a bio yet." %></p>
+  <p class="bio"><%= @user.bio %></p>
 
   <ul class="stats">
     <li class="total-score"><span><%= @user.total_score %></span> Total Score</li>

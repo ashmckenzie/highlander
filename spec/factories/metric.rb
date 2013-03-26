@@ -1,4 +1,5 @@
 FactoryGirl.define do
+
   factory :metric do
     default_unit 1
 
@@ -30,4 +31,5 @@ FactoryGirl.define do
     end
 
   end
+
 end

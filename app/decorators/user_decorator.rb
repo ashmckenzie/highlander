@@ -9,6 +9,19 @@ class UserDecorator < Draper::Decorator
     end
   end
 
+  def email
+    hooroo_email || ''
+  end
+
+  def avatar_url size=80
+    gravatar_id = Digest::MD5::hexdigest(email).downcase
+    "http://gravatar.com/avatar/#{gravatar_id}.png?s=#{size}"
+  end
+
+  def bio
+    source.bio || "#{name.split(' ').first} hasn't added a bio yet"
+  end
+
   def id_or_slug
     source.slug.present? ? source.slug : source.id
   end

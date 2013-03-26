@@ -12,7 +12,7 @@ class User < ActiveRecord::Base
   scope :point_earner,    -> { where(earns_points: true) }
 
   validates :name, presence: true
-  validates :preferred_email,  uniqueness: true, presence: true
+  validates :hooroo_email,  uniqueness: true, presence: true
   validates :twitter_username, uniqueness: true
 
   class << self
@@ -50,11 +50,7 @@ class User < ActiveRecord::Base
   end
 
   def self.with_email email
-    where("'#{email}' = ANY (emails) OR preferred_email = '#{email}'").first
-  end
-
-  def email
-    preferred_email || ''
+    where("'#{email}' = ANY (emails) OR hooroo_email = '#{email}'").first
   end
 
   def total_badges
@@ -63,11 +59,6 @@ class User < ActiveRecord::Base
 
   def events_for_metric metric
     events.joins(:metric).where("metrics.name = ?", metric.name)
-  end
-
-  def avatar_url size=80
-    gravatar_id = Digest::MD5::hexdigest(email).downcase
-    "http://gravatar.com/avatar/#{gravatar_id}.png?s=#{size}"
   end
 
   def metric_totals

@@ -1,32 +1,45 @@
-require "spec_helper"
+require 'spec_helper'
 
-feature "First Github push" do
+feature 'Github Push' do
 
   background do
-
-    @first_time_badge   = Badge.create(name: 'first_time', tag: 'Experience the quickening', description: 'First timer')
-    @github_push_badge  = Badge.create(name: '1_github_push', tag: 'Octocat is pleased with you', description: 'First GitHub push')
-
-    c = Api::Adapters::GithubController.new
-    c.params = valid_params
-    c.stub(:respond_to)
-    c.create
-  end
-
-  given(:valid_params) do
-    {
-      metric:   metric.name,
-      email:    user.email,
-      payload:  GithubPush.new.payload
-    }
+    @first_time_badge       = FactoryGirl.create(:first_time)
+    @one_github_push_badge  = FactoryGirl.create(:one_github_push)
   end
 
   given(:user)    { FactoryGirl.create(:user) }
   given(:metric)  { FactoryGirl.create(:github_push) }
 
-  scenario "User is given the First Github push and First Timer badges" do
-    visit user_path(user)
-    page.should have_content @first_time_badge.description
-    page.should have_content @github_push_badge.description
+  given(:valid_params) do
+    { metric: metric.name, payload: GithubPush.new.payload(user.hooroo_email) }
   end
+
+  describe 'First push' do
+
+    background { page.driver.post '/api/adapters/github.json', valid_params }
+
+    scenario 'User is given the First Github push and First Timer badges' do
+      visit user_path(user)
+      page.should have_content @first_time_badge.description
+      page.should have_content @one_github_push_badge.description
+
+      page.should have_content "#{metric.default_unit} Total Score"
+      page.should have_content '2 Badges'
+    end
+  end
+
+  describe 'Second push' do
+
+    background { 2.times { page.driver.post '/api/adapters/github.json', valid_params } }
+
+    scenario 'User has more points' do
+      visit user_path(user)
+      page.should have_content @first_time_badge.description
+      page.should have_content @one_github_push_badge.description
+
+      page.should have_content "#{metric.default_unit * 2} Total Score"
+      page.should have_content '2 Badges'
+    end
+  end
+
 end
