@@ -15,7 +15,7 @@ class UserDecorator < Draper::Decorator
 
   def last_event_created_at
     if source.events.first
-      source.events.first.created_at.strftime("%d/%m/%y %k:%M")
+      "Last updated on #{source.events.first.created_at.strftime("%B %-d, %Y at %-l:%M %P")}"
     else
       ''
     end

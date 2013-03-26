@@ -1,25 +1,33 @@
 .ranking
   list-style: none
   padding: 0
+  margin: 0
   width: 100%
 
-  .rankee
-    border-bottom: 1px solid palette(5, lighten, 40)
-    overflow: hidden
-    padding: .75em 0
-    position: relative
+  ul
+    list-style: none
+    padding: 0
 
-    &:nth-child(2n+1)
-      background: palette(5, lighten, 55)
+.rankee
+  border-bottom: 1px solid palette(5, lighten, 45)
+  overflow: hidden
+  padding: 1em 0
+  position: relative
 
-    &:first-child
-      border-top: 1px solid palette(5, lighten, 40)
+  &:nth-child(2n+1)
+    background: palette(5, lighten, 55)
 
-    &:first-child
-      .rank
-        +nice-font(black)
-        color: palette(3)
-        font-size: 6rem
+  &:first-child
+    border-top: 1px solid palette(5, lighten, 45)
+
+    .rank
+      +nice-font(black)
+      color: palette(5)
+      font-size: 5.5rem
+      text-shadow: 0 2px 0 palette(5, lighten, 30)
+    .total-score, .total-badges
+      span
+        color: palette(5)
 
 
   p
@@ -30,60 +38,54 @@
     +nice-font(bold)
     +omega
     color: palette(3, lighten, 5)
-    font-size: 2.5rem
-    line-height: 100px
+    font-size: 2.2rem
+    line-height: 90px
     text-align: center
-    text-shadow: 0 2px 0 palette(4)
+    text-shadow: 0 1px 0 palette(4)
 
   .avatar
     float: left
-    margin-right: 20px
+    margin-right: 5%
 
   img
     border-radius: $radius
     display: block
 
   .details
-    +span-columns(4 of 8)
+    +span-columns(5 of 8)
 
     .name
       +nice-font(bold)
       font-size: 1.3rem
-      margin-top: .5em
 
     .bio
-      color: desaturate(palette(4, lighten, 20), 100)
+      color: palette(6)
       font-size: .8rem
+      line-height: 1.3em
       margin-top: .5em
 
   .scores
     list-style: none
 
-  // This needs to be improved
-  .total-score, .total-badges
-    background: #69BF13
-    border-radius: 3px
-    color: #fff
-    font-size: .9em
-    font-weight: bold
-    height: 30px
-    line-height: 30px
-    margin-top: -25px
-    padding: 0 .5em
-    position: absolute
-    right: 20px
-    text-align: center
-    top: 50%
-    width: 40px
+  .total-score
+    // +shift(1)
 
-  .total-badges
-    right: 80px
+  .total-score, .total-badges
+    +span-columns(1 of 8)
+    color: palette(6)
+    font-size: .8rem
+    margin-top: 2em
+    text-transform: uppercase
+    span
+      +nice-font(black)
+      color: palette(3)
+      display: block
+      font-size: 2.5rem
+      line-height: .8em
+
+
 
   .last-updated
-    bottom: 5px
-    color: hotpink
+    color: palette(6, lighten, 10)
     font-size: .7rem
-    height: 25px
-    line-height: 25px
-    position: absolute
-    right: 20px
+    margin-top: 1em

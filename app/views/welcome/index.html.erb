@@ -17,18 +17,18 @@
       <%= link_to user_path(user) do %>
         <p class="rank"><%= (i + 1) %></p>
 
-        <div class="details">
-          <p class="avatar"><%= image_tag user.avatar_url 100 %></p>
-          <p class="name"><%= user.name %></p>
-          <p class="bio"><%= user.bio %></p>
-        </div>
-
-        <ul class="scores">
-          <li class="total-score"><%= user.total_score %></li>
-          <li class="total-badges"><%= user.total_badges %></li>
+        <ul class="details">
+          <li class="avatar"><%= image_tag user.avatar_url 90 %></li>
+          <li class="name"><%= user.name %></li>
+          <li class="bio"><%= user.bio %></li>
+          <li class="last-updated"><em><%= user.last_event_created_at %></em></li>
         </ul>
 
-        <p class="last-updated"><%= user.last_event_created_at %></p>
+        <ul class="scores">
+          <li class="total-score"><span><%= user.total_score %></span> Score</li>
+          <li class="total-badges"><span><%= user.total_badges %></span> Badges</li>
+        </ul>
+
       <%- end -%>
     </li>
   <%- end -%>
