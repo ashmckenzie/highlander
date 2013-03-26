@@ -1,5 +1,8 @@
 @import "utils"
 
+.main-column
+  +clearfix
+
 h2
   margin: 0
 
@@ -31,7 +34,7 @@ h2
     font-style: italic
 
   .stats
-    background: aqua
+    background: palette(5, lighten, 55)
     color: #aaa
     border-radius: $radius
     font-size: .6rem
@@ -95,8 +98,6 @@ h2
       &.badge-date
         font-size: .8rem
 
-
-
     &:hover div
       display: block
       z-index: 99
@@ -105,7 +106,7 @@ h2
 .summary
   +span-columns(3 of 8)
   +omega()
-  background: aqua
+  background: palette(5, lighten, 55)
   padding: 1em
 
   ul
