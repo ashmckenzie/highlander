@@ -6,7 +6,7 @@ feature "Twitter Mentions" do
     @first_time_badge     = FactoryGirl.create(:first_time)
     @one_twitter_mention  = FactoryGirl.create(:one_twitter_mention)
 
-    page.driver.post api_adapters_twitter_index_path, valid_params
+    page.driver.post '/api/adapters/twitter.json', valid_params
   end
 
   given(:user)                    { FactoryGirl.create(:twitter_user) }

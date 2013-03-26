@@ -16,7 +16,7 @@ feature 'Github Push' do
 
   describe "First push" do
 
-    background { page.driver.post api_adapters_github_index_path, valid_params }
+    background { page.driver.post '/api/adapters/github.json', valid_params }
 
     scenario "User is given the First Github push and First Timer badges" do
       visit user_path(user)
@@ -30,7 +30,7 @@ feature 'Github Push' do
 
   describe "Second push" do
 
-    background { 2.times { page.driver.post api_adapters_github_index_path, valid_params } }
+    background { 2.times { page.driver.post '/api/adapters/github.json', valid_params } }
 
     scenario "User has more points" do
       visit user_path(user)
