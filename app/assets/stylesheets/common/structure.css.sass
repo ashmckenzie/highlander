@@ -18,19 +18,26 @@ body
     margin-top: 0
 
   nav
-    +shift(5)
-    +span-columns(3)
+    +shift(1)
+    +span-columns(7)
     float: left
     margin-top: 0
 
   ul
+    +clearfix
     list-style: none
-    overflow: auto
     padding: 0
 
   li
+    +span-columns(2 of 7)
+    height: 45px
     float: left
-    width: 30%
+
+    &.username
+      +span-columns(3 of 7)
+    a
+      +hl-button
+
 
 .hero
   background: palette(2)

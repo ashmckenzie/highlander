@@ -18,24 +18,18 @@ class ApiController < ApplicationController
     render text: "You are not authorised", status: :error
   end
 
-  before_filter :set_default_format, :set_current_user, :validate_metric
+  before_filter :validate_current_user!, :set_default_format, :validate_metric
 
   skip_before_filter :verify_authenticity_token
 
-  def current_user
-    @current_user
-  end
-
   protected
 
-  def set_current_user
+  def current_user
     @current_user ||= User.point_earner.with_email(params[:email])
-    raise InvalidUserToken if @current_user.nil?
   end
 
   def validate_metric
     raise InvalidMetric unless valid_metrics.include?(metric_name)
-    true
   end
 
   def validate_request_source
@@ -54,6 +48,10 @@ class ApiController < ApplicationController
   end
 
   private
+
+  def validate_current_user!
+    raise InvalidUserToken if current_user.nil?
+  end
 
   def set_default_format
     request.format = 'json'

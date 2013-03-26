@@ -15,15 +15,17 @@ class Api::EventsController < ApiController
   private
 
   def valid_metrics
-    interested_in_metrics - not_interested_in_metrics
+    Metric::NAMES & interested_in_metrics
   end
 
   def interested_in_metrics
-    Metric::NAMES
-  end
-
-  def not_interested_in_metrics
-    %w{ github_push twitter_mention }
+    %w{
+        jenkins_green_job
+        ming_pong_loss
+        ming_pong_victory
+        gift
+        express_yaself
+      }
   end
 
   def metric_name

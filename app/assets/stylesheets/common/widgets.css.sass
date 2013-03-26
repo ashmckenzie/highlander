@@ -1,0 +1,12 @@
+// Mixins
+@mixin hl-button
+  background: palette(5)
+  color: palette(1, lighten, 50)
+  border-radius: 5px
+  display: block
+  height: 100%
+  text-align: center
+
+// Classes
+.button
+  +hl-button
