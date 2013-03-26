@@ -5,14 +5,18 @@
 <p class="avatar"><%= image_tag @user.avatar_url 150 %></p>
 
 <%= form_for @user, :url => { :action => "update" } do |f| %>
+
+  <%= f.label :hooroo_email %>
+  <%= f.text_field :hooroo_email, disabled: true %><small>* this is the address we use for your Gravatar image</small>
+
   <%= f.label :name %>
   <%= f.text_field :name %>
 
-  <%= f.label :hooroo_email %>
-  <%= f.text_field :hooroo_email, disabled: true %>
-
   <%= f.label :twitter_username %>
   <%= f.text_field :twitter_username %>
+
+  <%= f.label :bio %>
+  <%= f.text_area :bio, rows: 5, maxlength: 128 %>
 
   <%= f.submit "Save" %>
   <%= link_to 'cancel', user_path(@user) %>
