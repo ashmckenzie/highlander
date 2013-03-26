@@ -9,6 +9,9 @@ feature "Twitter Mentions" do
     page.driver.post api_adapters_twitter_index_path, valid_params
   end
 
+  given(:user)                    { FactoryGirl.create(:twitter_user) }
+  given(:twitter_mention_metric)  { FactoryGirl.create(:twitter_mention) }
+
   given(:valid_params) do
     {
       twitter:
@@ -23,10 +26,8 @@ feature "Twitter Mentions" do
     }
   end
 
-  given(:user)                    { FactoryGirl.create(:twitter_user) }
-  given(:twitter_mention_metric)  { FactoryGirl.create(:twitter_mention) }
-
   scenario "User twets mentioning @Hooroo" do
+
     visit user_path(user)
     page.should have_content @first_time_badge.description
     page.should have_content @one_twitter_mention.description
