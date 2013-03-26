@@ -53,10 +53,6 @@ class User < ActiveRecord::Base
     where("'#{email}' = ANY (emails) OR hooroo_email = '#{email}'").first
   end
 
-  def email
-    hooroo_email || ''
-  end
-
   def total_badges
     achievements.count
   end

@@ -9,6 +9,14 @@ class UserDecorator < Draper::Decorator
     end
   end
 
+  def email
+    hooroo_email || ''
+  end
+
+  def bio
+    source.bio || "#{name.split(' ').first} hasn't added a bio yet"
+  end
+
   def id_or_slug
     source.slug.present? ? source.slug : source.id
   end
