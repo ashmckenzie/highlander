@@ -5,6 +5,7 @@ body
 #main-header
   background: palette(1, lighten, 25)
   height: 80px
+  overflow: hidden
 
   a
     color: palette(2)
@@ -26,17 +27,20 @@ body
   ul
     +clearfix
     list-style: none
+    margin-top: 20px
     padding: 0
 
   li
     +span-columns(2 of 7)
-    height: 45px
+    height: 35px
     float: left
 
     &.username
       +span-columns(3 of 7)
     a
       +hl-button
+      font-size: .9em
+      line-height: 35px
 
 
 .hero
@@ -49,7 +53,7 @@ body
   text-shadow: 0 1px 0 palette(3)
 
   h2
-    +vag(thin)
+    +nice-font
     font-size: 2.4rem
     line-height: 1em
     margin: 0

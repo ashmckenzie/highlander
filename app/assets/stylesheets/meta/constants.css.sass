@@ -8,6 +8,8 @@ $colours: #ECD078 #D95B43 #C02942 #542437 #257A69
 
   @if $operation == lighten
     $colour: lighten( $colour, $amount )
+  @else if $operation == darken
+    $colour: darken( $colour, $amount )
 
   @return $colour
 
