@@ -13,8 +13,7 @@ feature "First Github push" do
   given(:valid_params) do
     {
       metric:   metric.name,
-      email:    user.email,
-      payload:  GithubPush.new.payload
+      payload:  GithubPush.new.payload(user.email)
     }
   end
 
@@ -25,5 +24,8 @@ feature "First Github push" do
     visit user_path(user)
     page.should have_content @first_time_badge.description
     page.should have_content @one_github_push_badge.description
+
+    page.should have_content "#{metric.default_unit} Total Score"
+    page.should have_content "2 Badges"
   end
 end
