@@ -20,5 +20,17 @@ FactoryGirl.define do
       description   'First GitHub push'
     end
 
+    factory :one_jenkins_green_job do
+      name          '1_jenkins_green_job'
+      tag           'Well done, sir'
+      description   'First Jenkins green job'
+    end
+
+    factory :one_hundred_jenkins_green_jobs do
+      name          '100_jenkins_green_jobs'
+      tag           'Green goblin centurion'
+      description   '100 Jenkins green jobs'
+    end
+
   end
 end
