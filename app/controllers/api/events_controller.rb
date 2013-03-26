@@ -35,4 +35,5 @@ class Api::EventsController < ApiController
   def metric
     Metric.where(name: metric_name).first
   end
+
 end
