@@ -8,7 +8,7 @@ module PayloadAdapters
       { metric: 'some_metric', email: 'someone@example.com' }
     end
 
-    subject { Basic.new(payload) }
+    subject { Basic.new(payload: payload) }
     before  { subject.stub(valid_metric_names: ['some_metric']) }
 
     its(:metric)  { should == payload[:metric] }
@@ -21,17 +21,17 @@ module PayloadAdapters
       end
 
       context 'when the email is missing' do
-        subject { Basic.new(payload.merge({ email: nil })) }
+        subject { Basic.new(payload: payload.merge({ email: nil })) }
         its(:valid?) { should be_false }
       end
 
       context 'when the metric is missing' do
-        subject { Basic.new(payload.merge({ metric: nil })) }
+        subject { Basic.new(payload: payload.merge({ metric: nil })) }
         its(:valid?) { should be_false }
       end
 
       context 'when the metric is not in the known list' do
-        subject { Basic.new(payload.merge({ metric: 'made_up' })) }
+        subject { Basic.new(payload: payload.merge({ metric: 'made_up' })) }
         its(:valid?) { should be_false }
       end
 

@@ -1,5 +1,7 @@
 class Api::EventsController < ApiController
 
+  before_filter :adapt_payload
+
   def create
     if new_event_for_user(metric)
       code = :ok
@@ -13,6 +15,10 @@ class Api::EventsController < ApiController
   end
 
   private
+
+  def adapt_payload
+
+  end
 
   def valid_metrics
     Metric::NAMES & interested_in_metrics

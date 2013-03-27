@@ -2,7 +2,9 @@ module PayloadAdapters
 
   class Basic
 
-    def initialize(payload)
+    attr_accessor :payload
+
+    def initialize(payload: {})
       @payload = payload
     end
 
@@ -19,8 +21,6 @@ module PayloadAdapters
     end
 
     private
-
-    attr_reader :payload
 
     def valid_metric_names
       Metric::NAMES
