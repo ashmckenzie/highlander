@@ -9,25 +9,25 @@
     padding: 0
 
 .rankee
-  border-bottom: 1px solid palette(5, lighten, 45)
+  border-bottom: 1px solid palette(5, lighten, 55)
   overflow: hidden
   padding: 1em 0
   position: relative
 
   &:nth-child(2n+1)
-    background: palette(5, lighten, 55)
+    background: palette(5, lighten, 65)
 
   &:first-child
-    border-top: 1px solid palette(5, lighten, 45)
 
     .rank
       +nice-font(black)
       color: palette(5)
       font-size: 5.5rem
       text-shadow: 0 2px 0 palette(5, lighten, 30)
-    .total-score, .total-badges
-      span
-        color: palette(5)
+    .scores
+      .total-score, .total-badges
+        span
+          color: palette(5)
 
 
   p
@@ -67,23 +67,11 @@
   .scores
     list-style: none
 
-  .total-score
-    // +shift(1)
-
-  .total-score, .total-badges
-    +span-columns(1 of 8)
-    color: palette(6)
-    font-size: .8rem
-    margin-top: 2em
-    text-transform: uppercase
-    span
-      +nice-font(black)
-      color: palette(3)
-      display: block
-      font-size: 2.5rem
-      line-height: .8em
-
-
+    .total-score, .total-badges
+      +span-columns(1 of 8)
+      margin-top: 2em
+      span
+        color: palette(3)
 
   .last-updated
     color: palette(6, lighten, 10)

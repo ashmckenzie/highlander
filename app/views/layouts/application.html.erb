@@ -34,7 +34,7 @@
           <ul>
             <% if signed_in? %>
               <li class="username">Hello there, <strong><%= current_user.name %></strong>!</li>
-              <li><%= link_to 'My Account', user_path(current_user) %></li>
+              <li><%= link_to 'Account', user_path(current_user) %></li>
               <li><%= link_to 'Sign out', signout_path %></li>
             <% else %>
               <li class="sign-in"><a href="/auth/google_apps">Sign in</a></li>

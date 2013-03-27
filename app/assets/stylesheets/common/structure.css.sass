@@ -1,6 +1,7 @@
 body
   background: palette(1, lighten, 25)
   color: palette(3)
+  -webkit-font-smoothing: antialiased
 
 #main-header
   background: palette(1, lighten, 25)
@@ -57,7 +58,6 @@ body
 
     a
       +hl-button
-      font-size: .8em
 
 .hero
   background: palette(2, $texture: true)
@@ -78,7 +78,7 @@ body
   +outer-container
 
 #main-container
-  +box-shadow(0 0 15px 0px rgba(palette(4), .3))
+  +box-shadow(0 0 10px 0px rgba(palette(4), .2))
   background: palette(1, lighten, 100)
   // margin-top: 5px
   margin-bottom: 30px
@@ -90,7 +90,7 @@ body
 
 .sidebar
   +span-columns(4)
-  border-left: 1px solid palette(5, lighten, 45)
+  border-left: 1px solid palette(5, lighten, 55)
   position: absolute
   right: 0
   height: 100%

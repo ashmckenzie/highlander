@@ -2,6 +2,7 @@
 
 .main-column
   +clearfix
+  padding: 25px 0 20px 20px
 
 h2
   margin: 0
@@ -12,12 +13,22 @@ h2
   +clearfix
 
 .info-block
-  margin-top: 1.5em
   min-height: 150px
+  padding-bottom: 5px
+  position: relative
+  &:after //sneaky!
+    background: palette(5, lighten, 55)
+    bottom: 0
+    content: ""
+    height: 1px
+    position: absolute
+    padding-right: 46px
+    left: -20px
+    width: 100%
 
   .avatar
     float: left
-    margin: 0 20px
+    margin: 0 20px 0 0
 
   img
     border-radius: $radius
@@ -27,6 +38,7 @@ h2
     margin: 0 0 15px 0
 
   .bio
+    +clearfix
     color: palette(6)
     font-size: .9rem
 
@@ -38,16 +50,19 @@ h2
     padding: 0
 
   li
-    +span-columns(1 of 3)
-    +omega(3n)
+    +omega(5n)
+    float: left
     margin-bottom: 1em
     position: relative
+    margin: 0 35px 35px 0
+    width: 110px
 
     img
       cursor: pointer
       display: block
+      height: 110px
       margin: 0 auto
-      max-width: 110px
+      width: 110px
 
     div
       +box-shadow(0 0 15px 1px rgba(hotpink, .5))
@@ -77,7 +92,7 @@ h2
 
 
 .summary
-  background: palette(5, lighten, 55)
+  background: palette(5, lighten, 65)
   padding: 1em
 
   ul

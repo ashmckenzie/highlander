@@ -5,12 +5,33 @@
   color: palette(1, lighten, 50)
   border-radius: $radius
   display: block
+  font-size: .75rem
+  font-weight: bold
   height: 100%
   text-align: center
   text-shadow: 0 2px 0 palette(5, darken, 10)
+  text-transform: uppercase
   &:hover
     background: palette(5, lighten, 15)
+
+@mixin scores
+  list-style: none
+
+  .total-score, .total-badges
+    color: palette(6)
+    font-size: .8rem
+    text-transform: uppercase
+    span
+      +nice-font(black)
+      color: palette(5)
+      display: block
+      font-size: 2.5rem
+      line-height: .8em
+
 
 // Classes
 .button
   +hl-button
+
+.scores
+  +scores

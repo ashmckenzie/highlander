@@ -20,7 +20,7 @@
 
   <section class="badges">
 
-    <h2>Badges</h2>
+    <h2>Badges (<strong><%= @user.achievements.count %></strong>)</h2>
 
     <ul>
       <%- @user.achievements.each do |achievement| %>
@@ -34,8 +34,8 @@
 
 <section class="summary sidebar">
 
-  <ul class="stats">
-    <li class="total-score"><span><%= @user.total_score %></span> Total Score</li>
+  <ul class="scores">
+    <li class="total-score"><span><%= @user.total_score %></span> Score</li>
     <li class="total-badges"><span><%= @user.achievements.count %></span> Badges</li>
   </ul>
 
