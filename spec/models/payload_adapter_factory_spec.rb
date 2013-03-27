@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe PayloadAdapterFactory do
 
-  adapter_messages = %w{
+  MESSAGES = %w{
       metric
       email
       valid?
@@ -15,7 +15,7 @@ describe PayloadAdapterFactory do
     describe "factory for #{metric}" do
       subject { PayloadAdapterFactory.for(metric) }
 
-      adapter_messages.each do |message|
+      MESSAGES.each do |message|
         it { should respond_to message.to_sym }
       end
     end
