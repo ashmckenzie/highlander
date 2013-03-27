@@ -23,15 +23,15 @@ body
     a
       +hide-text
       display: block
-      height: 137px
+      height: 82px
       position: absolute
-      top: -40px
-      width: 181px
+      top: 5px
+      width: 109px
 
-      +media($phone)
-        height: 82px
-        top: 5px
-        width: 109px
+      +media($not-phone)
+        height: 137px
+        top: -40px
+        width: 181px
 
     img
       height: 100%
@@ -49,27 +49,23 @@ body
     padding: 0
 
   li
-    +span-columns(2 of 12)
     height: 35px
     line-height: 35px
     float: left
 
-    +media($phone)
-      +span-columns(1 of 1)
+    +media($not-phone)
+      +span-columns(2 of 12)
 
     &.username
-      +span-columns(8 of 12)
       font-size: .9em
       text-align: right
 
-      +media($phone)
-        +span-columns(1 of 1)
+      +media($not-phone)
+        +span-columns(8 of 12)
 
     &.sign-in
-      +shift(10)
-
-      +media($phone)
-        +shift(0)
+      +media($not-phone)
+        +shift(10)
 
     a
       +hl-button
@@ -78,24 +74,23 @@ body
   background: palette(2, $texture: true)
   color: palette(1, lighten, 25)
   clear: both
-  height: 300px
-  padding-top: 50px
+  padding-top: 20px
+  padding-bottom: 150px
   text-align: center
   text-shadow: 0 2px 0 palette(3, darken, 10)
 
-  +media($phone)
-    height: 280px
-    padding-top: 20px
+  +media($not-phone)
+    padding-top: 50px
 
   h2
     +nice-font
-    font-size: 2.5rem
+    font-size: 1.75rem
     line-height: 1.1em
+    padding: 0 1em
     margin: 0
 
-    +media($phone)
-      font-size: 1.75rem
-      padding: 0 1em
+    +media($not-phone)
+      font-size: 2.5rem
 
 .container
   +outer-container
