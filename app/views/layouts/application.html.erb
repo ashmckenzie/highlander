@@ -10,7 +10,7 @@
     <title>Highlander</title>
 
     <%= favicon_link_tag %>
-    <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+    <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
     <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
     <%= csrf_meta_tags %>
 
@@ -28,7 +28,7 @@
 
     <header id="main-header" class="top-header">
       <div class="container">
-        <h1><%= link_to "Highlander", root_path %>&nbsp;</h1>
+        <h1><%= link_to image_tag("logo.svg"), root_path %>&nbsp;</h1>
 
         <nav>
           <ul>

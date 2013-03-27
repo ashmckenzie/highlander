@@ -18,12 +18,14 @@
     background: palette(5, lighten, 65)
 
   &:first-child
-
     .rank
       +nice-font(black)
       color: palette(5)
       font-size: 5.5rem
       text-shadow: 0 2px 0 palette(5, lighten, 30)
+
+      // +media($not-phone)
+
     .scores
       .total-score, .total-badges
         span
@@ -42,6 +44,9 @@
     line-height: 90px
     text-align: center
     text-shadow: 0 1px 0 palette(4)
+
+    +media($phone)
+      margin: 0 5px
 
   .avatar
     float: left
