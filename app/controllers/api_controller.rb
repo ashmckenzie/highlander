@@ -18,7 +18,7 @@ class ApiController < ApplicationController
     render text: "You are not authorised", status: :error
   end
 
-  before_filter :validate_current_user!, :set_default_format, :validate_metric
+  before_filter :validate_current_user!, :set_default_format, :validate_metric # TODO: this might become validate payload
 
   skip_before_filter :verify_authenticity_token
 
