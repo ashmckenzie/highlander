@@ -19,7 +19,11 @@ class UserDecorator < Draper::Decorator
   end
 
   def bio
-    source.bio || "#{name.split(' ').first} hasn't added a bio yet"
+    source.bio || "#{first_name} hasn't added a bio yet"
+  end
+
+  def first_name
+    name.split(' ').first
   end
 
   def id_or_slug

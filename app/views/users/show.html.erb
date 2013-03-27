@@ -21,6 +21,7 @@
   <section class="badges">
 
     <h2>Badges (<strong><%= @user.achievements.count %></strong>)</h2>
+    <p class="badge-spiel"><%= @user.first_name %> has unlocked these <%= @user.achievements.count %> badges so far. Keep an eye on this page to see which one comes next!</p>
 
     <ul>
       <%- @user.achievements.each do |achievement| %>

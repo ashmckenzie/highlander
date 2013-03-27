@@ -39,8 +39,8 @@ h2
 
   .bio
     +clearfix
-    color: palette(6)
     font-size: .9rem
+    font-style: italic
 
 .badges
   padding-top: 1em
@@ -96,6 +96,17 @@ h2
   padding: 1em
 
   ul
-    padding: 0
     list-style: none
+    padding: 0
+
+  .scores
+    +clearfix
+    background: palette(1, lighten, 30)
+    border-radius: $radius
+    margin: 0 0 1em
+    padding: 1em
+
+    li
+      +span-columns(1 of 2)
+      +omega(2)
 
