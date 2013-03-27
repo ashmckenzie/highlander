@@ -28,11 +28,6 @@ body
       top: 5px
       width: 109px
 
-      +media($not-phone)
-        height: 137px
-        top: -40px
-        width: 181px
-
     img
       height: 100%
       width: 100%
@@ -51,21 +46,10 @@ body
   li
     height: 35px
     line-height: 35px
-    float: left
-
-    +media($not-phone)
-      +span-columns(2 of 12)
 
     &.username
       font-size: .9em
       text-align: right
-
-      +media($not-phone)
-        +span-columns(8 of 12)
-
-    &.sign-in
-      +media($not-phone)
-        +shift(10)
 
     a
       +hl-button
@@ -79,18 +63,12 @@ body
   text-align: center
   text-shadow: 0 2px 0 palette(3, darken, 10)
 
-  +media($not-phone)
-    padding-top: 50px
-
   h2
     +nice-font
     font-size: 1.75rem
     line-height: 1.1em
     padding: 0 1em
     margin: 0
-
-    +media($not-phone)
-      font-size: 2.5rem
 
 .container
   +outer-container
@@ -112,3 +90,28 @@ body
   position: absolute
   right: 0
   height: 100%
+
+
+
+// =================================================
+// -----------------Media Queries-------------------
+// =================================================
++media($not-phone)
+
+  #main-header
+    h1 a
+      height: 137px
+      top: -40px
+      width: 181px
+
+    li
+      +span-columns(2 of 12)
+      &.username
+        +span-columns(8 of 12)
+      &.sign-in
+        +shift(10)
+
+  .hero
+    padding-top: 50px
+    h2
+      font-size: 2.5rem

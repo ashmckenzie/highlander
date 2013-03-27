@@ -21,16 +21,12 @@
     .rank
       +nice-font(black)
       color: palette(5)
-      font-size: 5.5rem
       text-shadow: 0 2px 0 palette(5, lighten, 30)
-
-      // +media($not-phone)
 
     .scores
       .total-score, .total-badges
         span
           color: palette(5)
-
 
   p
     margin: 0
@@ -40,13 +36,9 @@
     +nice-font(bold)
     +omega
     color: palette(3, lighten, 5)
-    font-size: 2.2rem
-    line-height: 90px
+    font-size: 1.7rem
     text-align: center
     text-shadow: 0 1px 0 palette(4)
-
-    +media($phone)
-      margin: 0 5px
 
   .avatar
     float: left
@@ -55,6 +47,7 @@
   img
     border-radius: $radius
     display: block
+    width: 50px
 
   .details
     +span-columns(5 of 8)
@@ -62,23 +55,53 @@
     .name
       +nice-font(regular)
       font-size: 1.3rem
+      line-height: 1em
 
     .bio
       color: palette(6)
+      display: none
       font-size: .8rem
       line-height: 1.3em
       margin-top: .5em
 
   .scores
     list-style: none
+    background: gold
 
     .total-score, .total-badges
       +span-columns(1 of 8)
-      margin-top: 2em
       span
         color: palette(3)
 
   .last-updated
     color: palette(6, lighten, 10)
+    display: none
     font-size: .7rem
     margin-top: 1em
+
+
+// =================================================
+// -----------------Media Queries-------------------
+// =================================================
++media($not-phone)
+
+  .rankee
+    &:first-child .rank
+      font-size: 5.5rem
+
+    .rank
+      font-size: 2.2rem
+      line-height: 90px
+
+    img
+      width: auto
+
+    .details .bio
+      display: block
+
+    .scores
+      .total-score, .total-badges
+        margin-top: 2em
+
+    .last-updated
+      display: block
