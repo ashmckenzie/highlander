@@ -10,9 +10,11 @@ class Event < ActiveRecord::Base
   end
 
   class << self
+
     def with_key_and_value(key, value)
       where("data @> '#{key}=>#{value}'")
     end
+
   end
 
 end
