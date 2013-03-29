@@ -32,7 +32,7 @@ feature 'Twitter Mentions' do
     page.should have_content @first_time_badge.description
     page.should have_content @one_twitter_mention.description
 
-    page.should have_content "#{twitter_mention_metric.default_unit} Total Score"
+    page.should have_content "#{twitter_mention_metric.default_unit} Score"
     page.should have_content '2 Badges'
   end
 end

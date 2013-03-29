@@ -24,7 +24,7 @@ feature 'Jenkins Green Job' do
       page.should have_content @first_time_badge.description
       page.should have_content @first_jenkins_green_job_badge.description
 
-      page.should have_content "#{metric.default_unit} Total Score"
+      page.should have_content "#{metric.default_unit} Score"
       page.should have_content "2 Badges"
     end
   end
@@ -38,7 +38,7 @@ feature 'Jenkins Green Job' do
       page.should have_content @first_time_badge.description
       page.should have_content @first_jenkins_green_job_badge.description
 
-      page.should have_content "#{metric.default_unit * 2} Total Score"
+      page.should have_content "#{metric.default_unit * 2} Score"
       page.should have_content "2 Badges"
     end
   end
@@ -53,7 +53,7 @@ feature 'Jenkins Green Job' do
       page.should have_content @first_jenkins_green_job_badge.description
       page.should have_content @one_hundred_jenkins_green_jobs_badge.description
 
-      page.should have_content "#{metric.default_unit * 100} Total Score"
+      page.should have_content "#{metric.default_unit * 100} Score"
       page.should have_content "3 Badges"
     end
   end

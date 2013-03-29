@@ -23,7 +23,7 @@ feature 'Github Push' do
       page.should have_content @first_time_badge.description
       page.should have_content @one_github_push_badge.description
 
-      page.should have_content "#{metric.default_unit} Total Score"
+      page.should have_content "#{metric.default_unit} Score"
       page.should have_content '2 Badges'
     end
   end
@@ -37,7 +37,7 @@ feature 'Github Push' do
       page.should have_content @first_time_badge.description
       page.should have_content @one_github_push_badge.description
 
-      page.should have_content "#{metric.default_unit * 2} Total Score"
+      page.should have_content "#{metric.default_unit * 2} Score"
       page.should have_content '2 Badges'
     end
   end
