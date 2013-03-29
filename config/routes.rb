@@ -1,6 +1,11 @@
 Highlander::Application.routes.draw do
 
   namespace :api do
+
+    Metric::NAMES.each do |metric|
+      post metric => 'events#create', :defaults => { metric: metric }
+    end
+
     resources :events, only: [ :create ]
 
     namespace :adapters do
