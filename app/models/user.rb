@@ -13,7 +13,7 @@ class User < ActiveRecord::Base
 
   validates :name, presence: true
   validates :hooroo_email,  uniqueness: true, presence: true
-  validates :twitter_username, uniqueness: true
+  validates :twitter_username, uniqueness: true, allow_blank: true
 
   class << self
     alias_method :original_find, :find

@@ -11,6 +11,7 @@ class CreateUsers < ActiveRecord::Migration
       t.boolean :enabled, default: true
       t.boolean :earns_points, default: true
       t.string  :twitter_username
+
       t.timestamps
     end
   end
