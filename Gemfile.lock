@@ -1,4 +1,10 @@
 GIT
+  remote: git://github.com/ashmckenzie/data_migration.git
+  revision: 2cd846815be609c01f622b22d52954707665d47a
+  specs:
+    data_migration (0.0.1)
+
+GIT
   remote: git://github.com/heroku/rails3_serve_static_assets.git
   revision: 84910ceb4ca2851d650e66d3b22f5008acf253f8
   specs:
@@ -232,6 +238,7 @@ DEPENDENCIES
   cancan
   capybara
   coffee-rails (~> 4.0.0.beta1)
+  data_migration!
   draper
   factory_girl_rails
   friendly_id!

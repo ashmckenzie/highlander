@@ -20,6 +20,7 @@ gem 'awesome_print'
 gem 'hashie'
 gem 'friendly_id', github: 'norman/friendly_id', branch: 'rails4'
 gem 'omniauth-google-apps'
+gem 'data_migration', github: 'ashmckenzie/data_migration'
 
 group :development, :test do
   gem 'pry'
