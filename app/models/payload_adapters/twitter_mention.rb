@@ -1,6 +1,6 @@
 module PayloadAdapters
 
-  class TwitterMention < Basic
+  class TwitterMention < Base
 
   end
 

@@ -1,45 +1,30 @@
-class Api::EventsController < ApiController
+module Api
 
-  before_filter :adapt_payload
+  class EventsController < BaseController
+    respond_to :json
 
-  def create
-    if new_event_for_user(metric)
-      code = :ok
-    else
-      code = :not_found
+    before_filter :validate_payload!
+
+    def create
+      if Event.create(payload.to_event_hash)
+        code = :ok
+      else
+        code = :not_found
+      end
+
+      respond_with status: code
     end
 
-    respond_to do |format|
-      format.json { head code }
+    private
+
+    def validate_payload!
+      payload.validate!
     end
-  end
 
-  private
+    def payload
+      @payload ||= Factories::PayloadAdapterFactory.for(params)
+    end
 
-  def adapt_payload
-
-  end
-
-  def valid_metrics
-    Metric::NAMES & interested_in_metrics
-  end
-
-  def interested_in_metrics
-    %w{
-        jenkins_green_job
-        ming_pong_loss
-        ming_pong_victory
-        gift
-        express_yaself
-      }
-  end
-
-  def metric_name
-    params['metric']
-  end
-
-  def metric
-    Metric.where(name: metric_name).first
   end
 
 end

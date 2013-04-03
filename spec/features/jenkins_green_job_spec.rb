@@ -2,10 +2,12 @@ require "spec_helper"
 
 feature 'Jenkins Green Job' do
 
+  given(:endpoint) { '/api/jenkins_green_job.json' }
+
   background do
-    @first_time_badge                     = FactoryGirl.create(:first_time)
-    @first_jenkins_green_job_badge        = FactoryGirl.create(:one_jenkins_green_job)
-    @one_hundred_jenkins_green_jobs_badge  = FactoryGirl.create(:one_hundred_jenkins_green_jobs)
+    @first_time_badge                       = FactoryGirl.create(:first_time)
+    @first_jenkins_green_job_badge          = FactoryGirl.create(:one_jenkins_green_job)
+    @one_hundred_jenkins_green_jobs_badge   = FactoryGirl.create(:one_hundred_jenkins_green_jobs)
   end
 
   given(:user)    { FactoryGirl.create(:user) }
@@ -17,7 +19,7 @@ feature 'Jenkins Green Job' do
 
   describe "First green job" do
 
-    background { page.driver.post '/api/events.json', params }
+    background { page.driver.post endpoint, params }
 
     scenario "User is given the First Github push and First Timer badges" do
       visit user_path(user)
@@ -31,7 +33,7 @@ feature 'Jenkins Green Job' do
 
   describe "Second green job" do
 
-    background { 2.times { page.driver.post 'api/events.json', params } }
+    background { 2.times { page.driver.post endpoint, params } }
 
     scenario "User has more points" do
       visit user_path(user)
@@ -45,7 +47,7 @@ feature 'Jenkins Green Job' do
 
   describe "100 green jobs... OMG" do
 
-    background { 100.times { page.driver.post 'api/events.json', params } }
+    background { 100.times { page.driver.post endpoint, params } }
 
     scenario "User has 100 green jobs badge" do
       visit user_path(user)
