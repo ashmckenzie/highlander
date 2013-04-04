@@ -1,8 +1,8 @@
 GIT
   remote: git://github.com/ashmckenzie/data_migration.git
-  revision: 8cd15193e4d9773dfca211fd5b94f72d1fe32d04
+  revision: 998bad6c84d5ed58f79fdeedff72dd5215edc2e3
   specs:
-    data_migration (0.0.2)
+    data_migration (0.0.3)
 
 GIT
   remote: git://github.com/heroku/rails3_serve_static_assets.git
