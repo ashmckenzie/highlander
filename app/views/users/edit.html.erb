@@ -4,21 +4,37 @@
 
 <p class="avatar"><%= image_tag @user.decorate.avatar_url %></p>
 
+
 <%= form_for @user, :url => { :action => "update" } do |f| %>
 
-  <%= f.label :hooroo_email %>
-  <%= f.text_field :hooroo_email, disabled: true %><small>* this is the address we use for your Gravatar image</small>
+  <fieldset>
 
-  <%= f.label :name %>
-  <%= f.text_field :name %>
+    <p>
+      <%= f.label :hooroo_email %>
+      <%= f.text_field :hooroo_email, disabled: true %>
+      <small>* This is the address we use for your Gravatar image</small>
+    </p>
 
-  <%= f.label :twitter_username %>
-  <%= f.text_field :twitter_username %>
+    <p>
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+    </p>
 
-  <%= f.label :bio %>
-  <%= f.text_area :bio, rows: 5, maxlength: 128 %>
+    <p>
+      <%= f.label :twitter_username %>
+      <%= f.text_field :twitter_username %>
+    </p>
 
-  <%= f.submit "Save" %>
-  <%= link_to 'cancel', user_path(@user) %>
+    <p>
+      <%= f.label :bio %>
+      <%= f.text_area :bio, rows: 5, maxlength: 128 %>
+    </p>
+
+    <p>
+      <%= f.submit "Save" %>
+      <%= link_to 'cancel', user_path(@user), class: 'hl-button' %>
+    </p>
+
+</fieldset>
 
 <% end %>
