@@ -5,7 +5,7 @@ module Factories
     def self.for(payload)
       "PayloadValidators::#{payload.class.to_s.demodulize.camelize}".constantize.new(payload)
     rescue NameError
-      PayloadAdapters::Base.new(payload)
+      PayloadValidators::Base.new(payload)
     end
 
     private_class_method :new

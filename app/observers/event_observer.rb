@@ -1,9 +1,5 @@
 class EventObserver < ActiveRecord::Observer
 
-  def before_save event
-    event.value ||= event.metric.default_unit
-  end
-
   def after_create event
     log(event)
     update_total_score_for! event
