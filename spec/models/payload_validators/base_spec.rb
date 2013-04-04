@@ -16,7 +16,7 @@ module PayloadValidators
         let(:user) { nil }
 
         it 'raises an InvalidUserToken error' do
-          expect{ validator.validate! }.to raise_error(InvalidUserToken)
+          expect{ validator.validate! }.to raise_error(Exceptions::InvalidUserToken)
         end
       end
 
@@ -24,7 +24,7 @@ module PayloadValidators
         let(:metric) { nil }
 
         it 'raises an InvalidMetric error' do
-          expect{ validator.validate! }.to raise_error(InvalidMetric)
+          expect{ validator.validate! }.to raise_error(Exceptions::InvalidMetric)
         end
       end
     end

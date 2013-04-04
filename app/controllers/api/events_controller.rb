@@ -12,7 +12,9 @@ module Api
         code = :not_found
       end
 
-      respond_with status: code
+      respond_to do |format|
+        format.json { head code }
+      end
     end
 
     private
