@@ -21,19 +21,14 @@ class TwitterIntegration < Thor
   end
 
   def tweets
-    twitter_client.mentions_timeline.collect do |status|
+    (twitter_client.mentions_timeline || []).collect do |status|
       {
         tweet_id: status.id,
         text: status.text,
         twitter_username: status.user.screen_name,
         followers_count: status.user.followers_count,
-        metric: 'twitter_mention'
       }.to_json
     end
-  end
-
-  def metric
-    'twitter_mention'
   end
 
   def twitter_client

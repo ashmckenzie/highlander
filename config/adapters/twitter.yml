@@ -1,6 +1,6 @@
 ---
 default: &default
-  endpoint:           /api/adapters/twitter.json
+  endpoint:           /api/twitter_mention.json
   consumer_key:       tftvBCthb2Dzx6ccIAYkg
   consumer_secret:    2JI0mCn7hxJhmExU4jPBFox5wcfcPBQ059P6mAKkhg
   oauth_token:        15657534-DAClAfBX6VWiosAY4QDUCqP1DY9HFbo0d5HIZzyEr

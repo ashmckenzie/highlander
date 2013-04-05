@@ -1,15 +1,16 @@
 module Api
 
   class BaseController < ApplicationController
+    protect_from_forgery with: :null_session
 
-    #before_filter :merge_request_ip_address_into_params
+    before_filter :merge_request_ip_address_into_params!
 
-    def merge_request_ip_address_into_params
+    def merge_request_ip_address_into_params!
       params.merge!(request_ip_address: request_ip_address)
     end
 
     def request_ip_address
-      IPAddr.new(env['HTTP_X_FORWARDED_FOR'] || env['HTTP_X_REAL_IP'] || env['REMOTE_ADDR'])
+      env['HTTP_X_FORWARDED_FOR'] || env['HTTP_X_REAL_IP'] || env['REMOTE_ADDR']
     end
 
     rescue_from Exceptions::InvalidUserToken do
@@ -31,7 +32,7 @@ module Api
     end
 
     rescue_from Exceptions::TweetAlreadyProcessed do
-      Rails.logger.info "Not persisting tweet '#{current_tweet[:tweet_id]}' for '#{current_tweet[:twitter_username]}' as it's already been processed"
+      Rails.logger.info "Not persisting tweet '#{payload.tweet_id}' for '#{payload.twitter_username}' as it's already been processed"
       render text: 'Tweet already processed', status: :ok
     end
 
