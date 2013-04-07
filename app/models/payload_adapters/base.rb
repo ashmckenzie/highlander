@@ -5,7 +5,7 @@ module PayloadAdapters
     delegate :validate!, to: :validator
 
     def initialize(payload = {})
-      @payload = payload
+      self.payload = payload
     end
 
     def to_event_hash
@@ -25,12 +25,16 @@ module PayloadAdapters
     end
 
     def data
-      payload.except(*ignored_payload_keys)
+      @data ||= payload.except(*ignored_payload_keys)
+    end
+
+    def request_ip_address
+      @request_ip_address ||= IPAddr.new(payload[:request_ip_address])
     end
 
     private
 
-    attr_reader :payload
+    attr_accessor :payload
 
     def validator
       @validator ||= Factories::PayloadValidatorFactory.for(self)

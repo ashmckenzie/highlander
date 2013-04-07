@@ -18,7 +18,7 @@ module Api
     end
 
     rescue_from Exceptions::InvalidMetric do
-      render text: "Metric is invalid", status: :error
+      render text: "Metric '#{payload.metric.try(:name)}' is invalid", status: :error
     end
 
     rescue_from Exceptions::InvalidRequestSource do
@@ -27,7 +27,7 @@ module Api
 
     rescue_from Exceptions::InvalidGitBranch do
       # Render a HTTP 200 even though it's invalid so we don't annoy Github
-      Rails.logger.info "Not processing Github push for '#{email}' as it's for '#{git_branch}'"
+      Rails.logger.info "Not processing Github push for '#{payload.email}' as it's for branch: '#{payload.branch}'"
       render text: '', status: :ok
     end
 
