@@ -1,24 +1,26 @@
 module PayloadValidators
 
-  class Base < SimpleDelegator
+  class Base
 
     def initialize(payload)
-      super payload
+      @payload = payload
     end
 
     def validate!
-      raise Errors::InvalidMetric.new(self)         unless metric.present?
-      raise Errors::InvalidUserToken.new(self)      unless user.present?
-      raise Errors::InvalidRequestSource.new(self)  unless request_ip_address_valid?
+      raise Errors::InvalidMetric.new(payload)         unless payload.metric.present?
+      raise Errors::InvalidUserToken.new(payload)      unless payload.user.present?
+      raise Errors::InvalidRequestSource.new(payload)  unless request_ip_address_valid?
     end
 
     private
+
+    attr_reader :payload
 
     def request_ip_address_valid?
       return true if valid_request_sources.empty?
 
       valid_request_sources.each do |ip_range|
-        return true if ip_range.include?(request_ip_address)
+        return true if ip_range.include?(payload.request_ip_address)
       end
 
       false

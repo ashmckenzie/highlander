@@ -6,7 +6,7 @@ module PayloadValidators
 
     def validate!
       super
-      raise Errors::InvalidGitBranch.new(self) unless branch == MASTER_GIT_BRANCH
+      raise Errors::InvalidGitBranch.new(payload) unless payload.branch == MASTER_GIT_BRANCH
     end
 
     private
