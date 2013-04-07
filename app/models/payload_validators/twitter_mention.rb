@@ -4,7 +4,7 @@ module PayloadValidators
 
     def validate!
       super
-      raise Exceptions::TweetAlreadyProcessed.new(self) if tweet_already_attributed?
+      raise Errors::TweetAlreadyProcessed.new(self) if tweet_already_attributed?
     end
 
     def tweet_already_attributed?

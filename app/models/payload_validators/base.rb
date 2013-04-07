@@ -7,9 +7,9 @@ module PayloadValidators
     end
 
     def validate!
-      raise Exceptions::InvalidMetric.new(self)         unless metric.present?
-      raise Exceptions::InvalidUserToken.new(self)      unless user.present?
-      raise Exceptions::InvalidRequestSource.new(self)  unless request_ip_address_valid?
+      raise Errors::InvalidMetric.new(self)         unless metric.present?
+      raise Errors::InvalidUserToken.new(self)      unless user.present?
+      raise Errors::InvalidRequestSource.new(self)  unless request_ip_address_valid?
     end
 
     private

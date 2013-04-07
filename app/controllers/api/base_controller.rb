@@ -13,25 +13,25 @@ module Api
       env['HTTP_X_FORWARDED_FOR'] || env['HTTP_X_REAL_IP'] || env['REMOTE_ADDR']
     end
 
-    rescue_from Exceptions::InvalidUserToken do
+    rescue_from Errors::InvalidUserToken do
       render text: "User is not authorised", status: :unauthorized
     end
 
-    rescue_from Exceptions::InvalidMetric do
+    rescue_from Errors::InvalidMetric do
       render text: "Metric '#{payload.metric.try(:name)}' is invalid", status: :error
     end
 
-    rescue_from Exceptions::InvalidRequestSource do
+    rescue_from Errors::InvalidRequestSource do
       render text: "You are not authorised", status: :error
     end
 
-    rescue_from Exceptions::InvalidGitBranch do
+    rescue_from Errors::InvalidGitBranch do
       # Render a HTTP 200 even though it's invalid so we don't annoy Github
       Rails.logger.info "Not processing Github push for '#{payload.email}' as it's for branch: '#{payload.branch}'"
       render text: '', status: :ok
     end
 
-    rescue_from Exceptions::TweetAlreadyProcessed do
+    rescue_from Errors::TweetAlreadyProcessed do
       Rails.logger.info "Not persisting tweet '#{payload.tweet_id}' for '#{payload.twitter_username}' as it's already been processed"
       render text: 'Tweet already processed', status: :ok
     end
