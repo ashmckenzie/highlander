@@ -28,7 +28,7 @@
   &:nth-child(2n+1)
     background: palette(5, lighten, 65)
 
-  &:first-child
+  &:nth-child(2)
     .rank
       +nice-font(black)
       color: palette(5)
@@ -97,7 +97,7 @@
 +media($not-phone)
 
   .rankee
-    &:first-child .rank
+    &:nth-child(2) .rank
       font-size: 5.5rem
 
     .rank
