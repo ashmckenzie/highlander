@@ -53,10 +53,6 @@ class User < ActiveRecord::Base
     where("'#{email}' = ANY (emails) OR hooroo_email = '#{email}'").first
   end
 
-  def total_badges
-    achievements.count
-  end
-
   def events_for_metric metric
     events.joins(:metric).where("metrics.name = ?", metric.name)
   end
