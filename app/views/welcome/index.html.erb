@@ -12,6 +12,8 @@
 
 <ul class="ranking">
 
+  <li class="running">Fortnightly running score</li>
+
   <%- @users.each_with_index do |user, i| -%>
     <li class="rankee">
       <%= link_to user_path(user) do %>
