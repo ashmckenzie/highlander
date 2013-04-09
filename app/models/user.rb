@@ -7,7 +7,6 @@ class User < ActiveRecord::Base
 
   default_scope -> { enabled }
 
-  scope :by_total_score,  -> { order 'total_score DESC, name ASC' }
   scope :enabled,         -> { where(enabled: true) }
   scope :point_earner,    -> { where(earns_points: true) }
 
@@ -49,6 +48,19 @@ class User < ActiveRecord::Base
     slug
   end
 
+  # TODO: this 2.weeks.ago logic is replicated in the RunningLeaderboard query. Simplify.
+  def running_score
+    events.where('created_at > ?', 2.weeks.ago.to_s(:db)).sum(:value)
+  end
+
+  def total_score
+    @total_score ||= events.sum(:value)
+  end
+
+  def badge_count
+    @total_badges ||= achievements.count
+  end
+
   def self.with_email email
     where("'#{email}' = ANY (emails) OR hooroo_email = '#{email}'").first
   end
@@ -67,10 +79,6 @@ class User < ActiveRecord::Base
 
   def disable!
     update(enabled: false)
-  end
-
-  def recalculate_total_score!
-    update!(total_score: events.sum(:value))
   end
 
   def can_earn_points!

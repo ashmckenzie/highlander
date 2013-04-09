@@ -2,7 +2,6 @@ class EventObserver < ActiveRecord::Observer
 
   def after_create event
     log(event)
-    update_total_score_for! event
     calculate_achievements_for! event
   end
 
@@ -10,10 +9,6 @@ class EventObserver < ActiveRecord::Observer
 
   def log(event)
     Rails.logger.info "New event: #{event.inspect}"
-  end
-
-  def update_total_score_for! event
-    event.user.recalculate_total_score!
   end
 
   def achievement_calculators

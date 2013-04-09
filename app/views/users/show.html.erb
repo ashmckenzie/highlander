@@ -20,8 +20,12 @@
 
   <section class="badges">
 
-    <h2>Badges (<strong><%= @user.achievements.count %></strong>)</h2>
-    <p class="badge-spiel"><%= @user.first_name %> has unlocked these <%= @user.achievements.count %> badges so far. Keep an eye on this page to see which one comes next!</p>
+    <h2>Badges (<strong><%= @user.badge_count %></strong>)</h2>
+    <p class="badge-spiel">
+      <%= @user.first_name %> has unlocked these
+      <%= @user.badge_count %> badges so far.
+      Keep an eye on this page to see which one comes next!
+    </p>
 
     <ul>
       <%- @user.achievements.each do |achievement| %>
@@ -37,7 +41,8 @@
 
   <ul class="scores">
     <li class="total-score"><span><%= @user.total_score %></span> All-time Score</li>
-    <li class="total-badges"><span><%= @user.achievements.count %></span> Badges</li>
+    <li class="running-score"><span><%= @user.running_score %></span> Running Score</li>
+    <li class="total-badges"><span><%= @user.badge_count %></span> Badges</li>
   </ul>
 
   <h2>Summary</h2>
