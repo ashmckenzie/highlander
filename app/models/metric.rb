@@ -7,6 +7,7 @@ class Metric < ActiveRecord::Base
 
   NAMES = %w{
     github_push
+    github_issue
     jenkins_green_job
     ming_pong_loss
     ming_pong_victory
