@@ -2,7 +2,7 @@ FactoryGirl.define do
 
   factory :badge do
 
-    factory :first_time  do
+    factory :first_time do
       name          'first_time'
       tag           'Experience the quickening'
       description   'First timer'
@@ -30,6 +30,18 @@ FactoryGirl.define do
       name          '100_jenkins_green_jobs'
       tag           'Green goblin centurion'
       description   '100 Jenkins green jobs'
+    end
+
+    factory :one_ming_pong_victory do
+      name          '1_ming_pong_victory'
+      tag           'One small step forward'
+      description   'First Ming Pong victory'
+    end
+
+    factory :ten_ming_pong_victories do
+      name          '10_ming_pong_victories'
+      tag           'Paddle master'
+      description   '10 Ming Pong victories'
     end
 
   end

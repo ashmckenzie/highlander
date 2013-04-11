@@ -19,6 +19,12 @@ FactoryGirl.define do
       default_unit  2
     end
 
+    factory :ming_pong_loss do
+      name          'ming_pong_loss'
+      description   'Ming Pong loss'
+      default_unit  0
+    end
+
     factory :express_yaself do
       name          'express_yaself'
       description   'Expressed Yaself'

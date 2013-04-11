@@ -32,7 +32,7 @@ feature 'Twitter Mentions' do
       page.should have_content @first_time_badge.description
       page.should have_content @one_twitter_mention.description
 
-      page.should have_content "#{twitter_mention_metric.default_unit} Score"
+      page.should have_content "#{twitter_mention_metric.default_unit} All-time Score"
       page.should have_content '2 Badges'
     end
   end
@@ -51,7 +51,7 @@ feature 'Twitter Mentions' do
       page.should have_content @first_time_badge.description
       page.should have_content @one_twitter_mention.description
 
-      page.should have_content "#{twitter_mention_metric.default_unit * 3} Score"
+      page.should have_content "#{twitter_mention_metric.default_unit * 3} All-time Score"
       page.should have_content '2 Badges'
     end
   end
@@ -70,7 +70,7 @@ feature 'Twitter Mentions' do
       page.should have_content @first_time_badge.description
       page.should have_content @one_twitter_mention.description
 
-      page.should have_content "#{twitter_mention_metric.default_unit * 2} Score"
+      page.should have_content "#{twitter_mention_metric.default_unit * 2} All-time Score"
       page.should have_content '2 Badges'
     end
   end

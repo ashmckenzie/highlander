@@ -14,10 +14,12 @@ module Errors
 
   end
 
-  class InvalidMetric         < ApiError ; end
-  class InvalidUserToken      < ApiError ; end
-  class InvalidGitBranch      < ApiError ; end
-  class TweetAlreadyProcessed < ApiError ; end
-  class InvalidRequestSource  < ApiError ; end
+  class InvalidMetric                   < ApiError ; end
+  class InvalidUserToken                < ApiError ; end
+  class InvalidGitBranch                < ApiError ; end
+  class TweetAlreadyProcessed           < ApiError ; end
+  class InvalidRequestSource            < ApiError ; end
+  class MingPongWinnerAlreadyProcessed  < ApiError ; end
+  class MingPongLoserAlreadyProcessed   < ApiError ; end
 
 end
