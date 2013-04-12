@@ -1,7 +1,6 @@
 require 'net/http'
 require 'ostruct'
 require 'json'
-require 'pry'
 
 class RaquetioIntegration < Thor
 
@@ -35,7 +34,7 @@ class RaquetioIntegration < Thor
 
   def rio_config
     @rio_config ||= OpenStruct.new(
-      endpoint: '/hooroo/matches.json?limit=20',
+      endpoint: '/hooroo/matches.json?limit=100',
       host:     'racquet.io',
       port:     80
     )
