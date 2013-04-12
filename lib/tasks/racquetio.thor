@@ -35,7 +35,7 @@ class RaquetioIntegration < Thor
 
   def rio_config
     @rio_config ||= OpenStruct.new(
-      endpoint: '/hooroo/matches.json?limit=100',
+      endpoint: '/hooroo/matches.json?limit=20',
       host:     'racquet.io',
       port:     80
     )
