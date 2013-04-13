@@ -37,3 +37,19 @@ Please see the [data_migrations docs](https://github.com/ashmckenzie/data_migrat
 
 _*Please note this means the Rails migrations are for schema changes only_
 
+**Adding a new Metric**
+
+_(consider adding a wiki page for this)_
+
+1. Write a capybara feature test (see spec/features for examples of what we test)
+2. Watch it fail
+3. Add your new metric to the database by running a data migration to add the new row to the metrics table (see above)
+4. Add the metric name to the Metric::NAMES array. This automagically creates a new post endpoint in the format "/api/your-metric-name.json" - see the routes file, or run _$ rake routes_ to verify). All metric posts are redirected to the events#create action, with the metric name merged into the params with key _:metric_.
+5. Implement a *PayloadAdapter* for your metric only if the base one isn't compatible with the JSON payload you're expecting.
+6. Implement a *PayloadValidator* for your metric only if you require additional/customised checks before creating the event.
+
+**Configuring badges for your new metric**
+
+TBC
+
+
