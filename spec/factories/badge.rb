@@ -44,5 +44,29 @@ FactoryGirl.define do
       description   '10 Ming Pong victories'
     end
 
+    factory :one_github_issue_opened do
+      name          '1_github_issue_opened'
+      tag           'Picky bug-ger'
+      description   'First GitHub issue opened'
+    end
+
+    factory :twenty_five_github_issues_opened do
+      name          '25_github_issues_opened'
+      tag           'Master bug spotter!'
+      description   '25 GitHub issues opened'
+    end
+
+    factory :one_github_issue_closed do
+      name          '1_github_issue_closed'
+      tag           'Bug squasher'
+      description   'First GitHub issue closed'
+    end
+
+    factory :twenty_five_github_issues_closed do
+      name          '25_github_issues_closed'
+      tag           '25 issues resolved... not too shabby'
+      description   '25 GitHub issues closed'
+    end
+
   end
 end
