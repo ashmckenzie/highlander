@@ -22,3 +22,18 @@ Highlanders goal is to encourage and promote awesome work through points and bad
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
 
+## Development notes:
+
+**We use the data_migrations gem for seed data**
+
+To keep our data migrations seperate from the schema migrations*, we use [@ashmckenzie's](https://github.com/ashmckenzie) [data_migrations](https://github.com/ashmckenzie/data_migration) gem.
+
+To create a new migration (e.g. add a new metric):
+
+    $ rails g data_migration:new <name of migration>  # similar to rails g migration <name of migration>
+    $ rake db:data_migrate                            # similar to rake db:migrate
+
+Please see the [data_migrations docs](https://github.com/ashmckenzie/data_migration) for further info.
+
+_*Please note this means the Rails migrations are for schema changes only_
+
