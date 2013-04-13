@@ -1,5 +1,6 @@
 module AchievementCalculator
-  class TwitterMention < AchievementCalculator::Base
+
+  class TwitterMention < Base
 
     private
 
@@ -11,4 +12,5 @@ module AchievementCalculator
       }
     end
   end
+
 end

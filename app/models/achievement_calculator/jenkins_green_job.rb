@@ -1,5 +1,6 @@
 module AchievementCalculator
-  class JenkinsGreenJob < AchievementCalculator::Base
+
+  class JenkinsGreenJob < Base
 
     private
 
@@ -13,4 +14,5 @@ module AchievementCalculator
       }
     end
   end
+
 end

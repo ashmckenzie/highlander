@@ -1,5 +1,6 @@
 module AchievementCalculator
-  class MingPongVictory < AchievementCalculator::Base
+
+  class MingPongVictory < Base
 
     private
 
@@ -10,4 +11,5 @@ module AchievementCalculator
       }
     end
   end
+
 end

@@ -1,5 +1,6 @@
 module AchievementCalculator
-  class FirstTime < AchievementCalculator::Base
+
+  class FirstTime < Base
 
     def calculate!
       if name = badges[total_events]
@@ -17,4 +18,5 @@ module AchievementCalculator
       user.events.count
     end
   end
+
 end
