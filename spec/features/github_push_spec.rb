@@ -13,7 +13,7 @@ feature 'Github Push' do
   given!(:metric)  { FactoryGirl.create(:github_push) }
 
   given(:valid_params) do
-    { payload: GithubPush.new.payload(user.hooroo_email) }
+    { payload: GithubPayloads.push(user.hooroo_email) }
   end
 
   describe 'First push' do
