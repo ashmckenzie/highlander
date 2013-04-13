@@ -41,6 +41,14 @@ module Api
       render text: 'Match already processed', status: :ok
     end
 
+    rescue_from Errors::IssueActionNotOpened do
+      render text: 'Github issue action was not an open event', status: :ok
+    end
+
+    rescue_from Errors::IssueActionNotClosed do
+      render text: 'Github issue action was not a close event', status: :ok
+    end
+
   end
 
 end

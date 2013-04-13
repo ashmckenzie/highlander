@@ -17,7 +17,7 @@ FactoryGirl.define do
     factory :one_github_push do
       name          '1_github_push'
       tag           'Octocat is pleased with you'
-      description   'First GitHub push'
+      description   'First Github push'
     end
 
     factory :one_jenkins_green_job do
@@ -47,25 +47,25 @@ FactoryGirl.define do
     factory :one_github_issue_opened do
       name          '1_github_issue_opened'
       tag           'Picky bug-ger'
-      description   'First GitHub issue opened'
+      description   'First Github issue opened'
     end
 
     factory :twenty_five_github_issues_opened do
       name          '25_github_issues_opened'
       tag           'Master bug spotter!'
-      description   '25 GitHub issues opened'
+      description   '25 Github issues opened'
     end
 
     factory :one_github_issue_closed do
       name          '1_github_issue_closed'
       tag           'Bug squasher'
-      description   'First GitHub issue closed'
+      description   'First Github issue closed'
     end
 
     factory :twenty_five_github_issues_closed do
       name          '25_github_issues_closed'
       tag           '25 issues resolved... not too shabby'
-      description   '25 GitHub issues closed'
+      description   '25 Github issues closed'
     end
 
   end

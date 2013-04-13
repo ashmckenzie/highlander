@@ -36,6 +36,18 @@ FactoryGirl.define do
       default_unit  10
     end
 
+    factory :github_issue_opened do
+      name          'github_issue_opened'
+      description   'Opened GitHub issue'
+      default_unit  5
+    end
+
+    factory :github_issue_closed do
+      name          'github_issue_closed'
+      description   'Closed GitHub issue'
+      default_unit  5
+    end
+
   end
 
 end

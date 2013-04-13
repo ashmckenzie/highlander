@@ -21,5 +21,7 @@ module Errors
   class InvalidRequestSource            < ApiError ; end
   class MingPongWinnerAlreadyProcessed  < ApiError ; end
   class MingPongLoserAlreadyProcessed   < ApiError ; end
+  class IssueActionNotOpened            < ApiError ; end
+  class IssueActionNotClosed            < ApiError ; end
 
 end

@@ -1,17 +1,17 @@
 module PayloadAdapters
 
-  class GithubPush < Base
+  class GithubIssueOpened < Base
 
     def user
-      @user ||= User.with_email(author_email)
+      @user ||= User.find_by_github_username(github_username)
     end
 
-    def branch
-      payload[:ref]
+    def github_username
+      payload[:issue][:user][:login]
     end
 
-    def author_email
-      payload[:commits].first[:author][:email]
+    def action
+      payload[:action]
     end
 
     private

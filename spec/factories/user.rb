@@ -8,6 +8,10 @@ FactoryGirl.define do
     "tweeter#{n}"
   end
 
+  sequence :github_username do |n|
+    "github_user#{n}"
+  end
+
   factory :user do
     name 'Bob Smith'
     hooroo_email
@@ -17,7 +21,12 @@ FactoryGirl.define do
       twitter_username
     end
 
+    trait :githubber do
+      github_username
+    end
+
     factory :twitter_user, traits: [ :tweeter ]
+    factory :github_user,  traits: [ :githubber ]
 
   end
 end

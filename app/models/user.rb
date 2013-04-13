@@ -5,14 +5,14 @@ class User < ActiveRecord::Base
   has_many :achievements, -> { order 'achievements.created_at DESC' }
   has_many :badges,       -> { order 'achievements.created_at DESC' }, through: :achievements
 
-  default_scope -> { enabled }
-
+  default_scope           -> { enabled }
   scope :enabled,         -> { where(enabled: true) }
   scope :point_earner,    -> { where(earns_points: true) }
 
-  validates :name, presence: true
-  validates :hooroo_email,  uniqueness: true, presence: true
-  validates :twitter_username, uniqueness: true, allow_blank: true
+  validates :name,              presence: true
+  validates :hooroo_email,      uniqueness: true, presence: true
+  validates :twitter_username,  uniqueness: true, allow_blank: true
+  validates :github_username,   uniqueness: true, allow_blank: true
 
   class << self
     alias_method :original_find, :find
