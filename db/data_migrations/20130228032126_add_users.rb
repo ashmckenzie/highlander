@@ -5,7 +5,7 @@ module DataMigration
       def up
         User.create!(hooroo_email: 'ash@hooroo.com', emails: ['ash@hooroo.com', 'ash@greenworm.com.au'],  name: 'Ash McKenzie', bio: 'Software engineer, Boxer owner and craft beer & gaming connoisseur')
         User.create!(hooroo_email: 'daniel@hooroo.com', emails: ['daniel@hooroo.com', 'locusdelicti@gmail.com'], name: 'Dan Bradford', bio: "PhD Candidate and researcher, Developer and FLOSS enthusiast with a dull sense of humour. You've been warned.")
-        User.create!(hooroo_email: 'stuartActiveRecord::Base.transaction@hooroo.com', emails: ['stuart@hooroo.com', 'stuart.liston@gmail.com'], name: 'Stu Liston', bio: 'Scotsman in Melbourne. Husband, Pug Owner & Rubyist.')
+        User.create!(hooroo_email: 'stuart@hooroo.com', emails: ['stuart@hooroo.com', 'stuart.liston@gmail.com'], name: 'Stu Liston', bio: 'Scotsman in Melbourne. Husband, Pug Owner & Rubyist.')
         User.create!(hooroo_email: 'andrei@hooroo.com', emails: ['andrei@hooroo.com', ''], name: 'Andrei Miulescu')
         User.create!(hooroo_email: 'ashley@hooroo.com', emails: ['ashley@hooroo.com'], name: 'Ashley Cambrell', bio: 'Software dev. Web, Java, ROR')
         User.create!(hooroo_email: 'chris@hooroo.com', emails: ['chris@hooroo.com'], name: 'Chris Rode')
