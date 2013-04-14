@@ -26,7 +26,7 @@ Highlanders goal is to encourage and promote awesome work through points and bad
 
 **We use the data_migrations gem for seed data**
 
-To keep our data migrations seperate from the schema migrations*, we use [@ashmckenzie](https://github.com/ashmckenzie)'s [data_migrations](https://github.com/ashmckenzie/data_migration) gem.
+To keep our data migrations seperate from the schema migrations*, we use [ashmckenzie](https://github.com/ashmckenzie)'s [data_migrations](https://github.com/ashmckenzie/data_migration) gem.
 
 To create a new migration (e.g. add a new metric):
 
