@@ -76,22 +76,26 @@ body
 #main-container
   +box-shadow(0 0 10px 0px rgba(palette(4), .2))
   background: palette(1, lighten, 100)
-  // margin-top: 5px
-  margin-bottom: 30px
+  padding-bottom: 30px
   position: relative
   z-index: 0
 
 .main-column
   +span-columns(8)
 
-.sidebar
-  +span-columns(4)
-  border-left: 1px solid palette(5, lighten, 55)
-  position: absolute
-  right: 0
-  height: 100%
++media($not-phone)
 
+  .sidebar
+    +span-columns(3)
+    border-left: 1px solid palette(5, lighten, 55)
+    position: absolute
+    right: 0
+    height: 100%
 
++media($phone)
+
+  .sidebar
+    clear: both
 
 // =================================================
 // -----------------Media Queries-------------------

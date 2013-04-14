@@ -35,7 +35,7 @@
       text-shadow: 0 2px 0 palette(5, darken, 10)
 
     .scores
-      .total-score, .total-badges
+      .total-score, .running-score, .total-badges
         span
           color: palette(5)
 
@@ -79,7 +79,7 @@
     list-style: none
     background: gold
 
-    .total-score, .total-badges
+    .total-score, .total-badges, .running-score
       +span-columns(1 of 8)
       span
         color: palette(3)
@@ -111,7 +111,7 @@
       display: block
 
     .scores
-      .total-score, .total-badges
+      .total-score, .total-badges, .running-score
         margin-top: 2em
 
     .last-updated

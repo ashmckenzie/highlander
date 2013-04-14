@@ -4,6 +4,14 @@
   +clearfix
   padding: 25px 0 20px 20px
 
++media($not-phone)
+  .main-column
+    +span-columns(9)
+
++media($phone)
+  .main-column
+    +span-columns(11)
+
 h2
   margin: 0
   color: palette(3)
@@ -38,39 +46,54 @@ h2
     margin: 0 0 15px 0
 
   .bio
-    +clearfix
     font-size: .9rem
     font-style: italic
 
+  +media($not-phone)
+    .bio
+      +clearfix
+
+  +media($phone)
+    .bio
+      clear: both
+      padding-top: 10px
+
+
 .badges
+  +clearfix
   padding-top: 1em
 
   ul
     list-style: none
-    padding: 0
+    padding: 1em 0 0 0
+    // margin-left: 30px
 
   li
+    +clearfix
     +omega(5n)
     float: left
     margin-bottom: 1em
     position: relative
-    margin: 0 35px 35px 0
-    width: 110px
+    width: 330px
 
     img
       cursor: pointer
       display: block
+      float: left
       height: 110px
-      margin: 0 auto
       width: 110px
 
-    h3
-      margin: 0 0 .1em
-    p
-      font-size: .9rem
-      margin: 0 0 .5em
-      &.badge-date
-        font-size: .8rem
+    .badge-details
+      float: left
+      margin: 10px 0 0 15px
+      width: 190px
+      h3
+        margin: 0 0 .1em
+      p
+        font-size: .9rem
+        margin: 0 0 .5em
+        &.badge-date
+          font-size: .8rem
 
 .summary
   background: palette(5, lighten, 65)
@@ -80,14 +103,36 @@ h2
     list-style: none
     padding: 0
 
+  .metrics
+    +clearfix
+    li
+      +clearfix
+      line-height: 2em
+      .value, .description
+        float: left
+        display: block
+      .value
+        +nice-font(black)
+        color: palette(5)
+        display: block
+        font-size: 1.5rem
+        width: 40px
+        text-align: right
+      .description
+        margin-left: 15px
+
   .scores
     +clearfix
-    background: palette(1, lighten, 30)
     border-radius: $radius
     margin: 0 0 1em
-    padding: 1em
+    padding: 1em 0 0 0
 
     li
-      +span-columns(1 of 2)
-      +omega(2)
+      clear: both
+      float: left
+      line-height: 2em
 
+    .total-score, .total-badges, .running-score
+      font-size: .9rem
+      span
+        font-size: 2.3rem

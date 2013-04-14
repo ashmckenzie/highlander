@@ -12,6 +12,7 @@
       <%= link_to @user.name, @user %>
       <% if can? :edit, @user %><sup>(<%= link_to 'edit', edit_user_path(current_user) %>)</sup><% end %>
     </h2>
+
     <h3 class="twitter-handle"><%= @user.twitter_handle %></h3>
 
     <p class="bio"><%= @user.bio %></p>
@@ -20,9 +21,10 @@
 
   <section class="badges">
 
-    <h2>Badges (<strong><%= @user.badge_count %></strong>)</h2>
+    <h2>Badges</h2>
+
     <p class="badge-spiel">
-      <%= @user.first_name %> has unlocked these
+      <%= @user.first_name %> has unlocked the following
       <%= @user.badge_count %> badges so far.
       Keep an eye on this page to see which one comes next!
     </p>
@@ -39,15 +41,17 @@
 
 <section class="summary sidebar">
 
+  <h2>Scores</h2>
+
   <ul class="scores">
-    <li class="total-score"><span><%= @user.total_score %></span> All-time Score</li>
-    <li class="running-score"><span><%= @user.running_score %></span> Running Score</li>
+    <li class="running-score"><span><%= @user.running_score %></span> Running</li>
+    <li class="total-score"><span><%= @user.total_score %></span> All-time</li>
     <li class="total-badges"><span><%= @user.badge_count %></span> Badges</li>
   </ul>
 
-  <h2>Summary</h2>
+  <h2>Breakdown</h2>
 
-  <ul>
+  <ul class="metrics">
     <%- @user.metric_totals.each do |metric_total| %>
       <li class="<%= metric_total.description %>">
         <%
@@ -59,7 +63,5 @@
       </li>
     <%- end %>
   </ul>
-
-  <div id="badge-descriptions"></div>
 
 </section>

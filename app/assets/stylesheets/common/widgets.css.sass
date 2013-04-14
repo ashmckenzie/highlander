@@ -14,26 +14,28 @@
   &:hover
     background: palette(5, lighten, 15)
 
+@mixin score
+  color: palette(6)
+  font-size: .8rem
+  text-transform: uppercase
+  span
+    +nice-font(black)
+    color: palette(5)
+    display: block
+    font-size: 2.5rem
+    line-height: 1em
+
 @mixin scores
   list-style: none
 
-  .total-score, .total-badges
-    color: palette(6)
-    font-size: .8rem
-    text-transform: uppercase
-    span
-      +nice-font(black)
-      color: palette(5)
-      display: block
-      font-size: 2.5rem
-      line-height: .8em
+  .total-score, .running-score, .total-badges
+    +score
 
   +media($phone)
-    .total-score, .total-badges
+    .total-score, .total-badges, .running-score
       font-size: .7rem
       span
         font-size: 1.3rem
-
 
 // Classes
 .button
