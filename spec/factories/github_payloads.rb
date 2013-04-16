@@ -154,7 +154,7 @@ class GithubPayloads
   end
 
   # Created this hook using:
-  # curl -i --user stuliston -X POST -d '{"name": "web", "events": ["issues"], "active": true, "config": {"url": "http://leaderboard.hooroo.com/api/github_issue_opened.json", "content_type": "json"}}' https://api.github.com/repos/hooroo/hotels/hooks
+  # curl -i --user stuliston -X POST -d '{"name": "web", "events": ["issues"], "active": true, "config": {"url": "https://thequickening.herokuapp.com/api/github_issue_opened.json", "content_type": "json"}}' https://api.github.com/repos/hooroo/hotels/hooks
   def self.issue_opened(github_username)
     <<-JSON
       {
@@ -336,7 +336,7 @@ class GithubPayloads
   end
 
   # Created this hook using:
-  # curl -i --user stuliston -X POST -d '{"name": "web", "events": ["issues"], "active": true, "config": {"url": "http://leaderboard.hooroo.com/api/github_issue_closed.json", "content_type": "json"}}' https://api.github.com/repos/hooroo/hotels/hooks
+  # curl -i --user stuliston -X POST -d '{"name": "web", "events": ["issues"], "active": true, "config": {"url": "https://thequickening.herokuapp.com/api/github_issue_closed.json", "content_type": "json"}}' https://api.github.com/repos/hooroo/hotels/hooks
   def self.issue_closed(github_username)
     <<-JSON
       {
