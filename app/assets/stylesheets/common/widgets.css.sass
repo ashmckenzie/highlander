@@ -27,15 +27,17 @@
 
 @mixin scores
   list-style: none
-
   .total-score, .running-score, .total-badges
     +score
 
-  +media($phone)
-    .total-score, .total-badges, .running-score
-      font-size: .7rem
-      span
-        font-size: 1.3rem
+// To be used in special cases only
+@mixin clrfx
+  background: none
+  clear: both
+  display: block
+  float: none
+  height: 0px
+
 
 // Classes
 .button
@@ -43,3 +45,6 @@
 
 .scores
   +scores
+
+.clrfx
+  +clrfx

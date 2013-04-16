@@ -81,21 +81,12 @@ body
   z-index: 0
 
 .main-column
-  +span-columns(8)
+  +span-columns(12)
 
-+media($not-phone)
+.sidebar
+  +span-columns(12)
+  clear: both
 
-  .sidebar
-    +span-columns(3)
-    border-left: 1px solid palette(5, lighten, 55)
-    position: absolute
-    right: 0
-    height: 100%
-
-+media($phone)
-
-  .sidebar
-    clear: both
 
 // =================================================
 // -----------------Media Queries-------------------
@@ -109,9 +100,9 @@ body
       width: 181px
 
     li
-      +span-columns(2 of 12)
+      +span-columns(2)
       &.username
-        +span-columns(8 of 12)
+        +span-columns(8)
       &.sign-in
         +shift(10)
 
@@ -119,3 +110,13 @@ body
     padding-top: 50px
     h2
       font-size: 2.5rem
+
+  .sidebar
+    +span-columns(3)
+    border-left: 1px solid palette(5, lighten, 55)
+    position: absolute
+    right: 0
+    height: 100%
+
+  .main-column
+    +span-columns(9)

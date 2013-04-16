@@ -4,14 +4,6 @@
   +clearfix
   padding: 25px 0 20px 20px
 
-+media($not-phone)
-  .main-column
-    +span-columns(9)
-
-+media($phone)
-  .main-column
-    +span-columns(11)
-
 h2
   margin: 0
   color: palette(3)
@@ -21,18 +13,10 @@ h2
   +clearfix
 
 .info-block
+  border-bottom: 1px solid palette(5, lighten, 55)
   min-height: 150px
-  padding-bottom: 5px
+  padding-bottom: 20px
   position: relative
-  &:after //sneaky!
-    background: palette(5, lighten, 55)
-    bottom: 0
-    content: ""
-    height: 1px
-    position: absolute
-    padding-right: 46px
-    left: -20px
-    width: 100%
 
   .avatar
     float: left
@@ -48,16 +32,7 @@ h2
   .bio
     font-size: .9rem
     font-style: italic
-
-  +media($not-phone)
-    .bio
-      +clearfix
-
-  +media($phone)
-    .bio
-      clear: both
-      padding-top: 10px
-
+    padding-top: 10px
 
 .badges
   +clearfix
@@ -66,29 +41,28 @@ h2
   ul
     list-style: none
     padding: 1em 0 0 0
-    // margin-left: 30px
 
   li
     +clearfix
-    +omega(5n)
+    +span-columns(4 of 8)
+    +omega(2n)
     float: left
     margin-bottom: 1em
     position: relative
-    width: 330px
 
     img
-      cursor: pointer
       display: block
       float: left
       height: 110px
+      margin-right: 10px
       width: 110px
 
     .badge-details
-      float: left
-      margin: 10px 0 0 15px
-      width: 190px
       h3
-        margin: 0 0 .1em
+        +nice-font(regular)
+        color: palette(3)
+        line-height: 1em
+        margin: .5em 0 .1em
       p
         font-size: .9rem
         margin: 0 0 .5em
@@ -98,28 +72,18 @@ h2
 .summary
   background: palette(5, lighten, 65)
   padding: 1em
-
   ul
     list-style: none
     padding: 0
 
   .metrics
-    +clearfix
-    li
-      +clearfix
-      line-height: 2em
-      .value, .description
-        float: left
-        display: block
-      .value
-        +nice-font(black)
-        color: palette(5)
-        display: block
-        font-size: 1.5rem
-        width: 40px
-        text-align: right
-      .description
-        margin-left: 15px
+    white-space: nowrap
+    .value
+      +nice-font(black)
+      color: palette(5)
+      font-size: 1.5rem
+    .description
+      margin-left: 5px
 
   .scores
     +clearfix
@@ -136,3 +100,12 @@ h2
       font-size: .9rem
       span
         font-size: 2.3rem
+
+
+// =================================================
+// -----------------Media Queries-------------------
+// =================================================
+
++media($lte-480)
+  .badges li
+    +span-columns(8 of 8)

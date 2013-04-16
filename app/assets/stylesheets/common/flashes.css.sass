@@ -6,9 +6,10 @@
 
   &.topmost
     border-bottom: 1px solid
+    display: none
 
-    +media($phone)
-      display: none
+    +media($not-phone)
+      display: block
 
     p
       +shift(2)
