@@ -1,12 +1,9 @@
 class UserDecorator < Draper::Decorator
+  alias :user :source
   delegate_all
 
   def twitter_handle
-    if source.twitter_username
-      "@#{source.twitter_username}"
-    else
-      nil
-    end
+    "@#{user.twitter_username}" if user.twitter_username
   end
 
   def email
@@ -19,7 +16,7 @@ class UserDecorator < Draper::Decorator
   end
 
   def bio
-    source.bio || "#{first_name} hasn't added a bio yet"
+    user.bio || "#{first_name} hasn't added a bio yet"
   end
 
   def first_name
@@ -27,12 +24,12 @@ class UserDecorator < Draper::Decorator
   end
 
   def id_or_slug
-    source.slug.present? ? source.slug : source.id
+    user.slug.present? ? user.slug : user.id
   end
 
   def last_event_created_at
-    if source.events.first
-      "Last updated on #{source.events.first.created_at.strftime("%B %-d, %Y at %-l:%M %P")}"
+    if user.events.first
+      "Last updated on #{user.events.first.created_at.strftime("%B %-d, %Y at %-l:%M %P")}"
     else
       ''
     end
