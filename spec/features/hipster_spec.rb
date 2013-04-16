@@ -7,7 +7,6 @@ feature 'Hipster badge' do
   background do
     @hipster_badge            = FactoryGirl.create(:badge, :hipster)
     @first_github_push_badge  = FactoryGirl.create(:one_github_push)
-    binding.pry
   end
 
   given(:user)    { FactoryGirl.create(:user) }
