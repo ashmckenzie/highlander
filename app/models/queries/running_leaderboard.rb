@@ -2,7 +2,7 @@ module Queries
 
   class RunningLeaderboard
 
-    def initialize(users_relation: User.all, running_period_start: 2.weeks.ago)
+    def initialize(users_relation: User.all, running_period_start: 1.weeks.ago)
       @users_relation       = users_relation
       @running_period_start = running_period_start
     end

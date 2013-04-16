@@ -48,9 +48,9 @@ class User < ActiveRecord::Base
     slug
   end
 
-  # TODO: this 2.weeks.ago logic is replicated in the RunningLeaderboard query. Simplify.
+  # TODO: this 1.weeks.ago logic is replicated in the RunningLeaderboard query. Simplify.
   def running_score
-    events.where('created_at > ?', 2.weeks.ago.to_s(:db)).sum(:value)
+    events.where('created_at > ?', 1.weeks.ago.to_s(:db)).sum(:value)
   end
 
   def total_score
