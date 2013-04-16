@@ -26,7 +26,7 @@ feature 'Github Issue Opened' do
       page.should have_content @first_time_badge.description
       page.should have_content @one_github_issue_opened_badge.description # failing because badge is missing
 
-      page.should have_content "#{metric.default_unit} All-time Score"
+      page.should have_content "#{metric.default_unit} All-time"
       page.should have_content '2 Badges'
     end
   end

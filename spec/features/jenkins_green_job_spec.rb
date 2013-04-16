@@ -1,4 +1,4 @@
-require "spec_helper"
+require 'spec_helper'
 
 feature 'Jenkins Green Job' do
 
@@ -26,7 +26,7 @@ feature 'Jenkins Green Job' do
       page.should have_content @first_time_badge.description
       page.should have_content @first_jenkins_green_job_badge.description
 
-      page.should have_content "#{metric.default_unit} All-time Score"
+      page.should have_content "#{metric.default_unit} All-time"
       page.should have_content "2 Badges"
     end
   end
@@ -40,7 +40,7 @@ feature 'Jenkins Green Job' do
       page.should have_content @first_time_badge.description
       page.should have_content @first_jenkins_green_job_badge.description
 
-      page.should have_content "#{metric.default_unit * 2} All-time Score"
+      page.should have_content "#{metric.default_unit * 2} All-time"
       page.should have_content "2 Badges"
     end
   end
@@ -55,7 +55,7 @@ feature 'Jenkins Green Job' do
       page.should have_content @first_jenkins_green_job_badge.description
       page.should have_content @one_hundred_jenkins_green_jobs_badge.description
 
-      page.should have_content "#{metric.default_unit * 100} All-time Score"
+      page.should have_content "#{metric.default_unit * 100} All-time"
       page.should have_content "3 Badges"
     end
   end

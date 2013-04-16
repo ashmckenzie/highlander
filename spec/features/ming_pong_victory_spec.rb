@@ -35,7 +35,7 @@ feature 'Ming Pong Victory' do
       page.should have_content @first_time_badge.description
       page.should have_content @one_ming_pong_victory.description
 
-      page.should have_content "#{ming_pong_victory_metric.default_unit} All-time Score"
+      page.should have_content "#{ming_pong_victory_metric.default_unit} All-time"
       page.should have_content '2 Badges'
     end
   end
@@ -50,7 +50,7 @@ feature 'Ming Pong Victory' do
       page.should have_content @first_time_badge.description
       page.should have_content @one_ming_pong_victory.description
 
-      page.should have_content "#{ming_pong_victory_metric.default_unit} All-time Score"
+      page.should have_content "#{ming_pong_victory_metric.default_unit} All-time"
       page.should have_content '2 Badges'
     end
   end
@@ -66,7 +66,7 @@ feature 'Ming Pong Victory' do
       page.should have_content @one_ming_pong_victory.description
       page.should have_content @ten_ming_pong_victories.description
 
-      page.should have_content "#{ming_pong_victory_metric.default_unit * 10} All-time Score"
+      page.should have_content "#{ming_pong_victory_metric.default_unit * 10} All-time"
       page.should have_content '3 Badges'
     end
   end
