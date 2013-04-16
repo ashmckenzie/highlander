@@ -7,6 +7,7 @@ module AchievementCalculator
     end
 
     def calculate!
+      return if hipster_badge.nil?
       return if achievement_is_invalid_for_hipster_badge?
       return if achievement_is_mainstream?
       return if user_already_hipster?
@@ -22,11 +23,15 @@ module AchievementCalculator
     end
 
     def desc
-      "You got the #{achievement.badge.description} badge before it was cool"
+      "You got the #{achieved_badge.description} badge before it was cool"
     end
 
     def user
       achievement.user
+    end
+
+    def achieved_badge
+      achievement.badge
     end
 
     def hipster_badge
@@ -34,7 +39,7 @@ module AchievementCalculator
     end
 
     def achievement_is_invalid_for_hipster_badge?
-      achievement.badge_name == hipster_badge.name
+      achieved_badge.name == hipster_badge.name
     end
 
     def achievement_is_mainstream?
