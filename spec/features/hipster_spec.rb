@@ -24,10 +24,11 @@ feature 'Hipster Badge' do
 
     scenario "User is given the First Github push, First-time and ONE Hipster badge" do
       visit user_path(user)
+
       page.should have_content '3 Badges'
       page.should have_content @first_jenkins_green_job_badge.description
-      page.should have_content @hipster_badge.tag
       page.should have_content "#{metric.default_unit} All-time"
+
       page.should have_content "You got the #{@first_time_badge.description} badge before it was cool"
       page.should_not have_content "You got the #{@first_jenkins_green_job_badge.description} badge before it was cool"
     end

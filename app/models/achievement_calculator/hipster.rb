@@ -19,10 +19,10 @@ module AchievementCalculator
     attr_reader :achievement
 
     def hipster!
-      Achievement.create!(badge: hipster_badge, user: user, description: desc)
+      Achievement.create!(badge: hipster_badge, user: user, tag: tag)
     end
 
-    def desc
+    def tag
       "You got the #{achieved_badge.description} badge before it was cool"
     end
 

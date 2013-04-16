@@ -10,6 +10,10 @@ class AchievementDecorator < Draper::Decorator
     achievement.description || badge.description
   end
 
+  def tag
+    achievement.tag || badge.tag
+  end
+
   def created_at
     time_ago_in_words(achievement.created_at).capitalize
   end
