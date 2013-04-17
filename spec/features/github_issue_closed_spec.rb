@@ -13,9 +13,7 @@ feature 'Github Issue Closed' do
   given!(:user)    { FactoryGirl.create(:github_user) }
   given!(:metric)  { FactoryGirl.create(:github_issue_closed) }
 
-  given(:valid_params) do
-    { payload: GithubPayloads.issue_closed(user.github_username) }
-  end
+  given(:valid_params) { GithubPayloads.issue_closed(user.github_username) }
 
   describe 'First closed issue' do
 

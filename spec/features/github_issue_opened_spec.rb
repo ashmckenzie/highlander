@@ -13,9 +13,7 @@ feature 'Github Issue Opened' do
   given!(:user)    { FactoryGirl.create(:github_user) }
   given!(:metric)  { FactoryGirl.create(:github_issue_opened) }
 
-  given(:valid_params) do
-    { payload: GithubPayloads.issue_opened(user.github_username) }
-  end
+  given(:valid_params) { GithubPayloads.issue_opened(user.github_username) }
 
   describe 'First opened issue' do
 

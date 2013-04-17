@@ -4,9 +4,14 @@ module Api
     protect_from_forgery with: :null_session
 
     before_filter :merge_request_ip_address_into_params!
+    before_filter :merge_github_action_from_raw_params!
 
     def merge_request_ip_address_into_params!
       params.merge!(request_ip_address: request_ip_address)
+    end
+
+    def merge_github_action_from_raw_params!
+      params.merge!(issue_action: request.request_parameters[:action])
     end
 
     def request_ip_address
