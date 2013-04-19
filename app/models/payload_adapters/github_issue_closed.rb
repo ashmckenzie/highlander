@@ -1,3 +1,9 @@
 module PayloadAdapters
-  class GithubIssueClosed < GithubIssueOpened ; end
+  class GithubIssueClosed < GithubIssueOpened
+
+    def github_username
+      payload[:sender][:login]
+    end
+
+  end
 end
