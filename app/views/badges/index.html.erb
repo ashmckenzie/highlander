@@ -1,0 +1,5 @@
+<%- provide :head do -%>
+   <%= stylesheet_link_tag :badges -%>
+<%- end -%>
+
+<%= render partial: 'shared/badges', locals: { badges: @badges } %>

@@ -10,6 +10,10 @@ class UserDecorator < Draper::Decorator
     hooroo_email || ''
   end
 
+  def achievements
+    Queries::AchievementsAndBadgeTakeupForUser.new(user).query
+  end
+
   def avatar_url size=80
     gravatar_id = Digest::MD5::hexdigest(email).downcase
     "http://gravatar.com/avatar/#{gravatar_id}.png?s=#{size}"

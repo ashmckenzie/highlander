@@ -47,7 +47,7 @@
 </section>
 
 
-<section class="badges  main-column">
+<section class="badges main-column">
 
   <h2>Badges</h2>
 
@@ -57,10 +57,5 @@
     Keep an eye on this page to see which one comes next!
   </p>
 
-  <ul>
-    <%- @user.achievements.each do |achievement| %>
-      <li><%= render partial: 'shared/badge', locals: { achievement: achievement.decorate } %></li>
-    <%- end %>
-  </ul>
-
+  <%= render partial: 'shared/achievements', locals: { achievements: @user.achievements } %>
 </section>

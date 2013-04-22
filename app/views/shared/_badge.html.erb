@@ -1,7 +1,6 @@
-<%= image_tag( badge_image_url(achievement.badge), 'data-badge' => achievement.name ) %>
+<%= image_tag badge_image_url(badge) %>
 
-<div class="badge-details" data-badge="<%= achievement.name %>">
-  <h3 class="badge-name"><%= achievement.description %></h3>
-  <p class="badge-description"><%= achievement.tag %></p>
-  <p class="badge-date"><%= achievement.created_at %> ago</p>
+<div class="badge-details">
+  <h3 class="badge-name"><%= badge.description %></h3>
+  <p class="badge-description"><%= badge.tag %></p>
 </div>

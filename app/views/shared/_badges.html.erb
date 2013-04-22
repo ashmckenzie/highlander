@@ -1,0 +1,5 @@
+<ul class="badges">
+  <%- badges.each do |badge| %>
+    <li><%= render partial: 'shared/badge', locals: { badge: badge } %></li>
+  <%- end %>
+</ul>
