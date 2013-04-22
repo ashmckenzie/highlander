@@ -18,6 +18,7 @@ module Queries
             (" + User.select('1.0 * COUNT(id)').point_earner.to_sql +  ")
           ), 0))::integer AS badge_takeup_percentage
         ")
+        .order('achievements.created_at DESC')
     end
 
     private
