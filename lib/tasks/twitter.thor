@@ -3,7 +3,7 @@ require 'net/http'
 require 'ostruct'
 require 'pry'
 
-class TwitterScanner < Thor
+class TwitterIntegration < Thor
 
   desc 'scan_for_mentions', 'scans twitter for mentions of Hooroo'
   def scan_for_mentions(env, consumer_key, consumer_secret, oauth_token, oauth_token_secret)
