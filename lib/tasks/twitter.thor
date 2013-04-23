@@ -1,7 +1,6 @@
 require 'twitter'
 require 'net/http'
 require 'ostruct'
-require 'pry'
 
 class TwitterIntegration < Thor
 
