@@ -15,7 +15,6 @@ class UserDecorator < Draper::Decorator
   end
 
   def avatar_url size=80
-    return 'http://www.imafulltimemummy.com/image.axd?picture=2010%2F7%2Flook-whos-30-birthday-badge-large.jpg' if name == 'Gabriel Rotbart'
     gravatar_id = Digest::MD5::hexdigest(email).downcase
     "http://gravatar.com/avatar/#{gravatar_id}.png?s=#{size}"
   end
