@@ -5,6 +5,8 @@ class User < ActiveRecord::Base
   has_many :achievements, -> { order 'achievements.created_at DESC' }
   has_many :badges,       -> { order 'achievements.created_at DESC' }, through: :achievements
 
+  has_many :user_services, :dependent => :destroy
+
   default_scope           -> { enabled }
   scope :enabled,         -> { where(enabled: true) }
   scope :point_earner,    -> { where(earns_points: true) }
@@ -43,6 +45,11 @@ class User < ActiveRecord::Base
   end
 
   include QueryMethods
+
+  def service_for service_type
+    service_type = "#{service_type.capitalize}Service"
+    user_services.includes(:service).where('user_services.service_type = ?', service_type).first.try(:service)
+  end
 
   def to_param
     slug
