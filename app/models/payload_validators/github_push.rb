@@ -22,7 +22,7 @@ module PayloadValidators
         192.30.252.0/22
 
       }.map do |ip|
-       IPAddr.new(ip).to_range
+        IPAddr.new(ip).to_range
       end
     end
 

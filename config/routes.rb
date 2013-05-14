@@ -22,6 +22,8 @@ Highlander::Application.routes.draw do
 
   resources :users
 
+  resources :badges, only: [ :index, :show ]
+
   root to: 'welcome#index'
 
 end
