@@ -7,6 +7,6 @@
 
 
 <div class="achievement-details">
-  <p class="badge-takeup"><%= achievement.badge_takeup_percentage.to_s %>% of Highlanders have this badge</p>
+  <p class="badge-takeup"><%= achievement.badge_takeup_count - 1 %> other Highlanders have this badge</p>
   <p class="achievement-date"><%= achievement.created_at %> ago</p>
 </div>
