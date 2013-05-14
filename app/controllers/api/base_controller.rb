@@ -18,7 +18,7 @@ module Api
       env['HTTP_X_FORWARDED_FOR'] || env['HTTP_X_REAL_IP'] || env['REMOTE_ADDR']
     end
 
-    rescue_from Errors::InvalidUserToken do
+    rescue_from Errors::UserNotFound do
       render text: "User is not authorised", status: :unauthorized
     end
 

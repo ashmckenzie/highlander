@@ -15,8 +15,8 @@ module PayloadValidators
       context 'when the user is not present' do
         let(:user) { nil }
 
-        it 'raises an InvalidUserToken error' do
-          expect{ validator.validate! }.to raise_error(Errors::InvalidUserToken)
+        it 'raises an UserNotFound error' do
+          expect{ validator.validate! }.to raise_error(Errors::UserNotFound)
         end
       end
 

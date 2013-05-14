@@ -15,7 +15,7 @@ module Errors
   end
 
   class InvalidMetric                   < ApiError ; end
-  class InvalidUserToken                < ApiError ; end
+  class UserNotFound                    < ApiError ; end
   class InvalidGitBranch                < ApiError ; end
   class TweetAlreadyProcessed           < ApiError ; end
   class InvalidRequestSource            < ApiError ; end

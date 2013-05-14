@@ -1,4 +1,5 @@
 class UserDecorator < Draper::Decorator
+
   alias :user :source
   delegate_all
 
