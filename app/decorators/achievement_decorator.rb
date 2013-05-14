@@ -1,27 +1,19 @@
 class AchievementDecorator < Draper::Decorator
-  alias :achievement :source
 
   delegate_all
-  delegate :name, :tag, to: :badge
 
   include ActionView::Helpers::DateHelper
 
   def description
-    achievement.description || badge.description
+    source.description || badge.description
   end
 
   def tag
-    achievement.tag || badge.tag
+    source.tag || badge.tag
   end
 
   def created_at
-    time_ago_in_words(achievement.created_at).capitalize
-  end
-
-  private
-
-  def badge
-    @badge ||= achievement.badge
+    time_ago_in_words(source.created_at).capitalize
   end
 
 end

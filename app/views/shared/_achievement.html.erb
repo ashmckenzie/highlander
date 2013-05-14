@@ -1,4 +1,10 @@
-<%= render partial: 'shared/badge', locals: { badge: achievement.badge } %>
+<%= image_tag badge_image_url(achievement.badge) %>
+
+<div class="badge-details">
+  <h3 class="badge-name"><%= achievement.description %></h3>
+  <p class="badge-description"><%= achievement.tag %></p>
+</div>
+
 
 <div class="achievement-details">
   <p class="badge-takeup"><%= achievement.badge_takeup_percentage.to_s %>% of Highlanders have this badge</p>

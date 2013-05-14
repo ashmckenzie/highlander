@@ -5,7 +5,7 @@ class User < ActiveRecord::Base
   has_many :achievements, -> { order 'achievements.created_at DESC' }
   has_many :badges,       -> { order 'achievements.created_at DESC' }, through: :achievements
 
-  has_many :user_services, :dependent => :destroy
+  has_many :user_services, dependent: :destroy
 
   default_scope           -> { enabled }
   scope :enabled,         -> { where(enabled: true) }
