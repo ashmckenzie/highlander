@@ -15,6 +15,7 @@ class Metric < ActiveRecord::Base
     gift
     express_yaself
     twitter_mention
+    pager_duty_ack
   }
 
 end

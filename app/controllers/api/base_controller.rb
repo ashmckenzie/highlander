@@ -41,6 +41,11 @@ module Api
       render text: 'Tweet already processed', status: :ok
     end
 
+    rescue_from Errors::PagerDutyAckAlreadyProcessed do
+      Rails.logger.info "Not persisting PagerDuty ack '#{payload.ack_id}' for '#{payload.email}' as it's already been processed"
+      render text: 'PagerDuty ack already processed', status: :ok
+    end
+
     rescue_from Errors::MingPongWinnerAlreadyProcessed do
       Rails.logger.info "Not awarding points for Ming Pong win. Match: '#{payload.match_id}' for '#{payload.twitter_username}' as it's already been processed"
       render text: 'Match already processed', status: :ok

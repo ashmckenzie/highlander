@@ -23,5 +23,6 @@ module Errors
   class MingPongLoserAlreadyProcessed   < ApiError ; end
   class IssueActionNotOpened            < ApiError ; end
   class IssueActionNotClosed            < ApiError ; end
+  class PagerDutyAckAlreadyProcessed    < ApiError ; end
 
 end
