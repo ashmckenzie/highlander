@@ -12,6 +12,8 @@ module Queries
         .select("
           achievements.*,
           badges.*,
+          achievements.tag as achievement_tag,
+          badges.tag as badge_tag,
           (SELECT COUNT(user_id) from achievements WHERE badge_id = badges.id) AS badge_takeup_count,
           (SELECT ROUND(100.0 * (
             (SELECT 1.0 * COUNT(user_id) FROM achievements WHERE badge_id = badges.id) /

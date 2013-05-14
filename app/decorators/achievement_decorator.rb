@@ -9,7 +9,7 @@ class AchievementDecorator < Draper::Decorator
   end
 
   def tag
-    source.tag || badge.tag
+    source.achievement_tag || source.badge_tag
   end
 
   def created_at

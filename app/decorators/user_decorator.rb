@@ -12,7 +12,7 @@ class UserDecorator < Draper::Decorator
   end
 
   def achievements
-    Queries::AchievementsAndBadgeTakeupForUser.new(user).query
+    Queries::AchievementsAndBadgeTakeupForUser.new(user).query.decorate
   end
 
   def avatar_url size=80
