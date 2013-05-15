@@ -47,7 +47,7 @@ class User < ActiveRecord::Base
   include QueryMethods
 
   def service_for service_type
-    service_type = "#{service_type.capitalize}Service"
+    service_type = "Services::#{service_type.capitalize}"
     user_services.includes(:service).where('user_services.service_type = ?', service_type).first.try(:service)
   end
 

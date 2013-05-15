@@ -3,7 +3,7 @@ module PayloadAdapters
   class TwitterMention < Base
 
     def user
-      @user ||= User.point_earner.find_by_twitter_username(twitter_username)
+      @user ||= Services::Twitter.find_by_username(twitter_username).user
     end
 
     def tweet_id

@@ -9,7 +9,8 @@ feature 'Twitter Mentions' do
     @one_twitter_mention  = FactoryGirl.create(:one_twitter_mention)
   end
 
-  given(:user)                    { FactoryGirl.create(:twitter_user) }
+  given(:user)                    { FactoryGirl.create(:user, :tweeter) }
+  given!(:twitter_service)        { user.service_for(:twitter) }
   given(:twitter_mention_metric)  { FactoryGirl.create(:twitter_mention) }
 
   given(:valid_params) do
@@ -17,7 +18,7 @@ feature 'Twitter Mentions' do
       metric:           twitter_mention_metric.name,
       tweet_id:         860860860,
       text:             'I just mentioned @Hooroo in a tweet! #YOLO',
-      twitter_username: user.twitter_username,
+      twitter_username: twitter_service.username,
       followers_count:  155
     }
   end
@@ -26,7 +27,7 @@ feature 'Twitter Mentions' do
 
     background { page.driver.post endpoint, valid_params }
 
-    scenario 'User is given First Time and One Twitter Mention badges' do
+    scenario 'User is given First Time and One Twitter Mention badge' do
 
       visit user_path(user)
       page.should have_content @first_time_badge.description

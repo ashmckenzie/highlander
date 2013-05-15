@@ -4,7 +4,7 @@ class UserDecorator < Draper::Decorator
   delegate_all
 
   def twitter_handle
-    "@#{user.twitter_username}" if user.twitter_username
+    "@#{user.service_for(:twitter).username}" if user.service_for(:twitter)
   end
 
   def email

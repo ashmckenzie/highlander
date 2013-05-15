@@ -4,10 +4,6 @@ FactoryGirl.define do
     "person#{n}@hooroo.com"
   end
 
-  sequence :twitter_username do |n|
-    "tweeter#{n}"
-  end
-
   sequence :github_username do |n|
     "github_user#{n}"
   end
@@ -18,14 +14,15 @@ FactoryGirl.define do
     earns_points  true
 
     trait :tweeter do
-      twitter_username
+      after(:create) do |user, evaluator|
+        FactoryGirl.create_list(:twitter_service, 1, user: user)
+      end
     end
 
     trait :githubber do
       github_username
     end
 
-    factory :twitter_user, traits: [ :tweeter ]
     factory :github_user,  traits: [ :githubber ]
 
   end
