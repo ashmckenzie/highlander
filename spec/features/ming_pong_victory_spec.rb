@@ -10,15 +10,17 @@ feature 'Ming Pong Victory' do
     @ten_ming_pong_victories  = FactoryGirl.create(:ten_ming_pong_victories)
   end
 
-  given(:winner)                    { FactoryGirl.create(:twitter_user, name: 'Stu Liston') }
-  given(:loser)                     { FactoryGirl.create(:twitter_user, name: 'Phil Metcalfe') }
+  given(:winner)                    { FactoryGirl.create(:user, :tweeter, name: 'Stu Liston') }
+  given(:loser)                     { FactoryGirl.create(:user, :tweeter, name: 'Phil Metcalfe') }
+  given!(:winner_twitter_service)   { winner.service_for(:twitter) }
+  given!(:loser_twitter_service)   { loser.service_for(:twitter) }
   given(:ming_pong_victory_metric)  { FactoryGirl.create(:ming_pong_victory) }
 
   given(:valid_params) do
     {
       metric:     ming_pong_victory_metric.name,
-      winner:     winner.twitter_username,
-      loser:      loser.twitter_username,
+      winner:     winner_twitter_service.username,
+      loser:      loser_twitter_service.username,
       match_id:   1234,
       played_at:  1365664810289,
       points:     20
