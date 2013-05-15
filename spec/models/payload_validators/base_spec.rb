@@ -20,6 +20,17 @@ module PayloadValidators
         end
       end
 
+      context 'when the user is not a point earner' do
+
+        before do
+          user.stub(:earns_points?).and_return(false)
+        end
+
+        it 'raises an UserNotPointEarner error' do
+          expect{ validator.validate! }.to raise_error(Errors::UserNotPointEarner)
+        end
+      end
+
       context 'when the metric is not present' do
         let(:metric) { nil }
 

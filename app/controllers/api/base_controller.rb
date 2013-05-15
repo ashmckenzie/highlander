@@ -22,6 +22,10 @@ module Api
       render text: "User is not authorised", status: :unauthorized
     end
 
+    rescue_from Errors::UserNotPointEarner do
+      render text: "User is not a point earner", status: :unauthorized
+    end
+
     rescue_from Errors::InvalidMetric do
       render text: "Metric '#{payload.metric.try(:name)}' is invalid", status: :error
     end
