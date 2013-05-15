@@ -99,4 +99,7 @@ class User < ActiveRecord::Base
     update(earns_points: false)
   end
 
+  def left_hooroo!
+    update(leaderboarder: false, earns_points: false)
+  end
 end

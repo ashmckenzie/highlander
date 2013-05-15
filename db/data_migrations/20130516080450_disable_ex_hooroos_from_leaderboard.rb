@@ -7,13 +7,16 @@ module DataMigration
         'kunal@hooroo.com',
         'james@hooroo.com'
 
-      ].map do |email|
-        User.with_email(email)
+      ].inject([]) do |users, email|
+        if user = User.with_email(email)
+          users << user
+        end
+        users
       end
 
       def up
         USERS.each do |user|
-          user.update(leaderboarder: false, earns_points: false)
+          user.left_hooroo!
         end
       end
 
