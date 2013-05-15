@@ -14,6 +14,7 @@ class User < ActiveRecord::Base
 
   validates :name,              presence: true
   validates :hooroo_email,      uniqueness: true, presence: true
+  validates :avatar_email,      uniqueness: true
 
   class << self
     alias_method :original_find, :find
