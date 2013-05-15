@@ -10,6 +10,7 @@ class User < ActiveRecord::Base
   default_scope           -> { enabled }
   scope :enabled,         -> { where(enabled: true) }
   scope :point_earner,    -> { where(earns_points: true) }
+  scope :leaderboarder,   -> { where(leaderboarder: true) }
 
   validates :name,              presence: true
   validates :hooroo_email,      uniqueness: true, presence: true
