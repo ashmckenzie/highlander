@@ -4,10 +4,6 @@ FactoryGirl.define do
     "person#{n}@hooroo.com"
   end
 
-  sequence :github_username do |n|
-    "github_user#{n}"
-  end
-
   factory :user do
     name 'Bob Smith'
     hooroo_email
@@ -20,10 +16,11 @@ FactoryGirl.define do
     end
 
     trait :githubber do
-      github_username
+      after(:create) do |user, evaluator|
+        FactoryGirl.create_list(:github_service, 1, user: user)
+      end
     end
 
-    factory :github_user,  traits: [ :githubber ]
 
   end
 end

@@ -10,10 +10,11 @@ feature 'Github Issue Closed' do
     @twenty_five_github_issues_closed_badge   = FactoryGirl.create(:twenty_five_github_issues_closed)
   end
 
-  given!(:user)    { FactoryGirl.create(:github_user) }
-  given!(:metric)  { FactoryGirl.create(:github_issue_closed) }
+  given!(:user)           { FactoryGirl.create(:user, :githubber) }
+  given!(:github_service) { user.service_for(:github) }
+  given!(:metric)         { FactoryGirl.create(:github_issue_closed) }
 
-  given(:valid_params) { GithubPayloads.issue_closed(user.github_username) }
+  given(:valid_params)    { GithubPayloads.issue_closed(github_service.username) }
 
   describe 'First closed issue' do
 

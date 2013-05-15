@@ -3,7 +3,7 @@ module PayloadAdapters
   class GithubIssueOpened < Base
 
     def user
-      @user ||= User.find_by_github_username(github_username)
+      @user ||= Services::Github.find_by_username(github_username).user
     end
 
     def github_username

@@ -9,11 +9,12 @@ feature 'Github Push' do
     @one_github_push_badge  = FactoryGirl.create(:one_github_push)
   end
 
-  given!(:user)    { FactoryGirl.create(:user) }
-  given!(:metric)  { FactoryGirl.create(:github_push) }
+  given!(:user)           { FactoryGirl.create(:user, :githubber) }
+  given!(:github_service) { user.service_for(:github) }
+  given!(:metric)         { FactoryGirl.create(:github_push) }
 
   given(:valid_params) do
-    { payload: GithubPayloads.push(user.hooroo_email) }
+    { payload: GithubPayloads.push(github_service.emails.first) }
   end
 
   describe 'First push' do

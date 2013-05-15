@@ -10,10 +10,11 @@ feature 'Github Issue Opened' do
     @twenty_five_github_issues_opened_badge   = FactoryGirl.create(:twenty_five_github_issues_opened)
   end
 
-  given!(:user)    { FactoryGirl.create(:github_user) }
-  given!(:metric)  { FactoryGirl.create(:github_issue_opened) }
+  given!(:user)           { FactoryGirl.create(:user, :githubber) }
+  given!(:github_service) { user.service_for(:github) }
+  given!(:metric)         { FactoryGirl.create(:github_issue_opened) }
 
-  given(:valid_params) { GithubPayloads.issue_opened(user.github_username) }
+  given(:valid_params) { GithubPayloads.issue_opened(github_service.username) }
 
   describe 'First opened issue' do
 

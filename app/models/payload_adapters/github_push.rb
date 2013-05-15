@@ -3,7 +3,7 @@ module PayloadAdapters
   class GithubPush < Base
 
     def user
-      @user ||= User.with_email(author_email)
+      @user ||= Services::Github.with_email(author_email).user
     end
 
     def branch
