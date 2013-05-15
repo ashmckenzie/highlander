@@ -3,7 +3,7 @@ module PayloadAdapters
   class PagerDutyAck < Base
 
     def user
-      @user ||= User.point_earner.with_email(email)
+      @user ||= Services::PagerDuty.find_by_email(email).user
     end
 
     def ack_id

@@ -74,5 +74,11 @@ FactoryGirl.define do
       description   '25 Github issues closed'
     end
 
+    factory :one_pager_duty_ack do
+      name          '1_pager_duty_ack'
+      tag           "Hope I didn't interrupt dinner?"
+      description   'First PagerDuty ack'
+    end
+
   end
 end

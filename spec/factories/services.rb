@@ -20,4 +20,8 @@ FactoryGirl.define do
     username { generate(:github_username) }
     emails { [ generate(:email) ] }
   end
+
+  factory :pager_duty_service, class: 'Services::PagerDuty' do
+    email
+  end
 end

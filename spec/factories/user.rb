@@ -21,6 +21,11 @@ FactoryGirl.define do
       end
     end
 
+    trait :pager_duty_gimp do
+      after(:create) do |user, evaluator|
+        FactoryGirl.create_list(:pager_duty_service, 1, user: user)
+      end
+    end
 
   end
 end

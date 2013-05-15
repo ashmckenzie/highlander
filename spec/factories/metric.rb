@@ -48,6 +48,12 @@ FactoryGirl.define do
       default_unit  5
     end
 
+    factory :pager_duty_ack do
+      name          'pager_duty_ack'
+      description   'PagerDuty ack'
+      default_unit  1
+    end
+
   end
 
 end
