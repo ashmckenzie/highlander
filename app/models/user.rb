@@ -47,7 +47,7 @@ class User < ActiveRecord::Base
   include QueryMethods
 
   def service_for service_type
-    service_type = "Services::#{service_type.capitalize}"
+    service_type = "Services::#{service_type.to_s.camelize}"
     user_services.includes(:service).where('user_services.service_type = ?', service_type).first.try(:service)
   end
 
@@ -66,6 +66,10 @@ class User < ActiveRecord::Base
 
   def badge_count
     @total_badges ||= achievements.count
+  end
+
+  def primary_email
+    hooroo_email
   end
 
   def self.with_email email
