@@ -17,7 +17,7 @@ gem 'typhoeus'#, git: 'https://github.com/typhoeus/typhoeus.git', branch: 'maste
 gem 'draper'
 gem 'awesome_print'
 gem 'hashie'
-gem 'friendly_id', github: 'norman/friendly_id', branch: 'rails4'
+#gem 'friendly_id', github: 'norman/friendly_id', branch: 'rails4'
 gem 'data_migration', github: 'ashmckenzie/data_migration'
 gem 'rest-client'
 gem 'coffee-rails', '~> 4.0.0'
