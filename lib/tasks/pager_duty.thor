@@ -1,11 +1,12 @@
 require  File.expand_path('../../pager_duty', __FILE__)
 require 'net/http'
 require 'ostruct'
+require 'active_support/time'
 
 class PagerDutyIntegration < Thor
 
   desc 'check_for_incidents', 'check PagerDuty for incidents'
-  def check_for_incidents(env, api_key, subdomain, since=Time.now.strftime('%Y-%m-%d'))
+  def check_for_incidents(env, api_key, subdomain, since=Time.now.yesterday.strftime('%Y-%m-%d'))
     @env = env
     @api_key = api_key
     @subdomain = subdomain
