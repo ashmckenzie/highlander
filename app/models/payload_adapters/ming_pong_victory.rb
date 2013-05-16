@@ -3,7 +3,7 @@ module PayloadAdapters
   class MingPongVictory < Base
 
     def user
-      @user ||= Services::Twitter.find_by_username(twitter_username).user
+      @user ||= Services::Twitter.find_by_username(twitter_username).try(:user)
     end
 
     def match_id
