@@ -5,23 +5,20 @@ require 'ostruct'
 class PagerDutyIntegration < Thor
 
   desc 'check_for_incidents', 'check PagerDuty for incidents'
-  def check_for_incidents(env, api_key, subdomain)
+  def check_for_incidents(env, api_key, subdomain, since=Time.now.strftime('%Y-%m-%d'))
     @env = env
     @api_key = api_key
     @subdomain = subdomain
+    @since = since
 
-    acknowledged_log_entries.each do |log_entry|
+    pager_duty.acknowledged_log_entries({ since: since }).each do |log_entry|
       RestClient.post(internal_url, log_entry)
     end
   end
 
   private
 
-  attr_reader :env, :api_key, :subdomain
-
-  def acknowledged_log_entries
-    pager_duty.log_entries.select { |x| x['type'] == 'acknowledge'  }
-  end
+  attr_reader :env, :api_key, :subdomain, :since
 
   def pager_duty
     @pager_duty ||= PagerDuty.new(api_key, subdomain)

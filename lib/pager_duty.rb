@@ -9,14 +9,20 @@ class PagerDuty
     @subdomain = subdomain
   end
 
-  def log_entries headers={}
-    response = RestClient.get(log_entries_endpoint, default_headers.merge(headers))
-    JSON.parse(response)['log_entries']
+  def acknowledged_log_entries params
+    log_entries(params).select { |x| x['type'] == 'acknowledge'  }
   end
 
   private
 
   attr_reader :api_key, :subdomain
+
+  def log_entries params
+    headers = default_headers.dup
+    headers[:params] = params
+    response = RestClient.get(log_entries_endpoint, headers)
+    JSON.parse(response)['log_entries']
+  end
 
   def default_headers
     {
