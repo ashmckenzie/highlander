@@ -12,7 +12,7 @@ class PagerDutyIntegration < Thor
     @subdomain = subdomain
     @since = since
 
-    pager_duty.acknowledged_log_entries({ since: since }).each do |log_entry|
+    pager_duty.resolved_log_entries({ since: since }).each do |log_entry|
       RestClient.post(internal_url, log_entry)
     end
   end

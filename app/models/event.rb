@@ -9,12 +9,8 @@ class Event < ActiveRecord::Base
     scope metric.pluralize.to_sym, -> { joins(:metric).where("metrics.name = '#{metric}'") }
   end
 
-  class << self
-
-    def with_key_and_value(key, value)
-      where("data @> '#{key}=>#{value}'")
-    end
-
+  def self.with_key_and_value(key, value)
+    where("data @> '#{key}=>#{value}'")
   end
 
 end

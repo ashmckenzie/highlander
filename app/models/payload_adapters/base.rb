@@ -9,7 +9,12 @@ module PayloadAdapters
     end
 
     def to_event_hash
-      { user: user, metric: metric, value: metric.default_unit, data: data }
+      {
+        user: user,
+        metric: metric,
+        value: metric.default_unit,
+        data: data
+      }
     end
 
     def to_s

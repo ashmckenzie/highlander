@@ -9,8 +9,8 @@ class PagerDuty
     @subdomain = subdomain
   end
 
-  def acknowledged_log_entries params
-    log_entries(params).select { |x| x['type'] == 'acknowledge'  }
+  def resolved_log_entries params
+    log_entries(params).select { |x| [ 'resolve' ].include? x['type'] }
   end
 
   private
