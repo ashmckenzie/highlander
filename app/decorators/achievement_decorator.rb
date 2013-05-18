@@ -19,7 +19,8 @@ class AchievementDecorator < Draper::Decorator
     if count == 0 || achievement.badge.is_hipster_badge?
       'You are the only Highlander with this badge!'
     else
-      (achievement.badge_takeup_count - 1).to_s << " other Highlanders have this badge"
+      possession = count == 1 ? 'has' : 'have'
+      h.pluralize(count, 'other Highlander') << " #{possession} this badge"
     end
   end
 
