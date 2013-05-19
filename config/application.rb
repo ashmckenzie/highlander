@@ -24,6 +24,8 @@ module Highlander
     #sass, beeeatch
     config.sass.preferred_syntax = :sass
 
+    config.autoload_paths << File.join(Rails.root, 'lib')
+
     config.generators do |g|
       g.fixture_replacement :factory_girl
     end

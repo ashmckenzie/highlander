@@ -12,9 +12,7 @@ class AchievementObserver < ActiveRecord::Observer
   end
 
   def achievement_calculators
-    [
-      AchievementCalculator::Hipster
-    ]
+    AchievementCalculators::Base.instance.achievement_calculators
   end
 
   def calculate_achievements_for! achievement
