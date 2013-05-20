@@ -11,17 +11,17 @@ module DataMigration
       end
 
       def down
-        Badge.find_by_name('1_pager_duty_ack_opened').destroy
-        Badge.find_by_name('25_pager_duty_acks_opened').destroy
-        Badge.find_by_name('50_pager_duty_acks_opened').destroy
-        Badge.find_by_name('100_pager_duty_acks_opened').destroy
-        Badge.find_by_name('500_pager_duty_acks_opened').destroy
+        Badge.find_by_name('1_pager_duty_ack').destroy
+        Badge.find_by_name('25_pager_duty_acks').destroy
+        Badge.find_by_name('50_pager_duty_acks').destroy
+        Badge.find_by_name('100_pager_duty_acks').destroy
+        Badge.find_by_name('500_pager_duty_acks').destroy
 
-        Badge.find_by_name('1_pager_duty_ack_closed').destroy
-        Badge.find_by_name('25_pager_duty_acks_closed').destroy
-        Badge.find_by_name('50_pager_duty_acks_closed').destroy
-        Badge.find_by_name('100_pager_duty_acks_closed').destroy
-        Badge.find_by_name('500_pager_duty_acks_closed').destroy
+        Badge.find_by_name('1_pager_duty_ack_').destroy
+        Badge.find_by_name('25_pager_duty_acks').destroy
+        Badge.find_by_name('50_pager_duty_acks').destroy
+        Badge.find_by_name('100_pager_duty_acks').destroy
+        Badge.find_by_name('500_pager_duty_acks').destroy
       end
     end
   end

@@ -5,12 +5,17 @@ class Metric < ActiveRecord::Base
 
   validate :default_unit, numericality: true
 
+  default_scope   -> { enabled }
+
+  scope :enabled, -> { where(enabled: true) }
+
+  include Enabler
+
   NAMES = %w{
     github_push
     github_issue_opened
     github_issue_closed
     jenkins_green_job
-    ming_pong_loss
     ming_pong_victory
     gift
     express_yaself

@@ -20,6 +20,5 @@ module AchievementCalculators
         user.events.count
       end
     end
-
   end
 end

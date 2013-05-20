@@ -8,6 +8,7 @@ class User < ActiveRecord::Base
   has_many :user_services, dependent: :destroy
 
   default_scope           -> { enabled }
+
   scope :enabled,         -> { where(enabled: true) }
   scope :point_earner,    -> { where(earns_points: true) }
   scope :leaderboarder,   -> { where(leaderboarder: true) }
@@ -15,6 +16,8 @@ class User < ActiveRecord::Base
   validates :name,              presence: true
   validates :hooroo_email,      uniqueness: true, presence: true
   validates :avatar_email,      uniqueness: true, allow_blank: true
+
+  include Enabler
 
   class << self
     alias_method :original_find, :find
@@ -82,14 +85,6 @@ class User < ActiveRecord::Base
 
   def metric_totals
     Queries::UserMetricTotals.new(user: self)
-  end
-
-  def enable!
-    update(enabled: true)
-  end
-
-  def disable!
-    update(enabled: false)
   end
 
   def can_earn_points!
