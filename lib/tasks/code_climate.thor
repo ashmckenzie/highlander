@@ -15,12 +15,12 @@ class CodeClimateIntegration < Thor
     scraper = CodeClimate::Scraper.new(account_info)
     feed = CodeClimate::Feed.new(scraper)
 
-    feed.enries
+    feed.entries
     #=> []
 
     feed.update!
 
-    feed.enries
+    feed.entries
     #=> [ some entries, bitch! ]
 
   end
