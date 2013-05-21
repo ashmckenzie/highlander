@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+  include Enabler
 
   has_many :events,       -> { order 'events.created_at DESC' }
   has_many :metrics,      -> { order 'events.created_at DESC' }, through: :events
@@ -9,7 +10,6 @@ class User < ActiveRecord::Base
 
   default_scope           -> { enabled }
 
-  scope :enabled,         -> { where(enabled: true) }
   scope :point_earner,    -> { where(earns_points: true) }
   scope :leaderboarder,   -> { where(leaderboarder: true) }
 
@@ -17,7 +17,6 @@ class User < ActiveRecord::Base
   validates :hooroo_email,      uniqueness: true, presence: true
   validates :avatar_email,      uniqueness: true, allow_blank: true
 
-  include Enabler
 
   class << self
     alias_method :original_find, :find

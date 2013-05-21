@@ -1,4 +1,5 @@
 class Metric < ActiveRecord::Base
+  include Enabler
 
   has_many :events
   has_many :users, through: :events
@@ -6,10 +7,6 @@ class Metric < ActiveRecord::Base
   validate :default_unit, numericality: true
 
   default_scope   -> { enabled }
-
-  scope :enabled, -> { where(enabled: true) }
-
-  include Enabler
 
   NAMES = %w{
     github_push
