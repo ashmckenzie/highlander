@@ -8,6 +8,9 @@ class User < ActiveRecord::Base
 
   has_many :user_services, dependent: :destroy
 
+  has_many :bounties_created, class_name: 'Bounty', foreign_key: 'created_by_id'
+  has_many :bounties_claimed, class_name: 'Bounty', foreign_key: 'claimed_by_id'
+
   default_scope           -> { enabled }
 
   scope :point_earner,    -> { where(earns_points: true) }
@@ -16,7 +19,6 @@ class User < ActiveRecord::Base
   validates :name,              presence: true
   validates :hooroo_email,      uniqueness: true, presence: true
   validates :avatar_email,      uniqueness: true, allow_blank: true
-
 
   class << self
     alias_method :original_find, :find

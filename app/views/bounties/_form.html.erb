@@ -1,0 +1,52 @@
+<%= form_for(@bounty) do |f| %>
+  <% if @bounty.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@bounty.errors.count, "error") %> prohibited this bounty from being saved:</h2>
+
+      <ul>
+      <% @bounty.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <%- if controller.action_name == 'new' %>
+
+    <div class="field">
+      <%= f.label :name %><br>
+      <%= f.text_field :name %>
+    </div>
+    <div class="field">
+      <%= f.label :description %><br>
+      <%= f.text_area :description %>
+    </div>
+    <div class="field">
+      <%= f.label :points %><br>
+      <%= f.number_field :points %>
+    </div>
+
+    <div class="field">
+      <%= f.label :needs_claiming_by %><br>
+      <%= f.datetime_select :needs_claiming_by, include_blank: true %>
+    </div>
+
+  <%- end %>
+
+  <%- if controller.action_name == 'edit' %>
+    <div class="field">
+      <%= f.label :claimed_by %><br>
+      <%= f.collection_select :id, @users, :id, :name, include_blank: true %>
+    </div>
+
+    <div class="field">
+      <%= f.label :claimed_at %><br>
+      <%= f.datetime_select :claimed_at %>
+    </div>
+  <%- end %>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+
+<% end %>

@@ -1,0 +1,47 @@
+<%- provide :head do -%>
+   <%= stylesheet_link_tag :bounties -%>
+<%- end -%>
+
+<section class="info-block bounties main-column">
+
+  <h1>Listing bounties</h1>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Points</th>
+        <th>Created by</th>
+        <th>Claimed by</th>
+        <th>Needs claiming by</th>
+        <th>Claimed at</th>
+        <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @bounties.each do |bounty| %>
+        <tr>
+          <td><%= bounty.name %></td>
+          <td><%= bounty.description %></td>
+          <td><%= bounty.points %></td>
+          <td><%= bounty.created_by.name %></td>
+          <td><%= bounty.claimed_by.try(:name) %></td>
+          <td><%= bounty.needs_claiming_by %></td>
+          <td><%= bounty.claimed_at %></td>
+          <td><%= link_to 'Show', bounty %></td>
+          <td><%= link_to 'Edit', edit_bounty_path(bounty) %></td>
+          <td><%= link_to 'Destroy', bounty, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  <br>
+
+  <%= link_to 'New Bounty', new_bounty_path %>
+
+</section>
