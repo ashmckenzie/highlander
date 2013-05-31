@@ -25,6 +25,6 @@ class Bounty < ActiveRecord::Base
   end
 
   def ensure_max_active_bounties
-    errors.add(:id, "You can only have #{self.class::MAX_ACTIVE_BOUNTIES} bounties at any one time") if self.class.unclaimed.where("created_by_id = #{self.created_by_id}").count > self.class::MAX_ACTIVE_BOUNTIES
+    errors.add(:id, "You can only have #{self.class::MAX_ACTIVE_BOUNTIES} bounties at any one time") if self.class.unclaimed.where("created_by_id = #{self.created_by_id}").count > (self.class::MAX_ACTIVE_BOUNTIES - 1)
   end
 end
