@@ -14,6 +14,10 @@ class Badge < ActiveRecord::Base
     name == 'hipster'
   end
 
+  def is_bounty_badge?
+    name == 'bounty_claimed'
+  end
+
   private
 
   def set_position

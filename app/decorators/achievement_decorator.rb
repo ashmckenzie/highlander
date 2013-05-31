@@ -16,7 +16,7 @@ class AchievementDecorator < Draper::Decorator
   def badge_takeup
     count = (achievement.badge_takeup_count - 1)
 
-    if count == 0 || achievement.badge.is_hipster_badge?
+    if count == 0 || achievement.badge.is_hipster_badge? || achievement.badge.is_bounty_badge?
       'The only Highlander with this badge!'
     else
       possession = count == 1 ? 'has' : 'have'
