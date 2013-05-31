@@ -20,6 +20,8 @@ class User < ActiveRecord::Base
   validates :hooroo_email,      uniqueness: true, presence: true
   validates :avatar_email,      uniqueness: true, allow_blank: true
 
+  ROLES = %w[admin user]
+
   class << self
     alias_method :original_find, :find
   end
@@ -98,5 +100,9 @@ class User < ActiveRecord::Base
 
   def left_hooroo!
     update(leaderboarder: false, earns_points: false)
+  end
+
+  def admin?
+    role == 'admin'
   end
 end
