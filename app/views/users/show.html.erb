@@ -39,7 +39,7 @@
           # e.g. 20 points for 2 twitter mentions
         %>
          <span class="value"><strong><%= metric_total.event_total_count %></strong></span>
-         <span class="description"><%= metric_total.description.pluralize(metric_total.event_total_count) %></span>
+         <span class="description"><%= metric_total.description %></span>
       </li>
     <%- end %>
   </ul>

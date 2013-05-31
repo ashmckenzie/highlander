@@ -1,6 +1,13 @@
-<h1>Editing bounty</h1>
+<%- provide :head do -%>
+   <%= stylesheet_link_tag :bounties -%>
+<%- end -%>
 
-<%= render 'form' %>
+<section class="countainer bounties">
 
-<%= link_to 'Show', @bounty %> |
-<%= link_to 'Back', bounties_path %>
+  <h1>Editing <%= @bounty.name %> bounty</h1>
+
+  <%= render 'form' %>
+
+  <%= link_to 'Back', bounties_path %>
+
+</section>
