@@ -5,6 +5,10 @@ class Bounty < ActiveRecord::Base
 
   validate :ensure_not_claimed
 
+  validates :name, :description, :reward, presence: true
+  validates :name, uniqueness: true
+  validates :reward, inclusion: { in: 5..10 , message: "must be between 5 and 10" }
+
   def claimed?
     claimed_by && claimed_at ? true : false
   end
