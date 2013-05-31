@@ -7,7 +7,7 @@ class BountiesController < ApplicationController
   # GET /bounties
   # GET /bounties.json
   def index
-    @bounties = Bounty.created_by(current_user)
+    @bounties = Bounty.all
   end
 
   # GET /bounties/1
@@ -70,11 +70,11 @@ class BountiesController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_bounty
-      @bounty = Bounty.created_by(current_user).where('id = ?', params[:id]).first
+      @bounty = Bounty.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def bounty_params
-      params.require(:bounty).permit(:name, :description, :points, :claimed_by_id, :needs_claiming_by, :claimed_at)
+      params.require(:bounty).permit(:name, :description, :reward, :claimed_by_id, :needs_claiming_by, :claimed_at)
     end
 end

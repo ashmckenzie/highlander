@@ -32,9 +32,18 @@
           <td><%= bounty.claimed_by.try(:name) %></td>
           <td><%= bounty.needs_claiming_by %></td>
           <td><%= bounty.claimed_at %></td>
-          <td><%= link_to 'Show', bounty %></td>
-          <td><%= link_to 'Edit', edit_bounty_path(bounty) %></td>
-          <td><%= link_to 'Destroy', bounty, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+
+          <%- if can? :show, Bounty %>
+            <td><%= link_to 'Show', bounty %></td>
+          <%- end %>
+
+          <%- if can? :edit, bounty %>
+            <td><%= link_to 'Edit', edit_bounty_path(bounty) %></td>
+          <%- end %>
+
+          <%- if can? :destroy, bounty %>
+            <td><%= link_to 'Destroy', bounty, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <%- end %>
         </tr>
       <% end %>
     </tbody>
@@ -42,6 +51,8 @@
 
   <br>
 
-  <%= link_to 'New Bounty', new_bounty_path %>
+  <%- if can? :create, Bounty %>
+    <%= link_to 'New Bounty', new_bounty_path %>
+  <%- end %>
 
 </section>

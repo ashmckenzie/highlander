@@ -101,8 +101,4 @@ class User < ActiveRecord::Base
   def left_hooroo!
     update(leaderboarder: false, earns_points: false)
   end
-
-  def admin?
-    role == 'admin'
-  end
 end
