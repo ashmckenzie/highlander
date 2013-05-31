@@ -18,6 +18,7 @@ class Metric < ActiveRecord::Base
     express_yaself
     twitter_mention
     pager_duty_ack
+    bounty
   }
 
 end

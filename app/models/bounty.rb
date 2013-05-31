@@ -5,4 +5,15 @@ class Bounty < ActiveRecord::Base
 
   scope :created_by, -> user { where("created_by_id = ?", user.id) }
 
+  validate :ensure_not_claimed
+
+  def claimed?
+    claimed_by && claimed_at ? true : false
+  end
+
+  private
+
+  def ensure_not_claimed
+    errors.add(:claimed_by, "already claimed by #{claimed_by.name}") if (attributes['claimed_by'] && attributes['claimed_at'])
+  end
 end

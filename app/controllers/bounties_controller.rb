@@ -20,6 +20,7 @@ class BountiesController < ApplicationController
   # GET /bounties/1/edit
   def edit
     @users = User.point_earner.order(:name)
+    raise 'Bounty already claimed' if @bounty.claimed?
   end
 
   # POST /bounties

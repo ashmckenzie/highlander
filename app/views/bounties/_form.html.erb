@@ -22,8 +22,8 @@
       <%= f.text_area :description %>
     </div>
     <div class="field">
-      <%= f.label :points %><br>
-      <%= f.number_field :points %>
+      <%= f.label :reward %><br>
+      <%= f.number_field :reward %>
     </div>
 
     <div class="field">
@@ -35,8 +35,8 @@
 
   <%- if controller.action_name == 'edit' %>
     <div class="field">
-      <%= f.label :claimed_by %><br>
-      <%= f.collection_select :id, @users, :id, :name, include_blank: true %>
+      <%= f.label :claimed_by_id %><br>
+      <%= f.collection_select :claimed_by_id, @users, :id, :name, include_blank: true %>
     </div>
 
     <div class="field">

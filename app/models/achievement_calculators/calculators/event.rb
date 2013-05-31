@@ -16,6 +16,12 @@ module AchievementCalculators
         AchievementCalculators::Base.instance.register_event_calculator!(self, position)
       end
 
+      protected
+
+      def user
+        event.user
+      end
+
       private
 
       attr_reader :event
@@ -32,10 +38,6 @@ module AchievementCalculators
         Badge.where(name: name).first
       end
 
-      def user
-        event.user
-      end
-
       def metric
         event.metric
       end
@@ -44,8 +46,8 @@ module AchievementCalculators
         user.events_for_metric(metric).count
       end
 
-      def add_achievement_for_badge badge
-        ::Achievement.create(badge: badge, user: user)
+      def add_achievement_for_badge badge, tag=''
+        ::Achievement.create(badge: badge, user: user, tag: tag)
       end
     end
   end

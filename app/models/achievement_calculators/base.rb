@@ -5,6 +5,8 @@ module AchievementCalculators
 
     include Singleton
 
+    # FIXME: need to dry this up
+
     def register_event_calculator! calculator, position
       @event_calculators = [] unless @event_calculators
 
