@@ -1,5 +1,8 @@
 class BountiesController < ApplicationController
+
   before_action :set_bounty, only: [:show, :edit, :update, :destroy]
+
+  load_and_authorize_resource
 
   # GET /bounties
   # GET /bounties.json
