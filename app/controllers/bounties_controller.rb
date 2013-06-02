@@ -41,6 +41,7 @@ class BountiesController < ApplicationController
       if @bounty.update(bounty_params)
         format.html { redirect_to bounties_path, notice: 'Bounty was successfully updated.' }
       else
+         @users = User.point_earner.order(:name)
         format.html { render action: 'edit' }
       end
     end

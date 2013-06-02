@@ -33,7 +33,7 @@
 
   <%- end %>
 
-  <%- if controller.action_name == 'edit' %>
+  <%- if %q{ edit update }.include?(controller.action_name) %>
     <div class="field">
       <%= f.label :claimed_by_id %><br>
       <%= f.collection_select :claimed_by_id, @users, :id, :name, include_blank: true %>

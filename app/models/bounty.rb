@@ -7,6 +7,7 @@ class Bounty < ActiveRecord::Base
 
   validate :ensure_not_claimed
   validate :ensure_max_active_bounties, on: :create
+  validate :ensure_no_self_claim, on: :update
 
   validates :name, :description, :reward, presence: true
   validates :name, uniqueness: true
@@ -38,5 +39,9 @@ class Bounty < ActiveRecord::Base
       return false
     end
     true
+  end
+
+  def ensure_no_self_claim
+    errors.add(:claimed_by_id, "cannot be yourself, that's cheating!") if claimed_by == created_by
   end
 end
