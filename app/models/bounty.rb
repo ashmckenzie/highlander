@@ -1,18 +1,25 @@
 class Bounty < ActiveRecord::Base
 
+  include Slugger
+
   belongs_to :created_by, class_name: 'User', foreign_key: 'created_by_id'
   belongs_to :claimed_by, class_name: 'User', foreign_key: 'claimed_by_id'
 
   validate :ensure_not_claimed
-  validate :ensure_max_active_bounties
+  validate :ensure_max_active_bounties, on: :create
 
   validates :name, :description, :reward, presence: true
   validates :name, uniqueness: true
   validates :reward, inclusion: { in: 5..10 , message: "must be between 5 and 10" }
 
   scope :unclaimed, -> { where("claimed_by_id IS NULL AND claimed_at IS NULL") }
+  scope :created_by, -> user { where("created_by_id = ?", user.id) }
 
   MAX_ACTIVE_BOUNTIES = 2
+
+  def self.has_max_allowed? user
+    self.unclaimed.created_by(user).count >= self::MAX_ACTIVE_BOUNTIES
+  end
 
   def claimed?
     claimed_by && claimed_at ? true : false
@@ -25,6 +32,11 @@ class Bounty < ActiveRecord::Base
   end
 
   def ensure_max_active_bounties
-    errors.add(:id, "You can only have #{self.class::MAX_ACTIVE_BOUNTIES} bounties at any one time") if self.class.unclaimed.where("created_by_id = #{self.created_by_id}").count > (self.class::MAX_ACTIVE_BOUNTIES - 1)
+    if self.class.unclaimed.where("created_by_id = #{self.created_by_id}").count >= MAX_ACTIVE_BOUNTIES
+      message = "can only have #{MAX_ACTIVE_BOUNTIES} unclaimed bounties at any one time"
+      errors.add(:you, message)
+      return false
+    end
+    true
   end
 end

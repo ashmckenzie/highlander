@@ -12,6 +12,9 @@ class BountiesController < ApplicationController
   end
 
   def new
+    if Bounty.has_max_allowed?(current_user)
+      raise "You can only have #{Bounty::MAX_ACTIVE_BOUNTIES} unclaimed bounties at any one time"
+    end
     @bounty = Bounty.new
   end
 

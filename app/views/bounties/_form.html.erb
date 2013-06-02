@@ -11,7 +11,7 @@
     </div>
   <% end %>
 
-  <%- if controller.action_name == 'new' %>
+  <%- if %q{ new create }.include?(controller.action_name) %>
 
     <div class="field">
       <%= f.label :name %><br>
@@ -46,7 +46,7 @@
   <%- end %>
 
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit :class => 'button' %>
   </div>
 
 <% end %>
