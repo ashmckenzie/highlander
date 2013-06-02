@@ -16,7 +16,7 @@ module Slugger
     end
 
     def set_slug
-      new_slug = name.downcase.gsub(/[^a-z\-\s]/i, '').gsub(/\s+/, '-')
+      new_slug = name.downcase.gsub(/[^a-z0-9\.\-\s]/i, '').gsub(/[\s+\.]/, '-')
       self.slug = new_slug
     end
   end
