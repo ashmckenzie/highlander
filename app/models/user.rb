@@ -1,5 +1,7 @@
 class User < ActiveRecord::Base
+
   include Enabler
+  include Slugger
 
   has_many :events,       -> { order 'events.created_at DESC' }
   has_many :metrics,      -> { order 'events.created_at DESC' }, through: :events
@@ -21,36 +23,6 @@ class User < ActiveRecord::Base
   validates :avatar_email,      uniqueness: true, allow_blank: true
 
   ROLES = %w[admin user]
-
-  class << self
-    alias_method :original_find, :find
-  end
-
-  module QueryMethods
-    module ClassMethods
-
-      def with_id_or_slug lookup
-        if lookup.to_s.match(/^\d+$/)
-          query = "#{table_name}.id = ?"
-        else
-          query = "#{table_name}.slug = ?"
-        end
-        where(query, lookup).first
-      end
-    end
-
-    def self.included(base)
-      base.extend ClassMethods
-      base.class_eval do
-        class << self
-          alias_method :original_find, :find
-          alias_method :find, :with_id_or_slug
-        end
-      end
-    end
-  end
-
-  include QueryMethods
 
   def service_for service_type
     service_type = "Services::#{service_type.to_s.camelize}"
