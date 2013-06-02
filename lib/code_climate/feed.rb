@@ -1,6 +1,6 @@
-require_relative 'scraper'
 require_relative 'entry'
 require 'rss'
+require 'naught'
 
 module CodeClimate
 
@@ -10,16 +10,20 @@ module CodeClimate
       @scraper = scraper
     end
 
-    def update!
-      @rss_feed = RSS::Parser.parse(scraper.scrape, false)
-    end
-
     def updated_at
       rss_feed.updated.content
     end
 
     def entries
       rss_feed.entries.collect { |entry| Entry.new(entry) }
+    end
+
+    def improvements
+      entries.select(&:improvement?)
+    end
+
+    def update!
+      @rss_feed = RSS::Parser.parse(scraper.scrape, false)
     end
 
     private
@@ -32,13 +36,10 @@ module CodeClimate
 
   end
 
-  class NullAtomFeed < RSS::Atom::Feed
-
-    def initialize
-      super
-      self.updated = Time.new
+  NullAtomFeed = Naught.build do
+    def entries
+      []
     end
-
   end
 
 end

@@ -25,12 +25,14 @@ gem 'bourbon'
 gem 'neat'
 gem 'uglifier', '>= 1.3.0'
 gem 'mechanize'
+gem 'naught'
 
 gem 'twitter'
 gem 'omniauth-google-apps'
 
 group :development, :test do
   gem 'pry'
+  gem 'pry-debugger'
   gem 'rspec-rails'
   gem 'better_errors'
   gem 'binding_of_caller'
