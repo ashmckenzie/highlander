@@ -29,10 +29,6 @@ class User < ActiveRecord::Base
     user_services.includes(:service).where('user_services.service_type = ?', service_type).first.try(:service)
   end
 
-  def to_param
-    slug
-  end
-
   # TODO: this 1.weeks.ago logic is replicated in the RunningLeaderboard query. Simplify.
   def running_score
     events.where('created_at > ?', 1.weeks.ago.to_s(:db)).sum(:value)

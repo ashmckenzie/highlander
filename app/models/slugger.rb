@@ -6,6 +6,19 @@ module Slugger
       alias_method :original_find, :find
       alias_method :find, :with_id_or_slug
     end
+
+    validates :slug, uniqueness: true, presence: true, on: :create
+
+    before_validation :set_slug, on: :create
+
+    def to_param
+      slug
+    end
+
+    def set_slug
+      new_slug = name.downcase.gsub(/[^a-z\-\s]/i, '').gsub(/\s+/, '-')
+      self.slug = new_slug
+    end
   end
 
   module ClassMethods
