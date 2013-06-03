@@ -4,7 +4,19 @@
   <link rel="alternate" type="text/html" href="/repos/51233ac356b10216a600183f/feed"/>
   <link rel="self" type="application/atom+xml" href="https://codeclimate.com/repos/51233ac356b10216a600183f/feed.atom"/>
   <title>Private Feed for Hotels</title>
-  <updated>2013-05-31T04:54:51Z</updated>
+  <updated>2013-06-03T00:00:00Z</updated>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::WeeklyStats/51ac6acac7f3a302ad000002</id>
+    <published>2013-06-03T00:00:00Z</published>
+    <updated>2013-06-03T10:07:06Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/feed"/>
+    <title>Summary of May 27th - June 2nd</title>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <![CDATA[<p>273 files changed, 9376 insertions, 9248 deletions</p>]]>
+      </div>
+    </content>
+  </entry>
   <entry>
     <id>tag:codeclimate.com,2005:Events::RatingChanged/51a82d49f3ea004e2f000004</id>
     <published>2013-05-31T04:54:51Z</published>
