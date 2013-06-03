@@ -26,6 +26,7 @@ gem 'neat'
 gem 'uglifier', '>= 1.3.0'
 gem 'mechanize'
 gem 'naught'
+gem 'exception_notification', github: 'smartinez87/exception_notification'
 
 gem 'twitter'
 gem 'omniauth-google-apps'
@@ -38,6 +39,7 @@ group :development, :test do
   gem 'binding_of_caller'
   gem 'factory_girl_rails'
   gem 'capybara'
+  gem 'letter_opener'
 end
 
 group :heroku do
