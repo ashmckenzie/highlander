@@ -48,6 +48,19 @@ module CodeClimate
       git_sha_match[:to_sha]
     end
 
+    def to_h
+      {
+        id:           id,
+        title:        title,
+        type:         type,
+        improvement?: improvement?,
+        published_at: published_at,
+        updated_at:   updated_at,
+        from_sha:     from_sha,
+        to_sha:       to_sha
+      }
+    end
+
     private
 
     attr_reader :rss_entry
