@@ -13,11 +13,11 @@ module CodeClimate
     end
 
     def old_rating
-      rating_change_match[1]
+      rating_change_match[:old_rating]
     end
 
     def new_rating
-      rating_change_match[2]
+      rating_change_match[:new_rating]
     end
 
     def rating_jump
@@ -29,7 +29,7 @@ module CodeClimate
     attr_reader :entry_title
 
     def rating_change_match
-      entry_title.match(/from a ([A-F]) to a ([A-F])/)
+      entry_title.match(/from a (?<old_rating>[A-F]) to a (?<new_rating>[A-F])/)
     end
 
     def sorted_ratings

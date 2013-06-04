@@ -110,6 +110,8 @@ GEM
       railties (>= 3.0.0)
     faraday (0.8.7)
       multipart-post (~> 1.1)
+    faraday_middleware (0.9.0)
+      faraday (>= 0.7.4, < 0.9)
     ffi (1.8.1)
     hashie (2.0.5)
     hike (1.2.2)
@@ -145,9 +147,17 @@ GEM
       sass (>= 3.2)
     net-http-digest_auth (1.3)
     net-http-persistent (2.8)
+    netrc (0.7.7)
     nokogiri (1.5.9)
     normalize-rails (2.1.1)
     ntlm-http (0.1.1)
+    octokit (1.24.0)
+      addressable (~> 2.2)
+      faraday (~> 0.8)
+      faraday_middleware (~> 0.9)
+      hashie (~> 2.0)
+      multi_json (~> 1.3)
+      netrc (~> 0.7.7)
     omniauth (1.1.4)
       hashie (>= 1.2, < 3)
       rack
@@ -280,6 +290,7 @@ DEPENDENCIES
   naught
   neat
   normalize-rails
+  octokit
   omniauth-google-apps
   pg
   pry

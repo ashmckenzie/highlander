@@ -6,9 +6,9 @@ module CodeClimate
 
   class Feed
 
-    def initialize(scraper, from_date = 1.day.ago)
-      @scraper = scraper
-      @from_date = from_date
+    def initialize(scraper, from_date = nil)
+      @scraper   = scraper
+      @from_date = from_date || 1.day.ago
     end
 
     def update!
@@ -38,15 +38,6 @@ module CodeClimate
 
     def rss_feed
       @rss_feed || NullAtomFeed.new
-    end
-
-  end
-
-  NullAtomFeed = Naught.build do |config|
-    config.mimic RSS::Atom::Feed
-
-    def entries
-      []
     end
 
   end

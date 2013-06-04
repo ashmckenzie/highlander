@@ -40,6 +40,14 @@ module CodeClimate
       rss_entry.updated.content
     end
 
+    def from_sha
+      git_sha_match[:from_sha]
+    end
+
+    def to_sha
+      git_sha_match[:to_sha]
+    end
+
     private
 
     attr_reader :rss_entry
@@ -50,6 +58,10 @@ module CodeClimate
       else
         NullRatingChangeDetails.new
       end
+    end
+
+    def git_sha_match
+      rss_entry.link.href.match(/.*from_sha=(?<from_sha>.{8}).*to_sha=(?<to_sha>.{8})/)
     end
 
   end

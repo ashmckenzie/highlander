@@ -25,6 +25,7 @@ gem 'bourbon'
 gem 'neat'
 gem 'uglifier', '>= 1.3.0'
 gem 'mechanize'
+gem 'octokit'
 gem 'naught'
 gem 'exception_notification', github: 'smartinez87/exception_notification'
 

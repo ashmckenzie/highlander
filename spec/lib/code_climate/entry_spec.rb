@@ -101,6 +101,24 @@ module CodeClimate
 
     end
 
+    describe '#from_sha and #to_sha' do
+
+      let(:rss_entry) do
+        <<-rss
+          <entry>
+            <id>tag:codeclimate.com,2005:Events::RatingChanged/51a82d49f3ea004e2f000004</id>
+            <published>2013-05-31T04:54:51Z</published>
+            <updated>2013-05-31T04:55:37Z</updated>
+            <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/Consumer::BookingsController?from_sha=21006fdd&amp;to_sha=e4f0b8ea"/>
+            <title>Consumer::BookingsController has declined from a B to a C.</title>
+          </entry>
+        rss
+      end
+
+      its(:from_sha) { should == '21006fdd' }
+      its(:to_sha)   { should == 'e4f0b8ea' }
+    end
+
   end
 
 end
