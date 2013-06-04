@@ -6,7 +6,7 @@ class Metric < ActiveRecord::Base
 
   validate :default_unit, numericality: true
 
-  default_scope   -> { enabled }
+  default_scope -> { enabled }
 
   NAMES = %w{
     github_push
@@ -19,6 +19,7 @@ class Metric < ActiveRecord::Base
     twitter_mention
     pager_duty_ack
     bounty
+    code_climate_improvement
   }
 
 end

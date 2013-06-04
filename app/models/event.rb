@@ -10,7 +10,7 @@ class Event < ActiveRecord::Base
   end
 
   def self.with_key_and_value(key, value)
-    where("data @> '#{key}=>#{value}'")
+    where("data @> '#{key}=>\"#{value}\"'")
   end
 
 end

@@ -68,6 +68,11 @@ module Api
       render text: 'Github issue action was not a close event', status: :ok
     end
 
+    rescue_from Errors::CodeClimateImprovementAlreadyProcessed do
+      Rails.logger.info "Not awarding points for Code Climate Improvement. Id: '#{payload.id}' for '#{payload.github_username}' as it's already been processed"
+      render text: 'Improvement already processed', status: :ok
+    end
+
   end
 
 end

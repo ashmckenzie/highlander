@@ -19,12 +19,6 @@ FactoryGirl.define do
       default_unit  2
     end
 
-    factory :ming_pong_loss do
-      name          'ming_pong_loss'
-      description   'Ming Pong loss'
-      default_unit  0
-    end
-
     factory :express_yaself do
       name          'express_yaself'
       description   'Expressed Yaself'
@@ -51,7 +45,12 @@ FactoryGirl.define do
     factory :pager_duty_ack do
       name          'pager_duty_ack'
       description   'PagerDuty ack'
-      default_unit  1
+    end
+
+    factory :code_climate_improvement do
+      name          'code_climate_improvement'
+      description   'Code Climate Improvement'
+      default_unit  10
     end
 
   end

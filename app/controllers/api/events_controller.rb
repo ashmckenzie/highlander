@@ -7,6 +7,7 @@ module Api
     before_filter :validate_payload!
 
     def create
+      binding.pry
       if Event.create(payload.to_event_hash)
         code = :ok
       else
