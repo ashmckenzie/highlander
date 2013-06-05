@@ -30,10 +30,5 @@ module Highlander
     config.generators do |g|
       g.fixture_replacement :factory_girl
     end
-
-    config.middleware.use ExceptionNotifier,
-      sender_address: 'highlander-team@hooroo.com',
-      exception_recipients: 'highlander-team@hooroo.com',
-      ignore_exceptions: ExceptionNotifier.default_ignore_exceptions # + [RuntimeError]
   end
 end
