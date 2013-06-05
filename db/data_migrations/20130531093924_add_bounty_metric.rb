@@ -3,7 +3,7 @@ module DataMigration
     class AddBountyMetric < Base
 
       def up
-        Metric.create!(name: 'bounty', description: 'Bounty')
+        Metric.create!(name: 'bounty', description: 'Bounty claimed')
       end
 
       def down
