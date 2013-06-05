@@ -17,10 +17,7 @@
       <%= f.label :name %><br>
       <%= f.text_field :name %>
     </div>
-    <div class="field">
-      <%= f.label :description %><br>
-      <%= f.text_area :description %>
-    </div>
+
     <div class="field">
       <%= f.label :reward %><br>
       <%= f.number_field :reward %>
@@ -32,6 +29,11 @@
     </div> -->
 
   <%- end %>
+
+  <div class="field">
+    <%= f.label :description %><br>
+    <%= f.text_area :description %>
+  </div>
 
   <%- if %q{ edit update }.include?(controller.action_name) %>
     <div class="field">

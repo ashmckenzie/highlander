@@ -47,11 +47,14 @@
     <%= yield :pre_main %>
 
     <div id="main-container" class="container">
+      <%- flash.each do |key, msg| %>
+        <%= content_tag :div, msg, :class => [ key, "flash" ] %>
+      <% end %>
+
       <%= yield %>
     </div>
 
     <%= yield :post_main %>
-
 
     <script type="text/javascript">
 

@@ -1,7 +1,7 @@
 .flash
   background: red
   height: 45px
-  padding: 15px 0 0 0
+  padding: 15px
   width: 100%
 
   &.topmost
@@ -17,8 +17,14 @@
   &.warning
     background: $flash-warning
     color: $flash-warning-text
-  &.success
+
+  &.success, &.notice
+    background: $flash-success
+    color: $flash-success-text
+
   &.error
+    background: $flash-error
+    color: $flash-error-text
 
   > div
     +outer-container

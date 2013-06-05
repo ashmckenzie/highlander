@@ -14,7 +14,7 @@ class BountiesController < ApplicationController
 
   def new
     if Bounty.has_max_allowed?(current_user)
-      raise "You can only have #{Bounty::MAX_ACTIVE_BOUNTIES} unclaimed bounties at any one time"
+      redirect_to bounties_path, flash: { error: "You can only have #{Bounty::MAX_ACTIVE_BOUNTIES} unclaimed bounties at any one time" }
     end
     @bounty = Bounty.new
   end
@@ -51,7 +51,7 @@ class BountiesController < ApplicationController
   def destroy
     @bounty.destroy
     respond_to do |format|
-      format.html { redirect_to bounties_url }
+      format.html { redirect_to bounties_url, notice: 'Bounty was successfully destroyed.' }
     end
   end
 
