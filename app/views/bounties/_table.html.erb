@@ -1,0 +1,44 @@
+<table>
+  <thead>
+    <tr>
+      <th>Slug</th>
+      <th>Description</th>
+      <th>Reward</th>
+      <th>Created by</th>
+      <th>Claimed by</th>
+      <!-- <th>Needs claiming by</th> -->
+      <th>Claimed at</th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% bounties.each do |bounty| %>
+      <tr>
+        <td>
+          <%- if can? :show, Bounty %>
+            <%= link_to bounty.slug, bounty %>
+          <%- else %>
+            <%= bounty.slug %>
+          <%- end %>
+        </td>
+        <td><%= bounty.description %></td>
+        <td><%= bounty.reward %></td>
+        <td><%= bounty.created_by.name %></td>
+        <td><%= bounty.claimed_by.try(:name) %></td>
+        <!-- <td><%= bounty.needs_claiming_by %></td> -->
+        <td><%= bounty.claimed_at %></td>
+
+        <td>
+          <%- if !bounty.claimed? && can?(:edit, bounty) %>
+            <p><%= link_to 'Edit', edit_bounty_path(bounty) %></p>
+          <%- end %>
+
+          <%- if can? :destroy, bounty %>
+            <p><%= link_to 'Destroy', bounty, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+          <%- end %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

@@ -4,54 +4,24 @@
 
 <section class="container bounties">
 
-  <h1>Bounties</h1>
+  <h1>Unclaimed Bounties</h1>
 
-  <table>
-    <thead>
-      <tr>
-        <th>Slug</th>
-        <th>Description</th>
-        <th>Reward</th>
-        <th>Created by</th>
-        <th>Claimed by</th>
-        <!-- <th>Needs claiming by</th> -->
-        <th>Claimed at</th>
-        <th></th>
-      </tr>
-    </thead>
+  <%- unless @unclaimed_bounties.empty? %>
+    <%= render partial: 'table', locals: { bounties: @unclaimed_bounties } %>
+  <%- else %>
+    <p>There are no unclaimed bounties.</p>
+  <%- end %>
 
-    <tbody>
-      <% @bounties.each do |bounty| %>
-        <tr>
-          <td>
-            <%- if can? :show, Bounty %>
-              <%= link_to bounty.slug, bounty %>
-            <%- else %>
-              <%= bounty.slug %>
-            <%- end %>
-          </td>
-          <td><%= bounty.description %></td>
-          <td><%= bounty.reward %></td>
-          <td><%= bounty.created_by.name %></td>
-          <td><%= bounty.claimed_by.try(:name) %></td>
-          <!-- <td><%= bounty.needs_claiming_by %></td> -->
-          <td><%= bounty.claimed_at %></td>
+  <br/>
+  <h1>Claimed Bounties</h1>
 
-          <td>
-            <%- if !bounty.claimed? && can?(:edit, bounty) %>
-              <p><%= link_to 'Edit', edit_bounty_path(bounty) %></p>
-            <%- end %>
+  <%- unless @claimed_bounties.empty? %>
+    <%= render partial: 'table', locals: { bounties: @claimed_bounties } %>
+  <%- else %>
+    <p>There are no claimed bounties.</p>
+  <%- end %>
 
-            <%- if can? :destroy, bounty %>
-              <p><%= link_to 'Destroy', bounty, method: :delete, data: { confirm: 'Are you sure?' } %></p>
-            <%- end %>
-          </td>
-        </tr>
-      <% end %>
-    </tbody>
-  </table>
-
-  <br>
+  <br/>
 
   <%- if can? :create, Bounty %>
     <%= link_to 'New Bounty', new_bounty_path %>

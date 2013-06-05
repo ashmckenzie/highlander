@@ -13,6 +13,7 @@ class Bounty < ActiveRecord::Base
   validates :name, uniqueness: true
   validates :reward, inclusion: { in: 5..10 , message: "must be between 5 and 10" }
 
+  scope :claimed, -> { where("claimed_by_id IS NOT NULL AND claimed_at IS NOT NULL") }
   scope :unclaimed, -> { where("claimed_by_id IS NULL AND claimed_at IS NULL") }
   scope :created_by, -> user { where("created_by_id = ?", user.id) }
 
