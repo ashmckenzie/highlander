@@ -12,7 +12,7 @@ class BountyDecorator < Draper::Decorator
   private
 
   def better_time object
-    object.created_at.strftime("%m/%d/%y %H:%M:%S")
+    object.created_at.strftime("%m/%d/%y %H:%M")
   end
 
 end
