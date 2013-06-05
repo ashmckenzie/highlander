@@ -5,8 +5,8 @@ class BountiesController < ApplicationController
   load_and_authorize_resource
 
   def index
-    @claimed_bounties = Bounty.claimed
-    @unclaimed_bounties = Bounty.unclaimed
+    @claimed_bounties = Bounty.claimed.decorate
+    @unclaimed_bounties = Bounty.unclaimed.decorate
   end
 
   def show

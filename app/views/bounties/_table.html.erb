@@ -5,6 +5,7 @@
       <th>Description</th>
       <th>Reward</th>
       <th>Created by</th>
+      <th>Created at</th>
       <%- if type == 'claimed' %>
         <th>Claimed by</th>
         <!-- <th>Needs claiming by</th> -->
@@ -27,6 +28,7 @@
         <td><%= bounty.description %></td>
         <td><%= bounty.reward %></td>
         <td><%= bounty.created_by.name %></td>
+        <td><%= bounty.created_at %></td>
         <%- if type == 'claimed' %>
           <td><%= bounty.claimed_by.try(:name) %></td>
           <!-- <td><%= bounty.needs_claiming_by %></td> -->
