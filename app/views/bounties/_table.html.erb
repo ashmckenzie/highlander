@@ -1,7 +1,6 @@
 <table>
   <thead>
     <tr>
-      <th>Slug</th>
       <th>Description</th>
       <th>Reward</th>
       <th>Creator</th>
@@ -20,12 +19,11 @@
       <tr>
         <td>
           <%- if can? :show, Bounty %>
-            <%= link_to bounty.slug, bounty %>
+            <%= link_to bounty.description, bounty.slug %>
           <%- else %>
-            <%= bounty.slug %>
+            <%= bounty.description %>
           <%- end %>
         </td>
-        <td><%= bounty.description %></td>
         <td><%= bounty.reward %></td>
         <td><%= bounty.created_by.name %></td>
         <td><%= bounty.created_at %></td>
