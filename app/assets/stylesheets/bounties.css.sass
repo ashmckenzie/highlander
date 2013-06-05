@@ -1,9 +1,15 @@
-// Place all the styles related to the Bounties controller here.
-// They will automatically be included in application.css.
-// You can use Sass here: http://sass-lang.com/
+@import "utils"
+@import "common/widgets"
+@import "common/**/*"
 
 .bounties
   padding: 20px 10px
+
+  a.new-bounty
+    +hl-button
+    height: 35px
+    line-height: 35px
+    width: 120px
 
   table
     width: 100%

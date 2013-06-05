@@ -4,6 +4,14 @@
 
 <section class="container bounties">
 
+  <h1>New Bounty</h1>
+
+  <%- if can? :create, Bounty %>
+    <%= link_to 'New Bounty', new_bounty_path, class: 'new-bounty' %>
+  <%- end %>
+
+  <br/>
+
   <h1>Unclaimed Bounties</h1>
 
   <%- unless @unclaimed_bounties.empty? %>
@@ -21,10 +29,4 @@
     <p>There are no claimed bounties.</p>
   <%- end %>
 
-  <br/>
-
-  <%- if can? :create, Bounty %>
-    <%= link_to 'New Bounty', new_bounty_path %>
-  <%- end %>
-
-</section>
+ </section>
