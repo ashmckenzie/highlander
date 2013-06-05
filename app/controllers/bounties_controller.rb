@@ -39,6 +39,7 @@ class BountiesController < ApplicationController
 
   def update
     respond_to do |format|
+
       if @bounty.update(bounty_params)
         format.html { redirect_to bounties_path, notice: 'Bounty was successfully updated.' }
       else
