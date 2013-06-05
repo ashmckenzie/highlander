@@ -15,7 +15,7 @@
   <h1>Unclaimed Bounties</h1>
 
   <%- unless @unclaimed_bounties.empty? %>
-    <%= render partial: 'table', locals: { bounties: @unclaimed_bounties } %>
+    <%= render partial: 'table', locals: { bounties: @unclaimed_bounties, type: 'unclaimed' } %>
   <%- else %>
     <p>There are no unclaimed bounties.</p>
   <%- end %>
@@ -24,7 +24,7 @@
   <h1>Claimed Bounties</h1>
 
   <%- unless @claimed_bounties.empty? %>
-    <%= render partial: 'table', locals: { bounties: @claimed_bounties } %>
+    <%= render partial: 'table', locals: { bounties: @claimed_bounties, type: 'claimed' } %>
   <%- else %>
     <p>There are no claimed bounties.</p>
   <%- end %>
