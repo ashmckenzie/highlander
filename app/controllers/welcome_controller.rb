@@ -1,6 +1,6 @@
 class WelcomeController < ApplicationController
 
   def index
-    @users = User.by_total_score.decorate
+    @users = Queries::RunningLeaderboard.new.query.decorate
   end
 end

@@ -4,7 +4,6 @@ require File.expand_path("../../config/environment", __FILE__)
 Dir[File.dirname(__FILE__) + "/support/**/*.rb"].each { |f| require f }
 require 'rspec/rails'
 require 'rspec/autorun'
-#require 'factory_girl'
 require 'capybara/rspec'
 
 # Requires supporting ruby files with custom matchers and macros, etc,

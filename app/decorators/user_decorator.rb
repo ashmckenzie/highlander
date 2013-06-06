@@ -1,25 +1,31 @@
 class UserDecorator < Draper::Decorator
+
+  alias :user :source
   delegate_all
 
   def twitter_handle
-    if source.twitter_username
-      "@#{source.twitter_username}"
-    else
-      nil
-    end
+    "@#{user.service_for(:twitter).username}" if user.service_for(:twitter)
   end
 
   def email
     hooroo_email || ''
   end
 
+  def avatar_email
+    user.avatar_email || email
+  end
+
+  def achievements
+    Queries::AchievementsAndBadgeTakeupForUser.new(user).query.decorate
+  end
+
   def avatar_url size=80
-    gravatar_id = Digest::MD5::hexdigest(email).downcase
+    gravatar_id = Digest::MD5::hexdigest(avatar_email).downcase
     "http://gravatar.com/avatar/#{gravatar_id}.png?s=#{size}"
   end
 
   def bio
-    source.bio || "#{first_name} hasn't added a bio yet"
+    user.bio || "#{first_name} hasn't added a bio yet"
   end
 
   def first_name
@@ -27,12 +33,12 @@ class UserDecorator < Draper::Decorator
   end
 
   def id_or_slug
-    source.slug.present? ? source.slug : source.id
+    user.slug.present? ? user.slug : user.id
   end
 
   def last_event_created_at
-    if source.events.first
-      "Last updated on #{source.events.first.created_at.strftime("%B %-d, %Y at %-l:%M %P")}"
+    if user.events.first
+      "Last updated on #{user.events.first.created_at.strftime("%B %-d, %Y at %-l:%M %P")}"
     else
       ''
     end

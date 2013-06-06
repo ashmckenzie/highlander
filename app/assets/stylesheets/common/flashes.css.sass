@@ -1,14 +1,15 @@
 .flash
   background: red
   height: 45px
-  padding: 15px 0 0 0
+  padding: 15px
   width: 100%
 
   &.topmost
     border-bottom: 1px solid
+    display: none
 
-    +media($phone)
-      display: none
+    +media($not-phone)
+      display: block
 
     p
       +shift(2)
@@ -16,8 +17,14 @@
   &.warning
     background: $flash-warning
     color: $flash-warning-text
-  &.success
+
+  &.success, &.notice
+    background: $flash-success
+    color: $flash-success-text
+
   &.error
+    background: $flash-error
+    color: $flash-error-text
 
   > div
     +outer-container

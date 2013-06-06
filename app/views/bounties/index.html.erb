@@ -1,0 +1,32 @@
+<%- provide :head do -%>
+   <%= stylesheet_link_tag :bounties -%>
+<%- end -%>
+
+<section class="container bounties">
+
+  <h1>New Bounty</h1>
+
+  <%- if can? :create, Bounty %>
+    <%= link_to 'New Bounty', new_bounty_path, class: 'new-bounty' %>
+  <%- end %>
+
+  <br/>
+
+  <h1>Unclaimed Bounties</h1>
+
+  <%- unless @unclaimed_bounties.empty? %>
+    <%= render partial: 'table', locals: { bounties: @unclaimed_bounties, type: 'unclaimed' } %>
+  <%- else %>
+    <p>There are no unclaimed bounties.</p>
+  <%- end %>
+
+  <br/>
+  <h1>Claimed Bounties</h1>
+
+  <%- unless @claimed_bounties.empty? %>
+    <%= render partial: 'table', locals: { bounties: @claimed_bounties, type: 'claimed' } %>
+  <%- else %>
+    <p>There are no claimed bounties.</p>
+  <%- end %>
+
+ </section>

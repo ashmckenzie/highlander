@@ -1,0 +1,2089 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xml:lang="en-US" xmlns="http://www.w3.org/2005/Atom">
+  <id>tag:codeclimate.com,2005:/repos/51233ac356b10216a600183f/feed</id>
+  <link rel="alternate" type="text/html" href="/repos/51233ac356b10216a600183f/feed"/>
+  <link rel="self" type="application/atom+xml" href="https://codeclimate.com/repos/51233ac356b10216a600183f/feed.atom"/>
+  <title>Private Feed for Hotels</title>
+  <updated>2013-06-03T00:00:00Z</updated>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::WeeklyStats/51ac6acac7f3a302ad000002</id>
+    <published>2013-06-03T00:00:00Z</published>
+    <updated>2013-06-03T10:07:06Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/feed"/>
+    <title>Summary of May 27th - June 2nd</title>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <![CDATA[<p>273 files changed, 9376 insertions, 9248 deletions</p>]]>
+      </div>
+    </content>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::RatingChanged/51a82d49f3ea004e2f000004</id>
+    <published>2013-05-31T04:54:51Z</published>
+    <updated>2013-05-31T04:55:37Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/Consumer::BookingsController?from_sha=21006fdd&amp;to_sha=e4f0b8ea"/>
+    <title>Consumer::BookingsController has declined from a B to a C.</title>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::ConstantsCreated/51a813b5f3ea0070fb000005</id>
+    <published>2013-05-31T03:05:13Z</published>
+    <updated>2013-05-31T03:06:29Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/constants"/>
+    <title>Four classes/modules were added.</title>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <![CDATA[<ul>&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Grid&quot;&gt;Grid&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/GridRow&quot;&gt;GridRow&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/LowestCostOffers&quot;&gt;LowestCostOffers&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Searches::Locals::OfferGrid&quot;&gt;Searches::Locals::OfferGrid&lt;/a&gt;&lt;/li&gt;</ul>]]>
+      </div>
+    </content>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::ConstantsCreated/51a73f09f3ea002bb3000005</id>
+    <published>2013-05-30T11:53:47Z</published>
+    <updated>2013-05-30T11:59:05Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/constants"/>
+    <title>Three classes/modules were added.</title>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <![CDATA[<ul>&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/ActiveRecord&quot;&gt;ActiveRecord&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/ActiveRecord::ConnectionAdapters&quot;&gt;ActiveRecord::ConnectionAdapters&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/ActiveRecord::ConnectionAdapters::PostGISAdapter&quot;&gt;ActiveRecord::ConnectionAdapters::PostGISAdapter&lt;/a&gt;&lt;/li&gt;</ul>]]>
+      </div>
+    </content>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::ConstantsCreated/51a6fab113d6376fd2000005</id>
+    <published>2013-05-30T07:06:04Z</published>
+    <updated>2013-05-30T07:07:29Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/Bookings::BookingFactory"/>
+    <title>Bookings::BookingFactory was added.</title>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <![CDATA[<ul>&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Bookings::BookingFactory&quot;&gt;Bookings::BookingFactory&lt;/a&gt;&lt;/li&gt;</ul>]]>
+      </div>
+    </content>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::ConstantsCreated/51a6d94f56b1026947000005</id>
+    <published>2013-05-30T04:43:09Z</published>
+    <updated>2013-05-30T04:45:03Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/Bookings::BookingService"/>
+    <title>Bookings::BookingService was added.</title>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <![CDATA[<ul>&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Bookings::BookingService&quot;&gt;Bookings::BookingService&lt;/a&gt;&lt;/li&gt;</ul>]]>
+      </div>
+    </content>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::ConstantsCreated/51a69f4989af7e1794000005</id>
+    <published>2013-05-30T00:33:09Z</published>
+    <updated>2013-05-30T00:37:29Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/constants"/>
+    <title>Two classes/modules were added.</title>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <![CDATA[<ul>&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Bookings::Rebook::RefundPaymentFactory&quot;&gt;Bookings::Rebook::RefundPaymentFactory&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/RebookPayment&quot;&gt;RebookPayment&lt;/a&gt;&lt;/li&gt;</ul>]]>
+      </div>
+    </content>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::RatingChanged/51a5d2c1c7f3a34d93000004</id>
+    <published>2013-05-29T10:03:32Z</published>
+    <updated>2013-05-29T10:04:49Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/Bookings::Booking::ExternalOfferStaticSnapshot?from_sha=b6469e94&amp;to_sha=6c4c2100"/>
+    <title>Bookings::Booking::ExternalOfferStaticSnapshot has declined from a A to a B.</title>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::RatingChanged/51a45dccc7f3a328d1000004</id>
+    <published>2013-05-28T07:32:41Z</published>
+    <updated>2013-05-28T07:33:32Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/Consumer::Cards::DealCard::OfferSerializer?from_sha=646bca72&amp;to_sha=874c3907"/>
+    <title>Consumer::Cards::DealCard::OfferSerializer has declined from a B to a C.</title>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::ConstantsCreated/51a43cb289af7e1015000005</id>
+    <published>2013-05-28T05:11:26Z</published>
+    <updated>2013-05-28T05:12:18Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/BookingInventory::Pegasus::ChargeCalculatorFactory"/>
+    <title>BookingInventory::Pegasus::ChargeCalculatorFactory was added.</title>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <![CDATA[<ul>&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/BookingInventory::Pegasus::ChargeCalculatorFactory&quot;&gt;BookingInventory::Pegasus::ChargeCalculatorFactory&lt;/a&gt;&lt;/li&gt;</ul>]]>
+      </div>
+    </content>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::RatingChanged/51a42a4a89af7e40fc000004</id>
+    <published>2013-05-28T03:52:53Z</published>
+    <updated>2013-05-28T03:53:46Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/Inventory::Core::Offer?from_sha=5317678d&amp;to_sha=ba029efb"/>
+    <title>Inventory::Core::Offer has declined from a B to a C.</title>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::ConstantsCreated/51a412cb56b1026b29000005</id>
+    <published>2013-05-28T02:12:07Z</published>
+    <updated>2013-05-28T02:13:31Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/constants"/>
+    <title>Four classes/modules were added.</title>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <![CDATA[<ul>&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Bookings::Rebook&quot;&gt;Bookings::Rebook&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Bookings::Rebook::LineItemFactory&quot;&gt;Bookings::Rebook::LineItemFactory&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Bookings::Rebook::Refund&quot;&gt;Bookings::Rebook::Refund&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/CreditCardPayment&quot;&gt;CreditCardPayment&lt;/a&gt;&lt;/li&gt;</ul>]]>
+      </div>
+    </content>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::ConstantsCreated/51a3f74c7e00a41975000005</id>
+    <published>2013-05-28T00:15:18Z</published>
+    <updated>2013-05-28T00:16:12Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/Newco::HasValidations"/>
+    <title>Newco::HasValidations was added.</title>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <![CDATA[<ul>&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Newco::HasValidations&quot;&gt;Newco::HasValidations&lt;/a&gt;&lt;/li&gt;</ul>]]>
+      </div>
+    </content>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::RatingChanged/51a31c6889af7e545a000004</id>
+    <published>2013-05-27T08:26:14Z</published>
+    <updated>2013-05-27T08:42:16Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/Inventory::Local::OfferByDate?from_sha=8bdec695&amp;to_sha=340111ac"/>
+    <title>Inventory::Local::OfferByDate has declined from a D to a F.</title>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::WeeklyStats/51a3308cf3ea006ad4000002</id>
+    <published>2013-05-27T00:00:00Z</published>
+    <updated>2013-05-27T10:08:12Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/feed"/>
+    <title>Summary of May 20th - 26th</title>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <![CDATA[<p>220 files changed, 4046 insertions, 2545 deletions</p>]]>
+      </div>
+    </content>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::ConstantsCreated/519ef98a89af7e3c56000005</id>
+    <published>2013-05-24T05:23:37Z</published>
+    <updated>2013-05-24T05:24:26Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/BookingInventory::StrategyFactory"/>
+    <title>BookingInventory::StrategyFactory was added.</title>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <![CDATA[<ul>&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/BookingInventory::StrategyFactory&quot;&gt;BookingInventory::StrategyFactory&lt;/a&gt;&lt;/li&gt;</ul>]]>
+      </div>
+    </content>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::ConstantsCreated/519ef1b289af7e24e2000005</id>
+    <published>2013-05-24T04:16:32Z</published>
+    <updated>2013-05-24T04:50:58Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/constants"/>
+    <title>Four classes/modules were added.</title>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <![CDATA[<ul>&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/BookingInventory::Pegasus::BaseOfferStrategy&quot;&gt;BookingInventory::Pegasus::BaseOfferStrategy&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/BookingInventory::Pegasus::ExternalOfferStrategy&quot;&gt;BookingInventory::Pegasus::ExternalOfferStrategy&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/BookingInventory::Pegasus::LocalOfferStrategy&quot;&gt;BookingInventory::Pegasus::LocalOfferStrategy&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/BookingInventory::Pegasus::PegasusNullAvailableOffer&quot;&gt;BookingInventory::Pegasus::PegasusNullAvailableOffer&lt;/a&gt;&lt;/li&gt;</ul>]]>
+      </div>
+    </content>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::ConstantsCreated/519ecc7613d6374c63000005</id>
+    <published>2013-05-24T02:03:51Z</published>
+    <updated>2013-05-24T02:12:06Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/Inventory::Core::UtmDetails"/>
+    <title>Inventory::Core::UtmDetails was added.</title>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <![CDATA[<ul>&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Inventory::Core::UtmDetails&quot;&gt;Inventory::Core::UtmDetails&lt;/a&gt;&lt;/li&gt;</ul>]]>
+      </div>
+    </content>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::ConstantsCreated/519e88b5c7f3a34114000005</id>
+    <published>2013-05-23T21:21:57Z</published>
+    <updated>2013-05-23T21:23:01Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/Inventory::Repository::WrappableInErrorHandlingRepository"/>
+    <title>Inventory::Repository::WrappableInErrorHandlingRepository was added.</title>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <![CDATA[<ul>&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Inventory::Repository::WrappableInErrorHandlingRepository&quot;&gt;Inventory::Repository::WrappableInErrorHandlingRepository&lt;/a&gt;&lt;/li&gt;</ul>]]>
+      </div>
+    </content>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::ConstantsCreated/519da6f3c7f3a33cf6000005</id>
+    <published>2013-05-23T05:12:25Z</published>
+    <updated>2013-05-23T05:19:47Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/constants"/>
+    <title>Three classes/modules were added.</title>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <![CDATA[<ul>&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Cookies&quot;&gt;Cookies&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Cookies::FlightBookerCookie&quot;&gt;Cookies::FlightBookerCookie&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Cookies::JetstarCookie&quot;&gt;Cookies::JetstarCookie&lt;/a&gt;&lt;/li&gt;</ul>]]>
+      </div>
+    </content>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::RatingChanged/519c2a2413d6370cc5000004</id>
+    <published>2013-05-22T02:13:52Z</published>
+    <updated>2013-05-22T02:15:00Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/Bookings::Service::Manager?from_sha=936240e8&amp;to_sha=89fe9984"/>
+    <title>Bookings::Service::Manager has declined from a B to a C.</title>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::ConstantsCreated/519c2a24c7f3a37e62000005</id>
+    <published>2013-05-22T02:13:52Z</published>
+    <updated>2013-05-22T02:15:00Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/Bookings::Service::CommandStrategy::Factory"/>
+    <title>Bookings::Service::CommandStrategy::Factory was added.</title>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <![CDATA[<ul>&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Bookings::Service::CommandStrategy::Factory&quot;&gt;Bookings::Service::CommandStrategy::Factory&lt;/a&gt;&lt;/li&gt;</ul>]]>
+      </div>
+    </content>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::ConstantsCreated/519b31367e00a456b2000005</id>
+    <published>2013-05-21T08:00:31Z</published>
+    <updated>2013-05-21T08:32:54Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/constants"/>
+    <title>Three classes/modules were added.</title>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <![CDATA[<ul>&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Inventory::Repository::Pegasus::PropertyInLocationService&quot;&gt;Inventory::Repository::Pegasus::PropertyInLocationService&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Inventory::Repository::Pegasus::SinglePropertyService&quot;&gt;Inventory::Repository::Pegasus::SinglePropertyService&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Inventory::Service::FindOfferByPropertyService&quot;&gt;Inventory::Service::FindOfferByPropertyService&lt;/a&gt;&lt;/li&gt;</ul>]]>
+      </div>
+    </content>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::ConstantsCreated/519acaae89af7e4053000005</id>
+    <published>2013-05-21T01:14:02Z</published>
+    <updated>2013-05-21T01:15:26Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/Bookings::CancelRebookLinker"/>
+    <title>Bookings::CancelRebookLinker was added.</title>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <![CDATA[<ul>&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Bookings::CancelRebookLinker&quot;&gt;Bookings::CancelRebookLinker&lt;/a&gt;&lt;/li&gt;</ul>]]>
+      </div>
+    </content>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::ConstantsCreated/5199bd3813d6372a1f000005</id>
+    <published>2013-05-20T06:05:02Z</published>
+    <updated>2013-05-20T06:05:44Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/constants"/>
+    <title>Two classes/modules were added.</title>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <![CDATA[<ul>&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Inventory::Repository::Pegasus&quot;&gt;Inventory::Repository::Pegasus&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Inventory::Repository::Pegasus::BaseRepository&quot;&gt;Inventory::Repository::Pegasus::BaseRepository&lt;/a&gt;&lt;/li&gt;</ul>]]>
+      </div>
+    </content>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::RatingChanged/5199bd3889af7e26c5000004</id>
+    <published>2013-05-20T06:05:02Z</published>
+    <updated>2013-05-20T06:05:44Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/Inventory::Repository::PegasusExternalOfferRoomTypeRepository?from_sha=ca90f153&amp;to_sha=2f7744e6"/>
+    <title>Inventory::Repository::PegasusExternalOfferRoomTypeRepository has improved from a C to a A.</title>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::ConstantsCreated/5199bc32f3ea004682000005</id>
+    <published>2013-05-20T06:00:36Z</published>
+    <updated>2013-05-20T06:01:22Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/constants"/>
+    <title>Two classes/modules were added.</title>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <![CDATA[<ul>&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/BookingInventory&quot;&gt;BookingInventory&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/BookingInventory::BookingChangeFactory&quot;&gt;BookingInventory::BookingChangeFactory&lt;/a&gt;&lt;/li&gt;</ul>]]>
+      </div>
+    </content>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::WeeklyStats/5199f5faf3ea003ad3000002</id>
+    <published>2013-05-20T00:00:00Z</published>
+    <updated>2013-05-20T10:07:54Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/feed"/>
+    <title>Summary of May 13th - 19th</title>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <![CDATA[<p>342 files changed, 11342 insertions, 8996 deletions</p>]]>
+      </div>
+    </content>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::ConstantsCreated/519580d013d6370461000005</id>
+    <published>2013-05-17T00:33:15Z</published>
+    <updated>2013-05-17T00:58:56Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/Inventory::Strategy::PegasusCreation::BaseOfferStrategy"/>
+    <title>Inventory::Strategy::PegasusCreation::BaseOfferStrategy was added.</title>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <![CDATA[<ul>&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Inventory::Strategy::PegasusCreation::BaseOfferStrategy&quot;&gt;Inventory::Strategy::PegasusCreation::BaseOfferStrategy&lt;/a&gt;&lt;/li&gt;</ul>]]>
+      </div>
+    </content>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::RatingChanged/5195623956b102189f000004</id>
+    <published>2013-05-16T22:11:14Z</published>
+    <updated>2013-05-16T22:48:25Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/Inventory::Factory::PegasusOfferFactory?from_sha=a265209c&amp;to_sha=0ce84126"/>
+    <title>Inventory::Factory::PegasusOfferFactory has declined from a A to a B.</title>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::RatingChanged/5195623989af7e28ea000004</id>
+    <published>2013-05-16T22:11:14Z</published>
+    <updated>2013-05-16T22:48:25Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/Inventory::Repository::PegasusExternalOfferRoomTypeRepository?from_sha=a265209c&amp;to_sha=0ce84126"/>
+    <title>Inventory::Repository::PegasusExternalOfferRoomTypeRepository has declined from a B to a C.</title>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::ConstantsCreated/5195623a13d6374146000005</id>
+    <published>2013-05-16T22:11:14Z</published>
+    <updated>2013-05-16T22:48:26Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/constants"/>
+    <title>Two classes/modules were added.</title>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <![CDATA[<ul>&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Inventory::Pegasus::RatePlanResponse&quot;&gt;Inventory::Pegasus::RatePlanResponse&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Inventory::Strategy::PegasusCreation::LocalOffer&quot;&gt;Inventory::Strategy::PegasusCreation::LocalOffer&lt;/a&gt;&lt;/li&gt;</ul>]]>
+      </div>
+    </content>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::ConstantsCreated/519411ddc7f3a30408000005</id>
+    <published>2013-05-15T22:32:44Z</published>
+    <updated>2013-05-15T22:53:17Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/constants"/>
+    <title>Seven classes/modules were added.</title>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <![CDATA[<ul>&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Inventory::Repository::ExternalOffersDetector&quot;&gt;Inventory::Repository::ExternalOffersDetector&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Inventory::Strategy&quot;&gt;Inventory::Strategy&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Inventory::Strategy::PegasusCreation&quot;&gt;Inventory::Strategy::PegasusCreation&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Inventory::Strategy::PegasusCreation::CreationArguments&quot;&gt;Inventory::Strategy::PegasusCreation::CreationArguments&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Inventory::Strategy::PegasusCreation::CreationDelegate&quot;&gt;Inventory::Strategy::PegasusCreation::CreationDelegate&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Inventory::Strategy::PegasusCreation::ExternalOffer&quot;&gt;Inventory::Strategy::PegasusCreation::ExternalOffer&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Inventory::Strategy::PegasusCreation::RateChange&quot;&gt;Inventory::Strategy::PegasusCreation::RateChange&lt;/a&gt;&lt;/li&gt;</ul>]]>
+      </div>
+    </content>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::ConstantsCreated/5193762ec7f3a311b1000007</id>
+    <published>2013-05-15T11:48:01Z</published>
+    <updated>2013-05-15T11:49:02Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/constants"/>
+    <title>Two classes/modules were added.</title>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <![CDATA[<ul>&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Pegasus::Shared::Import::RatePlanCodeUpdater&quot;&gt;Pegasus::Shared::Import::RatePlanCodeUpdater&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Pegasus::Shared::Import::RatePlanImporter&quot;&gt;Pegasus::Shared::Import::RatePlanImporter&lt;/a&gt;&lt;/li&gt;</ul>]]>
+      </div>
+    </content>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::ConstantsCreated/5193250d7e00a410a2000007</id>
+    <published>2013-05-15T06:01:58Z</published>
+    <updated>2013-05-15T06:02:53Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/Consumer::ShortlistController"/>
+    <title>Consumer::ShortlistController was added.</title>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <![CDATA[<ul>&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Consumer::ShortlistController&quot;&gt;Consumer::ShortlistController&lt;/a&gt;&lt;/li&gt;</ul>]]>
+      </div>
+    </content>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::RatingChanged/5192f486f3ea006e78000005</id>
+    <published>2013-05-15T02:20:38Z</published>
+    <updated>2013-05-15T02:35:50Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/Consumer::BookingsController?from_sha=a07b1063&amp;to_sha=130c5cde"/>
+    <title>Consumer::BookingsController has improved from a C to a B.</title>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::ConstantsCreated/5191cb4d7e00a43ac2000007</id>
+    <published>2013-05-14T05:08:00Z</published>
+    <updated>2013-05-14T05:27:41Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/constants"/>
+    <title>Two classes/modules were added.</title>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <![CDATA[<ul>&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Partner&quot;&gt;Partner&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Partner::LeadsController&quot;&gt;Partner::LeadsController&lt;/a&gt;&lt;/li&gt;</ul>]]>
+      </div>
+    </content>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::ConstantsCreated/5191b53c7e00a466a5000007</id>
+    <published>2013-05-14T03:52:34Z</published>
+    <updated>2013-05-14T03:53:32Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/constants"/>
+    <title>Two classes/modules were added.</title>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <![CDATA[<ul>&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Pegasus::Accor::PropertyImporter&quot;&gt;Pegasus::Accor::PropertyImporter&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Pegasus::Accor::RatePlanImporter&quot;&gt;Pegasus::Accor::RatePlanImporter&lt;/a&gt;&lt;/li&gt;</ul>]]>
+      </div>
+    </content>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::ConstantsCreated/5191ae5ac7f3a371b7000007</id>
+    <published>2013-05-14T03:23:24Z</published>
+    <updated>2013-05-14T03:24:10Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/EANFeature"/>
+    <title>EANFeature was added.</title>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <![CDATA[<ul>&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/EANFeature&quot;&gt;EANFeature&lt;/a&gt;&lt;/li&gt;</ul>]]>
+      </div>
+    </content>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::RatingChanged/51918bbaf3ea001c05000005</id>
+    <published>2013-05-14T00:55:31Z</published>
+    <updated>2013-05-14T00:56:26Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/Consumer::EmbeddedSearchController?from_sha=12228142&amp;to_sha=f8579816"/>
+    <title>Consumer::EmbeddedSearchController has declined from a A to a B.</title>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::ConstantsCreated/5191780a7e00a460c6000007</id>
+    <published>2013-05-13T23:17:29Z</published>
+    <updated>2013-05-13T23:32:26Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/BetterLogger"/>
+    <title>BetterLogger was added.</title>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <![CDATA[<ul>&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/BetterLogger&quot;&gt;BetterLogger&lt;/a&gt;&lt;/li&gt;</ul>]]>
+      </div>
+    </content>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::ConstantsCreated/5190d3c689af7e2bc3000007</id>
+    <published>2013-05-13T11:50:30Z</published>
+    <updated>2013-05-13T11:51:34Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/Inventory::Factory::RoomTypeFactory"/>
+    <title>Inventory::Factory::RoomTypeFactory was added.</title>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <![CDATA[<ul>&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Inventory::Factory::RoomTypeFactory&quot;&gt;Inventory::Factory::RoomTypeFactory&lt;/a&gt;&lt;/li&gt;</ul>]]>
+      </div>
+    </content>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::ConstantsCreated/5190895756b10220db000007</id>
+    <published>2013-05-13T06:13:53Z</published>
+    <updated>2013-05-13T06:33:59Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/Inventory::Pegasus::CancellationPolicy"/>
+    <title>Inventory::Pegasus::CancellationPolicy was added.</title>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <![CDATA[<ul>&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Inventory::Pegasus::CancellationPolicy&quot;&gt;Inventory::Pegasus::CancellationPolicy&lt;/a&gt;&lt;/li&gt;</ul>]]>
+      </div>
+    </content>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::ConstantsCreated/51904d58f3ea007157000007</id>
+    <published>2013-05-13T02:17:19Z</published>
+    <updated>2013-05-13T02:18:00Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/constants"/>
+    <title>Two classes/modules were added.</title>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <![CDATA[<ul>&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Inventory::Factory::SearchDetailsFactory&quot;&gt;Inventory::Factory::SearchDetailsFactory&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Queries::WhitelistedRatePlansForOtaHotelCodes&quot;&gt;Queries::WhitelistedRatePlansForOtaHotelCodes&lt;/a&gt;&lt;/li&gt;</ul>]]>
+      </div>
+    </content>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::ConstantsCreated/51903d5fc7f3a35d5c000007</id>
+    <published>2013-05-13T01:08:34Z</published>
+    <updated>2013-05-13T01:09:51Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/Inventory::Repository::WhitelistedRatePlanRepository"/>
+    <title>Inventory::Repository::WhitelistedRatePlanRepository was added.</title>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <![CDATA[<ul>&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Inventory::Repository::WhitelistedRatePlanRepository&quot;&gt;Inventory::Repository::WhitelistedRatePlanRepository&lt;/a&gt;&lt;/li&gt;</ul>]]>
+      </div>
+    </content>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::ConstantsCreated/519035e389af7e6244000007</id>
+    <published>2013-05-13T00:36:38Z</published>
+    <updated>2013-05-13T00:37:55Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/Inventory::Factory::PegasusCancellationPolicyFactory"/>
+    <title>Inventory::Factory::PegasusCancellationPolicyFactory was added.</title>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <![CDATA[<ul>&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Inventory::Factory::PegasusCancellationPolicyFactory&quot;&gt;Inventory::Factory::PegasusCancellationPolicyFactory&lt;/a&gt;&lt;/li&gt;</ul>]]>
+      </div>
+    </content>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::WeeklyStats/5190bbaf13d6370fe4000003</id>
+    <published>2013-05-13T00:00:00Z</published>
+    <updated>2013-05-13T10:08:47Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/feed"/>
+    <title>Summary of May 6th - 12th</title>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <![CDATA[<p>227 files changed, 3387 insertions, 1982 deletions</p>]]>
+      </div>
+    </content>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::RatingChanged/51902cf2c7f3a32d31000005</id>
+    <published>2013-05-12T23:58:59Z</published>
+    <updated>2013-05-12T23:59:46Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/Inventory::Repository::PegasusExternalOfferRoomTypeRepository?from_sha=0c2ce1a2&amp;to_sha=36da166c"/>
+    <title>Inventory::Repository::PegasusExternalOfferRoomTypeRepository has declined from a A to a B.</title>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::ConstantsCreated/51902cf2c7f3a32d34000007</id>
+    <published>2013-05-12T23:58:59Z</published>
+    <updated>2013-05-12T23:59:46Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/Inventory::Repository::RatePlanRepository"/>
+    <title>Inventory::Repository::RatePlanRepository was added.</title>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <![CDATA[<ul>&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Inventory::Repository::RatePlanRepository&quot;&gt;Inventory::Repository::RatePlanRepository&lt;/a&gt;&lt;/li&gt;</ul>]]>
+      </div>
+    </content>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::ConstantsCreated/518c2d3e56b10260d2000007</id>
+    <published>2013-05-09T23:02:29Z</published>
+    <updated>2013-05-09T23:11:58Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/constants"/>
+    <title>Three classes/modules were added.</title>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <![CDATA[<ul>&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Inventory::Repository::PegasusOfferRepository&quot;&gt;Inventory::Repository::PegasusOfferRepository&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Inventory::Service&quot;&gt;Inventory::Service&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Inventory::Service::CheapestOfferService&quot;&gt;Inventory::Service::CheapestOfferService&lt;/a&gt;&lt;/li&gt;</ul>]]>
+      </div>
+    </content>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::ConstantsCreated/518c1f157e00a47af9000007</id>
+    <published>2013-05-09T21:45:59Z</published>
+    <updated>2013-05-09T22:11:33Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/Inventory::Pegasus::RatePlanRepository"/>
+    <title>Inventory::Pegasus::RatePlanRepository was added.</title>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <![CDATA[<ul>&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Inventory::Pegasus::RatePlanRepository&quot;&gt;Inventory::Pegasus::RatePlanRepository&lt;/a&gt;&lt;/li&gt;</ul>]]>
+      </div>
+    </content>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::ConstantsCreated/518ae9a97e00a404ba000007</id>
+    <published>2013-05-09T00:06:39Z</published>
+    <updated>2013-05-09T00:11:21Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/Inventory::Factory::PegasusPaymentTermFactory"/>
+    <title>Inventory::Factory::PegasusPaymentTermFactory was added.</title>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <![CDATA[<ul>&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Inventory::Factory::PegasusPaymentTermFactory&quot;&gt;Inventory::Factory::PegasusPaymentTermFactory&lt;/a&gt;&lt;/li&gt;</ul>]]>
+      </div>
+    </content>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::ConstantsCreated/518977bc7e00a42e06000005</id>
+    <published>2013-05-07T06:57:47Z</published>
+    <updated>2013-05-07T21:53:00Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/constants"/>
+    <title>Two classes/modules were added.</title>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <![CDATA[<ul>&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Inventory::Repository::PegasusProperties&quot;&gt;Inventory::Repository::PegasusProperties&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Queries::WhitelistedRatePlansByOtaHotelCodes&quot;&gt;Queries::WhitelistedRatePlansByOtaHotelCodes&lt;/a&gt;&lt;/li&gt;</ul>]]>
+      </div>
+    </content>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::ConstantsCreated/51871bcb13d637153c000005</id>
+    <published>2013-05-06T02:55:36Z</published>
+    <updated>2013-05-06T02:56:11Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/constants"/>
+    <title>Five classes/modules were added.</title>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <![CDATA[<ul>&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Pegasus::Accor::Updater&quot;&gt;Pegasus::Accor::Updater&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Pegasus::Accor::Updater::CSV&quot;&gt;Pegasus::Accor::Updater::CSV&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Pegasus::Accor::Updater::CSV::File&quot;&gt;Pegasus::Accor::Updater::CSV::File&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Pegasus::Accor::Updater::CSV::Property&quot;&gt;Pegasus::Accor::Updater::CSV::Property&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Pegasus::Accor::Updater::CSV::Update&quot;&gt;Pegasus::Accor::Updater::CSV::Update&lt;/a&gt;&lt;/li&gt;</ul>]]>
+      </div>
+    </content>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::RatingChanged/51871b037e00a402bb000004</id>
+    <published>2013-05-06T02:52:11Z</published>
+    <updated>2013-05-06T02:52:51Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/Consumer::PropertyController?from_sha=701473dc&amp;to_sha=5040e30f"/>
+    <title>Consumer::PropertyController has improved from a B to a A.</title>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::ConstantsCreated/51871b03f3ea006537000005</id>
+    <published>2013-05-06T02:52:11Z</published>
+    <updated>2013-05-06T02:52:51Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/Inventory::Repository::PegasusAvailableOfferRepositoryFactory"/>
+    <title>Inventory::Repository::PegasusAvailableOfferRepositoryFactory was added.</title>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <![CDATA[<ul>&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Inventory::Repository::PegasusAvailableOfferRepositoryFactory&quot;&gt;Inventory::Repository::PegasusAvailableOfferRepositoryFactory&lt;/a&gt;&lt;/li&gt;</ul>]]>
+      </div>
+    </content>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::WeeklyStats/5187814bf3ea0015b9000002</id>
+    <published>2013-05-06T00:00:00Z</published>
+    <updated>2013-05-06T10:09:15Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/feed"/>
+    <title>Summary of April 29th - May 5th</title>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <![CDATA[<p>217 files changed, 7812 insertions, 5621 deletions</p>]]>
+      </div>
+    </content>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::ConstantsCreated/518351b289af7e4f3c000005</id>
+    <published>2013-05-03T05:55:31Z</published>
+    <updated>2013-05-03T05:57:06Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/constants"/>
+    <title>Two classes/modules were added.</title>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <![CDATA[<ul>&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Instrumentation&quot;&gt;Instrumentation&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Instrumentation::EanLogSubscriber&quot;&gt;Instrumentation::EanLogSubscriber&lt;/a&gt;&lt;/li&gt;</ul>]]>
+      </div>
+    </content>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::RatingChanged/51832ad37e00a46608000004</id>
+    <published>2013-05-03T02:31:42Z</published>
+    <updated>2013-05-03T03:11:15Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/SearchDetails?from_sha=b9565eb8&amp;to_sha=8f797730"/>
+    <title>SearchDetails has declined from a A to a B.</title>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::ConstantsCreated/51832ad4f3ea007bb3000005</id>
+    <published>2013-05-03T02:31:42Z</published>
+    <updated>2013-05-03T03:11:16Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/constants"/>
+    <title>Two classes/modules were added.</title>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <![CDATA[<ul>&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Inventory::Core::AvailableOfferSummaryAdapter&quot;&gt;Inventory::Core::AvailableOfferSummaryAdapter&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Inventory::Repository::PegasusExternalOfferAvailableOfferRepositoryAdapter&quot;&gt;Inventory::Repository::PegasusExternalOfferAvailableOfferRepositoryAdapter&lt;/a&gt;&lt;/li&gt;</ul>]]>
+      </div>
+    </content>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::ConstantsCreated/5182028189af7e2d42000005</id>
+    <published>2013-05-02T06:05:56Z</published>
+    <updated>2013-05-02T06:06:57Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/constants"/>
+    <title>Six classes/modules were added.</title>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <![CDATA[<ul>&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Qff::Strategies&quot;&gt;Qff::Strategies&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Qff::Strategies::AbstractStrategy&quot;&gt;Qff::Strategies::AbstractStrategy&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Qff::Strategies::NoOp&quot;&gt;Qff::Strategies::NoOp&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Qff::Strategies::PointsPerBooking&quot;&gt;Qff::Strategies::PointsPerBooking&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Qff::Strategies::PointsPerDollar&quot;&gt;Qff::Strategies::PointsPerDollar&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Qff::StrategyFactory&quot;&gt;Qff::StrategyFactory&lt;/a&gt;&lt;/li&gt;</ul>]]>
+      </div>
+    </content>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::RatingChanged/5181e49ef3ea004fe7000004</id>
+    <published>2013-05-02T03:58:38Z</published>
+    <updated>2013-05-02T03:59:26Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/Inventory::Repository::PegasusAvailableOfferRepository?from_sha=7ce0aa6d&amp;to_sha=ec09441d"/>
+    <title>Inventory::Repository::PegasusAvailableOfferRepository has improved from a B to a A.</title>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::ConstantsCreated/5181e49ef3ea004fea000005</id>
+    <published>2013-05-02T03:58:38Z</published>
+    <updated>2013-05-02T03:59:26Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/constants"/>
+    <title>Five classes/modules were added.</title>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <![CDATA[<ul>&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Inventory::Core::RoomType&quot;&gt;Inventory::Core::RoomType&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Inventory::EAN::RoomTypeFactory&quot;&gt;Inventory::EAN::RoomTypeFactory&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Inventory::Factory::LocalRoomTypeToRoomTypeFactory&quot;&gt;Inventory::Factory::LocalRoomTypeToRoomTypeFactory&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Inventory::Factory::PegasusOfferFactory&quot;&gt;Inventory::Factory::PegasusOfferFactory&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Inventory::Repository::PegasusExternalOfferRoomTypeRepository&quot;&gt;Inventory::Repository::PegasusExternalOfferRoomTypeRepository&lt;/a&gt;&lt;/li&gt;</ul>]]>
+      </div>
+    </content>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::RatingChanged/5181bca113d6375dd7000004</id>
+    <published>2013-05-02T01:07:51Z</published>
+    <updated>2013-05-02T01:08:49Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/Bookings::CancellationReason?from_sha=0a07c409&amp;to_sha=83f5b8b0"/>
+    <title>Bookings::CancellationReason has declined from a A to a B.</title>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::RatingChanged/5180ff3a56b1022ec4000004</id>
+    <published>2013-05-01T11:39:47Z</published>
+    <updated>2013-05-01T11:40:42Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/Consumer::ArticlePresenter?from_sha=76ce30af&amp;to_sha=0a07c409"/>
+    <title>Consumer::ArticlePresenter has declined from a A to a B.</title>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::ConstantsCreated/518085b9f3ea0023a6000005</id>
+    <published>2013-05-01T02:17:24Z</published>
+    <updated>2013-05-01T03:02:17Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/constants"/>
+    <title>Four classes/modules were added.</title>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <![CDATA[<ul>&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Developer&quot;&gt;Developer&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Developer::DeveloperController&quot;&gt;Developer::DeveloperController&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Developer::FeatureController&quot;&gt;Developer::FeatureController&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Developer::StatsController&quot;&gt;Developer::StatsController&lt;/a&gt;&lt;/li&gt;</ul>]]>
+      </div>
+    </content>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::ConstantsCreated/51805c5d13d6371be2000005</id>
+    <published>2013-05-01T00:04:55Z</published>
+    <updated>2013-05-01T00:05:49Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/constants"/>
+    <title>Two classes/modules were added.</title>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <![CDATA[<ul>&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Inventory::Factory&quot;&gt;Inventory::Factory&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Inventory::Factory::PegasusRatePlanRoomTypeToOfferFactory&quot;&gt;Inventory::Factory::PegasusRatePlanRoomTypeToOfferFactory&lt;/a&gt;&lt;/li&gt;</ul>]]>
+      </div>
+    </content>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::ConstantsCreated/517f014e7e00a410b0000005</id>
+    <published>2013-04-29T23:24:04Z</published>
+    <updated>2013-04-29T23:25:02Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/constants"/>
+    <title>12 classes/modules were added.</title>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <![CDATA[<ul>&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Inventory::Core::ActivePromotion&quot;&gt;Inventory::Core::ActivePromotion&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Inventory::Core::CancellationPolicy&quot;&gt;Inventory::Core::CancellationPolicy&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Inventory::Core::Money&quot;&gt;Inventory::Core::Money&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;B&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Inventory::Core::Offer&quot;&gt;Inventory::Core::Offer&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Inventory::Repository&quot;&gt;Inventory::Repository&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Inventory::Repository::AvailableOfferRepositoryFactory&quot;&gt;Inventory::Repository::AvailableOfferRepositoryFactory&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Inventory::Repository::CompositeOfferRepository&quot;&gt;Inventory::Repository::CompositeOfferRepository&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;B&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Inventory::Repository::EANAvailableOfferRepository&quot;&gt;Inventory::Repository::EANAvailableOfferRepository&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Inventory::Repository::EmptyAvailableOfferRepository&quot;&gt;Inventory::Repository::EmptyAvailableOfferRepository&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Inventory::Repository::ErrorHandlingRepository&quot;&gt;Inventory::Repository::ErrorHandlingRepository&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Inventory::Repository::LocalAvailableOfferRepository&quot;&gt;Inventory::Repository::LocalAvailableOfferRepository&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;B&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Inventory::Repository::PegasusAvailableOfferRepository&quot;&gt;Inventory::Repository::PegasusAvailableOfferRepository&lt;/a&gt;&lt;/li&gt;</ul>]]>
+      </div>
+    </content>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::ConstantsCreated/517e020cc7f3a34cff000005</id>
+    <published>2013-04-29T04:44:06Z</published>
+    <updated>2013-04-29T05:15:56Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/Encryption::JetstarEncryptor"/>
+    <title>Encryption::JetstarEncryptor was added.</title>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <![CDATA[<ul>&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Encryption::JetstarEncryptor&quot;&gt;Encryption::JetstarEncryptor&lt;/a&gt;&lt;/li&gt;</ul>]]>
+      </div>
+    </content>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::WeeklyStats/517e475fc7f3a3328f000002</id>
+    <published>2013-04-29T00:00:00Z</published>
+    <updated>2013-04-29T10:11:43Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/feed"/>
+    <title>Summary of April 22nd - 28th</title>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <![CDATA[<p>179 files changed, 4139 insertions, 3343 deletions</p>]]>
+      </div>
+    </content>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::RatingChanged/5177671b7e00a439c9000004</id>
+    <published>2013-04-24T04:16:39Z</published>
+    <updated>2013-04-24T05:01:15Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/Extranet::BookingsHelper?from_sha=05b2169e&amp;to_sha=06b4c973"/>
+    <title>Extranet::BookingsHelper has improved from a D to a C.</title>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::RatingChanged/5177671b89af7e23ba000004</id>
+    <published>2013-04-24T04:16:39Z</published>
+    <updated>2013-04-24T05:01:15Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/OfferDetails?from_sha=05b2169e&amp;to_sha=06b4c973"/>
+    <title>OfferDetails has improved from a C to a A.</title>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::RatingChanged/5177671b13d6370f78000004</id>
+    <published>2013-04-24T04:16:39Z</published>
+    <updated>2013-04-24T05:01:15Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/SearchDetails?from_sha=05b2169e&amp;to_sha=06b4c973"/>
+    <title>SearchDetails has improved from a C to a A.</title>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::ConstantsCreated/5177671c89af7e23c0000005</id>
+    <published>2013-04-24T04:16:39Z</published>
+    <updated>2013-04-24T05:01:16Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/Inventory::Pegasus::AvailableOfferSummary"/>
+    <title>Inventory::Pegasus::AvailableOfferSummary was added.</title>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <![CDATA[<ul>&lt;li&gt;&lt;strong&gt;C&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Inventory::Pegasus::AvailableOfferSummary&quot;&gt;Inventory::Pegasus::AvailableOfferSummary&lt;/a&gt;&lt;/li&gt;</ul>]]>
+      </div>
+    </content>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::RatingChanged/5174b5f156b1022a12000004</id>
+    <published>2013-04-22T03:39:49Z</published>
+    <updated>2013-04-22T04:00:49Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/Bookings::QffClaim?from_sha=74c5c301&amp;to_sha=89f7cd61"/>
+    <title>Bookings::QffClaim has declined from a A to a B.</title>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::ConstantsCreated/5174b5f156b1022a17000005</id>
+    <published>2013-04-22T03:39:49Z</published>
+    <updated>2013-04-22T04:00:49Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/constants"/>
+    <title>Four classes/modules were added.</title>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <![CDATA[<ul>&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/QffPointsEarned::Claim&quot;&gt;QffPointsEarned::Claim&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/QffPointsEarned::Claim::Executor&quot;&gt;QffPointsEarned::Claim::Executor&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/QffPointsEarned::Claim::Manager&quot;&gt;QffPointsEarned::Claim::Manager&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/QffPointsEarned::ClaimType&quot;&gt;QffPointsEarned::ClaimType&lt;/a&gt;&lt;/li&gt;</ul>]]>
+      </div>
+    </content>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::RatingChanged/5174914ef3ea0069f5000004</id>
+    <published>2013-04-22T01:23:53Z</published>
+    <updated>2013-04-22T01:24:30Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/Consumer::EmbeddedSearchController?from_sha=0aca2307&amp;to_sha=cf605f43"/>
+    <title>Consumer::EmbeddedSearchController has improved from a B to a A.</title>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::ConstantsCreated/517488df89af7e712a000005</id>
+    <published>2013-04-22T00:29:44Z</published>
+    <updated>2013-04-22T00:48:31Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/constants"/>
+    <title>Two classes/modules were added.</title>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <![CDATA[<ul>&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Pegasus::Accor::Import::PropertyCodeUpdater&quot;&gt;Pegasus::Accor::Import::PropertyCodeUpdater&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Pegasus::Accor::Import::RatePlanCodeUpdater&quot;&gt;Pegasus::Accor::Import::RatePlanCodeUpdater&lt;/a&gt;&lt;/li&gt;</ul>]]>
+      </div>
+    </content>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::WeeklyStats/51750cbd89af7e2805000002</id>
+    <published>2013-04-22T00:00:00Z</published>
+    <updated>2013-04-22T10:11:09Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/feed"/>
+    <title>Summary of April 15th - 21st</title>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <![CDATA[<p>271 files changed, 5869 insertions, 3576 deletions</p>]]>
+      </div>
+    </content>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::ConstantsCreated/5170e27d7e00a428bf000005</id>
+    <published>2013-04-19T06:14:12Z</published>
+    <updated>2013-04-19T06:21:49Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/Newco::ExternallyProvided"/>
+    <title>Newco::ExternallyProvided was added.</title>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <![CDATA[<ul>&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Newco::ExternallyProvided&quot;&gt;Newco::ExternallyProvided&lt;/a&gt;&lt;/li&gt;</ul>]]>
+      </div>
+    </content>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::ConstantsCreated/5170d5c6c7f3a378d9000005</id>
+    <published>2013-04-19T05:26:58Z</published>
+    <updated>2013-04-19T05:27:34Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/constants"/>
+    <title>Five classes/modules were added.</title>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <![CDATA[<ul>&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/CreditCardInspector&quot;&gt;CreditCardInspector&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/CreditCardInspector::Base&quot;&gt;CreditCardInspector::Base&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/CreditCardInspector::Errors&quot;&gt;CreditCardInspector::Errors&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/CreditCardInspector::Errors::Error&quot;&gt;CreditCardInspector::Errors::Error&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/CreditCardInspector::Errors::UnknownCardNumber&quot;&gt;CreditCardInspector::Errors::UnknownCardNumber&lt;/a&gt;&lt;/li&gt;</ul>]]>
+      </div>
+    </content>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::ConstantsCreated/5170a69ec7f3a31905000005</id>
+    <published>2013-04-19T02:05:36Z</published>
+    <updated>2013-04-19T02:06:22Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/RoomTypeFacilityDecorator"/>
+    <title>RoomTypeFacilityDecorator was added.</title>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <![CDATA[<ul>&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/RoomTypeFacilityDecorator&quot;&gt;RoomTypeFacilityDecorator&lt;/a&gt;&lt;/li&gt;</ul>]]>
+      </div>
+    </content>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::RatingChanged/51709cb956b10241c8000004</id>
+    <published>2013-04-19T01:23:25Z</published>
+    <updated>2013-04-19T01:24:09Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/Consumer::EmbeddedSearchController?from_sha=ac49b88a&amp;to_sha=86b0ae33"/>
+    <title>Consumer::EmbeddedSearchController has declined from a A to a B.</title>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::ConstantsCreated/5170815489af7e387d000005</id>
+    <published>2013-04-18T23:26:02Z</published>
+    <updated>2013-04-18T23:27:16Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/Bookings::FlightBookers::StubDispatcher"/>
+    <title>Bookings::FlightBookers::StubDispatcher was added.</title>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <![CDATA[<ul>&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Bookings::FlightBookers::StubDispatcher&quot;&gt;Bookings::FlightBookers::StubDispatcher&lt;/a&gt;&lt;/li&gt;</ul>]]>
+      </div>
+    </content>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::RatingChanged/516f8b2d7e00a43f4a000004</id>
+    <published>2013-04-18T05:56:06Z</published>
+    <updated>2013-04-18T05:57:01Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/Inventory::Pegasus::Api?from_sha=04a66498&amp;to_sha=0da6f4bf"/>
+    <title>Inventory::Pegasus::Api has improved from a D to a C.</title>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::RatingChanged/516f83a77e00a420fe000004</id>
+    <published>2013-04-18T05:24:15Z</published>
+    <updated>2013-04-18T05:24:55Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/Bookings::Service::CommandStrategy::EAN?from_sha=af4a8730&amp;to_sha=04a66498"/>
+    <title>Bookings::Service::CommandStrategy::EAN has declined from a A to a B.</title>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::ConstantsCreated/516f5edd13d63718e5000005</id>
+    <published>2013-04-18T02:42:21Z</published>
+    <updated>2013-04-18T02:47:57Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/Providers::Pegasus::Image"/>
+    <title>Providers::Pegasus::Image was added.</title>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <![CDATA[<ul>&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Providers::Pegasus::Image&quot;&gt;Providers::Pegasus::Image&lt;/a&gt;&lt;/li&gt;</ul>]]>
+      </div>
+    </content>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::RatingChanged/516f5051c7f3a31845000004</id>
+    <published>2013-04-18T01:29:54Z</published>
+    <updated>2013-04-18T01:45:53Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/Inventory::Pegasus::Api?from_sha=22330b16&amp;to_sha=17a74261"/>
+    <title>Inventory::Pegasus::Api has declined from a C to a D.</title>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::ConstantsCreated/516e460fc7f3a32e8f000005</id>
+    <published>2013-04-17T06:48:54Z</published>
+    <updated>2013-04-17T06:49:51Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/constants"/>
+    <title>Five classes/modules were added.</title>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <![CDATA[<ul>&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Providers::Ean&quot;&gt;Providers::Ean&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Providers::Ean::Image&quot;&gt;Providers::Ean::Image&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Providers::Ean::Image::ImageData&quot;&gt;Providers::Ean::Image::ImageData&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Providers::Local&quot;&gt;Providers::Local&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Providers::Local::Image&quot;&gt;Providers::Local::Image&lt;/a&gt;&lt;/li&gt;</ul>]]>
+      </div>
+    </content>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::ConstantsCreated/516e37d856b1022d84000005</id>
+    <published>2013-04-17T05:48:31Z</published>
+    <updated>2013-04-17T05:49:12Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/constants"/>
+    <title>Four classes/modules were added.</title>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <![CDATA[<ul>&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Bookings::FlightBookers&quot;&gt;Bookings::FlightBookers&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Bookings::FlightBookers::ConfirmationMessage&quot;&gt;Bookings::FlightBookers::ConfirmationMessage&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Bookings::FlightBookers::Dispatcher&quot;&gt;Bookings::FlightBookers::Dispatcher&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Bookings::Service::Command::NotifyJetstar&quot;&gt;Bookings::Service::Command::NotifyJetstar&lt;/a&gt;&lt;/li&gt;</ul>]]>
+      </div>
+    </content>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::ConstantsCreated/516de4f889af7e50f3000005</id>
+    <published>2013-04-16T23:54:23Z</published>
+    <updated>2013-04-16T23:55:36Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/constants"/>
+    <title>Four classes/modules were added.</title>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <![CDATA[<ul>&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Encryption&quot;&gt;Encryption&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Encryption::Crypt&quot;&gt;Encryption::Crypt&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Encryption::Encryptor&quot;&gt;Encryption::Encryptor&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Encryption::PasswordInvalid&quot;&gt;Encryption::PasswordInvalid&lt;/a&gt;&lt;/li&gt;</ul>]]>
+      </div>
+    </content>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::ConstantsCreated/516b8395c7f3a3117c000005</id>
+    <published>2013-04-15T04:34:50Z</published>
+    <updated>2013-04-15T04:35:33Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/constants"/>
+    <title>Two classes/modules were added.</title>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <![CDATA[<ul>&lt;li&gt;&lt;strong&gt;C&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Pegasus::Accor::Import::PropertyHotelInfoUpdater&quot;&gt;Pegasus::Accor::Import::PropertyHotelInfoUpdater&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Pegasus::Accor::Importer&quot;&gt;Pegasus::Accor::Importer&lt;/a&gt;&lt;/li&gt;</ul>]]>
+      </div>
+    </content>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::WeeklyStats/516bd1c313d63744ae000002</id>
+    <published>2013-04-15T00:00:00Z</published>
+    <updated>2013-04-15T10:09:07Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/feed"/>
+    <title>Summary of April 8th - 14th</title>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <![CDATA[<p>412 files changed, 15177 insertions, 14438 deletions</p>]]>
+      </div>
+    </content>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::ConstantsCreated/5167974489af7e1b66000005</id>
+    <published>2013-04-12T05:09:34Z</published>
+    <updated>2013-04-12T05:10:28Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/constants"/>
+    <title>Two classes/modules were added.</title>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <![CDATA[<ul>&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Loggedy&quot;&gt;Loggedy&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Loggedy::Logger&quot;&gt;Loggedy::Logger&lt;/a&gt;&lt;/li&gt;</ul>]]>
+      </div>
+    </content>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::ConstantsCreated/51678a667e00a40cb0000005</id>
+    <published>2013-04-12T03:59:49Z</published>
+    <updated>2013-04-12T04:15:34Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/constants"/>
+    <title>Four classes/modules were added.</title>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <![CDATA[<ul>&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Providers&quot;&gt;Providers&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Providers::Pegasus&quot;&gt;Providers::Pegasus&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Providers::Pegasus::PropertyCode&quot;&gt;Providers::Pegasus::PropertyCode&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Providers::Pegasus::WhitelistedRatePlan&quot;&gt;Providers::Pegasus::WhitelistedRatePlan&lt;/a&gt;&lt;/li&gt;</ul>]]>
+      </div>
+    </content>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::ConstantsCreated/5166584ef3ea00231c000005</id>
+    <published>2013-04-11T06:28:42Z</published>
+    <updated>2013-04-11T06:29:34Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/Inventory::Core::BrandedCampaignDetails"/>
+    <title>Inventory::Core::BrandedCampaignDetails was added.</title>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <![CDATA[<ul>&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Inventory::Core::BrandedCampaignDetails&quot;&gt;Inventory::Core::BrandedCampaignDetails&lt;/a&gt;&lt;/li&gt;</ul>]]>
+      </div>
+    </content>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::ConstantsCreated/51664e1789af7e74a5000005</id>
+    <published>2013-04-11T05:44:59Z</published>
+    <updated>2013-04-11T05:45:59Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/MultiDb"/>
+    <title>MultiDb was added.</title>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <![CDATA[<ul>&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/MultiDb&quot;&gt;MultiDb&lt;/a&gt;&lt;/li&gt;</ul>]]>
+      </div>
+    </content>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::RatingChanged/51664bc17e00a47cf4000004</id>
+    <published>2013-04-11T05:22:01Z</published>
+    <updated>2013-04-11T05:36:01Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/Extranet::CampaignsController?from_sha=4d607d9f&amp;to_sha=ca62ab69"/>
+    <title>Extranet::CampaignsController has improved from a D to a C.</title>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::ConstantsCreated/51664bc113d6373829000005</id>
+    <published>2013-04-11T05:22:01Z</published>
+    <updated>2013-04-11T05:36:01Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/Inventory::Core::CampaignProperty"/>
+    <title>Inventory::Core::CampaignProperty was added.</title>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <![CDATA[<ul>&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Inventory::Core::CampaignProperty&quot;&gt;Inventory::Core::CampaignProperty&lt;/a&gt;&lt;/li&gt;</ul>]]>
+      </div>
+    </content>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::ConstantsCreated/516528c4f3ea002888000005</id>
+    <published>2013-04-10T08:53:39Z</published>
+    <updated>2013-04-10T08:54:28Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/JetstarCookie"/>
+    <title>JetstarCookie was added.</title>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <![CDATA[<ul>&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/JetstarCookie&quot;&gt;JetstarCookie&lt;/a&gt;&lt;/li&gt;</ul>]]>
+      </div>
+    </content>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::ConstantsCreated/51650d1189af7e584f000005</id>
+    <published>2013-04-10T06:00:30Z</published>
+    <updated>2013-04-10T06:56:17Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/Consumer::CampaignDetailsPresenter"/>
+    <title>Consumer::CampaignDetailsPresenter was added.</title>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <![CDATA[<ul>&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Consumer::CampaignDetailsPresenter&quot;&gt;Consumer::CampaignDetailsPresenter&lt;/a&gt;&lt;/li&gt;</ul>]]>
+      </div>
+    </content>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::ConstantsCreated/5164fdaa89af7e1aab000005</id>
+    <published>2013-04-10T05:49:16Z</published>
+    <updated>2013-04-10T05:50:34Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/CustomerFlight"/>
+    <title>CustomerFlight was added.</title>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <![CDATA[<ul>&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/CustomerFlight&quot;&gt;CustomerFlight&lt;/a&gt;&lt;/li&gt;</ul>]]>
+      </div>
+    </content>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::RatingChanged/5162567613d6374569000004</id>
+    <published>2013-04-08T05:31:59Z</published>
+    <updated>2013-04-08T05:32:38Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/Extranet::CampaignsController?from_sha=6113289f&amp;to_sha=73d609c3"/>
+    <title>Extranet::CampaignsController has declined from a A to a D.</title>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::WeeklyStats/51629760f3ea00711d000002</id>
+    <published>2013-04-08T00:00:00Z</published>
+    <updated>2013-04-08T10:09:36Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/feed"/>
+    <title>Summary of April 1st - 7th</title>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <![CDATA[<p>185 files changed, 2468 insertions, 1885 deletions</p>]]>
+      </div>
+    </content>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::ConstantsCreated/515e13d7f3ea001de9000005</id>
+    <published>2013-04-04T23:58:20Z</published>
+    <updated>2013-04-04T23:59:19Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/constants"/>
+    <title>Two classes/modules were added.</title>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <![CDATA[<ul>&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Encryptor&quot;&gt;Encryptor&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/PasswordInvalid&quot;&gt;PasswordInvalid&lt;/a&gt;&lt;/li&gt;</ul>]]>
+      </div>
+    </content>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::ConstantsCreated/515cf587c7f3a342f6000005</id>
+    <published>2013-04-04T03:36:49Z</published>
+    <updated>2013-04-04T03:37:43Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/RoomTypeFacilityProvider"/>
+    <title>RoomTypeFacilityProvider was added.</title>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <![CDATA[<ul>&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/RoomTypeFacilityProvider&quot;&gt;RoomTypeFacilityProvider&lt;/a&gt;&lt;/li&gt;</ul>]]>
+      </div>
+    </content>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::RatingChanged/515cd332c7f3a332be000004</id>
+    <published>2013-04-04T01:09:54Z</published>
+    <updated>2013-04-04T01:11:14Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/Bookings::CancellationReason?from_sha=de57c880&amp;to_sha=bfeed8bf"/>
+    <title>Bookings::CancellationReason has improved from a B to a A.</title>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::ConstantsCreated/515cd33313d6377769000005</id>
+    <published>2013-04-04T01:09:54Z</published>
+    <updated>2013-04-04T01:11:15Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/constants"/>
+    <title>Three classes/modules were added.</title>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <![CDATA[<ul>&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Bookings::AmendmentReason&quot;&gt;Bookings::AmendmentReason&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Bookings::ComplaintReason&quot;&gt;Bookings::ComplaintReason&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Bookings::FraudAction&quot;&gt;Bookings::FraudAction&lt;/a&gt;&lt;/li&gt;</ul>]]>
+      </div>
+    </content>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::ConstantsCreated/515cc5cdc7f3a36c17000005</id>
+    <published>2013-04-04T00:13:04Z</published>
+    <updated>2013-04-04T00:14:05Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/PropertyFacilityProvider"/>
+    <title>PropertyFacilityProvider was added.</title>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <![CDATA[<ul>&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/PropertyFacilityProvider&quot;&gt;PropertyFacilityProvider&lt;/a&gt;&lt;/li&gt;</ul>]]>
+      </div>
+    </content>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::RatingChanged/515b685556b1027d2a000004</id>
+    <published>2013-04-02T23:22:11Z</published>
+    <updated>2013-04-02T23:23:01Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/Consumer::DealsController?from_sha=a524d8d4&amp;to_sha=2b80f204"/>
+    <title>Consumer::DealsController has declined from a B to a C.</title>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::ConstantsCreated/515b68567e00a423e3000005</id>
+    <published>2013-04-02T23:22:11Z</published>
+    <updated>2013-04-02T23:23:02Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/constants"/>
+    <title>Two classes/modules were added.</title>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <![CDATA[<ul>&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Consumer::Cards::PropertyDealCard&quot;&gt;Consumer::Cards::PropertyDealCard&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Consumer::FeedbackSerializer&quot;&gt;Consumer::FeedbackSerializer&lt;/a&gt;&lt;/li&gt;</ul>]]>
+      </div>
+    </content>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::WeeklyStats/51595d5713d637616a000002</id>
+    <published>2013-04-01T00:00:00Z</published>
+    <updated>2013-04-01T10:11:35Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/feed"/>
+    <title>Summary of March 25th - 31st</title>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <![CDATA[<p>165 files changed, 4058 insertions, 1864 deletions</p>]]>
+      </div>
+    </content>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::RatingChanged/5153b4687e00a4690c000004</id>
+    <published>2013-03-28T02:54:21Z</published>
+    <updated>2013-03-28T03:09:28Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/Consumer::DealsController?from_sha=aaf1a979&amp;to_sha=d4290b17"/>
+    <title>Consumer::DealsController has declined from a A to a B.</title>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::RatingChanged/5153641ef3ea0064ed000004</id>
+    <published>2013-03-27T21:11:01Z</published>
+    <updated>2013-03-27T21:26:54Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/BookingInventory::EAN::BookingChange?from_sha=ccef9dab&amp;to_sha=c8a0c131"/>
+    <title>BookingInventory::EAN::BookingChange has improved from a C to a B.</title>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::RatingChanged/5153641e89af7e62a5000004</id>
+    <published>2013-03-27T21:11:01Z</published>
+    <updated>2013-03-27T21:26:54Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/BookingInventory::EAN::UpdateOccupantsLineItemsBuilder?from_sha=ccef9dab&amp;to_sha=c8a0c131"/>
+    <title>BookingInventory::EAN::UpdateOccupantsLineItemsBuilder has declined from a A to a C.</title>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::ConstantsCreated/5153641ec7f3a34e4f000005</id>
+    <published>2013-03-27T21:11:01Z</published>
+    <updated>2013-03-27T21:26:54Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/constants"/>
+    <title>Ten classes/modules were added.</title>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <![CDATA[<ul>&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/BookingInventory::EAN::OccupantChanges&quot;&gt;BookingInventory::EAN::OccupantChanges&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/LineItem::EANAddAdult&quot;&gt;LineItem::EANAddAdult&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/LineItem::EANAddChild&quot;&gt;LineItem::EANAddChild&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/LineItem::EANAddInfant&quot;&gt;LineItem::EANAddInfant&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/LineItem::EANOccupantAddition&quot;&gt;LineItem::EANOccupantAddition&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/LineItem::EANOccupantFactory&quot;&gt;LineItem::EANOccupantFactory&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/LineItem::EANOccupantRemoval&quot;&gt;LineItem::EANOccupantRemoval&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/LineItem::EANRemoveAdult&quot;&gt;LineItem::EANRemoveAdult&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/LineItem::EANRemoveChild&quot;&gt;LineItem::EANRemoveChild&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/LineItem::EANRemoveInfant&quot;&gt;LineItem::EANRemoveInfant&lt;/a&gt;&lt;/li&gt;</ul>]]>
+      </div>
+    </content>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::RatingChanged/5152482189af7e696e000004</id>
+    <published>2013-03-27T01:14:05Z</published>
+    <updated>2013-03-27T01:15:13Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/Inventory::Core::Campaign?from_sha=d27eb93f&amp;to_sha=44f95d10"/>
+    <title>Inventory::Core::Campaign has declined from a B to a C.</title>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::ConstantsCreated/514fcced13d6373b95000005</id>
+    <published>2013-03-25T04:04:17Z</published>
+    <updated>2013-03-25T04:05:01Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/constants"/>
+    <title>Two classes/modules were added.</title>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <![CDATA[<ul>&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/DataShed::AvailableProperty&quot;&gt;DataShed::AvailableProperty&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Extranet::DataShed::AvailablePropertiesController&quot;&gt;Extranet::DataShed::AvailablePropertiesController&lt;/a&gt;&lt;/li&gt;</ul>]]>
+      </div>
+    </content>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::ConstantsCreated/514faa7389af7e5197000005</id>
+    <published>2013-03-25T01:37:14Z</published>
+    <updated>2013-03-25T01:37:55Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/constants"/>
+    <title>Two classes/modules were added.</title>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <![CDATA[<ul>&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/CampaignProperty&quot;&gt;CampaignProperty&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Inventory::Core::CampaignImage&quot;&gt;Inventory::Core::CampaignImage&lt;/a&gt;&lt;/li&gt;</ul>]]>
+      </div>
+    </content>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::WeeklyStats/515022eec7f3a3776f000002</id>
+    <published>2013-03-25T00:00:00Z</published>
+    <updated>2013-03-25T10:11:58Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/feed"/>
+    <title>Summary of March 18th - 24th</title>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <![CDATA[<p>229 files changed, 5512 insertions, 6885 deletions</p>]]>
+      </div>
+    </content>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::ConstantsCreated/514bdbf156b102274e000005</id>
+    <published>2013-03-22T04:14:27Z</published>
+    <updated>2013-03-22T04:20:01Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/BookingInventory::EAN::UpdateOccupantsLineItemsBuilder"/>
+    <title>BookingInventory::EAN::UpdateOccupantsLineItemsBuilder was added.</title>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <![CDATA[<ul>&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/BookingInventory::EAN::UpdateOccupantsLineItemsBuilder&quot;&gt;BookingInventory::EAN::UpdateOccupantsLineItemsBuilder&lt;/a&gt;&lt;/li&gt;</ul>]]>
+      </div>
+    </content>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::RatingChanged/514bc1ecf3ea00397c000004</id>
+    <published>2013-03-22T02:27:54Z</published>
+    <updated>2013-03-22T02:29:00Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/Consumer::EmbeddedSearchController?from_sha=76b54d2a&amp;to_sha=4e5deb88"/>
+    <title>Consumer::EmbeddedSearchController has improved from a B to a A.</title>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::RatingChanged/514bc1ecc7f3a303b3000004</id>
+    <published>2013-03-22T02:27:54Z</published>
+    <updated>2013-03-22T02:29:00Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/Consumer::SearchController?from_sha=76b54d2a&amp;to_sha=4e5deb88"/>
+    <title>Consumer::SearchController has improved from a C to a A.</title>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::RatingChanged/514bbbd2c7f3a36ceb000004</id>
+    <published>2013-03-22T02:01:52Z</published>
+    <updated>2013-03-22T02:02:58Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/Consumer::EmbeddedSearchController?from_sha=7804da2a&amp;to_sha=56f93373"/>
+    <title>Consumer::EmbeddedSearchController has declined from a A to a B.</title>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::RatingChanged/514bbbd389af7e458a000004</id>
+    <published>2013-03-22T02:01:52Z</published>
+    <updated>2013-03-22T02:02:59Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/Consumer::SearchController?from_sha=7804da2a&amp;to_sha=56f93373"/>
+    <title>Consumer::SearchController has declined from a A to a C.</title>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::ConstantsCreated/514a942256b102528e000005</id>
+    <published>2013-03-21T04:59:50Z</published>
+    <updated>2013-03-21T05:01:22Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/constants"/>
+    <title>Three classes/modules were added.</title>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <![CDATA[<ul>&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/DataShed::PropertyAvailability&quot;&gt;DataShed::PropertyAvailability&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Extranet::DataShed::HomeController&quot;&gt;Extranet::DataShed::HomeController&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Extranet::DataShed::PropertyAvailabilityController&quot;&gt;Extranet::DataShed::PropertyAvailabilityController&lt;/a&gt;&lt;/li&gt;</ul>]]>
+      </div>
+    </content>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::RatingChanged/514a7534f3ea004f2a000004</id>
+    <published>2013-03-21T02:47:40Z</published>
+    <updated>2013-03-21T02:49:24Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/BookingInventory::EAN::BookingChange?from_sha=9487c95c&amp;to_sha=5ff76bdf"/>
+    <title>BookingInventory::EAN::BookingChange has declined from a B to a C.</title>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::RatingChanged/5149749789af7e2581000004</id>
+    <published>2013-03-20T08:30:26Z</published>
+    <updated>2013-03-20T08:34:31Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/Extranet::ConsumerEmailPresenter::Initial?from_sha=044e7e60&amp;to_sha=b2a19e93"/>
+    <title>Extranet::ConsumerEmailPresenter::Initial has declined from a A to a B.</title>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::RatingChanged/51497497c7f3a30e6e000004</id>
+    <published>2013-03-20T08:30:26Z</published>
+    <updated>2013-03-20T08:34:31Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/Extranet::ConsumerEmailPresenter?from_sha=044e7e60&amp;to_sha=b2a19e93"/>
+    <title>Extranet::ConsumerEmailPresenter has improved from a B to a A.</title>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::ConstantsCreated/514974977e00a47cfc000005</id>
+    <published>2013-03-20T08:30:26Z</published>
+    <updated>2013-03-20T08:34:31Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/constants"/>
+    <title>Three classes/modules were added.</title>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <![CDATA[<ul>&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Extranet::QffPoints&quot;&gt;Extranet::QffPoints&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Extranet::QffPoints::NullPresenter&quot;&gt;Extranet::QffPoints::NullPresenter&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Extranet::QffPoints::QantasPresenter&quot;&gt;Extranet::QffPoints::QantasPresenter&lt;/a&gt;&lt;/li&gt;</ul>]]>
+      </div>
+    </content>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::RatingChanged/51493f48f3ea007fe7000004</id>
+    <published>2013-03-20T04:46:19Z</published>
+    <updated>2013-03-20T04:47:04Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/Bookings::Dashboard::SearchCriteria?from_sha=b99208d5&amp;to_sha=2be75f8e"/>
+    <title>Bookings::Dashboard::SearchCriteria has declined from a A to a B.</title>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::RatingChanged/51483ceef3ea0064b0000004</id>
+    <published>2013-03-19T10:23:39Z</published>
+    <updated>2013-03-19T10:24:46Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/Consumer::SearchController?from_sha=2a81c658&amp;to_sha=b8363d97"/>
+    <title>Consumer::SearchController has improved from a B to a A.</title>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::ConstantsCreated/51483ceff3ea0064c2000005</id>
+    <published>2013-03-19T10:23:39Z</published>
+    <updated>2013-03-19T10:24:47Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/Consumer::BaseSearchController"/>
+    <title>Consumer::BaseSearchController was added.</title>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <![CDATA[<ul>&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Consumer::BaseSearchController&quot;&gt;Consumer::BaseSearchController&lt;/a&gt;&lt;/li&gt;</ul>]]>
+      </div>
+    </content>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::RatingChanged/51481ee356b1023139000004</id>
+    <published>2013-03-19T08:15:41Z</published>
+    <updated>2013-03-19T08:16:35Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/Consumer::EmbeddedSearchController?from_sha=5e4d919c&amp;to_sha=2a81c658"/>
+    <title>Consumer::EmbeddedSearchController has improved from a C to a A.</title>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::RatingChanged/51481ee356b1023147000004</id>
+    <published>2013-03-19T08:15:41Z</published>
+    <updated>2013-03-19T08:16:35Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/Consumer::SearchController?from_sha=5e4d919c&amp;to_sha=2a81c658"/>
+    <title>Consumer::SearchController has improved from a D to a B.</title>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::RatingChanged/514811607e00a4042a000004</id>
+    <published>2013-03-19T07:12:44Z</published>
+    <updated>2013-03-19T07:18:56Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/Bookings::Service::Manager?from_sha=455d3033&amp;to_sha=d661eb52"/>
+    <title>Bookings::Service::Manager has improved from a C to a B.</title>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::RatingChanged/5147f6f856b1021579000004</id>
+    <published>2013-03-19T05:12:20Z</published>
+    <updated>2013-03-19T05:26:16Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/Consumer::SearchController?from_sha=f58cd685&amp;to_sha=b33b9c44"/>
+    <title>Consumer::SearchController has declined from a C to a D.</title>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::RatingChanged/5147f6f889af7e336f000004</id>
+    <published>2013-03-19T05:12:20Z</published>
+    <updated>2013-03-19T05:26:16Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/Consumer::EmbeddedSearchController?from_sha=f58cd685&amp;to_sha=b33b9c44"/>
+    <title>Consumer::EmbeddedSearchController has declined from a B to a C.</title>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::RatingChanged/5147e8037e00a476ae000004</id>
+    <published>2013-03-19T04:21:27Z</published>
+    <updated>2013-03-19T04:22:27Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/Consumer::EmbeddedSearchController?from_sha=b03ba519&amp;to_sha=603be5f1"/>
+    <title>Consumer::EmbeddedSearchController has improved from a C to a B.</title>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::RatingChanged/5147e8037e00a476b1000004</id>
+    <published>2013-03-19T04:21:27Z</published>
+    <updated>2013-03-19T04:22:27Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/Consumer::SearchController?from_sha=b03ba519&amp;to_sha=603be5f1"/>
+    <title>Consumer::SearchController has improved from a D to a C.</title>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::ConstantsCreated/5147e8047e00a476b7000005</id>
+    <published>2013-03-19T04:21:27Z</published>
+    <updated>2013-03-19T04:22:28Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/constants"/>
+    <title>Two classes/modules were added.</title>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <![CDATA[<ul>&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/LowestCostOffers&quot;&gt;LowestCostOffers&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/SearchResults&quot;&gt;SearchResults&lt;/a&gt;&lt;/li&gt;</ul>]]>
+      </div>
+    </content>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::RatingChanged/51479a8d7e00a4663f000004</id>
+    <published>2013-03-18T22:51:06Z</published>
+    <updated>2013-03-18T22:51:57Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/BookingInventory::EAN::BookingChange?from_sha=cd1fc62f&amp;to_sha=eca4baae"/>
+    <title>BookingInventory::EAN::BookingChange has declined from a A to a B.</title>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::RatingChanged/51466ce113d6377163000004</id>
+    <published>2013-03-18T01:23:52Z</published>
+    <updated>2013-03-18T01:24:49Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/Inventory::Core?from_sha=c8cf3d1f&amp;to_sha=17b21a7d"/>
+    <title>Inventory::Core has declined from a A to a C.</title>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::ConstantsCreated/51466ce2f3ea002c7b000005</id>
+    <published>2013-03-18T01:23:52Z</published>
+    <updated>2013-03-18T01:24:50Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/Inventory::Core::PromotionStrategy"/>
+    <title>Inventory::Core::PromotionStrategy was added.</title>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <![CDATA[<ul>&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Inventory::Core::PromotionStrategy&quot;&gt;Inventory::Core::PromotionStrategy&lt;/a&gt;&lt;/li&gt;</ul>]]>
+      </div>
+    </content>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::RatingChanged/514661e089af7e4d57000004</id>
+    <published>2013-03-18T00:37:09Z</published>
+    <updated>2013-03-18T00:37:52Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/Searches::Locals::Finder?from_sha=537eac1a&amp;to_sha=456d4b1b"/>
+    <title>Searches::Locals::Finder has improved from a D to a C.</title>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::RatingChanged/51465d3d13d63744f6000004</id>
+    <published>2013-03-18T00:17:18Z</published>
+    <updated>2013-03-18T00:18:05Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/Consumer::EmbeddedSearchController?from_sha=4e9e9fef&amp;to_sha=dc2a6083"/>
+    <title>Consumer::EmbeddedSearchController has declined from a B to a C.</title>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::RatingChanged/51465d3dc7f3a36468000004</id>
+    <published>2013-03-18T00:17:18Z</published>
+    <updated>2013-03-18T00:18:05Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/Consumer::SearchController?from_sha=4e9e9fef&amp;to_sha=dc2a6083"/>
+    <title>Consumer::SearchController has declined from a C to a D.</title>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::RatingChanged/514659ecc7f3a359ec000004</id>
+    <published>2013-03-18T00:03:21Z</published>
+    <updated>2013-03-18T00:03:56Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/Consumer::SearchController?from_sha=a057b727&amp;to_sha=c25c7f9e"/>
+    <title>Consumer::SearchController has improved from a D to a C.</title>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::ConstantsCreated/514659edc7f3a359f2000005</id>
+    <published>2013-03-18T00:03:21Z</published>
+    <updated>2013-03-18T00:03:57Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/constants"/>
+    <title>Two classes/modules were added.</title>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <![CDATA[<ul>&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Queries&quot;&gt;Queries&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Queries::GroupedFilteredPropertyQuery&quot;&gt;Queries::GroupedFilteredPropertyQuery&lt;/a&gt;&lt;/li&gt;</ul>]]>
+      </div>
+    </content>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::WeeklyStats/5146e85f13d6370380000002</id>
+    <published>2013-03-18T00:00:00Z</published>
+    <updated>2013-03-18T10:11:44Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/feed"/>
+    <title>Summary of March 11th - 17th</title>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <![CDATA[<p>346 files changed, 29122 insertions, 2793 deletions</p>]]>
+      </div>
+    </content>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::RatingChanged/514653f0f3ea001169000004</id>
+    <published>2013-03-17T23:37:34Z</published>
+    <updated>2013-03-17T23:38:24Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/Consumer::EmbeddedSearchController?from_sha=f125591f&amp;to_sha=1db9aa9b"/>
+    <title>Consumer::EmbeddedSearchController has declined from a A to a B.</title>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::RatingChanged/51412af97e00a41d0f000004</id>
+    <published>2013-03-14T01:17:56Z</published>
+    <updated>2013-03-14T01:42:17Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/EAN::Data::PropertyImporter?from_sha=7547fe1a&amp;to_sha=2c978b4b"/>
+    <title>EAN::Data::PropertyImporter has improved from a F to a D.</title>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::RatingChanged/5141231d13d6371d74000004</id>
+    <published>2013-03-14T01:02:09Z</published>
+    <updated>2013-03-14T01:08:45Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/Consumer::BookingsController?from_sha=f33795f8&amp;to_sha=7547fe1a"/>
+    <title>Consumer::BookingsController has improved from a D to a C.</title>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::RatingChanged/51411c0e89af7e091c000004</id>
+    <published>2013-03-14T00:37:51Z</published>
+    <updated>2013-03-14T00:38:38Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/Consumer::EmbeddedSearchController?from_sha=1edca984&amp;to_sha=8ee639d0"/>
+    <title>Consumer::EmbeddedSearchController has improved from a D to a A.</title>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::RatingChanged/51411c0e7e00a46289000004</id>
+    <published>2013-03-14T00:37:51Z</published>
+    <updated>2013-03-14T00:38:38Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/Consumer::SearchController?from_sha=1edca984&amp;to_sha=8ee639d0"/>
+    <title>Consumer::SearchController has improved from a F to a D.</title>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::ConstantsCreated/51411c0ef3ea000d91000005</id>
+    <published>2013-03-14T00:37:51Z</published>
+    <updated>2013-03-14T00:38:38Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/constants"/>
+    <title>Two classes/modules were added.</title>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <![CDATA[<ul>&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/QueryObjects&quot;&gt;QueryObjects&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/QueryObjects::PropertyQuery&quot;&gt;QueryObjects::PropertyQuery&lt;/a&gt;&lt;/li&gt;</ul>]]>
+      </div>
+    </content>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::RatingChanged/5140f92b56b1023319000004</id>
+    <published>2013-03-13T22:08:56Z</published>
+    <updated>2013-03-13T22:09:47Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/Consumer::EmbeddedSearchController?from_sha=f7f0a788&amp;to_sha=c5937573"/>
+    <title>Consumer::EmbeddedSearchController has declined from a A to a D.</title>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::RatingChanged/5140f92b13d6373ed7000004</id>
+    <published>2013-03-13T22:08:56Z</published>
+    <updated>2013-03-13T22:09:47Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/Consumer::SearchController?from_sha=f7f0a788&amp;to_sha=c5937573"/>
+    <title>Consumer::SearchController has declined from a D to a F.</title>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::RatingChanged/5140397013d6371d0b000004</id>
+    <published>2013-03-13T07:38:36Z</published>
+    <updated>2013-03-13T08:31:44Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/Financial::CreditCardType?from_sha=6cf4193d&amp;to_sha=07a4602f"/>
+    <title>Financial::CreditCardType has declined from a A to a B.</title>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::RatingChanged/51403970c7f3a31e20000004</id>
+    <published>2013-03-13T07:38:36Z</published>
+    <updated>2013-03-13T08:31:44Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/Consumer::BookingsController?from_sha=6cf4193d&amp;to_sha=07a4602f"/>
+    <title>Consumer::BookingsController has declined from a C to a D.</title>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::RatingChanged/514016fc7e00a40674000004</id>
+    <published>2013-03-13T06:03:46Z</published>
+    <updated>2013-03-13T06:04:44Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/Consumer::BookingsController?from_sha=d7ba6029&amp;to_sha=866ed3d2"/>
+    <title>Consumer::BookingsController has improved from a D to a C.</title>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::ConstantsCreated/513fcf1489af7e4f9e000005</id>
+    <published>2013-03-13T00:51:53Z</published>
+    <updated>2013-03-13T00:57:56Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/constants"/>
+    <title>Two classes/modules were added.</title>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <![CDATA[<ul>&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Pegasus::Accor::Import::ContentImport&quot;&gt;Pegasus::Accor::Import::ContentImport&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Pegasus::Accor::Import::ContentRecord&quot;&gt;Pegasus::Accor::Import::ContentRecord&lt;/a&gt;&lt;/li&gt;</ul>]]>
+      </div>
+    </content>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::ConstantsCreated/513fa03f56b1027587000005</id>
+    <published>2013-03-12T21:36:32Z</published>
+    <updated>2013-03-12T21:38:07Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/DeploymentMigrationStrategy"/>
+    <title>DeploymentMigrationStrategy was added.</title>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <![CDATA[<ul>&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/DeploymentMigrationStrategy&quot;&gt;DeploymentMigrationStrategy&lt;/a&gt;&lt;/li&gt;</ul>]]>
+      </div>
+    </content>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::ConstantsCreated/513ebcb989af7e308c000005</id>
+    <published>2013-03-12T05:20:49Z</published>
+    <updated>2013-03-12T05:27:21Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/constants"/>
+    <title>Two classes/modules were added.</title>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <![CDATA[<ul>&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Consumer::FlightBookers&quot;&gt;Consumer::FlightBookers&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Consumer::FlightBookers::EmbeddedSearchController&quot;&gt;Consumer::FlightBookers::EmbeddedSearchController&lt;/a&gt;&lt;/li&gt;</ul>]]>
+      </div>
+    </content>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::ConstantsCreated/513eac87f3ea003501000005</id>
+    <published>2013-03-12T04:02:00Z</published>
+    <updated>2013-03-12T04:18:15Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/constants"/>
+    <title>Two classes/modules were added.</title>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <![CDATA[<ul>&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Consumer::Embedded&quot;&gt;Consumer::Embedded&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Consumer::Embedded::SearchController&quot;&gt;Consumer::Embedded::SearchController&lt;/a&gt;&lt;/li&gt;</ul>]]>
+      </div>
+    </content>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::WeeklyStats/513dad7dc7f3a37bbe000002</id>
+    <published>2013-03-11T00:00:00Z</published>
+    <updated>2013-03-11T10:10:05Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/feed"/>
+    <title>Summary of March 4th - 10th</title>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <![CDATA[<p>248 files changed, 25129 insertions, 2421 deletions</p>]]>
+      </div>
+    </content>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::RatingChanged/5139540489af7e1955000004</id>
+    <published>2013-03-08T02:58:37Z</published>
+    <updated>2013-03-08T02:59:16Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/QffStrategy?from_sha=94b803fd&amp;to_sha=71faa182"/>
+    <title>QffStrategy has declined from a A to a C.</title>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::ConstantsCreated/51391c80f3ea0040e9000005</id>
+    <published>2013-03-07T23:01:19Z</published>
+    <updated>2013-03-07T23:02:24Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/Extranet::RegionsHelper"/>
+    <title>Extranet::RegionsHelper was added.</title>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <![CDATA[<ul>&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Extranet::RegionsHelper&quot;&gt;Extranet::RegionsHelper&lt;/a&gt;&lt;/li&gt;</ul>]]>
+      </div>
+    </content>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::ConstantsCreated/513826547e00a476f3000005</id>
+    <published>2013-03-07T05:31:17Z</published>
+    <updated>2013-03-07T05:32:04Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/constants"/>
+    <title>12 classes/modules were added.</title>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <![CDATA[<ul>&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Consumer::ActivitiesController&quot;&gt;Consumer::ActivitiesController&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Trips::ActivityRepository&quot;&gt;Trips::ActivityRepository&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Trips::Adapters&quot;&gt;Trips::Adapters&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Trips::Adapters::ArticleActivityAdapter&quot;&gt;Trips::Adapters::ArticleActivityAdapter&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Trips::Adapters::GoogleSpotActivityAdapter&quot;&gt;Trips::Adapters::GoogleSpotActivityAdapter&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Trips::Factories::ActivityAdapterFactory&quot;&gt;Trips::Factories::ActivityAdapterFactory&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Trips::Factories::ActivityRepositoryFactory&quot;&gt;Trips::Factories::ActivityRepositoryFactory&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Trips::Repositories&quot;&gt;Trips::Repositories&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Trips::Repositories::ActivityRepository&quot;&gt;Trips::Repositories::ActivityRepository&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Trips::Repositories::ArticleActivityRepository&quot;&gt;Trips::Repositories::ArticleActivityRepository&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Trips::Repositories::CompositeActivityRepository&quot;&gt;Trips::Repositories::CompositeActivityRepository&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Trips::Repositories::GoogleSpotActivityRepository&quot;&gt;Trips::Repositories::GoogleSpotActivityRepository&lt;/a&gt;&lt;/li&gt;</ul>]]>
+      </div>
+    </content>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::RatingChanged/5138211cf3ea00127a000004</id>
+    <published>2013-03-07T05:08:57Z</published>
+    <updated>2013-03-07T05:09:48Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/Api::ExceptionHandler?from_sha=9f802c95&amp;to_sha=4af05d52"/>
+    <title>Api::ExceptionHandler has improved from a C to a A.</title>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::RatingChanged/5138211c89af7e7a59000004</id>
+    <published>2013-03-07T05:08:57Z</published>
+    <updated>2013-03-07T05:09:48Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/ApplicationHelper?from_sha=9f802c95&amp;to_sha=4af05d52"/>
+    <title>ApplicationHelper has improved from a C to a A.</title>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::RatingChanged/5138211df3ea00127d000004</id>
+    <published>2013-03-07T05:08:57Z</published>
+    <updated>2013-03-07T05:09:49Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/Cancellation::Pegasus::Strategy?from_sha=9f802c95&amp;to_sha=4af05d52"/>
+    <title>Cancellation::Pegasus::Strategy has improved from a C to a A.</title>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::RatingChanged/51381dcd89af7e59f6000004</id>
+    <published>2013-03-07T04:55:01Z</published>
+    <updated>2013-03-07T04:55:41Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/Api::ExceptionHandler?from_sha=91d44e7a&amp;to_sha=9f802c95"/>
+    <title>Api::ExceptionHandler has declined from a A to a C.</title>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::RatingChanged/51381dcdc7f3a36feb000004</id>
+    <published>2013-03-07T04:55:01Z</published>
+    <updated>2013-03-07T04:55:41Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/ApplicationHelper?from_sha=91d44e7a&amp;to_sha=9f802c95"/>
+    <title>ApplicationHelper has declined from a A to a C.</title>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::RatingChanged/51381dcd89af7e59fb000004</id>
+    <published>2013-03-07T04:55:01Z</published>
+    <updated>2013-03-07T04:55:41Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/Cancellation::Pegasus::Strategy?from_sha=91d44e7a&amp;to_sha=9f802c95"/>
+    <title>Cancellation::Pegasus::Strategy has declined from a A to a C.</title>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::RatingChanged/5138168c7e00a4305b000004</id>
+    <published>2013-03-07T04:23:58Z</published>
+    <updated>2013-03-07T04:24:44Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/ApplicationHelper?from_sha=99f9fbdf&amp;to_sha=91d44e7a"/>
+    <title>ApplicationHelper has improved from a C to a A.</title>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::RatingChanged/5138168cc7f3a358ff000004</id>
+    <published>2013-03-07T04:23:58Z</published>
+    <updated>2013-03-07T04:24:44Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/Cancellation::Pegasus::Strategy?from_sha=99f9fbdf&amp;to_sha=91d44e7a"/>
+    <title>Cancellation::Pegasus::Strategy has improved from a C to a A.</title>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::RatingChanged/5138168c13d6375149000004</id>
+    <published>2013-03-07T04:23:58Z</published>
+    <updated>2013-03-07T04:24:44Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/Api::ExceptionHandler?from_sha=99f9fbdf&amp;to_sha=91d44e7a"/>
+    <title>Api::ExceptionHandler has improved from a C to a A.</title>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::RatingChanged/513812b2c7f3a34e7e000004</id>
+    <published>2013-03-07T04:07:42Z</published>
+    <updated>2013-03-07T04:08:18Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/Api::ExceptionHandler?from_sha=1725a163&amp;to_sha=99f9fbdf"/>
+    <title>Api::ExceptionHandler has declined from a A to a C.</title>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::RatingChanged/513812b256b1026eae000004</id>
+    <published>2013-03-07T04:07:42Z</published>
+    <updated>2013-03-07T04:08:18Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/ApplicationHelper?from_sha=1725a163&amp;to_sha=99f9fbdf"/>
+    <title>ApplicationHelper has declined from a A to a C.</title>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::RatingChanged/513812b3c7f3a34e81000004</id>
+    <published>2013-03-07T04:07:42Z</published>
+    <updated>2013-03-07T04:08:19Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/Cancellation::Pegasus::Strategy?from_sha=1725a163&amp;to_sha=99f9fbdf"/>
+    <title>Cancellation::Pegasus::Strategy has declined from a A to a C.</title>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::ConstantsCreated/51380e41f3ea0079f5000005</id>
+    <published>2013-03-07T03:48:43Z</published>
+    <updated>2013-03-07T03:49:21Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/Bookings::CancellationReason"/>
+    <title>Bookings::CancellationReason was added.</title>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <![CDATA[<ul>&lt;li&gt;&lt;strong&gt;B&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Bookings::CancellationReason&quot;&gt;Bookings::CancellationReason&lt;/a&gt;&lt;/li&gt;</ul>]]>
+      </div>
+    </content>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::ConstantsCreated/5137df44c7f3a34330000005</id>
+    <published>2013-03-07T00:17:59Z</published>
+    <updated>2013-03-07T00:28:52Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/EAN::Client::JsonResponseCleaner"/>
+    <title>EAN::Client::JsonResponseCleaner was added.</title>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <![CDATA[<ul>&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/EAN::Client::JsonResponseCleaner&quot;&gt;EAN::Client::JsonResponseCleaner&lt;/a&gt;&lt;/li&gt;</ul>]]>
+      </div>
+    </content>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::RatingChanged/5136da7956b1025793000004</id>
+    <published>2013-03-06T05:54:21Z</published>
+    <updated>2013-03-06T05:56:10Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/Consumer::SearchController?from_sha=b74e6564&amp;to_sha=e75759f1"/>
+    <title>Consumer::SearchController has improved from a F to a D.</title>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::RatingChanged/5136d90cc7f3a35542000004</id>
+    <published>2013-03-06T05:45:41Z</published>
+    <updated>2013-03-06T05:50:04Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/Consumer::SearchController?from_sha=631328c9&amp;to_sha=b74e6564"/>
+    <title>Consumer::SearchController has declined from a D to a F.</title>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::ConstantsCreated/51368aee7e00a4081a000005</id>
+    <published>2013-03-06T00:05:44Z</published>
+    <updated>2013-03-06T00:16:46Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/Consumer::ExperimentsController"/>
+    <title>Consumer::ExperimentsController was added.</title>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <![CDATA[<ul>&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Consumer::ExperimentsController&quot;&gt;Consumer::ExperimentsController&lt;/a&gt;&lt;/li&gt;</ul>]]>
+      </div>
+    </content>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::RatingChanged/51367e5389af7e4c8a000004</id>
+    <published>2013-03-05T23:18:00Z</published>
+    <updated>2013-03-05T23:22:59Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/Consumer::BookingsController?from_sha=d6594ded&amp;to_sha=a597a84f"/>
+    <title>Consumer::BookingsController has declined from a C to a D.</title>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::RatingChanged/513560197e00a44885000004</id>
+    <published>2013-03-05T02:30:00Z</published>
+    <updated>2013-03-05T03:01:45Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/Location?from_sha=97a3dab8&amp;to_sha=9836dd20"/>
+    <title>Location has declined from a D to a F.</title>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::WeeklyStats/513481d8f3ea000b7e000002</id>
+    <published>2013-03-04T00:00:00Z</published>
+    <updated>2013-03-04T11:13:28Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/feed"/>
+    <title>Summary of February 25th - March 3rd</title>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <![CDATA[<p>2616 files changed, 14649 insertions, 5579 deletions</p>]]>
+      </div>
+    </content>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::ConstantsCreated/5133dde713d63777e2000005</id>
+    <published>2013-03-03T23:31:55Z</published>
+    <updated>2013-03-03T23:33:59Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/MigrationChecker"/>
+    <title>MigrationChecker was added.</title>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <![CDATA[<ul>&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/MigrationChecker&quot;&gt;MigrationChecker&lt;/a&gt;&lt;/li&gt;</ul>]]>
+      </div>
+    </content>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::RatingChanged/51303d7056b1021f2e000004</id>
+    <published>2013-03-01T05:30:56Z</published>
+    <updated>2013-03-01T05:32:32Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/Consumer::BookingsController?from_sha=14efab88&amp;to_sha=00482747"/>
+    <title>Consumer::BookingsController has improved from a D to a C.</title>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::RatingChanged/513024d77e00a42be6000004</id>
+    <published>2013-03-01T03:44:00Z</published>
+    <updated>2013-03-01T03:47:35Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/Consumer::DealsController?from_sha=43b67b9d&amp;to_sha=b81bc591"/>
+    <title>Consumer::DealsController has improved from a B to a A.</title>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::RatingChanged/51301ac2f3ea006eeb000004</id>
+    <published>2013-03-01T03:03:00Z</published>
+    <updated>2013-03-01T03:04:34Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/Consumer::DealsController?from_sha=54f73345&amp;to_sha=f70813bb"/>
+    <title>Consumer::DealsController has declined from a A to a B.</title>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::RatingChanged/51301ac213d6370805000004</id>
+    <published>2013-03-01T03:03:00Z</published>
+    <updated>2013-03-01T03:04:34Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/Extranet::LocationsController?from_sha=54f73345&amp;to_sha=f70813bb"/>
+    <title>Extranet::LocationsController has declined from a B to a D.</title>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::ConstantsCreated/51301ac2f3ea006ef1000005</id>
+    <published>2013-03-01T03:03:00Z</published>
+    <updated>2013-03-01T03:04:34Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/Extranet::RegionsController"/>
+    <title>Extranet::RegionsController was added.</title>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <![CDATA[<ul>&lt;li&gt;&lt;strong&gt;D&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Extranet::RegionsController&quot;&gt;Extranet::RegionsController&lt;/a&gt;&lt;/li&gt;</ul>]]>
+      </div>
+    </content>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::ConstantsCreated/512edf39f3ea007c8f000005</id>
+    <published>2013-02-28T04:26:32Z</published>
+    <updated>2013-02-28T04:38:17Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/LoggedException"/>
+    <title>LoggedException was added.</title>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <![CDATA[<ul>&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/LoggedException&quot;&gt;LoggedException&lt;/a&gt;&lt;/li&gt;</ul>]]>
+      </div>
+    </content>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::RatingChanged/512d609a56b102236c000004</id>
+    <published>2013-02-27T00:52:48Z</published>
+    <updated>2013-02-27T01:25:46Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/Geo::Region?from_sha=67340ca0&amp;to_sha=3b38712b"/>
+    <title>Geo::Region has declined from a A to a B.</title>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::ConstantsCreated/512d340113d637226a000005</id>
+    <published>2013-02-26T21:57:14Z</published>
+    <updated>2013-02-26T22:15:29Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/constants"/>
+    <title>Two classes/modules were added.</title>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <![CDATA[<ul>&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/EmailHarvesting&quot;&gt;EmailHarvesting&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/EmailHarvesting::Lead&quot;&gt;EmailHarvesting::Lead&lt;/a&gt;&lt;/li&gt;</ul>]]>
+      </div>
+    </content>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::ConstantsCreated/512adc5856b1024315000005</id>
+    <published>2013-02-25T03:28:38Z</published>
+    <updated>2013-02-25T03:36:56Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/CountryEnum"/>
+    <title>CountryEnum was added.</title>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <![CDATA[<ul>&lt;li&gt;&lt;strong&gt;F&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/CountryEnum&quot;&gt;CountryEnum&lt;/a&gt;&lt;/li&gt;</ul>]]>
+      </div>
+    </content>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::WeeklyStats/512b46b913d6374556000002</id>
+    <published>2013-02-25T00:00:00Z</published>
+    <updated>2013-02-25T11:10:49Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/feed"/>
+    <title>Summary of February 18th - 24th</title>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <![CDATA[<p>420 files changed, 23810 insertions, 15007 deletions</p>]]>
+      </div>
+    </content>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::ConstantsCreated/5126c12089af7e270a000005</id>
+    <published>2013-02-22T00:49:22Z</published>
+    <updated>2013-02-22T00:51:44Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/Inventory::ErrorHandlingRepository"/>
+    <title>Inventory::ErrorHandlingRepository was added.</title>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <![CDATA[<ul>&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Inventory::ErrorHandlingRepository&quot;&gt;Inventory::ErrorHandlingRepository&lt;/a&gt;&lt;/li&gt;</ul>]]>
+      </div>
+    </content>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::ConstantsCreated/5126b4a856b1024715000005</id>
+    <published>2013-02-21T23:45:07Z</published>
+    <updated>2013-02-21T23:58:32Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/constants"/>
+    <title>Two classes/modules were added.</title>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <![CDATA[<ul>&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/LineItem::EANHotelOccupancyTax&quot;&gt;LineItem::EANHotelOccupancyTax&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/LineItem::EANSalesTax&quot;&gt;LineItem::EANSalesTax&lt;/a&gt;&lt;/li&gt;</ul>]]>
+      </div>
+    </content>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::RatingChanged/5125c7ba13d63718e8000004</id>
+    <published>2013-02-21T06:59:33Z</published>
+    <updated>2013-02-21T07:07:38Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/Inventory::EANAvailableOfferRepository?from_sha=f075af33&amp;to_sha=548bcecc"/>
+    <title>Inventory::EANAvailableOfferRepository has improved from a C to a B.</title>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::ConstantsCreated/51254bd813d6376dcf000005</id>
+    <published>2013-02-20T22:06:35Z</published>
+    <updated>2013-02-20T22:19:04Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/Inventory::EAN::RoomTypeFacade"/>
+    <title>Inventory::EAN::RoomTypeFacade was added.</title>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <![CDATA[<ul>&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Inventory::EAN::RoomTypeFacade&quot;&gt;Inventory::EAN::RoomTypeFacade&lt;/a&gt;&lt;/li&gt;</ul>]]>
+      </div>
+    </content>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::RatingChanged/5124b7c77e00a4226f000004</id>
+    <published>2013-02-20T11:32:23Z</published>
+    <updated>2013-02-20T11:47:19Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/Extranet::LineItemPresenter?from_sha=d0694cb3&amp;to_sha=535d5ab9"/>
+    <title>Extranet::LineItemPresenter has improved from a C to a B.</title>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::ConstantsCreated/5124b7c77e00a42275000005</id>
+    <published>2013-02-20T11:32:23Z</published>
+    <updated>2013-02-20T11:47:19Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/LineItemCategory"/>
+    <title>LineItemCategory was added.</title>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <![CDATA[<ul>&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/LineItemCategory&quot;&gt;LineItemCategory&lt;/a&gt;&lt;/li&gt;</ul>]]>
+      </div>
+    </content>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::RatingChanged/512473f813d6375caa000004</id>
+    <published>2013-02-20T06:47:48Z</published>
+    <updated>2013-02-20T06:58:00Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/Inventory::EAN::AvailableOfferSummary?from_sha=1603f3b6&amp;to_sha=d0694cb3"/>
+    <title>Inventory::EAN::AvailableOfferSummary has improved from a F to a D.</title>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::RatingChanged/512473f856b102257f000004</id>
+    <published>2013-02-20T06:47:48Z</published>
+    <updated>2013-02-20T06:58:00Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/Inventory::EANAvailableOfferRepository?from_sha=1603f3b6&amp;to_sha=d0694cb3"/>
+    <title>Inventory::EANAvailableOfferRepository has improved from a D to a C.</title>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::ConstantsCreated/512467ea89af7e702b000005</id>
+    <published>2013-02-20T06:01:47Z</published>
+    <updated>2013-02-20T06:06:34Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/constants"/>
+    <title>Two classes/modules were added.</title>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <![CDATA[<ul>&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/LocationLookup&quot;&gt;LocationLookup&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/Recommender&quot;&gt;Recommender&lt;/a&gt;&lt;/li&gt;</ul>]]>
+      </div>
+    </content>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::RatingChanged/5124024b56b1021fe7000004</id>
+    <published>2013-02-19T22:51:30Z</published>
+    <updated>2013-02-19T22:52:59Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/Inventory::EAN::AvailableOfferSummary?from_sha=bdd3ac86&amp;to_sha=a76efce4"/>
+    <title>Inventory::EAN::AvailableOfferSummary has declined from a D to a F.</title>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::RatingChanged/5124024b56b1021fea000004</id>
+    <published>2013-02-19T22:51:30Z</published>
+    <updated>2013-02-19T22:52:59Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/Inventory::EANAvailableOfferRepository?from_sha=bdd3ac86&amp;to_sha=a76efce4"/>
+    <title>Inventory::EANAvailableOfferRepository has declined from a C to a D.</title>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::RatingChanged/51237cff89af7e777d000004</id>
+    <published>2013-02-19T13:22:55Z</published>
+    <updated>2013-02-19T13:24:15Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/Inventory::Local::AvailableOfferSummary?from_sha=3f436633&amp;to_sha=be47d643"/>
+    <title>Inventory::Local::AvailableOfferSummary has declined from a D to a F.</title>
+  </entry>
+  <entry>
+    <id>tag:codeclimate.com,2005:Events::ConstantsCreated/51237d0089af7e7780000005</id>
+    <published>2013-02-19T13:22:55Z</published>
+    <updated>2013-02-19T13:24:16Z</updated>
+    <link rel="alternate" type="text/html" href="https://codeclimate.com/repos/51233ac356b10216a600183f/LineItem::QffPoints"/>
+    <title>LineItem::QffPoints was added.</title>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <![CDATA[<ul>&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;a href=&quot;https://codeclimate.com/repos/51233ac356b10216a600183f/LineItem::QffPoints&quot;&gt;LineItem::QffPoints&lt;/a&gt;&lt;/li&gt;</ul>]]>
+      </div>
+    </content>
+  </entry>
+</feed>

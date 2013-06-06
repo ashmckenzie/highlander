@@ -2,37 +2,78 @@ require 'spec_helper'
 
 feature 'Twitter Mentions' do
 
+  given(:endpoint) { '/api/twitter_mention.json' }
+
   background do
     @first_time_badge     = FactoryGirl.create(:first_time)
     @one_twitter_mention  = FactoryGirl.create(:one_twitter_mention)
-
-    page.driver.post '/api/adapters/twitter.json', valid_params
   end
 
-  given(:user)                    { FactoryGirl.create(:twitter_user) }
+  given(:user)                    { FactoryGirl.create(:user, :tweeter) }
+  given!(:twitter_service)        { user.service_for(:twitter) }
   given(:twitter_mention_metric)  { FactoryGirl.create(:twitter_mention) }
 
   given(:valid_params) do
     {
-      twitter:
-        {
-          tweet_id:         12386560386060,
-          text:             'I just mentioned @Hooroo in a tweet! #YOLO',
-          twitter_username: user.twitter_username,
-          followers_count:  155,
-          metric:           twitter_mention_metric.name,
-          arbitrary_data:   42
-        }
+      metric:           twitter_mention_metric.name,
+      tweet_id:         860860860,
+      text:             'I just mentioned @Hooroo in a tweet! #YOLO',
+      twitter_username: twitter_service.username,
+      followers_count:  155
     }
   end
 
-  scenario 'User twets mentioning @Hooroo' do
+  describe 'First @Hooroo mention' do
 
-    visit user_path(user)
-    page.should have_content @first_time_badge.description
-    page.should have_content @one_twitter_mention.description
+    background { page.driver.post endpoint, valid_params }
 
-    page.should have_content "#{twitter_mention_metric.default_unit} Total Score"
-    page.should have_content '2 Badges'
+    scenario 'User is given First Time and One Twitter Mention badge' do
+
+      visit user_path(user)
+      page.should have_content @first_time_badge.description
+      page.should have_content @one_twitter_mention.description
+
+      page.should have_content "#{twitter_mention_metric.default_unit} All-time"
+      page.should have_content '2 Badges'
+    end
   end
+
+  describe 'Multiple @Hooroo mentions' do
+
+    background do
+      page.driver.post endpoint, valid_params.merge(tweet_id: 1)
+      page.driver.post endpoint, valid_params.merge(tweet_id: 2)
+      page.driver.post endpoint, valid_params.merge(tweet_id: 3)
+    end
+
+    scenario 'User is given appropriate badges and points' do
+
+      visit user_path(user)
+      page.should have_content @first_time_badge.description
+      page.should have_content @one_twitter_mention.description
+
+      page.should have_content "#{twitter_mention_metric.default_unit * 3} All-time"
+      page.should have_content '2 Badges'
+    end
+  end
+
+  describe 'Ensuring the same Tweet isnt pointed twice' do
+
+    background do
+      page.driver.post endpoint, valid_params.merge(tweet_id: 1)
+      page.driver.post endpoint, valid_params.merge(tweet_id: 2)
+      page.driver.post endpoint, valid_params.merge(tweet_id: 1)
+    end
+
+    scenario 'User only given points for original tweets' do
+
+      visit user_path(user)
+      page.should have_content @first_time_badge.description
+      page.should have_content @one_twitter_mention.description
+
+      page.should have_content "#{twitter_mention_metric.default_unit * 2} All-time"
+      page.should have_content '2 Badges'
+    end
+  end
+
 end

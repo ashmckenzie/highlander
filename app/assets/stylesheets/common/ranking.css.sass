@@ -8,6 +8,17 @@
     list-style: none
     padding: 0
 
+.running
+  +nice-font(regular)
+  background: palette(5, lighten, 65)
+  border-bottom: 1px solid palette(5, lighten, 55)
+  color: palette(3)
+  font-size: 1.5rem
+  height: 60px
+  line-height: 60px
+  text-align: center
+  text-shadow: 0 2px 0 palette(1, lighten, 55)
+
 .rankee
   border-bottom: 1px solid palette(5, lighten, 55)
   overflow: hidden
@@ -17,14 +28,14 @@
   &:nth-child(2n+1)
     background: palette(5, lighten, 65)
 
-  &:first-child
+  &:nth-child(2)
     .rank
       +nice-font(black)
       color: palette(5)
-      text-shadow: 0 2px 0 palette(5, lighten, 30)
+      text-shadow: 0 2px 0 palette(5, darken, 10)
 
     .scores
-      .total-score, .total-badges
+      .total-score, .running-score, .total-badges
         span
           color: palette(5)
 
@@ -68,7 +79,7 @@
     list-style: none
     background: gold
 
-    .total-score, .total-badges
+    .total-score, .total-badges, .running-score
       +span-columns(1 of 8)
       span
         color: palette(3)
@@ -86,7 +97,7 @@
 +media($not-phone)
 
   .rankee
-    &:first-child .rank
+    &:nth-child(2) .rank
       font-size: 5.5rem
 
     .rank
@@ -100,7 +111,7 @@
       display: block
 
     .scores
-      .total-score, .total-badges
+      .total-score, .total-badges, .running-score
         margin-top: 2em
 
     .last-updated

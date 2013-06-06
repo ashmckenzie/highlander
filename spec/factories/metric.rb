@@ -19,6 +19,12 @@ FactoryGirl.define do
       default_unit  2
     end
 
+    factory :ming_pong_loss do
+      name          'ming_pong_loss'
+      description   'Ming Pong loss'
+      default_unit  0
+    end
+
     factory :express_yaself do
       name          'express_yaself'
       description   'Expressed Yaself'
@@ -28,6 +34,24 @@ FactoryGirl.define do
       name          'twitter_mention'
       description   'Twitter mention'
       default_unit  10
+    end
+
+    factory :github_issue_opened do
+      name          'github_issue_opened'
+      description   'Opened GitHub issue'
+      default_unit  5
+    end
+
+    factory :github_issue_closed do
+      name          'github_issue_closed'
+      description   'Closed GitHub issue'
+      default_unit  5
+    end
+
+    factory :pager_duty_ack do
+      name          'pager_duty_ack'
+      description   'PagerDuty ack'
+      default_unit  1
     end
 
   end

@@ -12,6 +12,8 @@
 
 <ul class="ranking">
 
+  <li class="running">Weekly running score</li>
+
   <%- @users.each_with_index do |user, i| -%>
     <li class="rankee">
       <%= link_to user_path(user) do %>
@@ -21,11 +23,10 @@
           <li class="avatar"><%= image_tag user.avatar_url 90 %></li>
           <li class="name"><%= user.name %></li>
           <li class="bio"><%= user.bio %></li>
-          <li class="last-updated"><em><%= user.last_event_created_at %></em></li>
         </ul>
 
         <ul class="scores">
-          <li class="total-score"><span><%= user.total_score %></span> Score</li>
+          <li class="total-score"><span><%= user.running_score %></span> Score</li>
           <li class="total-badges"><span><%= user.total_badges %></span> Badges</li>
         </ul>
 

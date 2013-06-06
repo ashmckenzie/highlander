@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @bounty.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @bounty.description %>
+</p>
+
+<p>
+  <strong>Reward:</strong>
+  <%= @bounty.reward %>
+</p>
+
+<p>
+  <strong>Created by:</strong>
+  <%= @bounty.created_by.name %>
+</p>
+
+<p>
+  <strong>Claimed by:</strong>
+  <%= @bounty.claimed_by.try(:name) %>
+</p>
+
+<p>
+  <strong>Needs claiming by:</strong>
+  <%= @bounty.needs_claiming_by %>
+</p>
+
+<p>
+  <strong>Claimed at:</strong>
+  <%= @bounty.claimed_at %>
+</p>
+
+<%= link_to 'Edit', edit_bounty_path(@bounty) %> |
+<%= link_to 'Back', bounties_path %>

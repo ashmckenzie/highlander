@@ -1,56 +1,64 @@
 require 'twitter'
 require 'net/http'
-require File.expand_path('../../../config/initializers/twitter', __FILE__)
+require 'ostruct'
 
 class TwitterIntegration < Thor
 
   desc 'scan_for_mentions', 'scans twitter for mentions of Hooroo'
-  def scan_for_mentions
+  def scan_for_mentions(env, consumer_key, consumer_secret, oauth_token, oauth_token_secret)
+    @env = env
 
-    tweets.each do |payload|
+    Twitter.configure do |c|
+      c.consumer_key        = consumer_key
+      c.consumer_secret     = consumer_secret
+      c.oauth_token         = oauth_token
+      c.oauth_token_secret  = oauth_token_secret
+    end
+
+    tweets.each do |tweet|
       req = Net::HTTP::Post.new(config.endpoint, initheader = { 'Content-Type' =>'application/json' })
-      req.body = payload
+      req.body = tweet
       Net::HTTP.new(config.host, config.port).start { |http| http.request(req) }
     end
   end
 
   private
 
+  attr_reader :env
+
+  def development?
+    env == 'development'
+  end
+
   def config
-    TwitterConfig
+    @config ||= OpenStruct.new(
+      endpoint: '/api/twitter_mention.json',
+      host:     host,
+      port:     port
+    )
+  end
+
+  def host
+    development? ? 'localhost' : 'leaderboard.hooroo.com'
+  end
+
+  def port
+    development? ? 3000 : 80
   end
 
   def tweets
-    twitter_client.mentions_timeline.collect do |status|
+    (twitter_client.mentions_timeline || []).collect do |status|
       {
         tweet_id: status.id,
         text: status.text,
         twitter_username: status.user.screen_name,
         followers_count: status.user.followers_count,
-        metric: 'twitter_mention'
       }.to_json
     end
   end
 
-  def metric
-    'twitter_mention'
-  end
-
   def twitter_client
-    @twitter_client ||= begin
-      # Bypass bug in Net::HTTP
-      # See: https://github.com/sferik/twitter/issues/369
-      middleware = Proc.new do |builder|
-        builder.use Twitter::Request::MultipartWithFile
-        builder.use Faraday::Request::Multipart
-        builder.use Faraday::Request::UrlEncoded
-        builder.use Twitter::Response::RaiseError, Twitter::Error::ClientError
-        builder.use Twitter::Response::ParseJson
-        builder.use Twitter::Response::RaiseError, Twitter::Error::ServerError
-        builder.adapter :typhoeus
-      end
-      Twitter::Client.new(:middleware => Faraday::Builder.new(&middleware))
-    end
+    @twitter_client ||= Twitter::Client.new
   end
 
 end

@@ -1,0 +1,5 @@
+<ul class="achivements">
+  <%- achievements.each do |achievement| %>
+    <li><%= render partial: 'shared/achievement', locals: { achievement: achievement } %></li>
+  <%- end %>
+</ul>

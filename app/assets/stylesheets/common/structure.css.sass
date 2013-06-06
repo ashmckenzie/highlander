@@ -59,9 +59,8 @@ body
   color: palette(1, lighten, 25)
   clear: both
   padding-top: 20px
-  padding-bottom: 150px
+  padding-bottom: 210px
   text-align: center
-  text-shadow: 0 2px 0 palette(3, darken, 10)
 
   h2
     +nice-font
@@ -69,6 +68,7 @@ body
     line-height: 1.1em
     padding: 0 1em
     margin: 0
+    text-shadow: 0 2px 0 palette(3, darken, 10)
 
 .container
   +outer-container
@@ -76,21 +76,16 @@ body
 #main-container
   +box-shadow(0 0 10px 0px rgba(palette(4), .2))
   background: palette(1, lighten, 100)
-  // margin-top: 5px
-  margin-bottom: 30px
+  padding-bottom: 30px
   position: relative
   z-index: 0
 
 .main-column
-  +span-columns(8)
+  +span-columns(12)
 
 .sidebar
-  +span-columns(4)
-  border-left: 1px solid palette(5, lighten, 55)
-  position: absolute
-  right: 0
-  height: 100%
-
+  +span-columns(12)
+  clear: both
 
 
 // =================================================
@@ -105,9 +100,9 @@ body
       width: 181px
 
     li
-      +span-columns(2 of 12)
+      +span-columns(2)
       &.username
-        +span-columns(8 of 12)
+        +span-columns(8)
       &.sign-in
         +shift(10)
 
@@ -115,3 +110,14 @@ body
     padding-top: 50px
     h2
       font-size: 2.5rem
+
+  .sidebar
+    +span-columns(3)
+    border-left: 1px solid palette(5, lighten, 55)
+    margin-right: 0
+    position: absolute
+    right: 0
+    height: 100%
+
+  .main-column
+    +span-columns(9)

@@ -1,0 +1,54 @@
+<%= form_for(@bounty) do |f| %>
+  <% if @bounty.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@bounty.errors.count, "error") %> prohibited this bounty from being saved:</h2>
+
+      <ul>
+      <% @bounty.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <%- if %q{ new create }.include?(controller.action_name) %>
+
+    <div class="field">
+      <%= f.label :name %><br>
+      <%= f.text_field :name %>
+    </div>
+
+    <div class="field">
+      <%= f.label :reward %><br>
+      <%= f.number_field :reward %>
+    </div>
+
+    <div class="field">
+      <%= f.label :description %><br>
+      <%= f.text_area :description %>
+    </div>
+
+<!--     <div class="field">
+      <%= f.label :needs_claiming_by %><br>
+      <%= f.datetime_select :needs_claiming_by, include_blank: true %>
+    </div> -->
+
+  <%- end %>
+
+  <%- if %q{ edit update }.include?(controller.action_name) %>
+    <div class="field">
+      <%= f.label :claimed_by_id %><br>
+      <%= f.collection_select :claimed_by_id, @users, :id, :name, include_blank: true %>
+    </div>
+
+    <div class="field">
+      <%= f.label :claimed_at %><br>
+      <%= f.datetime_select :claimed_at %>
+    </div>
+  <%- end %>
+
+  <div class="actions">
+    <%= f.submit :class => 'button' %>
+  </div>
+
+<% end %>

@@ -13,18 +13,10 @@ h2
   +clearfix
 
 .info-block
+  border-bottom: 1px solid palette(5, lighten, 55)
   min-height: 150px
-  padding-bottom: 5px
+  padding-bottom: 20px
   position: relative
-  &:after //sneaky!
-    background: palette(5, lighten, 55)
-    bottom: 0
-    content: ""
-    height: 1px
-    position: absolute
-    padding-right: 46px
-    left: -20px
-    width: 100%
 
   .avatar
     float: left
@@ -38,75 +30,89 @@ h2
     margin: 0 0 15px 0
 
   .bio
-    +clearfix
     font-size: .9rem
     font-style: italic
+    padding-top: 10px
 
 .badges
+  +clearfix
   padding-top: 1em
 
   ul
     list-style: none
-    padding: 0
+    padding: 1em 0 0 0
 
   li
-    +omega(5n)
+    +clearfix
+    +span-columns(4 of 8)
+    +omega(2n)
     float: left
     margin-bottom: 1em
     position: relative
-    margin: 0 35px 35px 0
-    width: 110px
 
     img
-      cursor: pointer
       display: block
+      float: left
       height: 110px
-      margin: 0 auto
+      margin-right: 10px
       width: 110px
 
-    div
-      +box-shadow(0 0 15px 1px rgba(hotpink, .5))
-      background: hotpink
-      border-radius: $radius
-      color: #fff
-      display: none
-      min-height: 90px
-      left: 0
-      position: absolute
-      padding: .5em 1em
-      top: -100px
-      left: -5.5em
-      width: 16em
+    .badge-details
+      h3
+        +nice-font(regular)
+        color: palette(3)
+        line-height: 1em
+        margin: .5em 0 .1em
+      p
+        font-size: 1rem
+        margin: 0 0 1em
+        &.badge-name
+          margin-bottom: 0
+        &.badge-takeup, &.badge-date
+          font-size: .8rem
 
-    h3
-      margin: 0 0 .1em
-    p
-      font-size: .9rem
-      margin: 0 0 .5em
-      &.badge-date
-        font-size: .8rem
-
-    &:hover div
-      display: block
-      z-index: 99
-
+    .achievement-details
+      p
+        font-size: .75em
+        margin: 0 0 .3em
 
 .summary
   background: palette(5, lighten, 65)
   padding: 1em
-
   ul
     list-style: none
     padding: 0
 
+  .metrics
+    white-space: nowrap
+    .value
+      +nice-font(black)
+      color: palette(5)
+      font-size: 1.5rem
+    .description
+      margin-left: 5px
+
   .scores
     +clearfix
-    background: palette(1, lighten, 30)
     border-radius: $radius
     margin: 0 0 1em
-    padding: 1em
+    padding: 1em 0 0 0
 
     li
-      +span-columns(1 of 2)
-      +omega(2)
+      clear: both
+      float: left
+      line-height: 2em
 
+    .total-score, .total-badges, .running-score
+      font-size: .9rem
+      span
+        font-size: 2.3rem
+
+
+// =================================================
+// -----------------Media Queries-------------------
+// =================================================
+
++media($lte-480)
+  .badges li
+    +span-columns(8 of 8)

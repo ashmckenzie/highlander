@@ -2,47 +2,36 @@
    <%= stylesheet_link_tag :user -%>
 <%- end -%>
 
-<div class="user-details main-column">
+<section class="info-block user-details main-column">
 
-  <section class="info-block">
+  <p class="avatar"><%= image_tag @user.avatar_url 150 %></p>
 
-    <p class="avatar"><%= image_tag @user.avatar_url 150 %></p>
+  <h2 class="name">
+    <%= link_to @user.name, @user %>
+    <% if can? :edit, @user %><sup>(<%= link_to 'edit', edit_user_path(current_user) %>)</sup><% end %>
+  </h2>
 
-    <h2 class="name">
-      <%= link_to @user.name, @user %>
-      <% if can? :edit, @user %><sup>(<%= link_to 'edit', edit_user_path(current_user) %>)</sup><% end %>
-    </h2>
-    <h3 class="twitter-handle"><%= @user.twitter_handle %></h3>
+  <h3 class="twitter-handle"><%= @user.twitter_handle %></h3>
 
-    <p class="bio"><%= @user.bio %></p>
+  <p class="bio"><%= @user.bio %></p>
 
-  </section>
+  <span class="clrfx"><!-- Confucious say, if clearing span in forest, but no-one there to see it, clearing span exist? --></span>
 
-  <section class="badges">
-
-    <h2>Badges (<strong><%= @user.achievements.count %></strong>)</h2>
-    <p class="badge-spiel"><%= @user.first_name %> has unlocked these <%= @user.achievements.count %> badges so far. Keep an eye on this page to see which one comes next!</p>
-
-    <ul>
-      <%- @user.achievements.each do |achievement| %>
-        <li><%= render partial: 'shared/badge', locals: { achievement: achievement } %></li>
-      <%- end %>
-    </ul>
-
-  </section>
-
-</div>
+</section>
 
 <section class="summary sidebar">
 
+  <h2>Scores</h2>
+
   <ul class="scores">
-    <li class="total-score"><span><%= @user.total_score %></span> Score</li>
-    <li class="total-badges"><span><%= @user.achievements.count %></span> Badges</li>
+    <li class="running-score"><span><%= @user.running_score %></span> Running</li>
+    <li class="total-score"><span><%= @user.total_score %></span> All-time</li>
+    <li class="total-badges"><span><%= @user.badge_count %></span> Badges</li>
   </ul>
 
-  <h2>Summary</h2>
+  <h2>Breakdown</h2>
 
-  <ul>
+  <ul class="metrics">
     <%- @user.metric_totals.each do |metric_total| %>
       <li class="<%= metric_total.description %>">
         <%
@@ -50,9 +39,23 @@
           # e.g. 20 points for 2 twitter mentions
         %>
          <span class="value"><strong><%= metric_total.event_total_count %></strong></span>
-         <span class="description"><%= metric_total.description.titleize.pluralize(metric_total.event_total_count) %></span>
+         <span class="description"><%= metric_total.description %></span>
       </li>
     <%- end %>
   </ul>
 
+</section>
+
+
+<section class="badges main-column">
+
+  <h2>Badges</h2>
+
+  <p class="badge-spiel">
+    <%= @user.first_name %> has unlocked the following
+    <%= @user.badge_count %> badges so far.
+    Keep an eye on this page to see which one comes next!
+  </p>
+
+  <%= render partial: 'shared/achievements', locals: { achievements: @user.achievements } %>
 </section>

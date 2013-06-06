@@ -1,0 +1,13 @@
+<%- provide :head do -%>
+   <%= stylesheet_link_tag :bounties -%>
+<%- end -%>
+
+<section class="countainer bounties">
+
+  <h1>New bounty</h1>
+
+  <%= render 'form' %>
+
+  <%= link_to 'Back', bounties_path %>
+
+</section>

@@ -1,0 +1,45 @@
+@import "utils"
+@import "common/widgets"
+@import "common/**/*"
+
+.bounties
+  padding: 0 10px 10px 10px
+
+  a.new-bounty
+    +hl-button
+    height: 35px
+    line-height: 35px
+    width: 120px
+
+  table
+    border: 1px solid #ddd
+    width: 100%
+    font-size: 0.9em
+    tr
+      width: 100%
+      th, td
+        border: 1px solid #ddd
+      th
+        background-color: #ddd
+        text-align: left
+        padding: 8px
+      td
+        padding: 8px
+
+  form
+    .field
+      padding: 10px 0
+
+    .actions
+      padding: 20px 0
+
+    input, textarea
+      padding: 6px
+      width: 300px
+
+    textarea
+      height: 150px
+
+    input.button
+      border: 0
+      padding: 12px
