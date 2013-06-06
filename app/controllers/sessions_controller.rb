@@ -12,12 +12,12 @@ class SessionsController < ApplicationController
     end
 
     session[:user_id] = user.id
-    redirect_to root_url, notice: "Signed in!"
+    redirect_to root_url, notice: "Yay, <strong>#{user.name.split[0]}</strong>! You've successfully signed in to <strong>Highlander</strong>".html_safe
   end
 
   def destroy
     session[:user_id] = nil
-    redirect_to root_url, notice: "Signed out!"
+    redirect_to root_url, notice: "So long and thanks for all the fish! You've signed out"
   end
 
   private

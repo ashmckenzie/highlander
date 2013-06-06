@@ -19,11 +19,18 @@
 
   <body>
 
-    <div class="flash warning topmost">
-      <div>
-        <p>Attention shoppers! <strong>Highlander</strong> is still experimental. Your total score may fluctuate as we determine how many points each activity deserves.</p>
+    <%- unless flash.empty? %>
+      <%- flash.each do |key, msg| %>
+        <%= content_tag(:div, content_tag(:div, content_tag(:p, msg) ), :class => [ key, "flash", "topmost" ]) %>
+      <%- end -%>
+    <%- else -%>
+      <div class="flash warning topmost">
+        <div>
+          <p>Attention shoppers! <strong>Highlander</strong> is still experimental. Your total score may fluctuate as we determine how many points each activity deserves.</p>
+        </div>
       </div>
-    </div>
+    <%- end -%>
+
 
     <header id="main-header" class="top-header">
       <div class="container">
@@ -31,13 +38,13 @@
 
         <nav>
           <ul>
-            <% if signed_in? %>
+            <%- if signed_in? -%>
               <li class="username">Hello there, <strong><%= current_user.name %></strong>!</li>
               <li><%= link_to 'Account', user_path(current_user) %></li>
               <li><%= link_to 'Sign out', signout_path %></li>
-            <% else %>
+            <%- else -%>
               <li class="sign-in"><a href="/auth/google_apps">Sign in</a></li>
-            <% end %>
+            <%- end -%>
           </ul>
         </nav>
       </div>
@@ -47,10 +54,6 @@
     <%= yield :pre_main %>
 
     <div id="main-container" class="container">
-      <%- flash.each do |key, msg| %>
-        <%= content_tag :div, msg, :class => [ key, "flash" ] %>
-      <% end %>
-
       <%= yield %>
     </div>
 
