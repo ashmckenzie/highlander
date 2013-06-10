@@ -1,0 +1,13 @@
+3.5K events since inception
+
+1.0 stats 14/03/2013 - 25/03/2013 : (12 days, 8 business days)
+===================
+
+GH pushes - 17.5 p/day
+Jenkins - 13.3 p/day
+
+2.0 stats 25/03/2013 - now : (77 days, 56 business days)
+===================
+
+GH pushes - 12.2 p/day
+Jenkins - 16.2 p/day
