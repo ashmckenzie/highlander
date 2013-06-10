@@ -40,6 +40,7 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'capybara'
   gem 'letter_opener'
+  gem 'rails-erd'
 end
 
 group :heroku do
