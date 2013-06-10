@@ -40,6 +40,11 @@ module Api
       render text: '', status: :ok
     end
 
+    rescue_from Errors::TweetInvalid do
+      Rails.logger.info "Not persisting tweet '#{payload.tweet_id}' for '#{payload.twitter_username}' as it's invalid"
+      render text: 'Tweet invalid', status: :error
+    end
+
     rescue_from Errors::TweetAlreadyProcessed do
       Rails.logger.info "Not persisting tweet '#{payload.tweet_id}' for '#{payload.twitter_username}' as it's already been processed"
       render text: 'Tweet already processed', status: :ok

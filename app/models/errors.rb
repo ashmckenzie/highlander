@@ -18,6 +18,7 @@ module Errors
   class UserNotFound                    < ApiError ; end
   class UserNotPointEarner              < ApiError ; end
   class InvalidGitBranch                < ApiError ; end
+  class TweetInvalid                    < ApiError ; end
   class TweetAlreadyProcessed           < ApiError ; end
   class InvalidRequestSource            < ApiError ; end
   class MingPongWinnerAlreadyProcessed  < ApiError ; end
