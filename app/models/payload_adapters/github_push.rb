@@ -16,6 +16,7 @@ module PayloadAdapters
 
     private
 
+    # Gah, I hate this
     def payload=(payload)
       github_payload = JSON.parse(payload.delete(:payload)).to_h
       @payload = payload.merge!(github_payload)
