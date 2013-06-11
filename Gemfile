@@ -31,6 +31,7 @@ gem 'exception_notification', github: 'smartinez87/exception_notification'
 
 gem 'twitter'
 gem 'omniauth-google-apps'
+gem 'unshorten'
 
 group :development, :test do
   gem 'pry'
