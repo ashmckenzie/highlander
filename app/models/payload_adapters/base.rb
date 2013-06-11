@@ -10,10 +10,10 @@ module PayloadAdapters
 
     def to_event_hash
       {
-        user: user,
+        user:   user,
         metric: metric,
-        value: metric.default_unit,
-        data: data
+        value:  value || metric.default_unit,
+        data:   data
       }
     end
 
@@ -47,6 +47,10 @@ module PayloadAdapters
 
     def ignored_payload_keys
       [ 'controller', 'action', 'format' ]
+    end
+
+    def value
+      nil
     end
 
   end

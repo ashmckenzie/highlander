@@ -18,6 +18,16 @@ module PayloadAdapters
       payload[:text]
     end
 
+    private
+
+    def value
+      return 10 if content.high_value?
+    end
+
+    def content
+      @content ||= TwitterContent.new(text)
+    end
+
   end
 
 end
