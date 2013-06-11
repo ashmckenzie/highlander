@@ -29,10 +29,11 @@ class TweetContent
 
   def unshortened_content
     @unshortened_content ||= begin
+      unshortened = content
       shortened_links.each do |shortened_link|
-        content.gsub!(shortened_link, Unshorten[shortened_link])
+        unshortened.gsub!(shortened_link, Unshorten[shortened_link])
       end
-      content
+      unshortened
     end
   end
 
