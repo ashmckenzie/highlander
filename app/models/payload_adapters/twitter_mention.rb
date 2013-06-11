@@ -14,6 +14,10 @@ module PayloadAdapters
       payload[:twitter_username]
     end
 
+    def text
+      payload[:text]
+    end
+
   end
 
 end
