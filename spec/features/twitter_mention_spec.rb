@@ -5,7 +5,6 @@ feature 'Twitter Mentions' do
   given(:endpoint) { '/api/twitter_mention.json' }
 
   background do
-    @first_time_badge     = FactoryGirl.create(:first_time)
     @one_twitter_mention  = FactoryGirl.create(:one_twitter_mention)
   end
 
@@ -30,7 +29,6 @@ feature 'Twitter Mentions' do
     scenario 'User is given First Time and One Twitter Mention badge' do
 
       visit user_path(user)
-      page.should have_content @first_time_badge.description
       page.should have_content @one_twitter_mention.description
 
       page.should have_content "#{twitter_mention_metric.default_unit} All-time"
@@ -49,7 +47,6 @@ feature 'Twitter Mentions' do
     scenario 'User is given appropriate badges and points' do
 
       visit user_path(user)
-      page.should have_content @first_time_badge.description
       page.should have_content @one_twitter_mention.description
 
       page.should have_content "#{twitter_mention_metric.default_unit * 3} All-time"
@@ -68,7 +65,6 @@ feature 'Twitter Mentions' do
     scenario 'User only given points for original tweets' do
 
       visit user_path(user)
-      page.should have_content @first_time_badge.description
       page.should have_content @one_twitter_mention.description
 
       page.should have_content "#{twitter_mention_metric.default_unit * 2} All-time"
