@@ -47,9 +47,9 @@ FactoryGirl.define do
       description   'PagerDuty ack'
     end
 
-    factory :code_climate_improvement do
-      name          'code_climate_improvement'
-      description   'Code Climate Improvement'
+    factory :code_quality_improvement do
+      name          'code_quality_improvement'
+      description   'Code Quality Improvement'
       default_unit  10
     end
 

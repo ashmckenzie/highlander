@@ -53,7 +53,7 @@ class CodeClimateIntegration < Thor
 
   def config
     @config ||= OpenStruct.new(
-      endpoint: '/api/code_climate_improvement.json',
+      endpoint: '/api/code_quality_improvement.json',
       host:     host,
       port:     port
     )

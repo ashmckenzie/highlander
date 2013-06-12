@@ -19,7 +19,7 @@ class Metric < ActiveRecord::Base
     twitter_mention
     pager_duty_ack
     bounty
-    code_climate_improvement
+    code_quality_improvement
   }
 
 end
