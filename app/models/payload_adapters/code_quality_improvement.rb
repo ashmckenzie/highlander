@@ -1,6 +1,6 @@
 module PayloadAdapters
 
-  class CodeClimateImprovement < Base
+  class CodeQualityImprovement < Base
 
     def user
       @user ||= Services::Github.find_by_username(github_username).try(:user)

@@ -1,4 +1,5 @@
 class Metric < ActiveRecord::Base
+
   include Enabler
 
   has_many :events

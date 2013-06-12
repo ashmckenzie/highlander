@@ -1,10 +1,10 @@
 module PayloadValidators
 
-  class CodeClimateImprovement < Base
+  class CodeQualityImprovement < Base
 
     def validate!
       super
-      raise Errors::CodeClimateImprovementAlreadyProcessed.new(payload) if improvement_already_attributed?
+      raise Errors::CodeQualityImprovementAlreadyProcessed.new(payload) if improvement_already_attributed?
     end
 
     def improvement_already_attributed?
