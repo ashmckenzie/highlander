@@ -27,7 +27,7 @@ FactoryGirl.define do
     factory :twitter_mention do
       name          'twitter_mention'
       description   'Twitter mention'
-      default_unit  10
+      default_unit  2
     end
 
     factory :github_issue_opened do
