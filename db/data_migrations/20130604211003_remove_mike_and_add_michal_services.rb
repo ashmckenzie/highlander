@@ -12,19 +12,19 @@ module DataMigration
         michal.bio = 'The Pole'
         michal.save!
 
-        twitter_service = Services::Twitter.new(username: 'mpisanko')
-        michal.user_services << UserService.new(service: twitter_service)
+        twitter = Services::Twitter.new(username: 'mpisanko')
+        github = Services::Github.new(username: 'mpisanko')
+        pager_duty = Services::PagerDuty.new(email: michal.hooroo_email)
 
-        github_service = Services::Github.new(username: 'mpisanko', emails: michal.emails)
-        michal.user_services << UserService.new(service: github_service)
-
-        pager_duty_service = Services::PagerDuty.new(email: michal.hooroo_email)
-        michal.user_services << UserService.new(service: pager_duty_service)
+        UserService.create!(user: michal, service: twitter)
+        UserService.create!(user: michal, service: github)
+        UserService.create!(user: michal, service: pager_duty)
       end
 
       def down
         User.find_by_name('Michal Pisanko').try(:destroy)
       end
+
     end
   end
 end
