@@ -25,7 +25,7 @@ module PayloadAdapters
     end
 
     def content
-      @content ||= TwitterContent.new(text)
+      @content ||= TweetContent.new(text)
     end
 
   end
