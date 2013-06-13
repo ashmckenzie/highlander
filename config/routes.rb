@@ -24,6 +24,8 @@ Highlander::Application.routes.draw do
   resources :badges, only: [ :index, :show ]
   resources :bounties
 
+  get '/about' => 'high_voltage/pages#show', id: 'about'
+
   root to: 'welcome#index'
 
 end
