@@ -14,3 +14,25 @@ User.all.each do |user|
     end
   end
 end
+
+(1..20).each do |count|
+  bounties = ["Han", "Chewbacca", "Luke", "Lando", "Dan"]
+  user = User.all.sample
+  bounty_name = bounties.sample
+  created_at = Time.zone.now - (rand(21)+1).days
+
+  bounty_params = { name:          "#{bounty_name} hunt #{user.name} (#{count})",
+                    description:   "Hunt down #{bounty_name}, #{user.name} (#{count})",
+                    created_by_id: user.id,
+                    created_at:    created_at}
+
+  if rand(2) > 0
+    puts "Creating unclaimed bounty on #{bounty_name} for #{user.name} (#{count})"
+    Bounty.new(bounty_params).save
+  else
+    puts "Creating claimed bounty on #{bounty_name} for #{user.name} (#{count})"
+    claimed_params = bounty_params.merge(claimed_by_id: User.where("slug != ?", user.slug).sample.id, claimed_at: (created_at + 5.days))
+    Bounty.new(claimed_params).save
+  end
+
+end
