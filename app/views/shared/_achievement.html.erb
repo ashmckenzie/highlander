@@ -6,6 +6,8 @@
 </div>
 
 <div class="achievement-details">
-  <p class="badge-takeup"><%= achievement.badge_takeup %></p>
+  <p class="badge-takeup">
+    <%= link_to achievement.badge_takeup, badge_path(achievement.badge) %>
+  </p>
   <p class="achievement-date"><%= achievement.created_at %> ago</p>
 </div>
