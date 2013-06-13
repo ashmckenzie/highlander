@@ -21,6 +21,7 @@ Highlander::Application.routes.draw do
   post  '/auth/google_apps/callback' => 'sessions#create'
 
   resources :users
+  resources :badges, only: [ :index, :show ]
   resources :bounties
 
   root to: 'welcome#index'
