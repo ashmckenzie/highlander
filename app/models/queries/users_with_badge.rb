@@ -14,7 +14,7 @@ module Queries
      badge
       .achievements
       .order('achievements.created_at ASC')
-      .map { |x| x.user.decorate }
+      .map { |x| User.unscoped { x.user.decorate } }
     end
 
     private
