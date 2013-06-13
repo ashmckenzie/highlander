@@ -10,7 +10,7 @@ namespace :deploy do
   end
 
   task :before_deploy do
-    puts 'About to deploy...'
+    puts 'Running :before_deploy tasks...'
   end
 
   task :heroku_push do
@@ -21,9 +21,9 @@ namespace :deploy do
   end
 
   task :after_deploy do
-    puts 'Deployment complete!'
-    git_sha = `git ls-remote origin HEAD | awk '{ print $1 }'`
-    raise 'Unable to set RELEASE_GIT_SHA config variable' unless system("heroku config:set RELEASE_GIT_SHA=#{git_sha}")
-    raise 'Unable to run schema and/or data migrations' unless system('heroku run rake db:migrate db:data_migrate')
+    puts 'Running :after_deploy tasks...'
+    git_sha = `git rev-parse HEAD`.chomp
+    raise 'Unable to set RELEASE_GIT_SHA config variable' unless system("bundle exec heroku config:set RELEASE_GIT_SHA=#{git_sha}")
+    raise 'Unable to run schema and/or data migrations' unless system('bundle exec heroku run rake db:migrate db:data_migrate')
   end
 end
