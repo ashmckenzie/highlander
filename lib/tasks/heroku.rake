@@ -19,7 +19,7 @@ namespace :heroku do
     task :heroku_push do
       FileUtils.cd(Rails.root) do
         puts '> Pushing new code to Heroku...'
-        # raise 'Unable to push new code to Heroku' unless system('git push heroku master')
+        raise 'Unable to push new code to Heroku' unless system('git push heroku master')
       end
       puts
     end
