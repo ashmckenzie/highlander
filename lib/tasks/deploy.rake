@@ -26,6 +26,4 @@ namespace :deploy do
     raise 'Unable to set RELEASE_GIT_SHA config variable' unless system("heroku config:set RELEASE_GIT_SHA=#{git_sha}")
     raise 'Unable to run schema and/or data migrations' unless system('heroku run rake db:migrate db:data_migrate')
   end
-
-  task :default, :heroku
 end
