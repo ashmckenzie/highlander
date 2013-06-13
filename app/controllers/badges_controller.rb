@@ -1,0 +1,10 @@
+class BadgesController < ApplicationController
+
+  def index
+    @badges_groped_by_metric = Queries::BadgesIncludingAchievedGroupedByMetric.new.query
+  end
+
+  def show
+    @badge = Queries::BadgesIncludingAchievedGroupedByMetric.new(relation: Badge.where("badges.id = ?", params[:id])).query
+  end
+end

@@ -1,0 +1,5 @@
+<%- provide :head do -%>
+   <%= stylesheet_link_tag :badges -%>
+<%- end -%>
+
+<%= render partial: 'shared/badges_and_achieved', locals: { badges_groped_by_metric: @badge } %>
