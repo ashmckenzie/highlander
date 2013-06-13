@@ -2,11 +2,14 @@ require 'spec_helper'
 
 describe PayloadAdapters::TweetContent do
 
+  subject { described_class.new(tweet_content) }
+
   describe '#to_s' do
 
+   let(:tweet_content) { 'This is a really important tweet' }
+
     it 'is the raw tweet content/text' do
-      tweet_content = 'This is a really important tweet'
-      described_class.new(tweet_content).to_s.should == tweet_content
+      subject.to_s.should == tweet_content
     end
   end
 
@@ -16,7 +19,7 @@ describe PayloadAdapters::TweetContent do
       let(:tweet_content) { 'Please visit hooroo.com, it is cool.' }
 
       it 'is true' do
-        described_class.new(tweet_content).high_value?.should be_true
+        subject.high_value?.should be_true
       end
     end
 
@@ -24,7 +27,7 @@ describe PayloadAdapters::TweetContent do
       let(:tweet_content) { 'Please visit hooroooo.com, it is cool.' }
 
       it 'is false' do
-        described_class.new(tweet_content).high_value?.should be_false
+        subject.high_value?.should be_false
       end
     end
 
@@ -32,7 +35,7 @@ describe PayloadAdapters::TweetContent do
       let(:tweet_content) { 'Please visit goo.gl/W6tPN, it is cool. Or visit http://bit.ly/L5ePra' }
 
       it 'is true' do
-        described_class.new(tweet_content).high_value?.should be_true
+        subject.high_value?.should be_true
       end
     end
 
