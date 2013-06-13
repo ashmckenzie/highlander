@@ -28,6 +28,7 @@ gem 'mechanize'
 gem 'octokit'
 gem 'naught'
 gem 'exception_notification', github: 'smartinez87/exception_notification'
+gem 'stethoscope'
 
 gem 'twitter'
 gem 'omniauth-google-apps'

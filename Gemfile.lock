@@ -89,6 +89,7 @@ GEM
       debugger-ruby_core_source (~> 1.2.1)
     debugger-linecache (1.2.0)
     debugger-ruby_core_source (1.2.2)
+    dictionary (1.0.0)
     diff-lcs (1.2.4)
     domain_name (0.5.11)
       unf (>= 0.0.5, < 1.0.0)
@@ -238,6 +239,10 @@ GEM
       actionpack (>= 3.0)
       activesupport (>= 3.0)
       sprockets (~> 2.8)
+    stethoscope (0.2.3)
+      dictionary (>= 1.0)
+      rack (> 1.0)
+      tilt (>= 1.0)
     thin (1.5.1)
       daemons (>= 1.0.9)
       eventmachine (>= 0.12.6)
@@ -303,6 +308,7 @@ DEPENDENCIES
   rest-client
   rspec-rails
   sass-rails (~> 4.0.0.rc2)
+  stethoscope
   thin
   thor
   twitter
