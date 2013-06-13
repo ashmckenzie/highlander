@@ -38,8 +38,8 @@
           # TODO: We can provide point line items too using metric_total.event_total_value
           # e.g. 20 points for 2 twitter mentions
         %>
-         <span class="value"><strong><%= metric_total.event_total_count %></strong></span>
-         <span class="description"><%= metric_total.description %></span>
+         <span class="value"><%= metric_total.event_total_count %></span>
+         <span class="description"><%= metric_total.description.pluralize %></span>
       </li>
     <%- end %>
   </ul>
