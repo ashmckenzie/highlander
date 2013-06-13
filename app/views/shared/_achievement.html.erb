@@ -1,4 +1,4 @@
-<%= image_tag badge_image_url(achievement.badge) %>
+<%= link_to image_tag(badge_image_url(achievement.badge)), badge_path(achievement.badge) %>
 
 <div class="badge-details">
   <h3 class="badge-name"><%= achievement.description %></h3>

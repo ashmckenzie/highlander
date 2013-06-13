@@ -5,5 +5,6 @@ class BadgesController < ApplicationController
   end
 
   def show
+    @badge = Queries::BadgesIncludingAchievedGroupedByMetric.new(relation: Badge.where("badges.id = ?", params[:id])).query
   end
 end
