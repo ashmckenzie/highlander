@@ -16,8 +16,8 @@ Highlander::Application.routes.draw do
   namespace :admin do
   end
 
-  get   '/signout' => 'sessions#destroy', as: :signout
-  post  '/auth/google_apps/callback' => 'sessions#create'
+  # get   '/signout' => 'sessions#destroy', as: :signout
+  # post  '/auth/google_apps/callback' => 'sessions#create'
 
   resources :users
   resources :badges, only: [ :index, :show ]
