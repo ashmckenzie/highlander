@@ -35,7 +35,8 @@ module DataMigration
       private
 
       def add_twitter_username_for email, twitter_username
-        User.with_email(email).update(twitter_username: twitter_username)
+        user = User.with_email(email)
+        UserService.create!(user: user, service: Services::Twitter.new(username: twitter_username))
       end
     end
   end
