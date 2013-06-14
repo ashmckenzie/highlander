@@ -9,7 +9,6 @@ Highlander::Application.routes.draw do
     resources :events, only: [ :create ]
 
     namespace :adapters do
-      resources :github,  only: [ :create ]
       resources :twitter, only: [ :create ]
     end
   end

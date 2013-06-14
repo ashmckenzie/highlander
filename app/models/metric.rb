@@ -10,17 +10,7 @@ class Metric < ActiveRecord::Base
   default_scope -> { enabled }
 
   NAMES = %w{
-    github_push
-    github_issue_opened
-    github_issue_closed
-    jenkins_green_job
-    ming_pong_victory
-    gift
-    express_yaself
     twitter_mention
-    pager_duty_ack
-    bounty
-    code_quality_improvement
   }
 
 end
