@@ -1,13 +1,13 @@
 development:
   adapter: postgresql
   encoding: utf8
-  database: highlander_development
+  database: highlander_agile_aus_development
   pool: 5
   host: localhost
 
 test:
   adapter: postgresql
   encoding: utf8
-  database: highlander_test
+  database: highlander_agile_aus_test
   pool: 5
   host: localhost
