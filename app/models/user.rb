@@ -22,6 +22,8 @@ class User < ActiveRecord::Base
   validates :hooroo_email,      uniqueness: true, presence: true
   validates :avatar_email,      uniqueness: true, allow_blank: true
 
+  before_save :set_role_to_user
+
   ROLES = %w[admin user]
 
   def service_for service_type
@@ -68,5 +70,11 @@ class User < ActiveRecord::Base
 
   def left_hooroo!
     update(leaderboarder: false, earns_points: false)
+  end
+
+  private
+
+  def set_role_to_user
+    self.role = 'user'
   end
 end
