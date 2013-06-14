@@ -1,10 +1,68 @@
 class UserDecorator < Draper::Decorator
 
+  class TwitterDecorator
+
+    def initialize twitter_service
+      @twitter_service = twitter_service
+    end
+
+    def setup?
+      true
+    end
+
+    def handle
+      '@' << twitter_service.username
+    end
+
+    def url
+      "//twitter.com/#{twitter_service.username}"
+    end
+
+    private
+
+    attr_reader :twitter_service
+  end
+
+  class TwitterNullDecorator
+
+    def setup?
+      false
+    end
+
+    def handle
+      ''
+    end
+
+    def url
+      ''
+    end
+
+    private
+
+    attr_reader :twitter_service
+  end
+
+  class TwitterDecoratorFactory
+
+    def self.setup_for twitter_service
+      if twitter_service
+        TwitterDecorator.new(twitter_service)
+      else
+        TwitterNullDecorator.new
+      end
+    end
+  end
+
+  #----------------------------------------------------------------------------#
+
   alias :user :source
   delegate_all
 
-  def twitter_handle
-    "@#{user.service_for(:twitter).username}" if user.service_for(:twitter)
+  def twitter
+    @twitter ||= TwitterDecoratorFactory.setup_for(user.service_for(:twitter))
+  end
+
+  def twitter_url
   end
 
   def email

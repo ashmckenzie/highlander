@@ -11,7 +11,11 @@
     <% if can? :edit, @user %><sup>(<%= link_to 'edit', edit_user_path(current_user) %>)</sup><% end %>
   </h2>
 
-  <h3 class="twitter-handle"><%= @user.twitter_handle %></h3>
+  <%- if @user.twitter.setup? %>
+    <h3 class="twitter-handle">
+      <%= link_to @user.twitter.handle, @user.twitter.url, target: '_blank' %>
+    </h3>
+  <%- end %>
 
   <p class="bio"><%= @user.bio %></p>
 
