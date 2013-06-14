@@ -39,7 +39,7 @@ class TwitterIntegration < Thor
   end
 
   def host
-    development? ? 'localhost' : 'agile-aus-2013.leaderboard.hooroo.com'
+    development? ? 'localhost' : 'thequickening-agile-aus.herokuapp.com'
   end
 
   def port
