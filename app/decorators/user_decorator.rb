@@ -20,8 +20,9 @@ class UserDecorator < Draper::Decorator
   end
 
   def avatar_url size=80
-    gravatar_id = Digest::MD5::hexdigest(avatar_email).downcase
-    "http://gravatar.com/avatar/#{gravatar_id}.png?s=#{size}"
+    # gravatar_id = Digest::MD5::hexdigest(avatar_email).downcase
+    # "http://gravatar.com/avatar/#{gravatar_id}.png?s=#{size}"
+    user.avatar_url
   end
 
   def bio

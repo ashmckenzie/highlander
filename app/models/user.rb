@@ -19,8 +19,8 @@ class User < ActiveRecord::Base
   scope :leaderboarder,   -> { where(leaderboarder: true) }
 
   validates :name,              presence: true
-  validates :hooroo_email,      uniqueness: true, presence: true
-  validates :avatar_email,      uniqueness: true, allow_blank: true
+  # validates :hooroo_email,      uniqueness: true, presence: true
+  # validates :avatar_email,      uniqueness: true, allow_blank: true
 
   ROLES = %w[admin user]
 

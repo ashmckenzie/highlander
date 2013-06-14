@@ -15,14 +15,11 @@ class TwitterIntegration < Thor
       c.oauth_token_secret  = oauth_token_secret
     end
 
-    # tweets.each do |tweet|
-      # req = Net::HTTP::Post.new(config.endpoint, initheader = { 'Content-Type' =>'application/json' })
-      # req.body = tweet
-      # Net::HTTP.new(config.host, config.port).start { |http| http.request(req) }
-    # end
-
-    require 'pry'
-    binding.pry
+    tweets.each do |tweet|
+      req = Net::HTTP::Post.new(config.endpoint, initheader = { 'Content-Type' =>'application/json' })
+      req.body = tweet
+      Net::HTTP.new(config.host, config.port).start { |http| http.request(req) }
+    end
   end
 
   private
@@ -50,11 +47,14 @@ class TwitterIntegration < Thor
   end
 
   def tweets
-    twitter_client.search('#Agileaus', count: 50).results.collect do |result|
+    twitter_client.search('#Agileaus', count: 100).results.collect do |result|
       {
         tweet_id: result.id,
         text: result.text,
-        twitter_username: result.user.screen_name
+        username: result.user.screen_name,
+        name: result.user.name,
+        bio: result.user.description,
+        avatar_url: result.user.profile_image_url.gsub(/_normal/, '')
       }.to_json
     end
   end
