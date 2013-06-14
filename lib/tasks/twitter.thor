@@ -4,8 +4,8 @@ require 'ostruct'
 
 class TwitterIntegration < Thor
 
-  desc 'scan_for_mentions', 'scans twitter for mentions of Hooroo'
-  def scan_for_mentions(env, consumer_key, consumer_secret, oauth_token, oauth_token_secret)
+  desc 'scan_for_agile_aus', 'scans Twitter for #Agileaus tweets'
+  def scan_for_agile_aus(env, consumer_key, consumer_secret, oauth_token, oauth_token_secret)
     @env = env
 
     Twitter.configure do |c|
@@ -15,11 +15,14 @@ class TwitterIntegration < Thor
       c.oauth_token_secret  = oauth_token_secret
     end
 
-    tweets.each do |tweet|
-      req = Net::HTTP::Post.new(config.endpoint, initheader = { 'Content-Type' =>'application/json' })
-      req.body = tweet
-      Net::HTTP.new(config.host, config.port).start { |http| http.request(req) }
-    end
+    # tweets.each do |tweet|
+      # req = Net::HTTP::Post.new(config.endpoint, initheader = { 'Content-Type' =>'application/json' })
+      # req.body = tweet
+      # Net::HTTP.new(config.host, config.port).start { |http| http.request(req) }
+    # end
+
+    require 'pry'
+    binding.pry
   end
 
   private
@@ -39,7 +42,7 @@ class TwitterIntegration < Thor
   end
 
   def host
-    development? ? 'localhost' : 'leaderboard.hooroo.com'
+    development? ? 'localhost' : 'agile-aus-2013.leaderboard.hooroo.com'
   end
 
   def port
@@ -47,12 +50,11 @@ class TwitterIntegration < Thor
   end
 
   def tweets
-    (twitter_client.mentions_timeline || []).collect do |status|
+    twitter_client.search('#Agileaus', count: 50).results.collect do |result|
       {
-        tweet_id: status.id,
-        text: status.text,
-        twitter_username: status.user.screen_name,
-        followers_count: status.user.followers_count,
+        tweet_id: result.id,
+        text: result.text,
+        twitter_username: result.user.screen_name
       }.to_json
     end
   end
