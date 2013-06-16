@@ -10,6 +10,6 @@ module ApplicationHelper
   end
 
   def organisation_url org
-    "http://#{org}.#{request.env['HTTP_HOST']}"
+    "http://#{org}.#{request.env['HTTP_HOST'].gsub(/www\./, '')}"
   end
 end
