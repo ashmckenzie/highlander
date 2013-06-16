@@ -1,5 +1,10 @@
 Highlander::Application.routes.draw do
 
+  match '(*foo)' => redirect { |p|
+    "http://hooroo.hilander.io/#{p[:foo]}"
+  },
+  constraints: { host: 'leaderboard.hooroo.com' }, via: [ :get ]
+
   namespace :api do
 
     Metric::NAMES.each do |metric|
@@ -12,9 +17,6 @@ Highlander::Application.routes.draw do
       resources :github,  only: [ :create ]
       resources :twitter, only: [ :create ]
     end
-  end
-
-  namespace :admin do
   end
 
   get   '/signout' => 'sessions#destroy', as: :signout
