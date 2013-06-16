@@ -37,15 +37,17 @@
         <h1><%= link_to image_tag("logo.svg", alt: "Hilander"), root_path %>&nbsp;</h1>
 
         <nav>
-          <ul>
-            <%- if signed_in? -%>
-              <li class="username">Hello there, <strong><%= current_user.name %></strong>!</li>
-              <li><%= link_to 'Account', user_path(current_user) %></li>
-              <li><%= link_to 'Sign out', signout_path %></li>
-            <%- else -%>
-              <li class="sign-in"><a href="/auth/google_apps">Sign in</a></li>
-            <%- end -%>
-          </ul>
+          <%- if current_organisation.set? %>
+            <ul>
+              <%- if signed_in? -%>
+                <li class="username">Hello there, <strong><%= current_user.name %></strong>!</li>
+                <li><%= link_to 'Account', user_path(current_user) %></li>
+                <li><%= link_to 'Sign out', signout_path %></li>
+              <%- else -%>
+                <li class="sign-in"><a href="/auth/google_apps">Sign in</a></li>
+              <%- end -%>
+            </ul>
+          <% end %>
         </nav>
       </div>
 
