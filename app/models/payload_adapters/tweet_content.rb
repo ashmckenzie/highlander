@@ -13,7 +13,7 @@ module PayloadAdapters
     end
 
     def high_value?
-      links_to_hooro?
+      links_to_agile_aus?
     end
 
     def shortened_link_matcher
@@ -24,9 +24,8 @@ module PayloadAdapters
 
     attr_reader :content
 
-    # TODO: this needs to be managed outside of code. Refs to Hooroo != good
-    def links_to_hooro?
-      unshortened_content.downcase.include? 'hooroo.com'
+    def links_to_agile_aus?
+      unshortened_content.downcase.include? 'agileaustralia.com.au'
     end
 
     def unshortened_content
