@@ -41,6 +41,7 @@
             <ul>
               <%- if signed_in? -%>
                 <li class="username">Hello there, <strong><%= current_user.name %></strong>!</li>
+                <li class="bounties"><%= link_to unclaimed_bounties_text, bounties_path %></li>
                 <li><%= link_to 'Account', user_path(current_user) %></li>
                 <li><%= link_to 'Sign out', signout_path %></li>
               <%- else -%>

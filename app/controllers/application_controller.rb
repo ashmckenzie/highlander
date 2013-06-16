@@ -32,8 +32,13 @@ class ApplicationController < ActionController::Base
     Organisation.instance
   end
 
+  def unclaimed_bounties
+    Bounty.unclaimed.count
+  end
+
   helper_method :current_user
   helper_method :current_organisation
+  helper_method :unclaimed_bounties
   helper_method :signed_in?
 
 end
