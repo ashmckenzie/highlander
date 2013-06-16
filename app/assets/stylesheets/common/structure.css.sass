@@ -42,24 +42,25 @@ body
     margin-top: 0
     padding: 0
 
-  li
-    height: 35px
-    float: right
-    line-height: 35px
-    margin-right: 10px
-    padding-bottom: 2px
-    width: 75%
+    li
+      height: 35px
+      float: right
+      line-height: 35px
+      margin-right: 10px
+      padding-bottom: 2px
+      width: 65%
 
-    &.username
-      font-size: .9em
-      text-align: right
-    &.bounties .count
-      background-color: red
-      padding: 3px 5px 3px 5px
-      border-radius: 8px
+      &.username
+        width: 85%
+        font-size: .9em
+        text-align: right
+      &.bounties .count
+        background-color: red
+        padding: 3px 5px 3px 5px
+        border-radius: 8px
 
-    a
-      +hl-button
+      a
+        +hl-button
 
 .hero
   background: palette(2, $texture: true)
