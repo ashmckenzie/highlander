@@ -57,13 +57,12 @@ class BountiesController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_bounty
-      @bounty = Bounty.find(params[:id])
-    end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def bounty_params
-      params.require(:bounty).permit(:name, :description, :reward, :claimed_by_id, :needs_claiming_by, :claimed_at)
-    end
+  def set_bounty
+    @bounty = Bounty.find(params[:id])
+  end
+
+  def bounty_params
+    params.require(:bounty).permit(:name, :description, :reward, :claimed_by_id, :needs_claiming_by, :claimed_at)
+  end
 end
