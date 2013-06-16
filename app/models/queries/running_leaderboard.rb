@@ -14,7 +14,7 @@ module Queries
     def query
       users_relation
         .select('users.*, coalesce(sum(events.value), 0) as running_score, (select count(id) from achievements a where a.user_id = users.id) as total_badges')
-        .joins("left outer join events on events.user_id = users.id and events.created_at > '#{running_period_start.to_s(:db)}'")
+        .joins("left outer join events on events.user_id = users.id")
         .group('users.id')
         .order('running_score DESC, total_badges DESC')
     end
