@@ -41,17 +41,15 @@
 
     <% end %>
 
-  <% else %>
-
-    <h2>Organisations experiencing the quickening</h2>
-
-    <ul class="organisations">
-      <li>
-        <%= link_to image_tag(asset_path('hooroo.png')), organisation_url('hooroo') %>
-        <p>Hooroo</p>
-      </li>
-    </ul>
-
   <% end %>
+
+  <h2>Organisations experiencing the quickening</h2>
+
+  <ul class="organisations">
+    <li>
+      <%= link_to image_tag(asset_path('hooroo.png')), organisation_url('hooroo') %>
+      <p>Hooroo</p>
+    </li>
+  </ul>
 
 </section>
