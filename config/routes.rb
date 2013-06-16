@@ -1,9 +1,18 @@
 Highlander::Application.routes.draw do
 
+  # Redirect leaderboard.hooroo.com -> hooroo.hilander.io
+  #
   match '(*foo)' => redirect { |p|
     "http://hooroo.hilander.io/#{p[:foo]}"
   },
   constraints: { host: 'leaderboard.hooroo.com' }, via: [ :get ]
+
+  # Redirect thequickening.herokuapp.com -> www.hilander.io
+  #
+  match '(*foo)' => redirect { |p|
+    "http://hilander.io"
+  },
+  constraints: { host: 'thequickening.herokuapp.com' }, via: [ :get ]
 
   namespace :api do
 
