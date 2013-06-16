@@ -29,7 +29,7 @@ class ApplicationController < ActionController::Base
   end
 
   def set_organisation
-    Organisation.instance.name = 'hooroo'
+    Organisation.instance.name = request.subdomain
   end
 
   def current_organisation

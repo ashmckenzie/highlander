@@ -8,4 +8,8 @@ module ApplicationHelper
     content_tag(:span, 'Bounties ') <<
     ((unclaimed_bounties > 0) ? content_tag(:span, unclaimed_bounties, class: 'count') : nil)
   end
+
+  def organisation_url org
+    "http://#{org}.#{request.env['HTTP_HOST']}"
+  end
 end

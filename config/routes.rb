@@ -22,12 +22,21 @@ Highlander::Application.routes.draw do
   get   '/signout' => 'sessions#destroy', as: :signout
   post  '/auth/google_apps/callback' => 'sessions#create'
 
-  resources :users
-  resources :badges, only: [ :index, :show ]
-  resources :bounties
+  constraints(:subdomain => /.+/) do
 
-  get '/about' => 'high_voltage/pages#show', id: 'about'
+    resources :users
+    resources :badges, only: [ :index, :show ]
+    resources :bounties
 
-  root to: 'welcome#index'
+    get '/about' => 'high_voltage/pages#show', id: 'about'
 
+    root to: 'welcome#index'
+  end
+
+  constraints(:subdomain => /.*/) do
+
+    resources :registrations, only: [ :index, :create ]
+
+    root to: 'registrations#index', as: 'root_register'
+  end
 end
