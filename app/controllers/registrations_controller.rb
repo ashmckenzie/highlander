@@ -5,16 +5,18 @@ class RegistrationsController < ApplicationController
   end
 
   def create
-    redirect_to :index unless registered?
+    if registered?
+      redirect_to action: :index
+    else
+      @registration = Registration.new(registration_params)
 
-    @registration = Registration.new(registration_params)
-
-    respond_to do |format|
-      if @registration.save
-        cookies['registration'] = registration_params[:email]
-        format.html { redirect_to root_register_path, notice: 'Registration was successfully created.' }
-      else
-        format.html { render action: 'index' }
+      respond_to do |format|
+        if @registration.save
+          cookies['registration'] = registration_params[:email]
+          format.html { redirect_to root_register_path, notice: 'Thanks for your expression of interest!' }
+        else
+          format.html { render action: 'index' }
+        end
       end
     end
   end
