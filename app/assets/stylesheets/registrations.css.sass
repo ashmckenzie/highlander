@@ -1,0 +1,49 @@
+@import "utils"
+@import "common/widgets"
+@import "common/**/*"
+
+#main-container
+  margin-top: -182px
+
+section.registrations
+  padding: 0 10px 10px 10px
+  text-align: center
+
+  .organisations
+    display: table
+    margin: 0 auto
+    text-align: center
+    li
+      display: table-cell
+      list-style: none
+      width: 180px
+      img
+        border-radius: 300px
+
+  form
+    .field
+      padding: 10px 0
+
+    .actions
+      padding: 20px 0
+
+    #error_explanation
+      li
+        list-style: none
+
+    input
+      font-size: 1.1em
+      margin: 8px auto
+      padding: 10px
+      width: 200px
+      &[type="text"]
+        font-size: 1.6em
+        text-align: center
+        width: 600px
+
+    textarea
+      height: 150px
+
+    input.button
+      border: 0
+      padding: 12px

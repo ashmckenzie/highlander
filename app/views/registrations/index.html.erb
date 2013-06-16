@@ -1,0 +1,61 @@
+<%- provide :head do -%>
+   <%= stylesheet_link_tag :registrations -%>
+<%- end -%>
+
+<%- provide :pre_main do -%>
+  <div class="hero">
+    <div class="container">
+      <h2>Hilander turns work into a game. Be awesome, earn badges and become the leader!</h2>
+    </div>
+  </div>
+<%- end -%>
+
+<section class="container registrations">
+
+  <% unless @registered %>
+
+    <h2>Register your interest in Hilander!</h2>
+
+    <h3>We'll get in touch when we have something for you.</h3>
+
+    <%= form_for(@registration) do |f| %>
+      <% if @registration.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@registration.errors.count, "error") %> prohibited this registration from being saved:</h2>
+
+          <ul>
+          <% @registration.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+          </ul>
+        </div>
+      <% end %>
+
+      <div class="field">
+        <%= f.text_field :email, placeholder: 'your@email.here' %>
+      </div>
+
+      <div class="actions">
+        <%= f.submit value: 'Register', class: 'button' %>
+      </div>
+
+    <% end %>
+
+  <% else %>
+
+    <h2>Organisations experiencing the quickening</h2>
+
+    <ul class="organisations">
+      <li>
+        <%= link_to image_tag(asset_path('hooroo.png')), organisation_url('hooroo') %>
+        <p>Hooroo</p>
+      </li>
+      <li>
+        <%= link_to image_tag(asset_path('agile-aus.png')), organisation_url('agileaus') %>
+        <p>Agile Australia</p>
+      </li>
+    </ul>
+
+  <% end %>
+
+</section>
