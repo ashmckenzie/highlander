@@ -33,8 +33,8 @@ class Heroku < Thor
 
   def after_deploy
     puts '> Running after_deploy tasks...'
-    update_release_git_sha
     schema_and_data_migrations
+    update_release_git_sha
   end
 
   #--------------------------------------------------------------------------#
