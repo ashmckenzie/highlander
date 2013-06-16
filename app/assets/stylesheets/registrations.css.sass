@@ -9,7 +9,11 @@ section.registrations
   padding: 0 10px 10px 10px
   text-align: center
 
-  .organisations
+  section.organisations
+    clear: both
+    padding-top: 10px
+
+  ul.organisations
     display: table
     margin: 0 auto
     padding: 0
@@ -32,15 +36,26 @@ section.registrations
       li
         list-style: none
 
+    // input
+    //   clear: both
+    //   margin: 8px auto
+    //   padding: 10px
+    //   +span-columns(8)
+    //   +shift(1)
+    //   &[type="text"]
+    //     font-size: 1.6em
+    //     text-align: center
+    //     +span-columns(12)
     input
-      font-size: 1.1em
       margin: 8px auto
       padding: 10px
-      width: 200px
+      &[type="submit"]
+        +shift(4)
+        +span-columns(4)
       &[type="text"]
         font-size: 1.6em
         text-align: center
-        width: 600px
+        +span-columns(12)
 
     textarea
       height: 150px
@@ -48,3 +63,26 @@ section.registrations
     input.button
       border: 0
       padding: 12px
+
+// =================================================
+// -----------------Media Queries-------------------
+// =================================================
+
++media($not-phone)
+  section.registrations
+
+    section.organisations
+      padding-top: 20px
+
+    form
+      input
+        margin: 8px auto
+        padding: 10px
+        +shift(3)
+        &[type="submit"]
+          +shift(5)
+          +span-columns(2)
+        &[type="text"]
+          font-size: 1.6em
+          text-align: center
+          +span-columns(6)
