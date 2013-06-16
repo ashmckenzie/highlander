@@ -1,10 +1,10 @@
-# Highlander
+# Hilander
 
 > There can be only one
 
 ## Intent
 
-Highlanders goal is to encourage and promote awesome work through points and badges.  Focusing on rewarding great work through positive point allocation instead of negative point deduction is a major goal of the project.
+Hilanders goal is to encourage and promote awesome work through points and badges.  Focusing on rewarding great work through positive point allocation instead of negative point deduction is a major goal of the project.
 
 ## Getting started
 

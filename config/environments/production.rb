@@ -82,7 +82,7 @@ Highlander::Application.configure do
   config.log_formatter = ::Logger::Formatter.new
 
   config.middleware.use ExceptionNotifier,
-    sender_address: 'highlander-team@hooroo.com',
-    exception_recipients: 'highlander-team@hooroo.com',
+    sender_address: 'hilander-team@hooroo.com',
+    exception_recipients: 'hilander-team@hooroo.com',
     ignore_exceptions: ExceptionNotifier.default_ignore_exceptions # + [RuntimeError]
 end
