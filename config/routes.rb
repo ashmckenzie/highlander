@@ -22,6 +22,13 @@ Highlander::Application.routes.draw do
   get   '/signout' => 'sessions#destroy', as: :signout
   post  '/auth/google_apps/callback' => 'sessions#create'
 
+  constraints(:subdomain => 'www') do
+
+    resources :registrations, only: [ :index, :create ]
+
+    root to: 'registrations#index', as: 'root_register'
+  end
+
   constraints(:subdomain => /.+/) do
 
     resources :users
