@@ -2,17 +2,20 @@
 @mixin hl-button
   +transition(opacity, .4s)
   background: palette(5)
+  border: none
   color: palette(1, lighten, 50)
+  cursor: pointer
   border-radius: $radius
   display: block
   font-size: .75rem
   font-weight: bold
-  height: 100%
   text-align: center
   text-shadow: 0 2px 0 palette(5, darken, 10)
   text-transform: uppercase
   &:hover
     background: palette(5, lighten, 8)
+  &.large
+    font-size: 1.2rem
 
 @mixin score
   color: palette(6)
@@ -30,15 +33,17 @@
   .total-score, .running-score, .total-badges
     +score
 
-@mixin blurb
-  +nice-font(regular)
+@mixin single-column
   +span-columns(8)
   +shift(2)
+
+@mixin blurb
+  +nice-font(regular)
   font-size: 1.8rem
   text-align: left
   margin-top: 1em
   p
-    font-size: 1.1rem
+    font-size: 1.2rem
 
 
 // To be used in special cases only
@@ -62,3 +67,6 @@
 
 .blurb
   +blurb
+
+.single-column
+  +single-column

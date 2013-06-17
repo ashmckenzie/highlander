@@ -11,55 +11,58 @@
   </div>
 <%- end -%>
 
-<section class="container registrations">
+<section class="registrations single-column">
 
   <% unless @registered %>
 
     <section class="blurb">
-      <p>We won't be spamming you or anything like that. In fact, you'll only hear from us on <em>really</em> special occasions.</p>
-      <p>Go ahead, entrust us with your email address and we'll keep you posted about our baby project. Thanks for stopping by!</p>
+      <p>We won't be spamming you or anything like that. In fact, you'll only hear from us on <em>really</em> special occasions. Go ahead, fill 'er out and we'll keep you posted about our baby project. Thanks for stopping by!</p>
     </section>
 
     <%= form_for(@registration) do |f| %>
       <% if @registration.errors.any? %>
+
         <div id="error_explanation">
-          <h2><%= pluralize(@registration.errors.count, "error") %> prohibited this registration from being saved:</h2>
+          <h2>Whoa there! We found <%= pluralize(@registration.errors.count, "error") %>:</h2>
 
           <ul>
           <% @registration.errors.full_messages.each do |msg| %>
             <li><%= msg %></li>
           <% end %>
           </ul>
+
         </div>
       <% end %>
 
-      <div class="field">
-        <%= f.text_field :email, placeholder: 'your@email.here' %>
-      </div>
+      <p>
+        <%= f.label :email %>
+        <%= f.email_field :email, placeholder: 'your@email.here' %>
+      </p>
 
-      <div class="actions">
-        <%= f.submit value: 'Register', class: 'button' %>
-      </div>
+      <p class="button-holder">
+        <%= f.button 'Register!', class: 'button large' %>
+      </p>
 
     <% end %>
 
   <% end %>
 
-  <section class="container organisations">
+</section>
 
-    <h2>Organisations experiencing the quickening</h2>
 
-    <ul class="organisations">
-      <li>
-        <%= link_to image_tag(asset_path('hooroo.png')), organisation_url('hooroo') %>
-        <p>Hooroo</p>
-      </li>
-      <li>
-        <%= link_to image_tag(asset_path('agile-aus.png')), organisation_url('agileaus') %>
-        <p>Agile Australia</p>
-      </li>
-    </ul>
+<section class="organisations single-column">
 
-  </section>
+  <h2>Organisations experiencing the quickening</h2>
+
+  <ul>
+    <li>
+      <%= link_to image_tag(asset_path('hooroo.png')), organisation_url('hooroo') %>
+      <p>Hooroo</p>
+    </li>
+    <li>
+      <%= link_to image_tag(asset_path('agile-aus.png')), organisation_url('agileaus') %>
+      <p>Agile Australia</p>
+    </li>
+  </ul>
 
 </section>
