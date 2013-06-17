@@ -9,3 +9,16 @@
 @mixin nice-font($weight:light)
   font-family: "theserif-#{$weight}", Helvetica, Arial, sans-serif
   font-weight: normal
+
+@mixin placeholder
+  &.placeholder
+    @content
+  &:-moz-placeholder
+    @content
+  &::-webkit-input-placeholder
+    @content
+
+@mixin input-focus
+  &:focus
+    +box-shadow(0 0 10px 0 rgba(palette(5), .5) )
+    outline: none

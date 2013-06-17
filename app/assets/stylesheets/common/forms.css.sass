@@ -1,7 +1,14 @@
 input[type=text], input[type=email], textarea
+  +transition(all, .4s)
+  +input-focus
   background: palette(1, lighten, 25)
   border: 1px solid palette(2, lighten, 25)
+  color: palette(6, darken, 20)
   width: 20rem
 
-fieldset
-  p
+  +placeholder
+    color: palette(6, lighten, 10)
+    font-weight: normal
+
+button
+  +input-focus
