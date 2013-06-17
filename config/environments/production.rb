@@ -87,9 +87,10 @@ Highlander::Application.configure do
     exception_recipients: 'hilander-team@hooroo.com',
     ignore_exceptions: ExceptionNotifier.default_ignore_exceptions # + [RuntimeError]
 
-  config.action_dispatch.rack_cache = {
-    metastore: Dalli::Client.new,
-    entitystore: 'file:tmp/cache/rack/body',
-    allow_reload: false
-  }
+  config.cache_store = :dalli_store,
+    ENV['MEMCACHIER_SERVERS'].split(','),
+    {
+      username: ENV['MEMCACHIER_USERNAME'],
+      password: ENV['MEMCACHIER_PASSWORD']
+    }
 end
