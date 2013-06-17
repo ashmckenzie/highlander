@@ -5,7 +5,7 @@ module ApplicationHelper
   end
 
   def unclaimed_bounties_text
-    content_tag(:span, 'Bounties ') <<
+    "Bounties ".html_safe <<
     ((unclaimed_bounties > 0) ? content_tag(:span, unclaimed_bounties, class: 'count') : nil)
   end
 
