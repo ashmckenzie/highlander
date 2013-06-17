@@ -87,7 +87,7 @@ Highlander::Application.configure do
     exception_recipients: 'hilander-team@hooroo.com',
     ignore_exceptions: ExceptionNotifier.default_ignore_exceptions # + [RuntimeError]
 
-  config.cache_store = :dalli_store, ENV["MEMCACHIER_SERVERS"].split(','),
+  config.cache_store = :dalli_store, ENV["MEMCACHIER_SERVERS"],
     {
       username: ENV["MEMCACHIER_USERNAME"],
       password: ENV["MEMCACHIER_PASSWORD"]
