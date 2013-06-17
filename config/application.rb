@@ -30,5 +30,7 @@ module Highlander
     config.generators do |g|
       g.fixture_replacement :factory_girl
     end
+
+    config.cache_store = :dalli_store
   end
 end
