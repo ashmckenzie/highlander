@@ -5,7 +5,8 @@
 <%- provide :pre_main do -%>
   <div class="hero">
     <div class="container">
-      <h2>Hilander turns work into a game. Be awesome, earn badges and become the leader!</h2>
+      <h2>Have we piqued your interest? Let's stay in touch!</h2>
+      <h3>We've got grand plans for Hilander, and we want to share them with you</h3>
     </div>
   </div>
 <%- end -%>
@@ -14,9 +15,7 @@
 
   <% unless @registered %>
 
-    <h2>Register your interest in Hilander!</h2>
 
-    <h3>We'll get in touch when we have something for you.</h3>
 
     <%= form_for(@registration) do |f| %>
       <% if @registration.errors.any? %>
