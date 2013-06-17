@@ -49,6 +49,7 @@ group :development, :test do
   gem 'capybara'
   gem 'letter_opener'
   gem 'rails-erd'
+  gem 'heroku'
 end
 
 group :heroku do
