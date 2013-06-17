@@ -8,7 +8,9 @@
 
   <h2 class="name">
     <%= link_to @user.name, @user %>
-    <% if can? :edit, @user %><sup>(<%= link_to 'edit', edit_user_path(current_user) %>)</sup><% end %>
+    <% if can? :edit, @user %>
+      <sup>(<%= link_to 'edit', edit_user_path(current_user) %>)</sup>
+    <% end %>
   </h2>
 
   <%- if @user.twitter.setup? %>
@@ -17,7 +19,9 @@
     </h3>
   <%- end %>
 
-  <p class="bio"><%= @user.bio %></p>
+  <p class="bio">
+    <%= @user.bio %>
+  </p>
 
   <span class="clrfx"><!-- Confucious say, if clearing span in forest, but no-one there to see it, clearing span exist? --></span>
 
