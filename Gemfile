@@ -37,6 +37,7 @@ gem 'omniauth-google-apps'
 gem 'unshorten'
 
 gem 'dalli'
+gem 'rack-cache'
 
 group :development, :test do
   gem 'pry'
