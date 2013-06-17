@@ -32,8 +32,8 @@ feature 'Hipster Badge' do
       page.should have_content @first_jenkins_green_job_badge.description
       page.should have_content "#{metric.default_unit} All-time"
 
-      page.should have_content "You got the #{@first_time_badge.description} badge before it was cool"
-      page.should_not have_content "You got the #{@first_jenkins_green_job_badge.description} badge before it was cool"
+      page.should have_content "You unlocked the #{@first_time_badge.description} badge before it was cool"
+      page.should_not have_content "You unlocked the #{@first_jenkins_green_job_badge.description} badge before it was cool"
     end
   end
 
