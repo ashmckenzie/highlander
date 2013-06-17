@@ -36,6 +36,8 @@ gem 'twitter'
 gem 'omniauth-google-apps'
 gem 'unshorten'
 
+gem 'dalli'
+
 group :development, :test do
   gem 'pry'
   gem 'pry-debugger'

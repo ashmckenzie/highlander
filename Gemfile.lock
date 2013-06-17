@@ -82,6 +82,7 @@ GEM
     coffee-script-source (1.6.2)
     columnize (0.3.6)
     daemons (1.1.9)
+    dalli (2.6.4)
     debug_inspector (0.0.2)
     debugger (1.6.0)
       columnize (>= 0.3.1)
@@ -284,6 +285,7 @@ DEPENDENCIES
   cancan
   capybara
   coffee-rails (~> 4.0.0)
+  dalli
   data_migration!
   draper
   exception_notification!
