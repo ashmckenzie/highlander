@@ -15,7 +15,10 @@
 
   <% unless @registered %>
 
-
+    <section class="blurb">
+      <p>We won't be spamming you or anything like that. In fact, you'll only hear from us on <em>really</em> special occasions.</p>
+      <p>Go ahead, entrust us with your email address and we'll keep you posted about our baby project. Thanks for stopping by!</p>
+    </section>
 
     <%= form_for(@registration) do |f| %>
       <% if @registration.errors.any? %>

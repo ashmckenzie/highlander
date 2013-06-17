@@ -30,6 +30,17 @@
   .total-score, .running-score, .total-badges
     +score
 
+@mixin blurb
+  +nice-font(regular)
+  +span-columns(8)
+  +shift(2)
+  font-size: 1.8rem
+  text-align: left
+  margin-top: 1em
+  p
+    font-size: 1.1rem
+
+
 // To be used in special cases only
 @mixin clrfx
   background: none
@@ -48,3 +59,6 @@
 
 .clrfx
   +clrfx
+
+.blurb
+  +blurb
