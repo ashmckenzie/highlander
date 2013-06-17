@@ -19,7 +19,7 @@ module AchievementCalculators
       end
 
       def tag
-        "You got the #{achieved_badge.description} badge before it was cool"
+        "You unlocked the #{achieved_badge.description} badge before it was cool"
       end
 
       def hipster_badge
