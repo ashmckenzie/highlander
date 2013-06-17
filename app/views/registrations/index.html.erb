@@ -21,17 +21,7 @@
 
     <%= form_for(@registration) do |f| %>
       <% if @registration.errors.any? %>
-
-        <div id="error_explanation">
-          <h2>Whoa there! We found <%= pluralize(@registration.errors.count, "error") %>:</h2>
-
-          <ul>
-          <% @registration.errors.full_messages.each do |msg| %>
-            <li><%= msg %></li>
-          <% end %>
-          </ul>
-
-        </div>
+          <p class="flash warning">Whoa there! We found <%= pluralize(@registration.errors.count, "error") %>: <strong><%= @registration.errors.full_messages.join(',') %></strong></p>
       <% end %>
 
       <p>
@@ -52,16 +42,16 @@
 
 <section class="organisations single-column">
 
-  <h2>Organisations experiencing the quickening</h2>
+  <h2>Others who've experienced The Quickening:</h2>
 
   <ul>
     <li>
-      <%= link_to image_tag(asset_path('hooroo.png')), organisation_url('hooroo') %>
-      <p>Hooroo</p>
+      <%= link_to image_tag(asset_path('third-party-logos/hooroo.png'), alt: "Hooroo Logo" ), organisation_url('hooroo') %>
+      Hooroo
     </li>
     <li>
-      <%= link_to image_tag(asset_path('agile-aus.png')), organisation_url('agileaus') %>
-      <p>Agile Australia</p>
+      <%= link_to image_tag(asset_path('third-party-logos/agile-aus.png'), alt: "Agile Australia Logo" ), organisation_url('agileaus') %>
+      Agile Australia
     </li>
   </ul>
 

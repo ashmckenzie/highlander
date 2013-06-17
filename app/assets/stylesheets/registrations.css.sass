@@ -3,23 +3,19 @@
 @import "common/**/*"
 
 #main-container
-  margin-top: -160px
+  margin-top: -190px
   padding-top: 10px
-
-.registrations
-
 
 .organisations
 
   ul
-    margin: 0 auto
-    padding: 0
+    +structural-list
+    overflow: auto
     text-align: center
-  li
-    list-style: none
-    width: 180px
-    img
-      border-radius: 300px
+  img
+    border-radius: 100%
+    display: block
+    margin: 20px auto 10px
 
 form
   margin: 25px 0
@@ -50,8 +46,9 @@ form
 // =================================================
 
 +media($not-phone)
-  section.registrations
+  #main-container
+    margin-top: -160px
 
-    section.organisations
-      padding-top: 20px
-
+  .organisations li
+    +span-columns(1 of 4)
+    +omega(4n)

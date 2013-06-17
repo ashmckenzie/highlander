@@ -71,7 +71,6 @@ body
 
 .hero
   background: palette(2, $texture: true)
-  color: palette(1, lighten, 25)
   clear: both
   padding-top: 20px
   padding-bottom: 210px
@@ -79,6 +78,7 @@ body
 
   h2
     +nice-font
+    color: palette(1, lighten, 25)
     font-size: 1.75rem
     line-height: 1.1em
     padding: 0 1em
@@ -87,7 +87,8 @@ body
 
   h3
     +nice-font(regular)
-    font-size: 1.5rem
+    color: palette(1, lighten, 25)
+    font-size: 1.2rem
     line-height: 1.1em
     margin: .3em 0 0
     text-shadow: 0 1px 0 palette(4)
@@ -137,6 +138,8 @@ body
     padding-top: 50px
     h2
       font-size: 2.5rem
+    h3
+      font-size: 1.5rem
 
   .sidebar
     +span-columns(3)

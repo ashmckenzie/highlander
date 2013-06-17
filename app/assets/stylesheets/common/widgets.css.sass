@@ -34,8 +34,11 @@
     +score
 
 @mixin single-column
-  +span-columns(8)
-  +shift(2)
+  +span-columns(10)
+  +shift(1)
+  +media($not-phone)
+    +span-columns(8)
+    +shift(2)
 
 @mixin blurb
   +nice-font(regular)
@@ -44,6 +47,10 @@
   margin-top: 1em
   p
     font-size: 1.2rem
+
+@mixin structural-list
+  list-style: none
+  padding: 0
 
 
 // To be used in special cases only
