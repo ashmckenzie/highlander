@@ -18,8 +18,8 @@
     <% bounties.each do |bounty| %>
       <tr>
         <td>
-          <a name="bounty-<%= bounty.id %>" />
-          <%= link_to bounty.description, "#bounty-#{bounty.id}" %>
+          <a name="bounty-<%= bounty.slug %>" />
+          <%= link_to bounty.description, "#bounty-#{bounty.slug}" %>
         </td>
         <td><%= bounty.reward %></td>
         <td><%= bounty.created_by.name %></td>
