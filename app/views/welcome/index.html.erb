@@ -16,21 +16,7 @@
 
   <%- @users.each_with_index do |user, i| -%>
     <li class="rankee">
-      <%= link_to user_path(user) do %>
-        <p class="rank"><%= (i + 1) %></p>
-
-        <ul class="details">
-          <li class="avatar"><%= image_tag user.avatar_url 90 %></li>
-          <li class="name"><%= user.name %></li>
-          <li class="bio"><%= user.bio %></li>
-        </ul>
-
-        <ul class="scores">
-          <li class="total-score"><span><%= user.running_score %></span> Score</li>
-          <li class="total-badges"><span><%= user.total_badges %></span> Badges</li>
-        </ul>
-
-      <%- end -%>
+      <%= render partial: 'shared/rankee', locals: { rankee: OpenStruct.new(user: user, index: i + 1) } %>
     </li>
   <%- end -%>
 
