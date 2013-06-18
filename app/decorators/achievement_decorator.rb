@@ -6,11 +6,11 @@ class AchievementDecorator < Draper::Decorator
   include ActionView::Helpers::DateHelper
 
   def description
-    achievement.description || badge.description
+    achievement.description.blank? ? badge.description : badge.description
   end
 
   def tag
-    achievement.achievement_tag || achievement.badge_tag
+    achievement.achievement_tag.blank? ? achievement.badge_tag : achievement.achievement_tag
   end
 
   def badge_takeup
