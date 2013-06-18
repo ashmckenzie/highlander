@@ -10,7 +10,7 @@ class AchievementDecorator < Draper::Decorator
   end
 
   def tag
-    achievement.achievement_tag.blank? ? achievement.badge_tag : achievement.achievement_tag
+    achievement.achievement_tag.blank? ? achievement.badge_tag : achievement.achievement_tag.truncate(70, separator: ' ', omission: '…')
   end
 
   def badge_takeup
