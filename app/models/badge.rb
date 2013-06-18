@@ -1,5 +1,7 @@
 class Badge < ActiveRecord::Base
+
   include Enabler
+  include Slugger
 
   has_many :achievements
   has_many :users, through: :achievements
@@ -16,6 +18,10 @@ class Badge < ActiveRecord::Base
 
   def is_bounty_badge?
     name == 'bounty_claimed'
+  end
+
+  def to_param
+    slug
   end
 
   private
