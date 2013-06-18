@@ -10,6 +10,7 @@ module PayloadAdapters
       payload[:ref]
     end
 
+    # TODO: use Github service username
     def author_email
       payload[:commits].first[:author][:email]
     end
