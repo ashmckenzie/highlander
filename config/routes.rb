@@ -13,15 +13,8 @@ Highlander::Application.routes.draw do
     end
   end
 
-  namespace :admin do
-  end
-
-  # get   '/signout' => 'sessions#destroy', as: :signout
-  # post  '/auth/google_apps/callback' => 'sessions#create'
-
   resources :users
   resources :badges, only: [ :index, :show ]
-  # resources :bounties
 
   get '/about' => 'high_voltage/pages#show', id: 'about'
 
