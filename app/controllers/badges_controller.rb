@@ -5,6 +5,6 @@ class BadgesController < ApplicationController
   end
 
   def show
-    @badge = Queries::BadgesIncludingAchievedGroupedByMetric.new(relation: Badge.where("badges.id = ?", params[:id])).query
+    @badge = Queries::BadgesIncludingAchievedGroupedByMetric.new(relation: Badge.where_id_or_slug(params[:id])).query
   end
 end

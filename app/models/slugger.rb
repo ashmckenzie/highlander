@@ -4,7 +4,7 @@ module Slugger
   included do
     class << self
       alias_method :original_find, :find
-      alias_method :find, :with_id_or_slug
+      alias_method :find, :find_by_id_or_slug
     end
 
     validates :slug, uniqueness: true, presence: true, on: :create
@@ -23,9 +23,13 @@ module Slugger
 
   module ClassMethods
 
-    def with_id_or_slug lookup
+    def find_by_id_or_slug lookup
+      where_id_or_slug(lookup).first
+    end
+
+    def where_id_or_slug lookup
       query = lookup.to_s.match(/^\d+$/) ? "#{table_name}.id = ?" : "#{table_name}.slug = ?"
-      where(query, lookup).first
+      where(query, lookup)
     end
   end
 end
