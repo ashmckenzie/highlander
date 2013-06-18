@@ -17,11 +17,17 @@ module Queries
           achievements.*,
           badges.tag as badge_tag,
           achievements.tag as achievement_tag,
-          (SELECT COUNT(user_id) from achievements WHERE badge_id = badges.id) AS badge_takeup_count,
-          (SELECT ROUND(100.0 * (
-            (SELECT 1.0 * COUNT(user_id) FROM achievements WHERE badge_id = badges.id) /
-            (" + User.select('1.0 * COUNT(id)').point_earner.to_sql +  ")
-          ), 0))::integer AS badge_takeup_percentage
+          (
+            SELECT
+              COUNT(user_id)
+            FROM
+              achievements
+            JOIN users ON users.id = achievements.user_id
+            WHERE
+              users.enabled = 't' AND
+              users.leaderboarder = 't' AND
+              badge_id = badges.id
+            ) AS badge_takeup_count
         ")
         .order('achievements.created_at DESC')
     end
