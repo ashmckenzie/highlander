@@ -4,7 +4,7 @@ class TwitterDecoratorFactory
     if twitter_service
       TwitterDecorator.new(twitter_service)
     else
-      TwitterNullDecorator.new
+      NullTwitterDecorator.new
     end
   end
 end
