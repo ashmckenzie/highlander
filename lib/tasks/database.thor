@@ -3,8 +3,9 @@ require 'bundler'
 class Database < Thor
 
   desc 'pull', 'Restores the local DB from Production (Heroku)'
-  def pull(app = 'thequickening')
+  def pull(app = 'thequickening', db_name = 'highlander_development')
     @app = app
+    @db_name = db_name
 
     capture
     download
@@ -13,7 +14,7 @@ class Database < Thor
 
   private
 
-  attr_reader :app
+  attr_reader :app, :db_name
 
   def capture
     puts '> Capturing a backup...'
@@ -31,7 +32,7 @@ class Database < Thor
 
   def restore
     puts '> Restoring your dev DB from backup...'
-    system("pg_restore --verbose --clean --no-acl --no-owner -h localhost -d highlander_development latest.dump")
+    system("pg_restore --verbose --clean --no-acl --no-owner -h localhost -d #{db_name} latest.dump")
     puts 'done.'
     puts '            $$\                                $$$$$$\                                 $$\
             $$ |                              $$  __$$\                                $$ |
