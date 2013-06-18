@@ -4,7 +4,8 @@
   <ul class="details">
     <li class="avatar"><%= image_tag rankee.user.avatar_url 90 %></li>
     <li class="name"><%= rankee.user.name %></li>
-    <li class="bio"><%= rankee.user.bio %></li>
+    <li class="twitter-handle"><%= rankee.user.twitter.handle %></li>
+    <li class="bio"><%= rankee.user.bio.truncate(70, separator: ' ', omission: '…') %></li>
   </ul>
 
   <ul class="scores">
