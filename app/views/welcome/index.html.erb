@@ -15,9 +15,7 @@
   <li class="running">Leaderboard</li>
 
   <%- @users.each_with_index do |user, i| -%>
-    <li class="rankee">
-      <%= render partial: 'shared/rankee', locals: { rankee: OpenStruct.new(user: user, index: i + 1) } %>
-    </li>
+      <%= render partial: "shared/" << (i > 19 ? "simple_" : "") << "rankee", locals: { rankee: OpenStruct.new(user: user, index: i + 1) } %>
   <%- end -%>
 
 </ul>

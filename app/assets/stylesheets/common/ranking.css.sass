@@ -19,7 +19,7 @@
   text-align: center
   text-shadow: 0 2px 0 palette(1, lighten, 55)
 
-.rankee
+.rankee, .simple-rankee
   border-bottom: 1px solid palette(5, lighten, 55)
   overflow: hidden
   padding: 1em 0
@@ -42,6 +42,19 @@
   p
     margin: 0
 
+
+  .details
+
+    .name
+      +nice-font(regular)
+      font-size: 1.3rem
+
+    .bio
+      color: palette(6)
+      font-size: .8rem
+      line-height: 1.3em
+      margin: .5em .5em .5em 5em
+
   .rank
     +span-columns(1 of 8)
     +nice-font(bold)
@@ -52,35 +65,35 @@
     text-shadow: 0 1px 0 palette(4)
 
   .avatar
-    background: #000
-    border-radius: $radius
     float: left
-    height: 50px
-    overflow: hidden
     margin-right: 5%
+    width: 50px
+    span
+      background: #000
+      border-radius: $radius
+      display: block
+      overflow: hidden
+      width: 50px
 
+
+.rankee
+
+  .avatar span
+    height: 50px
 
   img
     display: block
     width: 50px
 
   .details
-    +span-columns(5 of 8)
+    +span-columns(6 of 8)
 
     .name
-      +nice-font(regular)
-      font-size: 1.3rem
       line-height: 1em
 
     .twitter-handle
       font-size: 1.0rem
       margin: 4px 0 8px 0
-
-    .bio
-      color: palette(6)
-      font-size: .8rem
-      line-height: 1.3em
-      margin: 0.5em 0.5em 0.5em 5.0em
 
   .scores
     list-style: none
@@ -100,21 +113,71 @@
     margin-top: 1em
 
 
+.simple-rankee
+
+  .details
+    +span-columns(7 of 8)
+
+    .name
+      +nice-font(bold)
+      span
+        +nice-font(regular)
+        color: palette(3)
+
+
+  .avatar span
+    width: 35px
+
+  img
+    display: block
+    width: 35px
+
+
 // =================================================
 // -----------------Media Queries-------------------
 // =================================================
 +media($not-phone)
 
-  .rankee
+  .rankee, .simple-rankee
     &:nth-child(2) .rank
       font-size: 5.5rem
 
     .rank
       font-size: 2.2rem
-      line-height: 90px
 
     .avatar
+      width: 90px
+      span
+        height: 90px
+
+    img
+      width: 90px
+
+    .details
+      +span-columns(5 of 8)
+
+      .bio
+        display: block
+        margin-left: 6em
+
+    .scores
+      .total-score, .total-badges, .running-score
+        margin-top: 2em
+
+      .total-badges
+        display: block
+
+    .last-updated
+      display: block
+
+  .rankee
+
+    .rank
+      line-height: 90px
+
+    .avatar span
       height: 90px
+      width: 90px
 
     img
       width: 90px
@@ -131,3 +194,20 @@
 
     .last-updated
       display: block
+
+
+  .simple-rankee
+
+    .rank
+      line-height: 50px
+
+    .avatar span
+      height: 50px
+      width: 50px
+
+    img
+      width: 50px
+
+    .details .bio
+      display: block
+

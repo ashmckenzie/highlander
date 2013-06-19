@@ -1,0 +1,10 @@
+<li class="simple-rankee">
+  <%= link_to user_path(rankee.user) do %>
+    <p class="rank"><%= (rankee.index) %></p>
+
+    <ul class="details">
+      <li class="avatar"><span><%= image_tag rankee.user.avatar_url 50 %></span></li>
+      <li class="name"><%= rankee.user.name %> <span>(<%= rankee.user.running_score %> points)</span></li>
+    </ul>
+  <%- end -%>
+</li>
