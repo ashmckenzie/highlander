@@ -100,8 +100,10 @@
 
     .total-score, .total-badges, .running-score
       +span-columns(1 of 8)
+      font-size: .7rem
       span
         color: palette(3)
+        font-size: 1.6rem
 
     .total-badges
       display: none
@@ -123,6 +125,7 @@
       span
         +nice-font(regular)
         color: palette(3)
+        white-space: nowrap
 
 
   .avatar span
@@ -188,6 +191,9 @@
     .scores
       .total-score, .total-badges, .running-score
         margin-top: 2em
+        font-size: .8rem
+        span
+          font-size: 2.5rem
 
       .total-badges
         display: block
