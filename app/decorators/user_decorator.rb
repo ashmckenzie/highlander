@@ -25,17 +25,9 @@ class UserDecorator < Draper::Decorator
 
   class TwitterNullDecorator
 
-    def setup?
-      false
-    end
-
-    def handle
-      ''
-    end
-
-    def url
-      ''
-    end
+    def setup?; false end
+    def handle; ''end
+    def url; ''end
 
     private
 
@@ -62,7 +54,8 @@ class UserDecorator < Draper::Decorator
     @twitter ||= TwitterDecoratorFactory.setup_for(user.service_for(:twitter))
   end
 
-  def twitter_url
+  def twitter_username
+    '@' << user.twitter_username
   end
 
   def email

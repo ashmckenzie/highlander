@@ -5,7 +5,7 @@
     <ul class="details">
       <li class="avatar"><span><%= image_tag rankee.user.avatar_url 90 %></span></li>
       <li class="name"><%= rankee.user.name %></li>
-      <li class="twitter-handle"><%= rankee.user.twitter.handle %></li>
+      <li class="twitter-handle"><%= rankee.user.twitter_username %></li>
       <li class="bio"><%= rankee.user.bio.truncate(70, separator: ' ', omission: '…') %></li>
     </ul>
 
