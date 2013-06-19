@@ -54,7 +54,7 @@ class TwitterIntegration < Thor
         username: result.user.screen_name,
         name: result.user.name,
         bio: result.user.description,
-        avatar_url: result.user.profile_image_url.gsub(/_normal/, '')
+        avatar_url: result.user.profile_image_url.gsub(/_normal/, '_bigger')
       }.to_json
     end
   end
