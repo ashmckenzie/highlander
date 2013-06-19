@@ -30,9 +30,9 @@ class User < ActiveRecord::Base
   end
 
   # TODO: this 1.weeks.ago logic is replicated in the RunningLeaderboard query. Simplify.
-  def running_score
-    events.where('created_at > ?', 1.weeks.ago.to_s(:db)).sum(:value)
-  end
+  # def running_score
+  #   events.where('created_at > ?', 1.weeks.ago.to_s(:db)).sum(:value)
+  # end
 
   def total_score
     @total_score ||= events.sum(:value)
