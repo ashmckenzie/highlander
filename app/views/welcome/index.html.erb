@@ -12,7 +12,12 @@
 
 <ul class="ranking">
 
-  <li class="running">Leaderboard</li>
+  <li class="running">
+    <h2>Leaderboard</h2>
+    <h3>
+      Have we piqued your interest? Let's stay in touch!  Register your interest at <a href="hilander.io">hilander.io</a>
+    </h3>
+  </li>
 
   <%- @users.each_with_index do |user, i| -%>
       <%= render partial: "shared/" << (i > 19 ? "simple_" : "") << "rankee", locals: { rankee: OpenStruct.new(user: user, index: i + 1) } %>
