@@ -21,16 +21,6 @@
     </p>
 
     <p>
-      <%= f.label :twitter_username %>
-      <%= f.text_field :twitter_username %>
-    </p>
-
-    <p>
-      <%= f.label :bio %>
-      <%= f.text_area :bio, rows: 5, maxlength: 128 %>
-    </p>
-
-    <p>
       <%= f.submit "Save" %>
       <%= link_to 'cancel', user_path(@user), class: 'hl-button' %>
     </p>
