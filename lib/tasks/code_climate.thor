@@ -60,7 +60,7 @@ class CodeClimateIntegration < Thor
   end
 
   def host
-    development? ? 'localhost' : 'leaderboard.hooroo.com'
+    development? ? 'localhost' : 'hooroo.hilander.io'
   end
 
   def port

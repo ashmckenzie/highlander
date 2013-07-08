@@ -54,7 +54,7 @@ class RaquetioIntegration < Thor
   end
 
   def hldr_host
-    development? ? 'localhost' : 'leaderboard.hooroo.com'
+    development? ? 'localhost' : 'hooroo.hilander.io'
   end
 
   def hldr_port
