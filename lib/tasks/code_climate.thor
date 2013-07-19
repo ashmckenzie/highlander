@@ -18,8 +18,7 @@ class CodeClimateIntegration < Thor
     scraper   = CodeClimate::Scraper.new(account_info)
     from_date = DateTime.parse('1900-01-01') if options.force?
 
-    feed      = CodeClimate::Feed.new(scraper, from_date)
-
+    feed = CodeClimate::Feed.new(scraper, from_date)
     feed.update!
 
     github_client = Octokit::Client.new(login: github_username, password: github_password)
