@@ -17,7 +17,7 @@ module Highlander
   class Application < Rails::Application
 
     config.time_zone = 'Melbourne'
-    config.active_record.observers = [ :event_observer, :user_observer, :achievement_observer, :bounty_observer ]
+    config.active_record.observers = [ :event_observer, :achievement_observer, :bounty_observer ]
 
     #fonts path
     config.assets.paths << "#{Rails.root}/app/assets/fonts"
