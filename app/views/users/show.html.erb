@@ -54,7 +54,6 @@
 
 </section>
 
-
 <section class="badges main-column">
 
   <h2>Badges <strong>(<%= @user.badge_count %>)</strong></h2>
@@ -66,4 +65,9 @@
   </p>
 
   <%= render partial: 'shared/achievements', locals: { achievements: @user.achievements } %>
+
+</section>
+
+<section class="stats main-column">
+  <%= render(partial: 'shared/stats_events', locals: { stats: @stats }) if @stats %>
 </section>
