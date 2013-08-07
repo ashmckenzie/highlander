@@ -40,6 +40,10 @@ gem 'dalli'
 gem 'memcachier'
 gem 'rack-cache'
 
+gem 'groupdate'
+gem 'chart-js-rails'
+gem 'chartkick'
+
 group :development, :test do
   gem 'pry'
   gem 'pry-debugger'

@@ -71,6 +71,8 @@ GEM
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
+    chart-js-rails (0.0.1)
+    chartkick (1.2.0)
     choice (0.1.6)
     coderay (1.0.9)
     coffee-rails (4.0.0)
@@ -116,6 +118,8 @@ GEM
     faraday_middleware (0.9.0)
       faraday (>= 0.7.4, < 0.9)
     ffi (1.8.1)
+    groupdate (1.0.4)
+      activerecord (>= 3.0.0)
     hashie (2.0.5)
     heroku (2.39.4)
       heroku-api (~> 0.3.7)
@@ -297,12 +301,15 @@ DEPENDENCIES
   bourbon
   cancan
   capybara
+  chart-js-rails
+  chartkick
   coffee-rails (~> 4.0.0)
   dalli
   data_migration!
   draper
   exception_notification!
   factory_girl_rails
+  groupdate
   hashie
   heroku
   high_voltage

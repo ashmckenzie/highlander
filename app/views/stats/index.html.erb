@@ -1,0 +1,19 @@
+<%- provide :head do -%>
+   <%= stylesheet_link_tag :stats -%>
+<%- end -%>
+
+<section class="container stats">
+
+  <h2>Events</h2>
+
+  <%= line_chart @stats.events_by_created_at %>
+
+  <%= pie_chart @stats.events_by_metric, height: '600px' %>
+
+  <h2>Achievements</h2>
+
+  <%= line_chart @stats.achievements_by_created_at %>
+
+  <%= pie_chart @stats.achievements_by_badge, height: '600px' %>
+
+ </section>

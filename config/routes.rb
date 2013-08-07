@@ -44,6 +44,7 @@ Highlander::Application.routes.draw do
     resources :users
     resources :badges, only: [ :index, :show ]
     resources :bounties
+    get '/stats' => 'stats#index', as: :stats
 
     root to: 'welcome#index'
   end
