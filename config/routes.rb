@@ -31,9 +31,7 @@ Highlander::Application.routes.draw do
   get   '/signout' => 'sessions#destroy', as: :signout
   post  '/auth/google_apps/callback' => 'sessions#create'
 
-  # NOTE: Disabled for now.  Big question is, in what context does it belong?
-  #
-  get '/about' => 'high_voltage/pages#show', id: 'about'
+  # get '/about' => 'high_voltage/pages#show', id: 'about'
 
   # Rounds under this constraint are for Organisations
   #
