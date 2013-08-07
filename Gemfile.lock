@@ -217,6 +217,11 @@ GEM
       ruby-graphviz (~> 1.0.4)
     rails-observers (0.1.1)
       railties (~> 4.0.0.beta)
+    rails_12factor (0.0.2)
+      rails_serve_static_assets
+      rails_stdout_logging
+    rails_serve_static_assets (0.0.1)
+    rails_stdout_logging (0.0.1)
     railties (4.0.0)
       actionpack (= 4.0.0)
       activesupport (= 4.0.0)
@@ -331,6 +336,7 @@ DEPENDENCIES
   rails-erd
   rails-observers
   rails3_serve_static_assets!
+  rails_12factor
   rails_log_stdout!
   rest-client
   rspec-rails

@@ -44,6 +44,8 @@ gem 'groupdate'
 gem 'chart-js-rails'
 gem 'chartkick'
 
+gem 'rails_12factor'
+
 group :development, :test do
   gem 'pry'
   gem 'pry-debugger'
