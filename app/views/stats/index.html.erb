@@ -10,6 +10,14 @@
 
   <%= pie_chart @stats.events_by_metric, height: '600px' %>
 
+  <h2>Events: Github pushes</h2>
+
+  <%= line_chart @stats.github_pushes_by_created_at %>
+
+  <h2>Events: Jenkins green jobs</h2>
+
+  <%= line_chart @stats.jenkins_green_jobs_by_created_at %>
+
   <h2>Achievements</h2>
 
   <%= line_chart @stats.achievements_by_created_at %>
