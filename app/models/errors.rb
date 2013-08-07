@@ -21,8 +21,8 @@ module Errors
   class TweetInvalid                           < ApiError ; end
   class TweetAlreadyProcessed                  < ApiError ; end
   class InvalidRequestSource                   < ApiError ; end
-  class MingPongWinnerAlreadyProcessed         < ApiError ; end
-  class MingPongLoserAlreadyProcessed          < ApiError ; end
+  class PingPongWinnerAlreadyProcessed         < ApiError ; end
+  class PingPongLoserAlreadyProcessed          < ApiError ; end
   class IssueActionNotOpened                   < ApiError ; end
   class IssueActionNotClosed                   < ApiError ; end
   class PagerDutyAckAlreadyProcessed           < ApiError ; end

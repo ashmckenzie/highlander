@@ -1,6 +1,6 @@
 module PayloadAdapters
 
-  class MingPongVictory < Base
+  class PingPongVictory < Base
 
     def user
       @user ||= Services::Twitter.find_by_username(twitter_username).try(:user)

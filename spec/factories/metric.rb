@@ -13,9 +13,9 @@ FactoryGirl.define do
       description   'Jenkins green job'
     end
 
-    factory :ming_pong_victory do
-      name          'ming_pong_victory'
-      description   'Ming Pong victory'
+    factory :ping_pong_victory do
+      name          'ping_pong_victory'
+      description   'Ping Pong victory'
       default_unit  2
     end
 

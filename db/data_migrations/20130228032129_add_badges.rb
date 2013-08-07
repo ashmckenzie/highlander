@@ -17,10 +17,10 @@ module DataMigration
         Badge.create!(name: '500_jenkins_green_jobs', tag: 'Green goblin beast', description: '500 Jenkins green jobs')
         Badge.create!(name: '1000_jenkins_green_jobs', tag: 'Green gobline GOD', description: '1000 Jenkins green jobs')
 
-        Badge.create!(name: '1_ming_pong_victory', tag: 'One small step forward', description: 'First Ming Pong victory')
-        Badge.create!(name: '1_ming_pong_loss', tag: "Well that's to be expected", description: 'First Ming Pong loss')
-        Badge.create!(name: '10_ming_pong_victories', tag: 'Paddle master', description: '10 Ming Pong victories')
-        Badge.create!(name: '100_ming_pong_victories', tag: 'Paddle master', description: '100 Ming Pong victories')
+        Badge.create!(name: '1_ming_pong_victory', tag: 'One small step forward', description: 'First Ping Pong victory')
+        Badge.create!(name: '1_ming_pong_loss', tag: "Well that's to be expected", description: 'First Ping Pong loss')
+        Badge.create!(name: '10_ming_pong_victories', tag: 'Paddle master', description: '10 Ping Pong victories')
+        Badge.create!(name: '100_ming_pong_victories', tag: 'Paddle master', description: '100 Ping Pong victories')
 
         Badge.create!(name: '1_twitter_mention', tag: 'Fly fly little birdie!', description: 'First Hooroo Twitter mention')
         Badge.create!(name: '25_twitter_mentions', tag: 'In a flutter', description: '25 Hooroo Twitter mentions')

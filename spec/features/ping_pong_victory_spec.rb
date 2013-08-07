@@ -1,24 +1,24 @@
 require 'spec_helper'
 
-feature 'Ming Pong Victory' do
+feature 'Ping Pong Victory' do
 
-  given(:endpoint) { '/api/ming_pong_victory.json' }
+  given(:endpoint) { '/api/ping_pong_victory.json' }
 
   background do
     @first_time_badge         = FactoryGirl.create(:first_time)
-    @one_ming_pong_victory    = FactoryGirl.create(:one_ming_pong_victory)
-    @ten_ming_pong_victories  = FactoryGirl.create(:ten_ming_pong_victories)
+    @one_ping_pong_victory    = FactoryGirl.create(:one_ping_pong_victory)
+    @ten_ping_pong_victories  = FactoryGirl.create(:ten_ping_pong_victories)
   end
 
   given(:winner)                    { FactoryGirl.create(:user, :tweeter, name: 'Stu Liston') }
   given(:loser)                     { FactoryGirl.create(:user, :tweeter, name: 'Phil Metcalfe') }
   given!(:winner_twitter_service)   { winner.service_for(:twitter) }
   given!(:loser_twitter_service)   { loser.service_for(:twitter) }
-  given(:ming_pong_victory_metric)  { FactoryGirl.create(:ming_pong_victory) }
+  given(:ping_pong_victory_metric)  { FactoryGirl.create(:ping_pong_victory) }
 
   given(:valid_params) do
     {
-      metric:     ming_pong_victory_metric.name,
+      metric:     ping_pong_victory_metric.name,
       winner:     winner_twitter_service.username,
       loser:      loser_twitter_service.username,
       match_id:   1234,
@@ -31,13 +31,13 @@ feature 'Ming Pong Victory' do
 
     background { page.driver.post endpoint, valid_params }
 
-    scenario 'User is given First Time and One Ming Pong Victory badges' do
+    scenario 'User is given First Time and One Ping Pong Victory badges' do
 
       visit user_path(winner)
       page.should have_content @first_time_badge.description
-      page.should have_content @one_ming_pong_victory.description
+      page.should have_content @one_ping_pong_victory.description
 
-      page.should have_content "#{ming_pong_victory_metric.default_unit} All-time"
+      page.should have_content "#{ping_pong_victory_metric.default_unit} All-time"
       page.should have_content '2 Badges'
     end
   end
@@ -50,9 +50,9 @@ feature 'Ming Pong Victory' do
 
       visit user_path(winner)
       page.should have_content @first_time_badge.description
-      page.should have_content @one_ming_pong_victory.description
+      page.should have_content @one_ping_pong_victory.description
 
-      page.should have_content "#{ming_pong_victory_metric.default_unit} All-time"
+      page.should have_content "#{ping_pong_victory_metric.default_unit} All-time"
       page.should have_content '2 Badges'
     end
   end
@@ -65,10 +65,10 @@ feature 'Ming Pong Victory' do
 
       visit user_path(winner)
       page.should have_content @first_time_badge.description
-      page.should have_content @one_ming_pong_victory.description
-      page.should have_content @ten_ming_pong_victories.description
+      page.should have_content @one_ping_pong_victory.description
+      page.should have_content @ten_ping_pong_victories.description
 
-      page.should have_content "#{ming_pong_victory_metric.default_unit * 10} All-time"
+      page.should have_content "#{ping_pong_victory_metric.default_unit * 10} All-time"
       page.should have_content '3 Badges'
     end
   end

@@ -14,7 +14,7 @@ class Metric < ActiveRecord::Base
     github_issue_opened
     github_issue_closed
     jenkins_green_job
-    ming_pong_victory
+    ping_pong_victory
     gift
     express_yaself
     twitter_mention

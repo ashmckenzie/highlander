@@ -38,16 +38,16 @@ FactoryGirl.define do
       description   '100 Jenkins green jobs'
     end
 
-    factory :one_ming_pong_victory do
-      name          '1_ming_pong_victory'
+    factory :one_ping_pong_victory do
+      name          '1_ping_pong_victory'
       tag           'One small step forward'
-      description   'First Ming Pong victory'
+      description   'First Ping Pong victory'
     end
 
-    factory :ten_ming_pong_victories do
-      name          '10_ming_pong_victories'
+    factory :ten_ping_pong_victories do
+      name          '10_ping_pong_victories'
       tag           'Paddle master'
-      description   '10 Ming Pong victories'
+      description   '10 Ping Pong victories'
     end
 
     factory :one_github_issue_opened do

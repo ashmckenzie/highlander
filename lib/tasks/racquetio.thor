@@ -46,8 +46,8 @@ class RaquetioIntegration < Thor
 
   def hldr_config
     @hldr_config ||= OpenStruct.new(
-      victory_endpoint: '/api/ming_pong_victory.json',
-      loss_endpoint:    '/api/ming_pong_loss.json',
+      victory_endpoint: '/api/ping_pong_victory.json',
+      loss_endpoint:    '/api/ping_pong_loss.json',
       host:             hldr_host,
       port:             hldr_port
     )

@@ -1,6 +1,6 @@
 module DataMigration
   module MigrationFiles
-    class DisableMingPongLossMetric < Base
+    class DisablePingPongLossMetric < Base
 
       def up
         Metric.find_by_name('ming_pong_loss').disable!
