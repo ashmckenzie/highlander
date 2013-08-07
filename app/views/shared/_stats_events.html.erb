@@ -1,5 +1,5 @@
 <h2>Events</h2>
 
-<%= line_chart(stats.events.map { |name, data| { name: name, data: data } }) %>
+<%= line_chart(stats.events.map { |name, data| { name: name, data: data } }, library: { 'lineWidth' => 1, 'pointSize' => 3 }) %>
 
 <%= pie_chart stats.events_by_metric, height: '600px' %>

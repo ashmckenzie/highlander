@@ -1,5 +1,5 @@
 <h2>Achievements</h2>
 
-<%= line_chart stats.achievements_by_created_at %>
+<%= line_chart stats.achievements_by_created_at, library: { 'lineWidth' => 1, 'pointSize' => 3 } %>
 
 <%= pie_chart stats.achievements_by_badge, height: '600px' %>
