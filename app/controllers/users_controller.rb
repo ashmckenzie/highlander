@@ -9,7 +9,7 @@ class UsersController < ApplicationController
   end
 
   def show
-    @stats = Rails.cache.fetch('stats', expires_in: 5.minutes) do
+    @stats = Rails.cache.fetch("user-stats-#{user.id}", expires_in: 5.minutes) do
       Queries::Stats.new(user: user.user, achievements: false).query
     end
   end
