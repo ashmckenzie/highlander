@@ -38,7 +38,7 @@ feature 'Ping Pong Victory' do
       page.should have_content @one_ping_pong_victory.description
 
       page.should have_content "#{ping_pong_victory_metric.default_unit} All-time"
-      page.should have_content '2 Badges'
+      page.should have_content '2 badges'
     end
   end
 
@@ -53,7 +53,7 @@ feature 'Ping Pong Victory' do
       page.should have_content @one_ping_pong_victory.description
 
       page.should have_content "#{ping_pong_victory_metric.default_unit} All-time"
-      page.should have_content '2 Badges'
+      page.should have_content '2 badges'
     end
   end
 
@@ -69,7 +69,7 @@ feature 'Ping Pong Victory' do
       page.should have_content @ten_ping_pong_victories.description
 
       page.should have_content "#{ping_pong_victory_metric.default_unit * 10} All-time"
-      page.should have_content '3 Badges'
+      page.should have_content '3 badges'
     end
   end
 

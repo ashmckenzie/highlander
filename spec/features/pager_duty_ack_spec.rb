@@ -32,7 +32,7 @@ feature 'PagerDuty Ack' do
       page.should have_content @one_pager_duty_ack.description
 
       page.should have_content "#{pager_duty_ack_metric.default_unit} All-time"
-      page.should have_content '2 Badges'
+      page.should have_content '2 badges'
     end
   end
 
@@ -51,7 +51,7 @@ feature 'PagerDuty Ack' do
       page.should have_content @one_pager_duty_ack.description
 
       page.should have_content "#{pager_duty_ack_metric.default_unit * 3} All-time"
-      page.should have_content '2 Badges'
+      page.should have_content '2 badges'
     end
   end
 
@@ -70,7 +70,7 @@ feature 'PagerDuty Ack' do
       page.should have_content @one_pager_duty_ack.description
 
       page.should have_content "#{pager_duty_ack_metric.default_unit * 2} All-time"
-      page.should have_content '2 Badges'
+      page.should have_content '2 badges'
     end
   end
 

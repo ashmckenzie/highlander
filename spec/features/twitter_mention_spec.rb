@@ -32,7 +32,7 @@ feature 'Twitter Mentions' do
       page.should have_content @one_twitter_mention.description
 
       page.should have_content "#{twitter_mention_metric.default_unit} All-time"
-      page.should have_content '2 Badges'
+      page.should have_content '2 badges'
     end
   end
 
@@ -50,7 +50,7 @@ feature 'Twitter Mentions' do
       page.should have_content @one_twitter_mention.description
 
       page.should have_content "#{twitter_mention_metric.default_unit * 3} All-time"
-      page.should have_content '2 Badges'
+      page.should have_content '2 badges'
     end
   end
 
@@ -68,7 +68,7 @@ feature 'Twitter Mentions' do
       page.should have_content @one_twitter_mention.description
 
       page.should have_content "#{twitter_mention_metric.default_unit * 2} All-time"
-      page.should have_content '2 Badges'
+      page.should have_content '2 badges'
     end
   end
 

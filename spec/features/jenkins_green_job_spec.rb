@@ -27,7 +27,7 @@ feature 'Jenkins Green Job' do
       page.should have_content @first_jenkins_green_job_badge.description
 
       page.should have_content "#{metric.default_unit} All-time"
-      page.should have_content "2 Badges"
+      page.should have_content "2 badges"
     end
   end
 
@@ -41,7 +41,7 @@ feature 'Jenkins Green Job' do
       page.should have_content @first_jenkins_green_job_badge.description
 
       page.should have_content "#{metric.default_unit * 2} All-time"
-      page.should have_content "2 Badges"
+      page.should have_content "2 badges"
     end
   end
 
@@ -56,7 +56,7 @@ feature 'Jenkins Green Job' do
       page.should have_content @one_hundred_jenkins_green_jobs_badge.description
 
       page.should have_content "#{metric.default_unit * 100} All-time"
-      page.should have_content "3 Badges"
+      page.should have_content "3 badges"
     end
   end
 

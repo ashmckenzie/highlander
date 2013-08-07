@@ -27,7 +27,7 @@ feature 'Github Push' do
       page.should have_content @one_github_push_badge.description
 
       page.should have_content "#{metric.default_unit} All-time"
-      page.should have_content '2 Badges'
+      page.should have_content '2 badges'
     end
   end
 
@@ -41,7 +41,7 @@ feature 'Github Push' do
       page.should have_content @one_github_push_badge.description
 
       page.should have_content "#{metric.default_unit * 2} All-time"
-      page.should have_content '2 Badges'
+      page.should have_content '2 badges'
     end
   end
 
