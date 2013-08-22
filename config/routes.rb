@@ -17,7 +17,7 @@ Highlander::Application.routes.draw do
   namespace :api do
 
     Metric::NAMES.each do |metric|
-      post metric => 'events#create', :defaults => { metric: metric }
+      post metric => 'events#create', defaults: { metric: metric }
     end
 
     resources :events, only: [ :create ]
@@ -37,7 +37,7 @@ Highlander::Application.routes.draw do
   #
   # eg. Hooroo, Agile Aus
   #
-  constraints(:subdomain => /^(?!www).+$/) do
+  constraints(subdomain: /^(?!www).+$/) do
 
     resources :users
     resources :badges, only: [ :index, :show ]
@@ -50,7 +50,7 @@ Highlander::Application.routes.draw do
   # Routes under this constraint are when no Organisation has been defined,
   # or it's www
   #
-  constraints(:subdomain => /.*/) do
+  constraints(subdomain: /.*/) do
 
     resources :registrations, only: [ :index, :create ]
 

@@ -33,7 +33,7 @@ class Database < Thor
     puts '> Restoring your dev DB from backup...'
     system("pg_restore --verbose --clean --no-acl --no-owner -h localhost -d highlander_development latest.dump")
     puts 'done.'
-    puts '            $$\                                $$$$$$\                                 $$\
+    puts '  $$\                                $$$$$$\                                 $$\
             $$ |                              $$  __$$\                                $$ |
  $$$$$$$\ $$$$$$\    $$$$$$\  $$\   $$\       $$ /  \__|$$$$$$\   $$$$$$\   $$$$$$$\ $$$$$$\   $$\   $$\
 $$  _____|\_$$  _|   \____$$\ $$ |  $$ |      $$$$\    $$  __$$\ $$  __$$\ $$  _____|\_$$  _|  $$ |  $$ |
