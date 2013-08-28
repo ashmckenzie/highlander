@@ -22,7 +22,7 @@ class User < ActiveRecord::Base
   validates :hooroo_email,      uniqueness: true, presence: true
   validates :avatar_email,      uniqueness: true, allow_blank: true
 
-  before_save :set_role_to_user
+  before_create :set_role_to_user
 
   ROLES = %w[admin user]
 
@@ -75,6 +75,6 @@ class User < ActiveRecord::Base
   private
 
   def set_role_to_user
-    self.role = 'user'
+    self.role = 'user' unless self.role
   end
 end
