@@ -83,8 +83,8 @@ Highlander::Application.configure do
   config.log_formatter = ::Logger::Formatter.new
 
   config.middleware.use ExceptionNotifier,
-    sender_address: 'hilander-team@hooroo.com',
-    exception_recipients: 'hilander-team@hooroo.com',
+    sender_address: 'hello@hilander.io',
+    exception_recipients: 'hello@hilander.io',
     ignore_exceptions: ExceptionNotifier.default_ignore_exceptions # + [RuntimeError]
 
   config.cache_store = :dalli_store, ENV["MEMCACHIER_SERVERS"],
