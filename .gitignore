@@ -17,6 +17,7 @@
 
 .DS_Store
 highlander.sublime*
+hilander.sublime*
 db/schema.rb
 
 zeus.json
