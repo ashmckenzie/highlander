@@ -9,7 +9,7 @@ module DataMigration
         ben.emails = [ 'benb@hooroo.com' ]
         ben.save!
 
-        github = Services::Github.new(username: 'benb')
+        github = Services::Github.new(username: 'benjamin', emails: ["benjamin@wobolando.com", "benb@hooroo.com"])
         UserService.create!(user: ben, service: github)
       end
 
