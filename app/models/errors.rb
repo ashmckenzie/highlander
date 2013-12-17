@@ -27,4 +27,6 @@ module Errors
   class PagerDutyAckAlreadyProcessed           < ApiError ; end
   class PagerDutyAckEmailAddressNotProvided    < ApiError ; end
   class CodeQualityImprovementAlreadyProcessed < ApiError ; end
+  class DishWashAlreadyRegistered              < ApiError ; end
+
 end

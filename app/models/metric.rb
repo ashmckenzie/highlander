@@ -21,6 +21,7 @@ class Metric < ActiveRecord::Base
     pager_duty_ack
     bounty
     code_quality_improvement
+    dish_wash
   }
 
 end

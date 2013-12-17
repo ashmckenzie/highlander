@@ -73,6 +73,12 @@ module Api
       render text: 'Improvement already processed', status: :ok
     end
 
+    rescue_from Errors::DishWashAlreadyRegistered do
+      Rails.logger.info "Not awarding points for dish wash. User: '#{payload.user.id}' as it's already been registered"
+      render text:  { wash_status: 'error', text: 'Dish Wash already registered' }.to_json, status: :ok
+    end
+
+
   end
 
 end
