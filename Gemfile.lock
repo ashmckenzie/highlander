@@ -1,6 +1,7 @@
 GIT
   remote: git://github.com/ashmckenzie/data_migration.git
   revision: 2021c6d286b905ea25f8c3c1a77f5d0a6b95b961
+  branch: 2021c6d286b905ea25f8c3c1a77f5d0a6b95b961
   specs:
     data_migration (0.0.4)
 
