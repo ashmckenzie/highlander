@@ -2,8 +2,9 @@ Stethoscope.check :rails do |resp|
   resp[:version] = Rails::version
 end
 
-Stethoscope.check :release do |response|
-  response['release_git_sha'] = ENV['RELEASE_GIT_SHA'] || 'HEAD'
+Stethoscope.check :release do |resp|
+  head_file = File.expand_path(File.join('.git', 'refs', 'heads', 'master'))
+  resp[:revision] = File.read(head_file).chomp
 end
 
 Stethoscope.check :schema_migrations do |response|
