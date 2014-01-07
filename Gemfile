@@ -46,7 +46,7 @@ gem 'chartkick'
 
 gem 'rails_12factor'
 
-gem 'execjs'
+gem 'therubyracer'
 
 group :development, :test do
   gem 'pry'

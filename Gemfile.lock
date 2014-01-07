@@ -121,6 +121,7 @@ GEM
       addressable (~> 2.3)
     letter_opener (1.1.1)
       launchy (~> 2.2)
+    libv8 (3.16.14.3)
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
@@ -208,6 +209,7 @@ GEM
       rake (>= 0.8.7)
       thor (>= 0.18.1, < 2.0)
     rake (10.1.0)
+    ref (1.0.5)
     request_store (1.0.5)
     rest-client (1.6.7)
       mime-types (>= 1.16)
@@ -246,6 +248,9 @@ GEM
       dictionary (>= 1.0)
       rack (> 1.0)
       tilt (>= 1.0)
+    therubyracer (0.12.0)
+      libv8 (~> 3.16.14.0)
+      ref
     thin (1.5.1)
       daemons (>= 1.0.9)
       eventmachine (>= 0.12.6)
@@ -293,7 +298,6 @@ DEPENDENCIES
   debugger-ruby_core_source (~> 1.0)
   draper
   exception_notification!
-  execjs
   factory_girl_rails
   groupdate
   hashie
@@ -320,6 +324,7 @@ DEPENDENCIES
   rspec-rails
   sass-rails (~> 4.0.0)
   stethoscope
+  therubyracer
   thin
   thor
   twitter
