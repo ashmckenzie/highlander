@@ -1,3 +1,7 @@
+Stethoscope.check :rails do |resp|
+  resp[:version] = Rails::version
+end
+
 Stethoscope.check :release do |response|
   response['release_git_sha'] = ENV['RELEASE_GIT_SHA'] || 'HEAD'
 end
