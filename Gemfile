@@ -46,6 +46,8 @@ gem 'chartkick'
 
 gem 'rails_12factor'
 
+gem 'execjs'
+
 group :development, :test do
   gem 'pry'
   gem 'pry-debugger'

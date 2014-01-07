@@ -293,6 +293,7 @@ DEPENDENCIES
   debugger-ruby_core_source (~> 1.0)
   draper
   exception_notification!
+  execjs
   factory_girl_rails
   groupdate
   hashie
