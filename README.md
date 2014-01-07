@@ -52,4 +52,3 @@ _(consider adding a wiki page for this)_
 **Configuring badges for your new metric**
 
 TBC
-
