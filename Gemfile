@@ -56,5 +56,5 @@ group :development, :test do
   gem 'capybara'
   gem 'letter_opener'
   gem 'rails-erd'
-  gem 'debugger-ruby_core_source', '~> 1.2'
+  gem 'debugger-ruby_core_source', '~> 1.0'
 end

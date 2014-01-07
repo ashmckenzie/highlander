@@ -80,7 +80,7 @@ GEM
       debugger-linecache (~> 1.2.0)
       debugger-ruby_core_source (~> 1.2.1)
     debugger-linecache (1.2.0)
-    debugger-ruby_core_source (1.2.2)
+    debugger-ruby_core_source (1.2.4)
     dictionary (1.0.0)
     diff-lcs (1.2.4)
     domain_name (0.5.11)
@@ -290,7 +290,7 @@ DEPENDENCIES
   coffee-rails (~> 4.0.0)
   dalli
   data_migration!
-  debugger-ruby_core_source (~> 1.2)
+  debugger-ruby_core_source (~> 1.0)
   draper
   exception_notification!
   factory_girl_rails
