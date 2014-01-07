@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby '1.9.3'
+ruby '2.0.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0'
@@ -56,10 +56,5 @@ group :development, :test do
   gem 'capybara'
   gem 'letter_opener'
   gem 'rails-erd'
-  gem 'heroku'
-end
-
-group :heroku do
-  gem 'rails_log_stdout',           github: 'heroku/rails_log_stdout'
-  gem 'rails3_serve_static_assets', github: 'heroku/rails3_serve_static_assets'
+  gem 'debugger-ruby_core_source', '~> 1.2'
 end
