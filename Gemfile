@@ -46,6 +46,7 @@ gem 'rails_12factor'
 gem 'therubyracer'
 
 gem 'redis'
+gem 'redis-namespace'
 
 gem 'whenever'
 
