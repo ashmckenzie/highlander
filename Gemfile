@@ -45,6 +45,10 @@ gem 'rails_12factor'
 
 gem 'therubyracer'
 
+gem 'redis'
+
+gem 'whenever'
+
 group :development, :test do
   gem 'pry'
   gem 'pry-debugger'
