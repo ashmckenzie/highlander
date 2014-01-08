@@ -3,7 +3,6 @@ source 'https://rubygems.org'
 ruby '2.0.0'
 
 gem 'rails', '4.0.2'
-gem 'thin'
 gem 'pg'
 gem 'sass-rails',   '~> 4.0.1'
 gem 'coffee-rails', '~> 4.0.1'
@@ -51,6 +50,7 @@ gem 'redis-namespace'
 gem 'whenever'
 
 group :development, :test do
+  gem 'puma'
   gem 'pry'
   gem 'pry-debugger'
   gem 'rspec-rails'
