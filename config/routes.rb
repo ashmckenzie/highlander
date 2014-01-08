@@ -31,6 +31,8 @@ Highlander::Application.routes.draw do
   get   '/signout' => 'sessions#destroy', as: :signout
   post  '/auth/google_apps/callback' => 'sessions#create'
 
+  get   '/events/stream' => 'events#stream'
+
   # get '/about' => 'high_voltage/pages#show', id: 'about'
 
   # Rounds under this constraint are for Organisations
