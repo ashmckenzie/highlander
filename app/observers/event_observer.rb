@@ -2,7 +2,8 @@ class EventObserver < ActiveRecord::Observer
 
   def after_create event
     log(event)
-    calculate_achievements_for! event
+    calculate_achievements_for!(event)
+    add_to_event_feed!(event)
   end
 
   private
@@ -19,5 +20,9 @@ class EventObserver < ActiveRecord::Observer
     achievement_calculators.each do |calculator|
       calculator.new(event).calculate!
     end
+  end
+
+  def add_to_event_feed! event
+    EventFeed.add!(event)
   end
 end
