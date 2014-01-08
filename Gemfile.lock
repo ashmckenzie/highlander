@@ -86,6 +86,7 @@ GEM
     diff-lcs (1.2.4)
     domain_name (0.5.11)
       unf (>= 0.0.5, < 1.0.0)
+    dotenv (0.7.0)
     draper (1.2.1)
       actionpack (>= 3.0)
       activesupport (>= 3.0)
@@ -107,6 +108,9 @@ GEM
     faraday_middleware (0.9.0)
       faraday (>= 0.7.4, < 0.9)
     ffi (1.8.1)
+    foreman (0.63.0)
+      dotenv (>= 0.7)
+      thor (>= 0.13.6)
     groupdate (1.0.4)
       activerecord (>= 3.0.0)
     hashie (2.0.5)
@@ -303,6 +307,7 @@ DEPENDENCIES
   draper
   exception_notification!
   factory_girl_rails
+  foreman
   groupdate
   hashie
   high_voltage

@@ -60,4 +60,5 @@ group :development, :test do
   gem 'letter_opener'
   gem 'rails-erd'
   gem 'debugger-ruby_core_source', '~> 1.0'
+  gem 'foreman'
 end
