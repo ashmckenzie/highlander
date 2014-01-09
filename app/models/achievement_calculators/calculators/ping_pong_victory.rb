@@ -10,7 +10,8 @@ module AchievementCalculators
         {
           1  => '1_ping_pong_victory',
           10 => '10_ping_pong_victories',
-          100 => '100_ping_pong_victories'
+          100 => '100_ping_pong_victories',
+          250 => '250_ping_pong_victories'
         }
       end
     end
