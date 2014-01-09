@@ -8,7 +8,7 @@ module PayloadValidators
     end
 
     def contains_email_address?
-      payload[:agent][:email]
+      !!payload[:agent][:email].nil?
     end
 
     def ack_already_attributed?
