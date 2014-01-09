@@ -22,3 +22,5 @@ db/schema.rb
 
 zeus.json
 latest.dump
+
+vendor/bundle
