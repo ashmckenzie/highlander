@@ -11,7 +11,6 @@ module Errors
     def message
       "#{self.class}: for payload: #{payload}"
     end
-
   end
 
   class InvalidMetric                          < ApiError ; end
@@ -26,6 +25,6 @@ module Errors
   class IssueActionNotOpened                   < ApiError ; end
   class IssueActionNotClosed                   < ApiError ; end
   class PagerDutyAckAlreadyProcessed           < ApiError ; end
+  class PagerDutyAckEmailAddressNotProvided    < ApiError ; end
   class CodeQualityImprovementAlreadyProcessed < ApiError ; end
-
 end
