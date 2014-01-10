@@ -1,10 +1,10 @@
 module Api
-
   class EventsController < BaseController
+
     respond_to :json
 
     skip_before_filter  :verify_authenticity_token
-    before_filter :validate_payload!
+    before_filter       :validate_payload!
 
     def create
       respond_to do |format|

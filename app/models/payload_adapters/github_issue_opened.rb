@@ -1,5 +1,4 @@
 module PayloadAdapters
-
   class GithubIssueOpened < Base
 
     def user
@@ -13,7 +12,5 @@ module PayloadAdapters
     def action
       payload[:issue_action]
     end
-
   end
-
 end
