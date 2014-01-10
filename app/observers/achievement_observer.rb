@@ -2,8 +2,13 @@ class AchievementObserver < ActiveRecord::Observer
 
   def after_create achievement
     log(achievement)
-    calculate_achievements_for!(achievement)
     add_to_feed!(achievement)
+
+    # Yes, this looks crazy, but you can earn achievements for an achievement.
+    #
+    # eg. Hipster badges
+    #
+    calculate_achievements_for!(achievement)
   end
 
   private
