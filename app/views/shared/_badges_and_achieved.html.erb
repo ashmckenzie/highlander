@@ -2,7 +2,7 @@
   <%- badges_groped_by_metric.each do |metric, badges| %>
     <%- badges.each do |badge| %>
       <li class="badge">
-        <%= render partial: 'shared/badge', locals: { badge: badge } %>
+        <%= render partial: 'shared/badge', locals: { badge: badge.decorate } %>
         <%= render partial: 'shared/users', locals: { users: Queries::UsersWithBadge.new(badge: badge).query } %>
       </li>
     <%- end %>
