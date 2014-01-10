@@ -6,6 +6,13 @@ module PayloadValidators
       @payload = payload
     end
 
+    def valid?
+      validate!
+      true
+    rescue => e
+      false
+    end
+
     def validate!
       raise Errors::InvalidMetric.new(payload)        unless payload.metric.present?
       raise Errors::UserNotFound.new(payload)         unless payload.user.present?

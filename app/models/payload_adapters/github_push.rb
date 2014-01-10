@@ -1,6 +1,10 @@
 module PayloadAdapters
-
   class GithubPush < Base
+
+    def self.responsible_for_params? params
+      payload = JSON.parse(params['payload'])
+      payload['pusher'] && payload['pusher']['name']
+    end
 
     def user
       @user ||= Services::Github.with_email(email).try(:user)

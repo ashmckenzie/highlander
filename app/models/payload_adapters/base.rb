@@ -1,11 +1,16 @@
 module PayloadAdapters
-
   class Base
 
-    delegate :validate!, to: :validator
+    delegate :validate!,  to: :validator
+    delegate :valid?,     to: :validator
 
-    def initialize(payload = {})
-      self.payload = payload
+    def initialize(payload = {}, metric_name)
+      self.payload = payload  # gah, do not change this :(  see PayloadAdapters::GitHubPush#payload=
+      @metric_name = metric_name
+    end
+
+    def self.responsible_for_params? params
+      false
     end
 
     def to_event_hash
@@ -22,7 +27,7 @@ module PayloadAdapters
     end
 
     def metric
-      @meric ||= Metric.find_by_name(payload[:metric])
+      @meric ||= Metric.find_by_name(metric_name)
     end
 
     def user
@@ -39,20 +44,18 @@ module PayloadAdapters
 
     private
 
-    attr_accessor :payload
+      attr_accessor :payload, :metric_name
 
-    def validator
-      @validator ||= Factories::PayloadValidatorFactory.for(self)
-    end
+      def validator
+        @validator ||= Factories::PayloadValidatorFactory.for(self)
+      end
 
-    def ignored_payload_keys
-      [ 'controller', 'action', 'format' ]
-    end
+      def ignored_payload_keys
+        [ 'controller', 'action', 'format' ]
+      end
 
-    def value
-      nil
-    end
-
+      def value
+        nil
+      end
   end
-
 end
