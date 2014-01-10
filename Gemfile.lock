@@ -73,7 +73,6 @@ GEM
       execjs
     coffee-script-source (1.6.3)
     columnize (0.3.6)
-    dalli (2.6.4)
     debug_inspector (0.0.2)
     debugger (1.6.0)
       columnize (>= 0.3.1)
@@ -315,7 +314,6 @@ DEPENDENCIES
   chart-js-rails
   chartkick
   coffee-rails (~> 4.0.1)
-  dalli
   data_migration!
   debugger-ruby_core_source (~> 1.0)
   draper

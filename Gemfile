@@ -33,7 +33,6 @@ gem 'twitter'
 gem 'omniauth-google-apps'
 gem 'unshorten'
 
-gem 'dalli'
 gem 'rack-cache'
 
 gem 'groupdate'
