@@ -46,4 +46,36 @@ class AchievementDecorator < Draper::Decorator
     time_ago_in_words(achievement.created_at).capitalize
   end
 
+  def serialised
+    {
+      id: id,
+      description: description,
+      tag: tag,
+      user: {
+        id: decorated_user.id,
+        name: decorated_user.name,
+        avatar_url: decorated_user.avatar_url
+      },
+      badge: {
+        id: decorated_badge.id,
+        name: decorated_badge.name,
+        description: decorated_badge.description,
+        tag: decorated_badge.tag,
+        image_url: decorated_badge.image_url
+      },
+      created_at: created_at,
+      updated_at: updated_at
+    }
+  end
+
+  private
+
+    def decorated_user
+      @decorated_user ||= UserDecorator.new(user)
+    end
+
+    def decorated_badge
+      @decorated_badge ||= BadgeDecorator.new(badge)
+    end
+
 end

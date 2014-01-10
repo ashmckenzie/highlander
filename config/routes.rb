@@ -32,6 +32,7 @@ Highlander::Application.routes.draw do
   post  '/auth/google_apps/callback' => 'sessions#create'
 
   get   '/events/stream' => 'events#stream'
+  get   '/achievements/stream' => 'achievements#stream'
 
   # get '/about' => 'high_voltage/pages#show', id: 'about'
 
