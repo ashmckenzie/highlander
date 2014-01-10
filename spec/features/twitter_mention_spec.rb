@@ -5,6 +5,7 @@ feature 'Twitter Mentions' do
   given(:endpoint) { '/api/twitter_mention.json' }
 
   background do
+    @first_time  = FactoryGirl.create(:first_time)
     @one_twitter_mention  = FactoryGirl.create(:one_twitter_mention)
   end
 
