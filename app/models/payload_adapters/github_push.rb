@@ -3,7 +3,7 @@ module PayloadAdapters
   class GithubPush < Base
 
     def user
-      @user ||= Services::Github.with_email(author_email).try(:user)
+      @user ||= Services::Github.with_email(email).try(:user)
     end
 
     def branch
@@ -11,7 +11,7 @@ module PayloadAdapters
     end
 
     # TODO: use Github service username
-    def author_email
+    def email
       payload[:commits].first[:author][:email]
     end
 
