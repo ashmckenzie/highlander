@@ -89,5 +89,5 @@ Highlander::Application.configure do
       exception_recipients: %w{ hello@hilander.io }
     }
 
-  config.cache_store = :dalli_store
+  config.cache_store = :redis_store
 end
