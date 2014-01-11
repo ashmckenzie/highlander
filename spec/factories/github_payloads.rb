@@ -1,6 +1,7 @@
 class GithubPayloads
 
   def self.push(email)
+    JSON.parse(
     <<-JSON
       {
         "after":"24f2a159117298d4d8a7bd06d4a2ed2e668b0b45",
@@ -38,12 +39,12 @@ class GithubPayloads
 
              ],
              "author":{
-                "email":"tim@hooroo.com",
+                "email":"#{email}",
                 "name":"Timothy Dang",
                 "username":"timothydang"
              },
              "committer":{
-                "email":"tim@hooroo.com",
+                "email":"#{email}",
                 "name":"Timothy Dang",
                 "username":"timothydang"
              },
@@ -151,6 +152,7 @@ class GithubPayloads
         }
       }
     JSON
+    )
   end
 
   # Created this hook using:

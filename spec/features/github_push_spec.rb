@@ -13,9 +13,7 @@ feature 'Github Push' do
   given!(:github_service) { user.service_for(:github) }
   given!(:metric)         { FactoryGirl.create(:github_push) }
 
-  given(:valid_params) do
-    { payload: GithubPayloads.push(github_service.emails.first) }
-  end
+  given(:valid_params) { GithubPayloads.push(github_service.emails.first) }
 
   describe 'First push' do
 
