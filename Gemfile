@@ -49,6 +49,9 @@ gem 'redis-namespace'
 
 gem 'whenever'
 
+gem 'sidekiq'
+gem 'sidekiq-failures'
+
 group :development, :test do
   gem 'puma'
   gem 'pry'
