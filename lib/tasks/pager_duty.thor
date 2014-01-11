@@ -13,7 +13,11 @@ class PagerDutyIntegration < Thor
     @since = since
 
     pager_duty.resolved_log_entries({ since: since }).each do |log_entry|
-      RestClient.post(internal_url, log_entry)
+      begin
+        RestClient.post(internal_url, log_entry)
+      rescue => e
+        $stderr.puts "An exception was encountered: #{e} for #{log_entry}"
+      end
     end
   end
 
