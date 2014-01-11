@@ -1,5 +1,4 @@
 module PayloadAdapters
-
   class TwitterMention < Base
 
     def user
@@ -20,14 +19,12 @@ module PayloadAdapters
 
     private
 
-    def value
-      return 10 if content.high_value?
-    end
+      def value
+        return 10 if content.high_value?
+      end
 
-    def content
-      @content ||= TweetContent.new(text)
-    end
-
+      def content
+        @content ||= TweetContent.new(text)
+      end
   end
-
 end

@@ -14,7 +14,7 @@ feature 'Jenkins Green Job' do
   given(:metric)  { FactoryGirl.create(:jenkins_green_job) }
 
   given(:params) do
-    { metric: metric.name, email:  user.hooroo_email }
+    { metric: metric.name, email: user.hooroo_email }
   end
 
   describe "First green job" do

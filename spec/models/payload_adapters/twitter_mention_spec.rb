@@ -1,13 +1,13 @@
 require 'spec_helper'
 
 module PayloadAdapters
-
   describe TwitterMention do
 
     describe '#tweet_id' do
 
       it 'is the tweet id from the payload' do
         TwitterMention.new({ tweet_id: 123 }).tweet_id.should == 123
+        TwitterMention.new({ tweet_id: 123 }).metric
       end
     end
 

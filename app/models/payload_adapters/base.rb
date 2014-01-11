@@ -4,9 +4,8 @@ module PayloadAdapters
     delegate :validate!,  to: :validator
     delegate :valid?,     to: :validator
 
-    def initialize(payload = {}, metric_name)
+    def initialize(payload)
       self.payload = payload  # gah, do not change this :(  see PayloadAdapters::GitHubPush#payload=
-      @metric_name = metric_name
     end
 
     def self.responsible_for_params? params
@@ -24,6 +23,14 @@ module PayloadAdapters
 
     def to_s
       to_event_hash.to_s
+    end
+
+    def metric_name
+      if payload[:metric]
+        payload[:metric]
+      else
+        self.class.to_s.demodulize.underscore
+      end
     end
 
     def metric
@@ -44,7 +51,7 @@ module PayloadAdapters
 
     private
 
-      attr_accessor :payload, :metric_name
+      attr_accessor :payload
 
       def validator
         @validator ||= Factories::PayloadValidatorFactory.for(self)

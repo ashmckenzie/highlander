@@ -3,9 +3,9 @@ module Factories
 
     def self.for params
       metric = metric_from(params)
-      "PayloadAdapters::#{metric.camelize}".constantize.new(params, metric)
+      "PayloadAdapters::#{metric.camelize}".constantize.new(params)
     rescue NameError
-      PayloadAdapters::Base.new(params, metric)
+      PayloadAdapters::Base.new(params)
     end
 
     def self.metric_from params
