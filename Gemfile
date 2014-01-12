@@ -50,8 +50,6 @@ gem 'whenever'
 gem 'sidekiq'
 gem 'sidekiq-failures'
 
-gem 'octokit'
-
 group :development, :test do
   gem 'puma'
   gem 'pry', '0.9.12.4'
