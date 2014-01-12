@@ -39,8 +39,6 @@ gem 'groupdate'
 gem 'chart-js-rails'
 gem 'chartkick'
 
-gem 'rails_12factor'
-
 gem 'therubyracer'
 
 gem 'redis'
