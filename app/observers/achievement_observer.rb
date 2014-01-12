@@ -2,7 +2,7 @@ class AchievementObserver < ActiveRecord::Observer
 
   def after_create achievement
     log(achievement)
-    add_to_feed!(achievement)
+    add_to_activity_feed!(achievement)
 
     # Yes, this looks crazy, but you can earn achievements for an achievement.
     #
@@ -27,7 +27,7 @@ class AchievementObserver < ActiveRecord::Observer
     end
   end
 
-  def add_to_feed! achievement
-    Feed.new(achievement).add!
+  def add_to_activity_feed! achievement
+    ActivityFeed.new.add!(achievement)
   end
 end

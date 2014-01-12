@@ -8,12 +8,13 @@ class AchievementsController < ApplicationController
     response.headers['Content-Type'] = 'text/event-stream'
     response.headers['Connection'] = 'keep-alive'
 
-    RedisConnection.handle.psubscribe('achievements') do |on|
+    ActivityFeed.new.subscribe('achievements') do |on|
       on.pmessage do |pattern, event, data|
         response.stream.write("event: #{event}\n")
         response.stream.write("data: #{data}\n\n")
       end
     end
+
   rescue IOError
     logger.info "Stream closed"
   ensure
