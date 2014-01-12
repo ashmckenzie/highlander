@@ -40,6 +40,10 @@ class ApplicationController < ActionController::Base
     Bounty.unclaimed.count
   end
 
+  def not_found
+    raise ActionController::RoutingError.new('Not Found')
+  end
+
   helper_method :current_user
   helper_method :current_organisation
   helper_method :unclaimed_bounties
