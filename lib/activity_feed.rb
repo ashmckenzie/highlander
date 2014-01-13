@@ -1,12 +1,30 @@
+require 'singleton'
+
 class ActivityFeed
 
-  NAMESPACE = 'activity-feed'
-
   def subscribe channel
-    redis_handle do |handle|
+    Connection.instance.redis_handle do |handle|
       handle.psubscribe(channel) do |on|
         yield(on)
       end
+    end
+  end
+
+  class Connection
+
+    include Singleton
+
+    NAMESPACE = 'activity-feed'
+
+    def self.namespace() instance.namespace; end
+    def self.redis_handle(&blk) instance.redis_handle(blk); end
+
+    def namespace
+      @namespace ||= "#{RedisConnection.handle.namespace}:#{NAMESPACE}"
+    end
+
+    def redis_handle &blk
+      RedisConnection.handle.namespace(namespace) { |handle| blk.call(handle) }
     end
   end
 
@@ -17,7 +35,7 @@ class ActivityFeed
     end
 
     def add!
-      redis_handle do |handle|
+      Connection.instance.redis_handle do |handle|
         handle.publish(channel, detailed_object)
       end
     end
@@ -42,15 +60,4 @@ class ActivityFeed
         decorated_object.serialised.to_json
       end
   end
-
-  protected
-
-    def namespace
-      "#{RedisConnection.handle.namespace}:#{NAMESPACE}"
-    end
-
-    def redis_handle
-      RedisConnection.handle.namespace(namespace) { |handle| yield(handle) }
-    end
-
 end

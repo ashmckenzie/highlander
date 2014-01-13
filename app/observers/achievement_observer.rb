@@ -13,21 +13,21 @@ class AchievementObserver < ActiveRecord::Observer
 
   private
 
-  def log(achievement)
-    Rails.logger.info "New achievement: #{achievement.inspect}"
-  end
-
-  def achievement_calculators
-    AchievementCalculators::Base.instance.achievement_calculators
-  end
-
-  def calculate_achievements_for! achievement
-    achievement_calculators.each do |calculator|
-      calculator.new(achievement).calculate!
+    def log(achievement)
+      Rails.logger.info "New achievement: #{achievement.inspect}"
     end
-  end
 
-  def add_to_activity_feed! achievement
-    ActivityFeed.new.add!(achievement)
-  end
+    def achievement_calculators
+      AchievementCalculators::Base.instance.achievement_calculators
+    end
+
+    def calculate_achievements_for! achievement
+      achievement_calculators.each do |calculator|
+        calculator.new(achievement).calculate!
+      end
+    end
+
+    def add_to_activity_feed! achievement
+      ActivityFeed::Submit.new(achievement).add!
+    end
 end
