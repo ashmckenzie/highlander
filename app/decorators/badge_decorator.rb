@@ -13,4 +13,14 @@ class BadgeDecorator < Draper::Decorator
     asset_url("badges/#{name}.png")
   end
 
+  def serialised
+    {
+      id: badge.id,
+      name: badge.name,
+      description: badge.description,
+      tag: badge.tag,
+      image_url: image_url
+    }
+  end
+
 end

@@ -39,4 +39,12 @@ class UserDecorator < Draper::Decorator
   def last_event_created_at
     user.events.first ? "Last updated on #{user.events.first.created_at.strftime("%B %-d, %Y at %-l:%M %P")}" : ''
   end
+
+  def serialised
+    {
+      id: user.id,
+      name: user.name,
+      avatar_url: avatar_url
+    }
+  end
 end

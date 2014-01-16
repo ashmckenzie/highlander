@@ -7,16 +7,8 @@ class EventDecorator < Draper::Decorator
     {
       id: id,
       value: value,
-      user: {
-        id: decorated_user.id,
-        name: decorated_user.name,
-        avatar_url: decorated_user.avatar_url
-      },
-      metric: {
-        id: metric.id,
-        name: metric.name,
-        description: metric.description
-      },
+      user: decorated_user.serialised,
+      metric: decorated_metric.serialised,
       created_at: created_at,
       updated_at: updated_at
     }

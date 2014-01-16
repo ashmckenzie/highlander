@@ -51,18 +51,8 @@ class AchievementDecorator < Draper::Decorator
       id: id,
       description: description,
       tag: tag,
-      user: {
-        id: decorated_user.id,
-        name: decorated_user.name,
-        avatar_url: decorated_user.avatar_url
-      },
-      badge: {
-        id: decorated_badge.id,
-        name: decorated_badge.name,
-        description: decorated_badge.description,
-        tag: decorated_badge.tag,
-        image_url: decorated_badge.image_url
-      },
+      user: decorated_user.serialised,
+      badge: decorated_badge.serialised,
       created_at: created_at,
       updated_at: updated_at
     }
