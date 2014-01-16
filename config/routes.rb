@@ -31,8 +31,12 @@ Highlander::Application.routes.draw do
   get   '/signout' => 'sessions#destroy', as: :signout
   post  '/auth/google_apps/callback' => 'sessions#create'
 
-  get   '/events/stream' => 'events#stream'
-  get   '/achievements/stream' => 'achievements#stream'
+  get   '/activity'             => 'activity#index'
+  get   '/activity/current'     => 'activity#current'
+  get   '/activity/stream'      => 'activity#stream'
+
+  get   '/events/stream'        => 'events#stream'
+  get   '/achievements/stream'  => 'achievements#stream'
 
   # get '/about' => 'high_voltage/pages#show', id: 'about'
 

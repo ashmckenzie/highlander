@@ -1,0 +1,19 @@
+<div id="activity">
+  <ul>
+  </ul>
+</div>
+
+<script id="event-template" type="text/x-handlebars-template">
+  <li style="clear: both">
+    <div style="float: left; width: 100px">
+      <p class="user-avatar avatar"><img src="{{ user.avatar_url }}" /></p>
+    </div>
+    <div style="float: left; width: 400px">
+      <p class="user-name">{{ user.name }}</p>
+      <p class="metric-description">{{ metric.description }}</p>
+      <!-- <p class="metric-image">{{ metric.image_url }}</p> -->
+      <p class="value">{{ value }}</p>
+      <p class="created-at">{{ created_at }}</p>
+    </div>
+  </li>
+</script>
