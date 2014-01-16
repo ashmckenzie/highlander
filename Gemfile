@@ -1,7 +1,5 @@
 source 'https://rubygems.org'
 
-ruby '2.1.0'
-
 gem 'rails', '4.0.2'
 gem 'pg'
 gem 'sass-rails',   '~> 4.0.1'
@@ -50,8 +48,13 @@ gem 'whenever'
 gem 'sidekiq'
 gem 'sidekiq-failures'
 
+gem 'aws-sdk'
+
+gem 'underscore-rails'
+
 group :development, :test do
   gem 'puma'
+  #gem 'thin'
   gem 'pry', '0.9.12.4'
   gem 'pry-debugger', '0.2.2'
   gem 'rspec-rails'
