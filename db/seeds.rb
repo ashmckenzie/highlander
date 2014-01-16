@@ -1,6 +1,6 @@
 raise 'Only for development yo!' if ENV['RAILS_ENV'] == 'production'
 
-User.all.each do |user|
+User.point_earner.each do |user|
   Metric.all.shuffle.take(3).each do |metric|
     count = rand(50)+1
 
