@@ -7,20 +7,16 @@ module Slugger
       alias_method :find, :find_by_id_or_slug
     end
 
-    validates :slug, uniqueness: true, presence: true, on: :create
+    before_validation :set_slug, on: :create
 
-    before_create :set_slug
+    validates :slug, uniqueness: true, presence: true, on: :create
 
     def to_param
       slug
     end
 
-    def set_slug slug=default_slug
-      self.slug = slug
-    end
-
-    def default_slug
-      name.downcase.gsub(/[^a-z0-9\.\-\s]/i, '').gsub(/[\s+\.]/, '-')
+    def set_slug
+      self.slug = name.downcase.gsub(/[^a-z0-9\.\-\s]/i, '').gsub(/[\s+\.]/, '-')
     end
   end
 
