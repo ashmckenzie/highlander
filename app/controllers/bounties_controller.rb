@@ -39,8 +39,7 @@ class BountiesController < ApplicationController
 
   def update
     respond_to do |format|
-
-      if @bounty.update(bounty_params)
+      if @bounty.update(bounty_params, current_user)
         format.html { redirect_to bounties_path, notice: 'Bounty was successfully updated.' }
       else
          @users = User.point_earner.order(:name)
