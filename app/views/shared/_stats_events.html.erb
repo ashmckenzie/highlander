@@ -1,5 +1,13 @@
 <h2>Events</h2>
 
-<%= line_chart(stats.events.map { |name, data| { name: name, data: data } }, library: { 'lineWidth' => 1, 'pointSize' => 3 }) %>
+<h3>Past month</h3>
 
-<%= pie_chart stats.events_by_metric, height: '600px' %>
+<%= line_chart(stats_past_three_months.events.map { |name, data| { name: name, data: data } }, library: { 'lineWidth' => 1, 'pointSize' => 3 }) %>
+
+<h3>All time</h3>
+
+<%= line_chart(stats_all_time.events.map { |name, data| { name: name, data: data } }, library: { 'lineWidth' => 1, 'pointSize' => 3 }) %>
+
+<h3>Metric breakdown</h3>
+
+<%= pie_chart stats_all_time.events_by_metric, height: '600px' %>

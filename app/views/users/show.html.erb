@@ -72,5 +72,5 @@
 </section>
 
 <section class="stats main-column">
-  <%= render(partial: 'shared/stats_events', locals: { stats: @stats }) if @stats %>
+  <%= render(partial: 'shared/stats_events', locals: { stats_past_three_months: @stats_past_three_months, stats_all_time: @stats_all_time }) %>
 </section>
