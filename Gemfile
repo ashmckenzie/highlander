@@ -28,7 +28,8 @@ gem 'exception_notification', github: 'smartinez87/exception_notification'
 gem 'stethoscope'
 
 gem 'twitter'
-gem 'omniauth-google-apps'
+gem 'omniauth-google-apps', '~> 0.0'
+gem 'ruby-openid', '~> 2.0'
 gem 'unshorten'
 
 gem 'rack-cache'
