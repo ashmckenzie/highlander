@@ -72,9 +72,13 @@ class User < ActiveRecord::Base
     update(leaderboarder: false, earns_points: false)
   end
 
+  def admin?
+    role == 'admin'
+  end
+
   private
 
-  def set_role_to_user
-    self.role = 'user' unless self.role
-  end
+    def set_role_to_user
+      self.role = 'user' unless self.role
+    end
 end
