@@ -43,7 +43,7 @@ class Bounty < ActiveRecord::Base
     end
 
     def ensure_max_active_bounties
-      if self.class.unclaimed.where("created_by_id = #{self.created_by_id}").count >= MAX_ACTIVE_BOUNTIES
+      if !user_performing_claim.admin? && self.class.unclaimed.where("created_by_id = #{self.created_by_id}").count >= MAX_ACTIVE_BOUNTIES
         message = "can only have #{MAX_ACTIVE_BOUNTIES} unclaimed bounties at any one time"
         errors.add(:you, message)
         return false
