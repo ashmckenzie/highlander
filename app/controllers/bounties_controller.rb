@@ -29,7 +29,7 @@ class BountiesController < ApplicationController
     @bounty.created_by_id = current_user.id
 
     respond_to do |format|
-      if @bounty.save
+      if @bounty.save_with_user(current_user)
         format.html { redirect_to bounties_path, notice: 'Bounty was successfully created.' }
       else
         format.html { render action: 'new' }
@@ -57,11 +57,11 @@ class BountiesController < ApplicationController
 
   private
 
-  def set_bounty
-    @bounty = Bounty.find(params[:id])
-  end
+    def set_bounty
+      @bounty = Bounty.find(params[:id])
+    end
 
-  def bounty_params
-    params.require(:bounty).permit(:name, :description, :reward, :claimed_by_id, :needs_claiming_by, :claimed_at)
-  end
+    def bounty_params
+      params.require(:bounty).permit(:name, :description, :reward, :claimed_by_id, :needs_claiming_by, :claimed_at)
+    end
 end
