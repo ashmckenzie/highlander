@@ -9,11 +9,10 @@ class Bounty < ActiveRecord::Base
 
   validate :ensure_not_claimed
   validate :ensure_max_active_bounties, on: :create
+  validate :ensure_reward_amount_is_valid, on: :create
   validate :ensure_no_self_claim, on: :update
 
-  validates :name, :description, :reward, presence: true
-  validates :name, uniqueness: true
-  validates :reward, inclusion: { in: 5..10 , message: "must be between 5 and 10" }, on: :create
+  validates :name, :description, :reward, presence: true, uniqueness: true
 
   scope :claimed, -> { where("claimed_by_id IS NOT NULL AND claimed_at IS NOT NULL") }
   scope :unclaimed, -> { where("claimed_by_id IS NULL AND claimed_at IS NULL") }
@@ -22,7 +21,7 @@ class Bounty < ActiveRecord::Base
   MAX_ACTIVE_BOUNTIES = 2
 
   def self.has_max_allowed? user
-    self.unclaimed.created_by(user).count >= self::MAX_ACTIVE_BOUNTIES
+    !user.admin? && self.unclaimed.created_by(user).count >= self::MAX_ACTIVE_BOUNTIES
   end
 
   def claimed?
@@ -38,6 +37,10 @@ class Bounty < ActiveRecord::Base
 
     attr_writer :user_performing_claim
 
+    def ensure_reward_amount_is_valid
+      errors.add(:reward, "Reward value must be between 5 and 10") if !user_performing_claim.admin? && (attributes['reward'].to_i < 5 || attributes['reward'].to_i > 10)
+    end
+
     def ensure_not_claimed
       errors.add(:claimed_by, "Already claimed by #{claimed_by.name}") if (attributes['claimed_by'] && attributes['claimed_at'])
     end
@@ -48,7 +51,6 @@ class Bounty < ActiveRecord::Base
         errors.add(:you, message)
         return false
       end
-      true
     end
 
     def ensure_no_self_claim
