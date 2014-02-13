@@ -43,7 +43,7 @@ class Bounty < ActiveRecord::Base
     attr_writer :user_performing_claim
 
     def ensure_reward_amount_is_valid
-      errors.add(:reward, "Reward value must be between 5 and 10") if !user_performing_claim.admin? && (attributes['reward'].to_i < 5 || attributes['reward'].to_i > 10)
+      errors.add(:reward, "Reward value must be between 5 and 10") if !user_performing_claim.admin? || (attributes['reward'].to_i < 5 || attributes['reward'].to_i > 10)
     end
 
     def ensure_not_claimed
