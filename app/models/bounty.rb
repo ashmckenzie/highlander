@@ -7,12 +7,13 @@ class Bounty < ActiveRecord::Base
   belongs_to :created_by, class_name: 'User', foreign_key: 'created_by_id'
   belongs_to :claimed_by, class_name: 'User', foreign_key: 'claimed_by_id'
 
-  validate :ensure_not_claimed
   validate :ensure_max_active_bounties, on: :create
   validate :ensure_reward_amount_is_valid, on: :create
+  validate :ensure_not_claimed, on: :update
   validate :ensure_no_self_claim, on: :update
 
-  validates :name, :description, :reward, presence: true, uniqueness: true
+  validates :name, :description, :reward, presence: true
+  validates :name, uniqueness: true
 
   scope :claimed, -> { where("claimed_by_id IS NOT NULL AND claimed_at IS NOT NULL") }
   scope :unclaimed, -> { where("claimed_by_id IS NULL AND claimed_at IS NULL") }
