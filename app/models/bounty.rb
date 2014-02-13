@@ -33,6 +33,11 @@ class Bounty < ActiveRecord::Base
     super(attrs)
   end
 
+  def save_with_user user_performing_claim
+    self.user_performing_claim = user_performing_claim
+    save
+  end
+
   private
 
     attr_writer :user_performing_claim
