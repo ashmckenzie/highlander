@@ -1,9 +1,9 @@
 source 'https://rubygems.org'
 
-gem 'rails', '4.0.2'
+gem 'rails', '~> 4.0'
 gem 'pg'
-gem 'sass-rails',   '~> 4.0.1'
-gem 'coffee-rails', '~> 4.0.1'
+gem 'sass-rails',   '~> 4.0'
+gem 'coffee-rails', '~> 4.0'
 gem 'normalize-rails'
 gem 'jquery-rails'
 gem 'jbuilder', '~> 1.0.1'
@@ -55,7 +55,6 @@ gem 'underscore-rails'
 
 group :development, :test do
   gem 'puma'
-  #gem 'thin'
   gem 'pry', '0.9.12.4'
   gem 'pry-debugger', '0.2.2'
   gem 'rspec-rails'
