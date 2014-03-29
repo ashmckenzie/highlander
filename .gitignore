@@ -24,3 +24,4 @@ zeus.json
 latest.dump
 
 vendor/bundle
+.ruby-version
