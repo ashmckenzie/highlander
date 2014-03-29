@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+ruby '2.1.1'
+
 gem 'rails', '~> 4.0'
 gem 'pg'
 gem 'sass-rails',   '~> 4.0'
@@ -64,7 +66,7 @@ group :development, :test do
   gem 'capybara'
   gem 'letter_opener'
   gem 'rails-erd'
-  gem 'debugger', '1.6.5'
-  gem 'debugger-ruby_core_source', '1.3.1'
+  gem 'debugger', '~> 1.6.6'
+  gem 'debugger-ruby_core_source', '~> 1.3.1'
   gem 'foreman'
 end
