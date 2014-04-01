@@ -25,3 +25,4 @@ latest.dump
 
 vendor/bundle
 .ruby-version
+*.swp

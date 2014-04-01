@@ -1,6 +1,6 @@
 module DataMigration
   module MigrationFiles
-    class DisablePingPongBadges < Base
+    class DisableMingPongBadges < Base
 
       def up
         Badge.where("name LIKE '%_ming_pong_loss'").each { |x| x.disable! }
