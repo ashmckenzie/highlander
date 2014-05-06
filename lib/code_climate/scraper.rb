@@ -25,8 +25,8 @@ module CodeClimate
     def authenticate!
       agent.get(LOGIN_URL) do |login_page|
         login_page.form_with(method: "POST") do |f|
-          f['user_session[email]']    = account_info.email
-          f['user_session[password]'] = account_info.password
+          f['login_form[email]']    = account_info.email
+          f['login_form[password]'] = account_info.password
         end.submit
       end
       raise ScraperAuthenticationError, "Failed to log in to #{LOGIN_URL}" unless logged_in?
