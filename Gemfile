@@ -25,7 +25,6 @@ gem 'octokit'
 gem 'naught'
 gem 'high_voltage'
 
-gem 'exception_notification', github: 'smartinez87/exception_notification'
 gem 'stethoscope'
 
 gem 'twitter'
@@ -53,6 +52,8 @@ gem 'sidekiq-failures'
 gem 'aws-sdk'
 
 gem 'underscore-rails'
+
+gem 'rollbar'
 
 group :development, :test do
   gem 'puma'

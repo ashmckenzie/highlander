@@ -82,12 +82,12 @@ Highlander::Application.configure do
   # Use default logging formatter so that PID and timestamp are not suppressed.
   #config.log_formatter = ::Logger::Formatter.new
 
-  config.middleware.use ExceptionNotification::Rack,
-    email: {
-      email_prefix: "[Hilander] ",
-      sender_address: %{"Hilander" <hello@hilander.io>},
-      exception_recipients: %w{ hello@hilander.io }
-    }
+  #config.middleware.use ExceptionNotification::Rack,
+  #  email: {
+  #    email_prefix: "[Hilander] ",
+  #    sender_address: %{"Hilander" <hello@hilander.io>},
+  #    exception_recipients: %w{ hello@hilander.io }
+  #  }
 
   config.cache_store = :redis_store
 end
