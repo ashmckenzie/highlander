@@ -2,6 +2,7 @@ class Rack::Attack
 
   KNOWN_URL_SCANS = %w{
     /phpTest/zologize/axa.php
+    /manager/html
   }
 
   blacklist('known url scans') do |req|
