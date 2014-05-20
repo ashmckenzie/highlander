@@ -6,11 +6,9 @@ Rollbar.configure do |config|
 
   config.access_token = '9baf96027ffa46f59fc075233b273c06'
 
-  if Rails.env.production?
-    config.enabled = true
-  else
-    config.enabled = false
-  end
+  config.enabled = (Rails.env.production?) ? true : false
+
+  config.exception_level_filters.merge!('ActionController::RoutingError' => 'ignore')
 
   # By default, Rollbar will try to call the `current_user` controller method
   # to fetch the logged-in user object, and then call that object's `id`,
@@ -28,6 +26,7 @@ Rollbar.configure do |config|
   # change the level that exception is reported at. Note that if an exception
   # has already been reported and logged the level will need to be changed
   # via the rollbar interface.
+  #
   # Valid levels: 'critical', 'error', 'warning', 'info', 'debug', 'ignore'
   # 'ignore' will cause the exception to not be reported at all.
   # config.exception_level_filters.merge!('MyCriticalException' => 'critical')
