@@ -19,7 +19,7 @@ describe PayloadAdapters::TweetContent do
       let(:tweet_content) { 'Please visit hooroo.com, it is cool.' }
 
       it 'is true' do
-        subject.high_value?.should be_true
+        subject.high_value?.should be_truthy
       end
     end
 
@@ -27,7 +27,7 @@ describe PayloadAdapters::TweetContent do
       let(:tweet_content) { 'Please visit hooroooo.com, it is cool.' }
 
       it 'is false' do
-        subject.high_value?.should be_false
+        subject.high_value?.should be_falsey
       end
     end
 
@@ -35,7 +35,7 @@ describe PayloadAdapters::TweetContent do
       let(:tweet_content) { 'Please visit goo.gl/W6tPN, it is cool. Or visit http://bit.ly/L5ePra' }
 
       it 'is true' do
-        subject.high_value?.should be_true
+        subject.high_value?.should be_truthy
       end
     end
 

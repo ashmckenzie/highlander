@@ -4,7 +4,7 @@ class Badge < ActiveRecord::Base
   include Slugger
 
   has_many :achievements
-  has_many :users, through: :achievements
+  has_many :users, through: :achievements, source: :user
 
   default_scope     -> { enabled.in_order }
 

@@ -24,7 +24,7 @@ module CodeClimate
       its(:id)           { should == 'tag:codeclimate.com,2005:Events::RatingChanged/51a82d49f3ea004e2f000004' }
       its(:title)        { should == 'Consumer::BookingsController has declined from a B to a C.' }
       its(:type)         { should == :rating_changed }
-      its(:improvement?) { should be_false }
+      its(:improvement?) { should be_falsey }
 
     end
 
@@ -45,7 +45,7 @@ module CodeClimate
       its(:id)           { should == 'tag:codeclimate.com,2005:Events::RatingChanged/514bc1ecc7f3a303b3000004' }
       its(:title)        { should == 'Consumer::SearchController has improved from a C to a A.' }
       its(:type)         { should == :rating_changed }
-      its(:improvement?) { should be_true }
+      its(:improvement?) { should be_truthy }
 
     end
 
@@ -71,7 +71,7 @@ module CodeClimate
       its(:id)           { should == 'tag:codeclimate.com,2005:Events::ConstantsCreated/51a813b5f3ea0070fb000005' }
       its(:title)        { should == 'Four classes/modules were added.' }
       its(:type)         { should == :constants_created }
-      its(:improvement?) { should be_false }
+      its(:improvement?) { should be_falsey }
 
     end
 
@@ -97,7 +97,7 @@ module CodeClimate
       its(:id)           { should == 'tag:codeclimate.com,2005:Events::WeeklyStats/51a3308cf3ea006ad4000002' }
       its(:title)        { should == 'Summary of May 20th - 26th' }
       its(:type)         { should == :weekly_stats }
-      its(:improvement?) { should be_false }
+      its(:improvement?) { should be_falsey }
 
     end
 
