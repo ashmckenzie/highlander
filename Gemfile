@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 ruby '2.1.1'
 
-gem 'rails', '~> 4.0'
+gem 'rails', '~> 4.1'
 gem 'rack-attack'
 gem 'pg'
 gem 'sass-rails',   '~> 4.0'
@@ -60,7 +60,8 @@ group :development, :test do
   gem 'puma'
   gem 'pry', '0.9.12.4'
   gem 'pry-debugger', '0.2.2'
-  gem 'rspec-rails'
+  gem 'rspec-rails', '~> 2.0'
+  gem 'rspec-its'
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'factory_girl_rails'
