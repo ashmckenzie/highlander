@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby '2.1.1'
+ruby '2.1.3'
 
 gem 'rails', '~> 4.1'
 gem 'rack-attack'
@@ -59,7 +59,6 @@ gem 'rollbar'
 group :development, :test do
   gem 'puma'
   gem 'pry', '0.9.12.4'
-  gem 'pry-debugger', '0.2.2'
   gem 'rspec-rails', '~> 2.0'
   gem 'rspec-its'
   gem 'better_errors'
@@ -68,7 +67,4 @@ group :development, :test do
   gem 'capybara'
   gem 'letter_opener'
   gem 'rails-erd'
-  gem 'debugger', '~> 1.6.6'
-  gem 'debugger-ruby_core_source', '~> 1.3.1'
-  gem 'foreman'
 end
