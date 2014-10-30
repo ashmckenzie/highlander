@@ -2,7 +2,7 @@
 
 <h3>Past month</h3>
 
-<%= line_chart(stats.past_month.events.map { |name, data| { name: name, data: data } }, library: { 'lineWidth' => 1, 'pointSize' => 3 }) %>
+<%= line_chart(stats.period.events.map { |name, data| { name: name, data: data } }, library: { 'lineWidth' => 1, 'pointSize' => 3 }) %>
 
 <h3>All time</h3>
 

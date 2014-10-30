@@ -9,12 +9,11 @@ class UsersController < ApplicationController
   end
 
   def show
-    @stats_past_three_months = Rails.cache.fetch("user-stats-past-month-#{user.id}", expires_in: 5.minutes) do
-      Queries::Stats.new(user: user.user, achievements: false).query(Time.zone.now - 1.month)
-    end
-
-    @stats_all_time = Rails.cache.fetch("user-stats-all-time-#{user.id}", expires_in: 5.minutes) do
-      Queries::Stats.new(user: user.user, achievements: false).query
+    @stats = Rails.cache.fetch("user-stats-#{user.id}", expires_in: 5.minutes) do
+      Hashie::Mash.new({
+        all_time:   Queries::Stats.new(user: user.user, achievements: false).query,
+        period:     Queries::Stats.new(user: user.user, achievements: false).query(Time.zone.now - 1.month)
+      })
     end
   end
 
