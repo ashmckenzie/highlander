@@ -56,8 +56,6 @@ gem 'underscore-rails'
 
 gem 'rollbar'
 
-gem 'libv8', '3.16.14.7'
-
 group :development, :test do
   gem 'puma'
   gem 'pry', '0.9.12.4'

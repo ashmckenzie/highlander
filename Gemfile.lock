@@ -336,7 +336,6 @@ DEPENDENCIES
   high_voltage
   jquery-rails
   letter_opener
-  libv8 (= 3.16.14.7)
   mechanize
   naught
   neat
