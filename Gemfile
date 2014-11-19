@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby '2.1.4'
+ruby '2.1.5'
 
 gem 'rails', '~> 4.1'
 gem 'rack-attack'
@@ -55,6 +55,8 @@ gem 'aws-sdk'
 gem 'underscore-rails'
 
 gem 'rollbar'
+
+gem 'libv8', '3.16.14.7'
 
 group :development, :test do
   gem 'puma'
