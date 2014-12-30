@@ -1,3 +1,7 @@
+Stethoscope.check :ruby do |resp|
+  resp[:version] = RUBY_VERSION
+end
+
 Stethoscope.check :rails do |resp|
   resp[:version] = Rails::version
 end
