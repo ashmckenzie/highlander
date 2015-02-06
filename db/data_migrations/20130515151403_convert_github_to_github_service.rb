@@ -3,7 +3,7 @@ module DataMigration
     class ConvertGithubToGithubService < Base
 
       def up
-        {
+        [
           github_username: 'ashmckenzie', slug: 'ash-mckenzie',
           github_username: 'stuliston', slug: 'stu-liston',
           github_username: 'clouseauu', slug: 'dan-bradford',
@@ -20,7 +20,7 @@ module DataMigration
           github_username: 'philmetcalfe', slug: 'phil-metcalfe',
           github_username: 'sarahblayden', slug: 'sarah-blayden',
           github_username: 'timothydang', slug: 'timothy-dang',
-        }.each do |github_username, slug|
+        ].each do |github_username, slug|
           if user = User.find(slug)
             github_service = Services::Github.new(username: github_username, emails: user.emails)
             user.user_services << UserService.new(service: github_service)
